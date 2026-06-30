@@ -114,7 +114,7 @@ a{color:inherit;text-decoration:none}
 ═══════════════════════════════════════════════════════════ */
 #app{display:none;flex-direction:column;min-height:100vh}
 #app.visible{display:flex}
-nav{background:var(--nav-bg);padding:0 var(--gap-lg);height:52px;
+#main-nav{background:var(--nav-bg);padding:0 var(--gap-lg);height:52px;
   display:flex;align-items:center;justify-content:space-between;
   position:sticky;top:0;z-index:100;
   box-shadow:0 1px 0 var(--border),0 2px 12px rgba(0,0,0,.3);
@@ -515,32 +515,41 @@ html[data-theme="obsidian"] .timamu-theme .hot-cta{background:var(--ti-coral)}
 @media(max-width:768px){
   /* hide desktop tabs from top nav */
   .nav-tabs{display:none}
-  /* slim top nav */
-  nav{padding:0 12px;height:48px}
+  /* slim top nav — scoped to #main-nav only */
+  #main-nav{padding:0 12px;height:48px}
   .nav-brand{font-size:14px}
   .theme-switcher{display:none}
   #settings-btn{font-size:11px;padding:3px 8px}
   /* push content above bottom nav */
   main{padding:12px 12px 80px}
-  /* bottom nav bar */
+  /* bottom nav bar — fixed to bottom, no top-nav styles leak in */
   .bottom-nav{
-    display:flex;position:fixed;bottom:0;left:0;right:0;z-index:150;
-    background:var(--nav-bg);border-top:1px solid var(--border);
-    padding-bottom:env(safe-area-inset-bottom);
+    display:flex;
+    position:fixed !important;
+    bottom:0 !important;
+    top:auto !important;
+    left:0;right:0;
+    z-index:150;
+    height:auto;
+    background:var(--nav-bg);
+    border-top:1px solid var(--border);
+    border-bottom:none;
+    box-shadow:0 -4px 20px rgba(0,0,0,.4);
+    padding-bottom:env(safe-area-inset-bottom,0px);
   }
   .bn-tab{
     flex:1;display:flex;flex-direction:column;align-items:center;
-    justify-content:center;gap:2px;padding:8px 2px;
-    color:rgba(255,255,255,.4);font-size:9px;font-weight:600;
+    justify-content:center;gap:3px;padding:10px 2px 8px;
+    color:rgba(255,255,255,.38);font-size:9px;font-weight:600;
     text-transform:uppercase;letter-spacing:.3px;cursor:pointer;
     border:none;background:transparent;transition:color var(--trans);
-    -webkit-tap-highlight-color:transparent;
+    -webkit-tap-highlight-color:transparent;min-height:56px;
   }
-  .bn-tab .bn-icon{font-size:18px;line-height:1}
-  .bn-tab:hover,.bn-tab.active{color:var(--accent)}
+  .bn-tab .bn-icon{font-size:20px;line-height:1;display:block}
+  .bn-tab.active{color:var(--accent)}
   .bn-tab.active .bn-icon{
-    background:var(--nav-tab-active);border-radius:8px;
-    padding:2px 10px;
+    background:var(--nav-tab-active);
+    border-radius:10px;padding:2px 12px;
   }
 }
 
