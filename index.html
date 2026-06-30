@@ -1,377 +1,526 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="midnight">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LearnImpact · Fundraising Intelligence Hub</title>
 <link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#354062">
+<meta name="theme-color" content="#060B18">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <style>
+/* ═══════════════════════════════════════════════════════════
+   THEME TOKENS — override per data-theme attribute on <html>
+═══════════════════════════════════════════════════════════ */
 :root {
-  --li-deep: #354062; --li-gold: #FFC650; --li-sky: #5EA6B8;
-  --li-cedar: #BE6243; --li-bg: #F4F4F4; --li-white: #FFFFFF;
-  --ti-deep: #2E1A3E; --ti-coral: #C84020; --ti-teal: #1A7060;
-  --ti-amber: #C49020; --ti-bg: #F7F2F0;
-  --status-hot:#BE6243; --status-warm:#FFC650; --status-cold:#999;
-  --status-won:#1A7060; --status-lost:#c44; --status-dna:#888;
+  /* Brand constants — never change across themes */
+  --li-deep:#354062; --li-gold:#FFC650; --li-sky:#5EA6B8;
+  --li-cedar:#BE6243; --ti-deep:#2E1A3E; --ti-coral:#C84020;
+  --ti-teal:#1A7060; --ti-amber:#C49020;
+  --status-won:#1A7060; --status-hot:#BE6243;
+  --status-warm:#FFC650; --status-cold:#777;
+  /* Layout constants */
+  --radius:8px; --radius-lg:14px; --trans:.18s ease;
   --gap-xs:4px; --gap-sm:8px; --gap-md:16px; --gap-lg:24px; --gap-xl:40px;
-  --radius:8px; --radius-lg:14px; --shadow:0 2px 12px rgba(0,0,0,.10);
-  --shadow-lg:0 8px 32px rgba(0,0,0,.16); --trans:.18s ease;
   --font:-apple-system,BlinkMacSystemFont,'Segoe UI','Inter',sans-serif;
 }
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-body{font-family:var(--font);background:var(--li-bg);color:var(--li-deep);
-  font-size:14px;line-height:1.5;min-height:100vh;overflow-x:hidden}
-button{font-family:inherit;cursor:pointer;border:none;outline:none}
-input,textarea,select{font-family:inherit;outline:none}
-a{color:inherit;text-decoration:none}
 
-/* ── GATE ────────────────────────────────────────────────── */
-#gate{position:fixed;inset:0;background:var(--li-deep);display:flex;
+/* ── LIGHT ──────────────────────────────────────────── */
+html[data-theme="light"] {
+  --bg:#F4F4F4; --surface:#FFFFFF; --surface-2:rgba(53,64,98,.04);
+  --border:rgba(53,64,98,.12); --border-2:rgba(53,64,98,.06);
+  --text:#354062; --text-2:#555; --text-3:rgba(53,64,98,.4);
+  --nav-bg:#354062; --nav-text:#fff; --nav-tab-active:rgba(255,198,80,.12);
+  --accent:#FFC650; --accent-text:#354062;
+  --data:#5EA6B8; --warn:#BE6243;
+  --glow:transparent;
+  --shadow:0 2px 12px rgba(0,0,0,.10); --shadow-lg:0 8px 32px rgba(0,0,0,.16);
+  --input-bg:#fff; --input-border:rgba(53,64,98,.2);
+  --drawer-bg:#fff; --modal-bg:#fff;
+  --table-head:rgba(53,64,98,.04); --row-hover:rgba(53,64,98,.03);
+  --scrollbar:#ccc;
+}
+
+/* ── MIDNIGHT INDIGO (default) ───────────────────────── */
+html[data-theme="midnight"] {
+  --bg:#0A0F1E; --surface:#131929; --surface-2:rgba(255,255,255,.04);
+  --border:rgba(94,166,184,.14); --border-2:rgba(94,166,184,.07);
+  --text:#E8EBF0; --text-2:#8B9BC0; --text-3:rgba(232,235,240,.32);
+  --nav-bg:#060B18; --nav-text:rgba(255,255,255,.9); --nav-tab-active:rgba(255,198,80,.1);
+  --accent:#FFC650; --accent-text:#0A0F1E;
+  --data:#5EA6B8; --warn:#BE6243;
+  --glow:rgba(53,64,98,.9);
+  --shadow:0 2px 20px rgba(0,0,0,.5); --shadow-lg:0 8px 48px rgba(0,0,0,.7);
+  --input-bg:rgba(255,255,255,.06); --input-border:rgba(94,166,184,.25);
+  --drawer-bg:#131929; --modal-bg:#131929;
+  --table-head:rgba(255,255,255,.04); --row-hover:rgba(255,255,255,.03);
+  --scrollbar:rgba(255,255,255,.1);
+}
+
+/* ── OBSIDIAN PRO ────────────────────────────────────── */
+html[data-theme="obsidian"] {
+  --bg:#111111; --surface:#1A1A1A; --surface-2:rgba(255,255,255,.04);
+  --border:rgba(255,255,255,.08); --border-2:rgba(255,255,255,.04);
+  --text:#F0F0F0; --text-2:#A0A8C0; --text-3:rgba(240,240,240,.28);
+  --nav-bg:#0D0D0D; --nav-text:rgba(255,255,255,.88); --nav-tab-active:rgba(110,123,255,.12);
+  --accent:#6E7BFF; --accent-text:#fff;
+  --data:#A0A8C0; --warn:#FF7B6B;
+  --glow:rgba(110,123,255,.35);
+  --shadow:0 2px 20px rgba(0,0,0,.6); --shadow-lg:0 8px 48px rgba(0,0,0,.8);
+  --input-bg:rgba(255,255,255,.04); --input-border:rgba(255,255,255,.12);
+  --drawer-bg:#1A1A1A; --modal-bg:#1A1A1A;
+  --table-head:rgba(255,255,255,.04); --row-hover:rgba(255,255,255,.025);
+  --scrollbar:rgba(255,255,255,.08);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   BASE
+═══════════════════════════════════════════════════════════ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--bg);color:var(--text);
+  font-size:14px;line-height:1.5;min-height:100vh;overflow-x:hidden;
+  transition:background .25s,color .25s}
+button{font-family:inherit;cursor:pointer;border:none;outline:none}
+input,textarea,select{font-family:inherit;outline:none;color:var(--text)}
+a{color:inherit;text-decoration:none}
+::-webkit-scrollbar{width:6px;height:6px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:var(--scrollbar);border-radius:3px}
+
+/* ═══════════════════════════════════════════════════════════
+   GATE
+═══════════════════════════════════════════════════════════ */
+#gate{position:fixed;inset:0;background:var(--nav-bg);display:flex;
   flex-direction:column;align-items:center;justify-content:center;z-index:999;
   transition:opacity .4s}
 #gate.hidden{opacity:0;pointer-events:none}
 #gate-logo{font-size:28px;font-weight:800;color:#fff;letter-spacing:-.5px;margin-bottom:8px}
-#gate-sub{color:rgba(255,255,255,.5);font-size:13px;margin-bottom:48px}
-#gate-hint{color:rgba(255,255,255,.25);font-size:12px;margin-top:24px;text-align:center}
+#gate-logo span{color:var(--accent)}
+#gate-sub{color:rgba(255,255,255,.45);font-size:13px;margin-bottom:48px;letter-spacing:.3px}
+#gate-hint{color:rgba(255,255,255,.22);font-size:12px;margin-top:24px;text-align:center}
 #gate-dialog{display:none;flex-direction:column;gap:12px;width:280px}
-#gate-dialog input{padding:12px 16px;border-radius:var(--radius);border:2px solid rgba(255,255,255,.2);
-  background:rgba(255,255,255,.08);color:#fff;font-size:15px;
-  transition:border-color var(--trans)}
-#gate-dialog input:focus{border-color:var(--li-gold)}
-#gate-dialog input::placeholder{color:rgba(255,255,255,.35)}
-#gate-btn{padding:12px;border-radius:var(--radius);background:var(--li-gold);
-  color:var(--li-deep);font-weight:700;font-size:15px;transition:opacity var(--trans)}
+#gate-dialog input{padding:12px 16px;border-radius:var(--radius);border:2px solid rgba(255,255,255,.15);
+  background:rgba(255,255,255,.07);color:#fff;font-size:15px;transition:border-color var(--trans)}
+#gate-dialog input:focus{border-color:var(--accent)}
+#gate-dialog input::placeholder{color:rgba(255,255,255,.3)}
+#gate-btn{padding:12px;border-radius:var(--radius);background:var(--accent);
+  color:var(--accent-text);font-weight:700;font-size:15px;transition:opacity var(--trans)}
 #gate-btn:hover{opacity:.88}
 #gate-err{color:#f87;font-size:12px;text-align:center}
 
-/* ── NAV ─────────────────────────────────────────────────── */
+/* ═══════════════════════════════════════════════════════════
+   NAV
+═══════════════════════════════════════════════════════════ */
 #app{display:none;flex-direction:column;min-height:100vh}
 #app.visible{display:flex}
-nav{background:var(--li-deep);padding:0 var(--gap-lg);height:52px;
+nav{background:var(--nav-bg);padding:0 var(--gap-lg);height:52px;
   display:flex;align-items:center;justify-content:space-between;
-  position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.25)}
-.nav-brand{color:#fff;font-weight:800;font-size:16px;letter-spacing:-.3px;cursor:default;
-  display:flex;align-items:center;gap:8px}
-.nav-brand span{color:var(--li-gold)}
+  position:sticky;top:0;z-index:100;
+  box-shadow:0 1px 0 var(--border),0 2px 12px rgba(0,0,0,.3);
+  transition:background .25s}
+.nav-brand{color:var(--nav-text);font-weight:800;font-size:16px;letter-spacing:-.3px;
+  cursor:default;display:flex;align-items:center;gap:8px}
+.nav-brand span{color:var(--accent)}
 .nav-tabs{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none}
 .nav-tabs::-webkit-scrollbar{display:none}
-.nav-tab{padding:6px 14px;border-radius:6px;color:rgba(255,255,255,.6);
+.nav-tab{padding:6px 14px;border-radius:6px;color:rgba(255,255,255,.5);
   font-size:13px;font-weight:500;cursor:pointer;white-space:nowrap;
   transition:all var(--trans);background:transparent;border:none}
-.nav-tab:hover{color:#fff;background:rgba(255,255,255,.1)}
-.nav-tab.active{color:var(--li-gold);background:rgba(255,198,80,.12)}
-.nav-right{display:flex;align-items:center;gap:8px}
-#hq-chip{background:var(--li-cedar);color:#fff;border:none;border-radius:20px;
+.nav-tab:hover{color:var(--nav-text);background:rgba(255,255,255,.08)}
+.nav-tab.active{color:var(--accent);background:var(--nav-tab-active)}
+.nav-right{display:flex;align-items:center;gap:6px}
+/* theme switcher */
+.theme-switcher{display:flex;gap:2px;background:rgba(255,255,255,.07);
+  border-radius:20px;padding:2px}
+.theme-btn{padding:3px 9px;border-radius:16px;background:transparent;
+  border:none;color:rgba(255,255,255,.45);font-size:11px;font-weight:600;
+  cursor:pointer;transition:all var(--trans);letter-spacing:.3px}
+.theme-btn:hover{color:rgba(255,255,255,.8)}
+.theme-btn.active{background:var(--accent);color:var(--accent-text)}
+#hq-chip{background:var(--warn);color:#fff;border:none;border-radius:20px;
   padding:4px 12px;font-size:11px;font-weight:700;cursor:pointer;
   letter-spacing:.5px;transition:opacity var(--trans)}
 #hq-chip:hover{opacity:.8}
-#settings-btn{background:rgba(255,255,255,.12);border:none;color:rgba(255,255,255,.7);
-  border-radius:6px;padding:4px 10px;font-size:12px;cursor:pointer}
-#settings-btn:hover{background:rgba(255,255,255,.2);color:#fff}
+#settings-btn{background:rgba(255,255,255,.1);border:none;color:rgba(255,255,255,.65);
+  border-radius:6px;padding:4px 10px;font-size:12px;cursor:pointer;transition:all var(--trans)}
+#settings-btn:hover{background:rgba(255,255,255,.18);color:#fff}
 
-/* ── CONTENT ─────────────────────────────────────────────── */
+/* ═══════════════════════════════════════════════════════════
+   CONTENT
+═══════════════════════════════════════════════════════════ */
 main{flex:1;padding:var(--gap-lg);max-width:1400px;margin:0 auto;width:100%}
 .tab-panel{display:none}
 .tab-panel.active{display:block}
-.section-title{font-size:13px;font-weight:700;color:rgba(53,64,98,.5);
-  text-transform:uppercase;letter-spacing:.8px;margin-bottom:var(--gap-md)}
-.card{background:#fff;border-radius:var(--radius-lg);box-shadow:var(--shadow);padding:var(--gap-lg)}
+.section-title{font-size:11px;font-weight:700;color:var(--text-3);
+  text-transform:uppercase;letter-spacing:.9px;margin-bottom:var(--gap-md)}
+.card{background:var(--surface);border-radius:var(--radius-lg);
+  box-shadow:var(--shadow);padding:var(--gap-lg);
+  border:1px solid var(--border);transition:background .25s,border-color .25s}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:var(--gap-lg)}
 .grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:var(--gap-lg)}
 @media(max-width:900px){.grid3{grid-template-columns:1fr 1fr}}
 @media(max-width:600px){.grid2,.grid3{grid-template-columns:1fr}}
 
-/* ── ACTION CARDS ────────────────────────────────────────── */
+/* ═══════════════════════════════════════════════════════════
+   ACTION CARDS
+═══════════════════════════════════════════════════════════ */
 .action-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap-md);margin-bottom:var(--gap-lg)}
 @media(max-width:900px){.action-cards{grid-template-columns:1fr}}
-.action-card{background:#fff;border-radius:var(--radius-lg);padding:var(--gap-md);
-  box-shadow:var(--shadow);border-left:4px solid var(--li-gold);cursor:pointer;
-  transition:transform var(--trans),box-shadow var(--trans)}
+.action-card{background:var(--surface);border-radius:var(--radius-lg);padding:var(--gap-md);
+  box-shadow:var(--shadow);border-left:4px solid var(--accent);
+  border-top:1px solid var(--border);border-right:1px solid var(--border);border-bottom:1px solid var(--border);
+  cursor:pointer;transition:transform var(--trans),box-shadow var(--trans)}
 .action-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg)}
-.action-card.urgent{border-left-color:var(--status-hot)}
-.action-card.medium{border-left-color:var(--li-gold)}
-.action-card.low{border-left-color:var(--li-sky)}
+.action-card.urgent{border-left-color:var(--warn)}
+.action-card.medium{border-left-color:var(--accent)}
+.action-card.low{border-left-color:var(--data)}
 .action-card-badges{display:flex;gap:6px;margin-bottom:8px;flex-wrap:wrap}
-.prog-badge{padding:2px 8px;border-radius:12px;font-size:11px;font-weight:700;
-  text-transform:uppercase;letter-spacing:.4px}
+.prog-badge{padding:2px 8px;border-radius:12px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.4px}
 .prog-soma{background:rgba(94,166,184,.15);color:var(--li-sky)}
-.prog-kiufunza{background:rgba(190,98,67,.12);color:var(--li-cedar)}
-.prog-timamu{background:rgba(46,26,62,.1);color:var(--ti-deep)}
+.prog-kiufunza{background:rgba(190,98,67,.14);color:var(--li-cedar)}
+.prog-timamu{background:rgba(46,26,62,.2);color:#C084FC}
 .urg-chip{padding:2px 8px;border-radius:12px;font-size:10px;font-weight:700;text-transform:uppercase}
-.urg-high{background:rgba(190,98,67,.12);color:var(--status-hot)}
-.urg-medium{background:rgba(255,198,80,.18);color:#b8860b}
-.urg-low{background:rgba(94,166,184,.12);color:var(--li-sky)}
-.action-card h3{font-size:13px;font-weight:700;margin-bottom:4px;line-height:1.3}
-.action-card p{font-size:12px;color:#666;line-height:1.4}
-.action-due{font-size:11px;color:var(--li-cedar);font-weight:600;margin-top:8px}
+.urg-high{background:rgba(190,98,67,.15);color:var(--warn)}
+.urg-medium{background:rgba(255,198,80,.15);color:#b8860b}
+.urg-low{background:rgba(94,166,184,.12);color:var(--data)}
+.action-card h3{font-size:13px;font-weight:700;color:var(--text);margin-bottom:4px;line-height:1.3}
+.action-card p{font-size:12px;color:var(--text-2);line-height:1.4}
+.action-due{font-size:11px;color:var(--warn);font-weight:600;margin-top:8px}
 
-/* ── PIPELINE FUNNELS ────────────────────────────────────── */
+/* ═══════════════════════════════════════════════════════════
+   PIPELINE
+═══════════════════════════════════════════════════════════ */
 .pipeline-row{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap-md);margin-bottom:var(--gap-lg)}
 @media(max-width:900px){.pipeline-row{grid-template-columns:1fr}}
-.pipeline-card{background:#fff;border-radius:var(--radius-lg);padding:var(--gap-md);box-shadow:var(--shadow)}
-.pipeline-card h4{font-size:13px;font-weight:700;margin-bottom:var(--gap-md);
+.pipeline-card{background:var(--surface);border-radius:var(--radius-lg);padding:var(--gap-md);
+  box-shadow:var(--shadow);border:1px solid var(--border)}
+.pipeline-card h4{font-size:13px;font-weight:700;color:var(--text);margin-bottom:var(--gap-md);
   display:flex;align-items:center;justify-content:space-between}
-.pipeline-total{font-size:18px;font-weight:800;color:var(--li-deep)}
+.pipeline-total{font-size:18px;font-weight:800;color:var(--accent)}
 .pipeline-stages{display:flex;flex-direction:column;gap:6px}
 .pipeline-stage{display:flex;align-items:center;gap:8px;font-size:12px}
-.pipeline-stage-label{width:80px;color:#666;flex-shrink:0}
-.pipeline-bar-wrap{flex:1;height:6px;background:rgba(0,0,0,.06);border-radius:3px;overflow:hidden}
-.pipeline-bar{height:100%;border-radius:3px;background:var(--li-sky);transition:width .6s ease}
-.pipeline-count{width:28px;text-align:right;font-weight:600;color:var(--li-deep)}
+.pipeline-stage-label{width:80px;color:var(--text-3);flex-shrink:0}
+.pipeline-bar-wrap{flex:1;height:5px;background:var(--surface-2);border-radius:3px;overflow:hidden}
+.pipeline-bar{height:100%;border-radius:3px;background:var(--data);transition:width .6s ease}
+.pipeline-count{width:28px;text-align:right;font-weight:600;color:var(--text)}
 
-/* ── GAP BAR ─────────────────────────────────────────────── */
-.gap-section{background:#fff;border-radius:var(--radius-lg);padding:var(--gap-md);
-  box-shadow:var(--shadow);margin-bottom:var(--gap-lg)}
-.gap-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:var(--gap-md)}
-.gap-bars{display:flex;flex-direction:column;gap:12px}
+/* ═══════════════════════════════════════════════════════════
+   GAP BAR
+═══════════════════════════════════════════════════════════ */
+.gap-section{background:var(--surface);border-radius:var(--radius-lg);padding:var(--gap-md);
+  box-shadow:var(--shadow);border:1px solid var(--border);margin-bottom:var(--gap-lg)}
+.gap-bars{display:flex;flex-direction:column;gap:14px}
 .gap-row{display:flex;flex-direction:column;gap:4px}
-.gap-row-header{display:flex;justify-content:space-between;font-size:12px;font-weight:600}
-.gap-track{height:10px;background:rgba(0,0,0,.06);border-radius:5px;overflow:hidden;position:relative}
-.gap-fill-confirmed{height:100%;border-radius:5px 0 0 5px;background:var(--status-won);position:absolute;left:0}
-.gap-fill-pipeline{height:100%;border-radius:5px;background:var(--li-sky);opacity:.5;position:absolute;left:0}
+.gap-row-header{display:flex;justify-content:space-between;font-size:12px;font-weight:600;color:var(--text)}
+.gap-row-header span:last-child{color:var(--text-2);font-weight:400}
+.gap-track{height:8px;background:var(--surface-2);border-radius:4px;position:relative;overflow:hidden}
 
-/* ── WEEKLY BRIEF ────────────────────────────────────────── */
-.brief-banner{background:var(--li-deep);color:#fff;border-radius:var(--radius-lg);
-  padding:var(--gap-lg);margin-bottom:var(--gap-lg)}
-.brief-week{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;
-  color:var(--li-gold);margin-bottom:8px}
-.brief-summary{font-size:14px;line-height:1.7;color:rgba(255,255,255,.85)}
-.brief-ts{font-size:11px;color:rgba(255,255,255,.35);margin-top:8px}
+/* ═══════════════════════════════════════════════════════════
+   BRIEF BANNER
+═══════════════════════════════════════════════════════════ */
+.brief-banner{background:var(--nav-bg);border:1px solid var(--border);
+  border-radius:var(--radius-lg);padding:var(--gap-lg);margin-bottom:var(--gap-lg)}
+html[data-theme="midnight"] .brief-banner{background:linear-gradient(135deg,#0D1B35 0%,#0A0F1E 100%);
+  border-color:rgba(94,166,184,.2)}
+html[data-theme="obsidian"] .brief-banner{background:#0D0D0D;border-color:rgba(110,123,255,.2)}
+.brief-week{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.9px;
+  color:var(--accent);margin-bottom:8px}
+.brief-summary{font-size:13px;line-height:1.75;color:var(--nav-text);opacity:.85}
+.brief-ts{font-size:11px;color:rgba(255,255,255,.25);margin-top:8px}
 
-/* ── HOT LIST ────────────────────────────────────────────── */
+/* ═══════════════════════════════════════════════════════════
+   HOT LIST
+═══════════════════════════════════════════════════════════ */
 .hot-list{display:flex;flex-direction:column;gap:var(--gap-md);margin-bottom:var(--gap-lg)}
-.hot-card{background:#fff;border-radius:var(--radius-lg);padding:var(--gap-md);
-  box-shadow:var(--shadow);display:flex;gap:var(--gap-md);align-items:flex-start;
-  transition:transform var(--trans),box-shadow var(--trans)}
-.hot-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg)}
+.hot-card{background:var(--surface);border-radius:var(--radius-lg);padding:var(--gap-md);
+  box-shadow:var(--shadow);border:1px solid var(--border);
+  display:flex;gap:var(--gap-md);align-items:flex-start;
+  cursor:pointer;transition:transform var(--trans),box-shadow var(--trans),border-color var(--trans)}
+.hot-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg);border-color:var(--glow)}
+html[data-theme="midnight"] .hot-card:hover{border-color:rgba(94,166,184,.4)}
+html[data-theme="obsidian"] .hot-card:hover{border-color:rgba(110,123,255,.4)}
 .score-ring{width:52px;height:52px;border-radius:50%;flex-shrink:0;
   display:flex;align-items:center;justify-content:center;
-  font-size:16px;font-weight:800;color:#fff;position:relative}
+  font-size:15px;font-weight:800;color:#fff}
 .hot-content{flex:1}
-.hot-name{font-size:14px;font-weight:700;margin-bottom:4px}
-.hot-why{font-size:12px;color:#555;line-height:1.5;margin-bottom:8px}
-.hot-action{font-size:12px;font-weight:600;color:var(--li-deep);
-  background:var(--li-bg);border-radius:6px;padding:6px 10px;
-  display:inline-block;margin-bottom:8px}
+.hot-name{font-size:14px;font-weight:700;color:var(--text);margin-bottom:4px}
+.hot-why{font-size:12px;color:var(--text-2);line-height:1.55;margin-bottom:8px}
+.hot-action{font-size:12px;font-weight:600;color:var(--text);
+  background:var(--surface-2);border-radius:6px;padding:6px 10px;
+  display:inline-block;margin-bottom:8px;border:1px solid var(--border)}
 .hot-footer{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .deadline-badge{padding:3px 8px;border-radius:12px;font-size:11px;font-weight:700}
-.deadline-red{background:rgba(190,98,67,.12);color:var(--li-cedar)}
-.deadline-amber{background:rgba(255,198,80,.18);color:#b8860b}
-.deadline-green{background:rgba(26,112,96,.1);color:var(--status-won)}
+.deadline-red{background:rgba(190,98,67,.15);color:var(--warn)}
+.deadline-amber{background:rgba(255,198,80,.15);color:#b8860b}
+.deadline-green{background:rgba(26,112,96,.15);color:var(--status-won)}
 .hot-cta{margin-left:auto;padding:6px 14px;border-radius:6px;
-  background:var(--li-deep);color:#fff;font-size:12px;font-weight:600;
-  cursor:pointer;transition:opacity var(--trans)}
-.hot-cta:hover{opacity:.8}
+  background:var(--accent);color:var(--accent-text);font-size:12px;font-weight:700;
+  cursor:pointer;border:none;transition:opacity var(--trans)}
+.hot-cta:hover{opacity:.85}
 
-/* ── FUNDER TABLE ────────────────────────────────────────── */
+/* ═══════════════════════════════════════════════════════════
+   FUNDER TABLE
+═══════════════════════════════════════════════════════════ */
 .table-controls{display:flex;gap:8px;margin-bottom:var(--gap-md);flex-wrap:wrap}
-.search-input{padding:8px 12px;border-radius:var(--radius);border:1.5px solid rgba(53,64,98,.15);
-  font-size:13px;flex:1;min-width:180px;background:#fff;transition:border-color var(--trans)}
-.search-input:focus{border-color:var(--li-sky)}
-.filter-select{padding:8px 12px;border-radius:var(--radius);border:1.5px solid rgba(53,64,98,.15);
-  font-size:13px;background:#fff;cursor:pointer}
-.funder-table-wrap{overflow-x:auto;border-radius:var(--radius-lg);border:1.5px solid rgba(53,64,98,.08)}
-table{width:100%;border-collapse:collapse;background:#fff}
-thead th{background:rgba(53,64,98,.04);padding:10px 14px;text-align:left;
+.search-input{padding:8px 12px;border-radius:var(--radius);border:1.5px solid var(--input-border);
+  font-size:13px;flex:1;min-width:180px;background:var(--input-bg);color:var(--text);
+  transition:border-color var(--trans)}
+.search-input:focus{border-color:var(--accent)}
+.search-input::placeholder{color:var(--text-3)}
+.filter-select{padding:8px 12px;border-radius:var(--radius);border:1.5px solid var(--input-border);
+  font-size:13px;background:var(--input-bg);cursor:pointer;color:var(--text)}
+.filter-select option{background:var(--surface);color:var(--text)}
+.funder-table-wrap{overflow-x:auto;border-radius:var(--radius-lg);border:1px solid var(--border)}
+table{width:100%;border-collapse:collapse;background:var(--surface)}
+thead th{background:var(--table-head);padding:10px 14px;text-align:left;
   font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;
-  color:rgba(53,64,98,.5);cursor:pointer;user-select:none;white-space:nowrap}
-thead th:hover{background:rgba(53,64,98,.08)}
-tbody tr{border-top:1px solid rgba(53,64,98,.06);transition:background var(--trans);cursor:pointer}
-tbody tr:hover{background:rgba(53,64,98,.03)}
-td{padding:10px 14px;font-size:13px}
+  color:var(--text-3);cursor:pointer;user-select:none;white-space:nowrap}
+thead th:hover{background:var(--surface-2)}
+tbody tr{border-top:1px solid var(--border-2);transition:background var(--trans);cursor:pointer}
+tbody tr:hover{background:var(--row-hover)}
+td{padding:10px 14px;font-size:13px;color:var(--text)}
 .tier-chip{width:22px;height:22px;border-radius:50%;display:inline-flex;
   align-items:center;justify-content:center;font-size:11px;font-weight:800}
-.tier-1{background:var(--li-gold);color:var(--li-deep)}
-.tier-2{background:rgba(94,166,184,.2);color:var(--li-sky)}
-.tier-3{background:rgba(0,0,0,.06);color:#666}
+.tier-1{background:var(--accent);color:var(--accent-text)}
+.tier-2{background:rgba(94,166,184,.2);color:var(--data)}
+.tier-3{background:var(--surface-2);color:var(--text-3)}
 .status-chip{padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600}
-.st-partner{background:rgba(26,112,96,.1);color:var(--status-won)}
-.st-submitted{background:rgba(94,166,184,.15);color:var(--li-sky)}
-.st-cultivating{background:rgba(255,198,80,.2);color:#b8860b}
-.st-warm{background:rgba(255,198,80,.12);color:#b8860b}
-.st-prospect{background:rgba(0,0,0,.05);color:#666}
-.st-lapsed{background:rgba(204,68,68,.1);color:#c44}
+.st-partner{background:rgba(26,112,96,.15);color:var(--status-won)}
+.st-submitted{background:rgba(94,166,184,.15);color:var(--data)}
+.st-cultivating{background:rgba(255,198,80,.15);color:#b8860b}
+.st-warm{background:rgba(255,198,80,.1);color:#b8860b}
+.st-prospect{background:var(--surface-2);color:var(--text-2)}
+.st-lapsed{background:rgba(204,68,68,.12);color:#e44}
 .align-ring{display:inline-flex;align-items:center;justify-content:center;
   width:32px;height:32px;border-radius:50%;font-size:11px;font-weight:700;color:#fff}
 
-/* ── CRM DRAWER ──────────────────────────────────────────── */
-#crm-drawer{position:fixed;right:0;top:0;bottom:0;width:380px;background:#fff;
-  box-shadow:-8px 0 32px rgba(0,0,0,.18);z-index:200;
+/* ═══════════════════════════════════════════════════════════
+   CRM DRAWER
+═══════════════════════════════════════════════════════════ */
+#crm-drawer{position:fixed;right:0;top:0;bottom:0;width:380px;background:var(--drawer-bg);
+  box-shadow:-8px 0 40px rgba(0,0,0,.4);z-index:200;border-left:1px solid var(--border);
   transform:translateX(100%);transition:transform .25s cubic-bezier(.4,0,.2,1);
   display:flex;flex-direction:column;overflow:hidden}
 #crm-drawer.open{transform:translateX(0)}
-#crm-overlay{position:fixed;inset:0;background:rgba(0,0,0,.25);z-index:199;
+#crm-overlay{position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:199;
   display:none;transition:opacity var(--trans)}
 #crm-overlay.open{display:block}
-.drawer-header{background:var(--li-deep);padding:var(--gap-lg);color:#fff}
-.drawer-header h3{font-size:16px;font-weight:800;margin-bottom:4px}
-.drawer-header p{font-size:12px;color:rgba(255,255,255,.6)}
-.drawer-close{position:absolute;top:16px;right:16px;background:rgba(255,255,255,.15);
+.drawer-header{background:var(--nav-bg);padding:var(--gap-lg);color:var(--nav-text);
+  border-bottom:1px solid var(--border);position:relative}
+.drawer-header h3{font-size:15px;font-weight:800;margin-bottom:4px}
+.drawer-header p{font-size:12px;color:rgba(255,255,255,.5)}
+.drawer-close{position:absolute;top:14px;right:14px;background:rgba(255,255,255,.12);
   border:none;color:#fff;width:28px;height:28px;border-radius:50%;
-  cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center}
-.drawer-close:hover{background:rgba(255,255,255,.25)}
+  cursor:pointer;font-size:14px;display:flex;align-items:center;justify-content:center}
+.drawer-close:hover{background:rgba(255,255,255,.22)}
 .drawer-body{flex:1;overflow-y:auto;padding:var(--gap-lg)}
 .drawer-section{margin-bottom:var(--gap-lg)}
 .drawer-section-title{font-size:11px;font-weight:700;text-transform:uppercase;
-  letter-spacing:.6px;color:rgba(53,64,98,.4);margin-bottom:10px;
-  padding-bottom:6px;border-bottom:1px solid rgba(53,64,98,.08)}
+  letter-spacing:.7px;color:var(--text-3);margin-bottom:10px;
+  padding-bottom:6px;border-bottom:1px solid var(--border)}
 .info-row{display:flex;justify-content:space-between;padding:6px 0;
-  font-size:13px;border-bottom:1px solid rgba(53,64,98,.05)}
+  font-size:13px;border-bottom:1px solid var(--border-2)}
 .info-row:last-child{border-bottom:none}
-.info-label{color:#888;flex-shrink:0;margin-right:12px}
-.info-val{font-weight:600;text-align:right}
+.info-label{color:var(--text-3);flex-shrink:0;margin-right:12px}
+.info-val{font-weight:600;text-align:right;color:var(--text)}
 .touchpoint-list{display:flex;flex-direction:column;gap:8px;max-height:200px;overflow-y:auto}
-.touchpoint-item{background:var(--li-bg);border-radius:8px;padding:10px;font-size:12px}
-.tp-date{font-weight:700;color:var(--li-deep);margin-bottom:2px}
+.touchpoint-item{background:var(--surface-2);border-radius:8px;padding:10px;
+  font-size:12px;border:1px solid var(--border)}
+.tp-date{font-weight:700;color:var(--accent);margin-bottom:2px}
 .tp-channel{display:inline-block;padding:1px 6px;border-radius:10px;
-  background:rgba(94,166,184,.15);color:var(--li-sky);font-size:10px;font-weight:700;margin-bottom:4px}
+  background:rgba(94,166,184,.15);color:var(--data);font-size:10px;font-weight:700;margin-bottom:4px}
 .add-tp-form{display:flex;flex-direction:column;gap:8px;margin-top:12px}
-.add-tp-form textarea{padding:8px;border:1.5px solid rgba(53,64,98,.15);
-  border-radius:var(--radius);font-size:13px;resize:vertical;min-height:70px}
-.add-tp-form textarea:focus{border-color:var(--li-sky)}
+.add-tp-form textarea{padding:8px;border:1.5px solid var(--input-border);background:var(--input-bg);
+  color:var(--text);border-radius:var(--radius);font-size:13px;resize:vertical;min-height:70px}
+.add-tp-form textarea:focus{border-color:var(--accent)}
+.add-tp-form textarea::placeholder{color:var(--text-3)}
 .add-tp-row{display:flex;gap:8px}
-.add-tp-row select{flex:1;padding:8px;border:1.5px solid rgba(53,64,98,.15);
-  border-radius:var(--radius);font-size:13px}
+.add-tp-row select{flex:1;padding:8px;border:1.5px solid var(--input-border);
+  background:var(--input-bg);color:var(--text);border-radius:var(--radius);font-size:13px}
 .btn-primary{padding:8px 16px;background:var(--li-deep);color:#fff;
-  border-radius:var(--radius);font-size:13px;font-weight:600;
-  cursor:pointer;transition:opacity var(--trans)}
+  border-radius:var(--radius);font-size:13px;font-weight:600;cursor:pointer;transition:opacity var(--trans)}
+html[data-theme="obsidian"] .btn-primary{background:var(--accent);color:var(--accent-text)}
 .btn-primary:hover{opacity:.85}
-.btn-secondary{padding:8px 16px;background:rgba(53,64,98,.08);color:var(--li-deep);
-  border-radius:var(--radius);font-size:13px;font-weight:600;
+.btn-secondary{padding:8px 16px;background:var(--surface-2);color:var(--text);
+  border:1px solid var(--border);border-radius:var(--radius);font-size:13px;font-weight:600;
   cursor:pointer;transition:background var(--trans)}
-.btn-secondary:hover{background:rgba(53,64,98,.15)}
-.btn-gold{padding:8px 16px;background:var(--li-gold);color:var(--li-deep);
-  border-radius:var(--radius);font-size:13px;font-weight:700;
-  cursor:pointer;transition:opacity var(--trans)}
+.btn-secondary:hover{background:var(--table-head)}
+.btn-gold{padding:8px 16px;background:var(--accent);color:var(--accent-text);
+  border-radius:var(--radius);font-size:13px;font-weight:700;cursor:pointer;transition:opacity var(--trans)}
 .btn-gold:hover{opacity:.88}
+.drawer-notes{font-size:13px;line-height:1.65;color:var(--text-2)}
 
-/* ── DOC STUDIO ──────────────────────────────────────────── */
-#doc-studio{background:#fff;border-radius:var(--radius-lg);box-shadow:var(--shadow);
-  padding:var(--gap-lg)}
+/* ═══════════════════════════════════════════════════════════
+   DOC STUDIO
+═══════════════════════════════════════════════════════════ */
+#doc-studio{background:var(--surface);border-radius:var(--radius-lg);
+  box-shadow:var(--shadow);border:1px solid var(--border);padding:var(--gap-lg)}
 .studio-grid{display:grid;grid-template-columns:300px 1fr;gap:var(--gap-lg)}
 @media(max-width:800px){.studio-grid{grid-template-columns:1fr}}
 .studio-controls{display:flex;flex-direction:column;gap:var(--gap-md)}
-.studio-controls label{font-size:12px;font-weight:700;color:#555;
+.studio-controls label{font-size:12px;font-weight:700;color:var(--text-2);
   margin-bottom:4px;display:block}
 .studio-controls select,.studio-controls textarea{width:100%;padding:10px;
-  border:1.5px solid rgba(53,64,98,.15);border-radius:var(--radius);font-size:13px}
-.studio-controls select:focus,.studio-controls textarea:focus{border-color:var(--li-sky)}
+  border:1.5px solid var(--input-border);border-radius:var(--radius);
+  font-size:13px;background:var(--input-bg);color:var(--text)}
+.studio-controls select:focus,.studio-controls textarea:focus{border-color:var(--accent)}
+.studio-controls textarea::placeholder{color:var(--text-3)}
 .evidence-cards{margin-top:var(--gap-md)}
-.ev-card{background:var(--li-bg);border-radius:8px;padding:10px;
-  font-size:12px;margin-bottom:6px;line-height:1.5;cursor:pointer;
-  border-left:3px solid var(--li-sky);transition:background var(--trans)}
-.ev-card:hover{background:rgba(94,166,184,.12)}
-.ev-card.copied{background:rgba(26,112,96,.08);border-left-color:var(--status-won)}
-.studio-output{border:1.5px solid rgba(53,64,98,.1);border-radius:var(--radius-lg);
-  min-height:400px;position:relative;overflow:hidden}
+.ev-card{background:var(--surface-2);border-radius:8px;padding:10px;
+  font-size:12px;color:var(--text-2);margin-bottom:6px;line-height:1.5;cursor:pointer;
+  border-left:3px solid var(--data);border:1px solid var(--border);border-left:3px solid var(--data);
+  transition:background var(--trans),color var(--trans)}
+.ev-card:hover{background:rgba(94,166,184,.08);color:var(--text)}
+.ev-card.copied{background:rgba(26,112,96,.1);border-left-color:var(--status-won);color:var(--text)}
+.studio-output{border:1.5px solid var(--border);border-radius:var(--radius-lg);
+  min-height:400px;position:relative;overflow:hidden;background:var(--surface)}
 .output-placeholder{display:flex;flex-direction:column;align-items:center;
-  justify-content:center;height:400px;color:rgba(53,64,98,.3);gap:8px}
+  justify-content:center;height:400px;color:var(--text-3);gap:8px}
 .output-placeholder .icon{font-size:40px}
-.output-content{padding:var(--gap-lg);font-size:13px;line-height:1.8;
+.output-content{padding:var(--gap-lg);font-size:13px;line-height:1.8;color:var(--text);
   white-space:pre-wrap;overflow-y:auto;max-height:600px}
 .output-actions{display:flex;gap:8px;padding:var(--gap-md);
-  border-top:1px solid rgba(53,64,98,.08);background:rgba(53,64,98,.02)}
-.generating-overlay{position:absolute;inset:0;background:rgba(255,255,255,.92);
+  border-top:1px solid var(--border);background:var(--surface-2)}
+.generating-overlay{position:absolute;inset:0;background:rgba(0,0,0,.6);
   display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px}
 .spinner{width:32px;height:32px;border-radius:50%;
-  border:3px solid rgba(53,64,98,.15);border-top-color:var(--li-deep);
+  border:3px solid var(--border);border-top-color:var(--accent);
   animation:spin .8s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
+.generating-overlay p{color:var(--nav-text);font-size:13px}
 
-/* ── MONDAY BRIEF ────────────────────────────────────────── */
-#brief-view{display:none}
-#brief-view.active{display:block}
-.brief-print-header{display:flex;justify-content:space-between;align-items:center;
-  padding:var(--gap-lg);background:var(--li-deep);border-radius:var(--radius-lg);
-  margin-bottom:var(--gap-lg);color:#fff}
-.brief-section{background:#fff;border-radius:var(--radius-lg);padding:var(--gap-lg);
-  box-shadow:var(--shadow);margin-bottom:var(--gap-lg)}
-.brief-section h3{font-size:15px;font-weight:800;color:var(--li-deep);
-  margin-bottom:var(--gap-md);padding-bottom:8px;border-bottom:2px solid var(--li-gold)}
-.brief-action-row{display:flex;justify-content:space-between;align-items:flex-start;
-  padding:10px 0;border-bottom:1px solid rgba(53,64,98,.07)}
-.brief-action-row:last-child{border-bottom:none}
-.brief-action-text{font-size:13px;flex:1;line-height:1.5}
-.brief-action-meta{font-size:11px;color:var(--li-cedar);font-weight:700;
-  text-align:right;flex-shrink:0;margin-left:12px}
-
-/* ── ALERTS ──────────────────────────────────────────────── */
+/* ═══════════════════════════════════════════════════════════
+   ALERTS
+═══════════════════════════════════════════════════════════ */
 .alerts-strip{display:flex;flex-direction:column;gap:8px;margin-bottom:var(--gap-lg)}
-.alert-item{background:#fff;border-radius:var(--radius);padding:12px var(--gap-md);
-  box-shadow:var(--shadow);display:flex;gap:10px;align-items:flex-start}
-.alert-icon{font-size:18px;flex-shrink:0;margin-top:1px}
-.alert-text{font-size:12px;line-height:1.5;flex:1}
-.alert-text strong{font-weight:700;color:var(--li-deep)}
-.alert-conflict{border-left:3px solid var(--status-hot)}
-.alert-shift{border-left:3px solid var(--li-gold)}
-.alert-opp{border-left:3px solid var(--li-sky)}
-.alert-cold{border-left:3px solid #ddd}
-
-/* ── SETTINGS MODAL ──────────────────────────────────────── */
-#settings-modal{display:none;position:fixed;inset:0;z-index:300;
-  align-items:center;justify-content:center;background:rgba(0,0,0,.35)}
-#settings-modal.open{display:flex}
-.modal-box{background:#fff;border-radius:var(--radius-lg);padding:var(--gap-xl);
-  width:420px;max-width:90vw;box-shadow:var(--shadow-lg)}
-.modal-box h3{font-size:17px;font-weight:800;margin-bottom:var(--gap-lg)}
-.field-group{margin-bottom:var(--gap-md)}
-.field-group label{display:block;font-size:12px;font-weight:700;
-  color:#555;margin-bottom:6px}
-.field-group input{width:100%;padding:10px 12px;border:1.5px solid rgba(53,64,98,.2);
-  border-radius:var(--radius);font-size:13px}
-.field-group input:focus{border-color:var(--li-sky)}
-.field-note{font-size:11px;color:#888;margin-top:4px}
-.modal-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:var(--gap-lg)}
-
-/* ── TIMAMU COLORS ───────────────────────────────────────── */
-.timamu-theme .brief-banner{background:var(--ti-deep)}
-.timamu-theme .hot-cta{background:var(--ti-coral)}
-.timamu-theme .btn-primary{background:var(--ti-deep)}
-.conflict-banner{background:rgba(190,98,67,.06);border:1.5px solid var(--li-cedar);
-  border-radius:var(--radius-lg);padding:var(--gap-md);margin-bottom:var(--gap-lg);
+.alert-item{background:var(--surface);border-radius:var(--radius);padding:12px var(--gap-md);
+  box-shadow:var(--shadow);border:1px solid var(--border);
   display:flex;gap:10px;align-items:flex-start}
-.got-banner{background:rgba(255,198,80,.08);border:1.5px solid var(--li-gold);
-  border-radius:var(--radius-lg);padding:var(--gap-md);margin-bottom:var(--gap-lg)}
-.entity-sep{background:rgba(46,26,62,.06);border:1.5px solid var(--ti-deep);
-  border-radius:var(--radius-lg);padding:var(--gap-md);margin-bottom:var(--gap-lg)}
+.alert-icon{font-size:16px;flex-shrink:0;margin-top:2px}
+.alert-text{font-size:12px;line-height:1.5;color:var(--text-2);flex:1}
+.alert-text strong{font-weight:700;color:var(--text)}
+.alert-conflict{border-left:3px solid var(--warn)}
+.alert-shift{border-left:3px solid var(--accent)}
+.alert-opp{border-left:3px solid var(--data)}
+.alert-cold{border-left:3px solid var(--border)}
+
+/* ═══════════════════════════════════════════════════════════
+   HEAT MAP
+═══════════════════════════════════════════════════════════ */
 .heat-map{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px}
 .heat-contact{border-radius:var(--radius);padding:10px;font-size:12px;cursor:pointer;
-  transition:transform var(--trans)}
+  border:1px solid var(--border);transition:transform var(--trans)}
 .heat-contact:hover{transform:scale(1.03)}
-.heat-hot{background:rgba(190,98,67,.12);border-left:3px solid var(--status-hot)}
-.heat-warm{background:rgba(255,198,80,.12);border-left:3px solid var(--li-gold)}
-.heat-cooling{background:rgba(94,166,184,.1);border-left:3px solid var(--li-sky)}
-.heat-cold{background:rgba(0,0,0,.04);border-left:3px solid #ccc}
-.heat-name{font-weight:700;color:var(--li-deep);margin-bottom:2px}
-.heat-org{font-size:11px;color:#888}
+.heat-hot{background:rgba(190,98,67,.1);border-left:3px solid var(--warn)}
+.heat-warm{background:rgba(255,198,80,.08);border-left:3px solid var(--accent)}
+.heat-cooling{background:rgba(94,166,184,.07);border-left:3px solid var(--data)}
+.heat-cold{background:var(--surface-2);border-left:3px solid var(--border)}
+.heat-name{font-weight:700;color:var(--text);margin-bottom:2px}
+.heat-org{font-size:11px;color:var(--text-3)}
 .heat-days{font-size:10px;font-weight:600;margin-top:4px}
+
+/* ═══════════════════════════════════════════════════════════
+   GRANT CALENDAR
+═══════════════════════════════════════════════════════════ */
 .grant-cal{overflow-x:auto;margin-bottom:var(--gap-lg)}
 .cal-strip{display:flex;gap:4px;min-width:800px;padding:4px 0}
 .cal-month{flex:1;min-width:60px}
 .cal-month-label{font-size:10px;font-weight:700;text-transform:uppercase;
-  color:rgba(53,64,98,.4);text-align:center;margin-bottom:6px}
+  color:var(--text-3);text-align:center;margin-bottom:6px}
 .cal-month-events{display:flex;flex-direction:column;gap:3px;min-height:40px}
 .cal-event{border-radius:4px;padding:3px 6px;font-size:10px;font-weight:600;
-  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;cursor:pointer}
-.cal-event-soma{background:rgba(94,166,184,.2);color:var(--li-sky)}
-.cal-event-kiufunza{background:rgba(190,98,67,.15);color:var(--li-cedar)}
-.cal-event-timamu{background:rgba(46,26,62,.1);color:var(--ti-deep)}
-.today-line{width:2px;background:var(--li-cedar);position:relative}
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;cursor:pointer;transition:opacity var(--trans)}
+.cal-event:hover{opacity:.8}
+.cal-event-soma{background:rgba(94,166,184,.2);color:var(--data)}
+.cal-event-kiufunza{background:rgba(190,98,67,.18);color:var(--warn)}
+.cal-event-timamu{background:rgba(200,64,32,.15);color:#C084FC}
+
+/* ═══════════════════════════════════════════════════════════
+   SETTINGS MODAL
+═══════════════════════════════════════════════════════════ */
+#settings-modal{display:none;position:fixed;inset:0;z-index:300;
+  align-items:center;justify-content:center;background:rgba(0,0,0,.5)}
+#settings-modal.open{display:flex}
+.modal-box{background:var(--modal-bg);border-radius:var(--radius-lg);
+  padding:var(--gap-xl);width:420px;max-width:90vw;
+  box-shadow:var(--shadow-lg);border:1px solid var(--border)}
+.modal-box h3{font-size:17px;font-weight:800;color:var(--text);margin-bottom:var(--gap-lg)}
+.field-group{margin-bottom:var(--gap-md)}
+.field-group label{display:block;font-size:12px;font-weight:700;
+  color:var(--text-2);margin-bottom:6px}
+.field-group input{width:100%;padding:10px 12px;border:1.5px solid var(--input-border);
+  background:var(--input-bg);color:var(--text);border-radius:var(--radius);font-size:13px}
+.field-group input:focus{border-color:var(--accent)}
+.field-group input::placeholder{color:var(--text-3)}
+.field-note{font-size:11px;color:var(--text-3);margin-top:4px}
+.modal-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:var(--gap-lg)}
+
+/* ═══════════════════════════════════════════════════════════
+   PROGRAMME CONTEXT BANNERS
+═══════════════════════════════════════════════════════════ */
+.prog-context{background:var(--surface);border-radius:var(--radius-lg);padding:var(--gap-md);
+  box-shadow:var(--shadow);border:1px solid var(--border);margin-bottom:var(--gap-lg)}
+.prog-context.soma-ctx{border-left:4px solid var(--data)}
+.prog-context.kf-ctx{border-left:4px solid var(--warn)}
+.prog-context.timamu-ctx{border-left:4px solid #C084FC}
+.prog-stat{text-align:center}
+.prog-stat-val{font-size:22px;font-weight:800;color:var(--accent)}
+.prog-stat-label{font-size:11px;color:var(--text-3)}
+.got-banner{background:rgba(255,198,80,.07);border:1px solid rgba(255,198,80,.25);
+  border-radius:var(--radius-lg);padding:var(--gap-md);margin-bottom:var(--gap-lg);
+  font-size:13px;color:var(--text-2);line-height:1.5}
+.got-banner strong{color:var(--accent)}
+.entity-sep{background:rgba(192,132,252,.06);border:1px solid rgba(192,132,252,.2);
+  border-radius:var(--radius-lg);padding:var(--gap-md);margin-bottom:var(--gap-lg);
+  font-size:13px;color:var(--text-2);line-height:1.5}
+.entity-sep strong{color:#C084FC}
+.conflict-panel{background:rgba(190,98,67,.07);border:1px solid rgba(190,98,67,.25);
+  border-radius:var(--radius-lg);padding:var(--gap-md);margin-bottom:var(--gap-lg);
+  display:flex;gap:10px;align-items:flex-start}
+.conflict-text{font-size:12px;color:var(--text-2);line-height:1.6}
+.conflict-text strong{color:var(--warn)}
+
+/* ═══════════════════════════════════════════════════════════
+   MONDAY BRIEF VIEW
+═══════════════════════════════════════════════════════════ */
+#brief-view{display:none;position:fixed;inset:0;background:var(--bg);z-index:400;overflow-y:auto}
+.brief-print-header{display:flex;justify-content:space-between;align-items:center;
+  padding:var(--gap-lg);background:var(--nav-bg);border-radius:var(--radius-lg);
+  margin-bottom:var(--gap-lg);color:var(--nav-text);border:1px solid var(--border)}
+.brief-section{background:var(--surface);border-radius:var(--radius-lg);
+  padding:var(--gap-lg);box-shadow:var(--shadow);border:1px solid var(--border);
+  margin-bottom:var(--gap-lg)}
+.brief-section h3{font-size:15px;font-weight:800;color:var(--text);
+  margin-bottom:var(--gap-md);padding-bottom:8px;border-bottom:2px solid var(--accent)}
+.brief-action-row{display:flex;justify-content:space-between;align-items:flex-start;
+  padding:10px 0;border-bottom:1px solid var(--border-2)}
+.brief-action-row:last-child{border-bottom:none}
+.brief-action-text{font-size:13px;flex:1;line-height:1.5;color:var(--text)}
+.brief-action-meta{font-size:11px;color:var(--warn);font-weight:700;text-align:right;
+  flex-shrink:0;margin-left:12px}
+
+/* ═══════════════════════════════════════════════════════════
+   TIMAMU THEME OVERRIDES
+═══════════════════════════════════════════════════════════ */
+.timamu-theme .hot-cta{background:var(--ti-coral)}
+html[data-theme="midnight"] .timamu-theme .hot-cta{background:var(--ti-coral)}
+html[data-theme="obsidian"] .timamu-theme .hot-cta{background:var(--ti-coral)}
+.ti-stat{color:#C084FC !important}
+
+/* ═══════════════════════════════════════════════════════════
+   PRINT
+═══════════════════════════════════════════════════════════ */
 @media print{
-  nav,#settings-modal,#crm-overlay,#crm-drawer{display:none!important}
-  body{background:#fff}
-  .brief-section{box-shadow:none;border:1px solid #ddd}
+  html{--bg:#fff;--surface:#fff;--text:#000;--text-2:#333;--nav-bg:#354062}
+  nav,#settings-modal,#crm-overlay,#crm-drawer,.theme-switcher{display:none!important}
+  .brief-section{box-shadow:none;border:1px solid #ddd;page-break-inside:avoid}
 }
 </style>
 </head>
 <body>
 
-<!-- ══════════════════════════════════════════════════════════
-     GATE
-═══════════════════════════════════════════════════════════ -->
+<!-- ══ GATE ═══════════════════════════════════════════════ -->
 <div id="gate">
   <div id="gate-logo">LearnImpact <span>·</span> Fundraising</div>
   <div id="gate-sub">Intelligence Hub — Private Access</div>
@@ -383,9 +532,7 @@ td{padding:10px 14px;font-size:13px}
   <div id="gate-hint">Type passphrase to unlock · Triple-tap header on mobile</div>
 </div>
 
-<!-- ══════════════════════════════════════════════════════════
-     APP SHELL
-═══════════════════════════════════════════════════════════ -->
+<!-- ══ APP ════════════════════════════════════════════════ -->
 <div id="app">
   <nav id="main-nav">
     <div class="nav-brand" onclick="showMondayBrief()">LearnImpact <span>HQ</span></div>
@@ -398,6 +545,11 @@ td{padding:10px 14px;font-size:13px}
       <button class="nav-tab" onclick="showMondayBrief()">Monday Brief</button>
     </div>
     <div class="nav-right">
+      <div class="theme-switcher">
+        <button class="theme-btn" onclick="setTheme('light')" id="tbtn-light">☀</button>
+        <button class="theme-btn active" onclick="setTheme('midnight')" id="tbtn-midnight">◑</button>
+        <button class="theme-btn" onclick="setTheme('obsidian')" id="tbtn-obsidian">◉</button>
+      </div>
       <button id="settings-btn" onclick="openSettings()">⚙ Settings</button>
       <button id="hq-chip" onclick="lock()">HQ ✕</button>
     </div>
@@ -407,77 +559,61 @@ td{padding:10px 14px;font-size:13px}
     <!-- ── COMMAND CENTER ── -->
     <div id="tab-cmd" class="tab-panel active">
       <div id="action-cards-area" class="action-cards"></div>
-
-      <div class="brief-banner" id="brief-banner">
+      <div class="brief-banner">
         <div class="brief-week" id="brief-week"></div>
         <div class="brief-summary" id="brief-summary">Loading weekly brief…</div>
         <div class="brief-ts" id="brief-ts"></div>
       </div>
-
       <div class="pipeline-row" id="pipeline-row"></div>
-
-      <div class="gap-section card">
-        <div class="gap-header">
-          <div class="section-title" style="margin:0">Funding Gap Status</div>
-        </div>
+      <div class="gap-section">
+        <div class="section-title">Funding Gap Status</div>
         <div class="gap-bars" id="gap-bars"></div>
       </div>
-
       <div class="section-title">Relationship Heat Map</div>
       <div class="card" style="margin-bottom:var(--gap-lg)">
         <div class="heat-map" id="heat-map"></div>
       </div>
-
       <div class="section-title">Alerts This Week</div>
       <div class="alerts-strip" id="alerts-strip"></div>
-
       <div class="section-title">Grant Calendar</div>
       <div class="card grant-cal"><div class="cal-strip" id="cal-strip"></div></div>
     </div>
 
-    <!-- ── SOMA TAB ── -->
+    <!-- ── SOMA ── -->
     <div id="tab-soma" class="tab-panel">
-      <div class="card" style="margin-bottom:var(--gap-lg);border-left:4px solid var(--li-sky)">
+      <div class="prog-context soma-ctx">
         <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:var(--gap-md)">
           <div>
             <div class="section-title" style="margin-bottom:4px">SOMA Programme</div>
-            <div style="font-size:13px;color:#555;line-height:1.6;max-width:600px">
-              AI-enabled teacher coaching via WhatsApp (Mwalimu). USD 3.12/student/year.
-              10 schools — Kibaha Term 3 2026. Mtwara RCT 2027 (70 schools). USD 12/LAYS modelled.
-              2027 funding gap: USD 637K (USD 229K confirmed vs USD 866K needed).
+            <div style="font-size:13px;color:var(--text-2);line-height:1.6;max-width:560px">
+              AI-enabled teacher coaching via WhatsApp (Mwalimu). 10 schools Kibaha Term 3 2026.
+              Mtwara RCT 2027 (70 schools). Government co-financing: Kibaha DC.
+              2027 gap: USD 637K (USD 229K confirmed vs USD 866K needed).
             </div>
           </div>
-          <div style="display:flex;gap:var(--gap-md);flex-wrap:wrap">
-            <div style="text-align:center"><div style="font-size:24px;font-weight:800;color:var(--li-sky)">$3.12</div><div style="font-size:11px;color:#888">/student/year</div></div>
-            <div style="text-align:center"><div style="font-size:24px;font-weight:800;color:var(--li-deep)">$12</div><div style="font-size:11px;color:#888">/LAYS (modelled)</div></div>
-            <div style="text-align:center"><div style="font-size:24px;font-weight:800;color:var(--li-cedar)">$5M</div><div style="font-size:11px;color:#888">pipeline</div></div>
+          <div style="display:flex;gap:var(--gap-lg);flex-wrap:wrap">
+            <div class="prog-stat"><div class="prog-stat-val">$3.12</div><div class="prog-stat-label">/student/yr</div></div>
+            <div class="prog-stat"><div class="prog-stat-val">$12</div><div class="prog-stat-label">/LAYS modelled</div></div>
+            <div class="prog-stat"><div class="prog-stat-val">$5M</div><div class="prog-stat-label">pipeline</div></div>
           </div>
         </div>
       </div>
-
-      <div class="section-title">Hot List — Top Opportunities Right Now</div>
+      <div class="section-title">Hot List — SOMA</div>
       <div class="hot-list" id="soma-hotlist"></div>
-
       <div class="section-title" style="margin-top:var(--gap-lg)">All SOMA Funders</div>
       <div class="card">
         <div class="table-controls">
           <input class="search-input" id="soma-search" type="text" placeholder="Search funders…" oninput="filterTable('soma')">
           <select class="filter-select" id="soma-tier-filter" onchange="filterTable('soma')">
-            <option value="">All Tiers</option>
-            <option value="1">Tier 1</option>
-            <option value="2">Tier 2</option>
-            <option value="3">Tier 3</option>
+            <option value="">All Tiers</option><option value="1">Tier 1</option>
+            <option value="2">Tier 2</option><option value="3">Tier 3</option>
           </select>
           <select class="filter-select" id="soma-status-filter" onchange="filterTable('soma')">
-            <option value="">All Status</option>
-            <option value="partner">Partner</option>
-            <option value="submitted">Submitted</option>
-            <option value="cultivating">Cultivating</option>
-            <option value="warm">Warm</option>
-            <option value="prospect">Prospect</option>
+            <option value="">All Status</option><option value="partner">Partner</option>
+            <option value="submitted">Submitted</option><option value="prospect">Prospect</option>
           </select>
         </div>
-        <div class="funder-table-wrap"><table id="soma-table"><thead><tr>
+        <div class="funder-table-wrap"><table><thead><tr>
           <th onclick="sortTable('soma','name')">Funder</th>
           <th onclick="sortTable('soma','tier')">Tier</th>
           <th onclick="sortTable('soma','status')">Status</th>
@@ -486,49 +622,45 @@ td{padding:10px 14px;font-size:13px}
           <th onclick="sortTable('soma','probability_score')">Probability</th>
         </tr></thead><tbody id="soma-tbody"></tbody></table></div>
       </div>
-
-      <div class="section-title" style="margin-top:var(--gap-lg)">Positioning Intelligence</div>
+      <div class="section-title" style="margin-top:var(--gap-lg)">Positioning Advisor</div>
       <div class="card" id="soma-positioning"></div>
     </div>
 
-    <!-- ── KIUFUNZA TAB ── -->
+    <!-- ── KIUFUNZA ── -->
     <div id="tab-kiufunza" class="tab-panel">
       <div class="got-banner">
-        <strong>⚠ GoT Sensitivity:</strong> Never lead proposals with Twaweza history. Frame as LearnImpact's independent programme. KiuFunza brand has damaged Government of Tanzania relationships — SOMA is the pivot.
+        <strong>⚠ GoT Sensitivity:</strong> Never lead proposals with Twaweza history.
+        Frame as LearnImpact's independently verified programme. Brand damage risk with GoT — SOMA is the strategic pivot.
       </div>
-      <div class="card" style="margin-bottom:var(--gap-lg);border-left:4px solid var(--li-cedar)">
+      <div class="prog-context kf-ctx">
         <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:var(--gap-md)">
           <div>
             <div class="section-title" style="margin-bottom:4px">KiuFunza Programme</div>
-            <div style="font-size:13px;color:#555;line-height:1.6;max-width:600px">
-              Teacher performance pay, Grades 1–7. 265 schools, 10 Tanzania regions.
-              QJE-published: +9.4pp treatment effect. USD ~7/child/year.
-              Active funders: Hempel (anchor, Hearing Committee), VTF (TZS 462M near-confirmed), Dovetail ($100K Track 1 won).
+            <div style="font-size:13px;color:var(--text-2);line-height:1.6;max-width:560px">
+              Teacher performance pay, Grades 1–7. 265 schools, 10 regions.
+              QJE-published: +9.4pp treatment effect. USD 7/child/year.
+              Active: Hempel (Hearing Committee), VTF (TZS 462M near-confirmed), Dovetail ($100K won).
             </div>
           </div>
-          <div style="display:flex;gap:var(--gap-md);flex-wrap:wrap">
-            <div style="text-align:center"><div style="font-size:24px;font-weight:800;color:var(--li-cedar)">265</div><div style="font-size:11px;color:#888">schools</div></div>
-            <div style="text-align:center"><div style="font-size:24px;font-weight:800;color:var(--status-won)">+9.4pp</div><div style="font-size:11px;color:#888">QJE effect</div></div>
-            <div style="text-align:center"><div style="font-size:24px;font-weight:800;color:var(--li-deep)">$7</div><div style="font-size:11px;color:#888">/child/year</div></div>
+          <div style="display:flex;gap:var(--gap-lg);flex-wrap:wrap">
+            <div class="prog-stat"><div class="prog-stat-val" style="color:var(--warn)">265</div><div class="prog-stat-label">schools</div></div>
+            <div class="prog-stat"><div class="prog-stat-val" style="color:var(--status-won)">+9.4pp</div><div class="prog-stat-label">QJE effect</div></div>
+            <div class="prog-stat"><div class="prog-stat-val">$7</div><div class="prog-stat-label">/child/yr</div></div>
           </div>
         </div>
       </div>
-
       <div class="section-title">Hot List — KiuFunza</div>
       <div class="hot-list" id="kiufunza-hotlist"></div>
-
       <div class="section-title" style="margin-top:var(--gap-lg)">All KiuFunza Funders</div>
       <div class="card">
         <div class="table-controls">
           <input class="search-input" id="kf-search" type="text" placeholder="Search funders…" oninput="filterTable('kiufunza')">
           <select class="filter-select" id="kf-status-filter" onchange="filterTable('kiufunza')">
-            <option value="">All Status</option>
-            <option value="partner">Partner</option>
-            <option value="submitted">Submitted</option>
-            <option value="prospect">Prospect</option>
+            <option value="">All Status</option><option value="partner">Partner</option>
+            <option value="submitted">Submitted</option><option value="prospect">Prospect</option>
           </select>
         </div>
-        <div class="funder-table-wrap"><table id="kf-table"><thead><tr>
+        <div class="funder-table-wrap"><table><thead><tr>
           <th onclick="sortTable('kiufunza','name')">Funder</th>
           <th onclick="sortTable('kiufunza','tier')">Tier</th>
           <th onclick="sortTable('kiufunza','status')">Status</th>
@@ -539,52 +671,47 @@ td{padding:10px 14px;font-size:13px}
       </div>
     </div>
 
-    <!-- ── TIMAMU TAB ── -->
+    <!-- ── TIMAMU ── -->
     <div id="tab-timamu" class="tab-panel timamu-theme">
       <div class="entity-sep">
-        <strong style="color:var(--ti-deep)">⚡ Entity Separation:</strong>
-        Timamu Foundation is a separate legal entity from LearnImpact. Proposals must never reference LearnImpact as implementing entity. Cross-programme conflicts with same funders require deliberate coordination before any approach.
+        <strong>⚡ Entity Separation:</strong> Timamu Foundation is a separate legal entity from LearnImpact.
+        Proposals must never reference LearnImpact as implementing entity.
+        Same-funder conflicts require deliberate coordination before any approach.
       </div>
-
-      <div class="card" style="margin-bottom:var(--gap-lg);border-left:4px solid var(--ti-coral)">
+      <div class="prog-context timamu-ctx">
         <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:var(--gap-md)">
           <div>
-            <div class="section-title" style="margin-bottom:4px;color:var(--ti-deep)">Timamu Foundation</div>
-            <div style="font-size:13px;color:#555;line-height:1.6;max-width:600px">
+            <div class="section-title" style="margin-bottom:4px">Timamu Foundation</div>
+            <div style="font-size:13px;color:var(--text-2);line-height:1.6;max-width:560px">
               Persons with disabilities + creator economy + assistive technology.
-              9–10M Tanzanians with disabilities. Tanzania Vision 2050: TZS 2B creator economy fund (July 2026).
-              Phase 1: digital creation, assistive technology. Phase 2: gig economy, AI tools for PWDs.
+              Phase 1: digital creation, assistive tech. Phase 2: gig economy, AI tools for PWDs.
+              Tanzania Vision 2050: TZS 2B creator economy fund activates July 2026.
             </div>
           </div>
-          <div style="display:flex;gap:var(--gap-md);flex-wrap:wrap">
-            <div style="text-align:center"><div style="font-size:24px;font-weight:800;color:var(--ti-coral)">10M</div><div style="font-size:11px;color:#888">Tanzanians w/ disabilities</div></div>
-            <div style="text-align:center"><div style="font-size:24px;font-weight:800;color:var(--ti-teal)">TZS 2B</div><div style="font-size:11px;color:#888">creator fund (Jul 2026)</div></div>
+          <div style="display:flex;gap:var(--gap-lg);flex-wrap:wrap">
+            <div class="prog-stat"><div class="prog-stat-val ti-stat">10M</div><div class="prog-stat-label">Tanzanians w/ disabilities</div></div>
+            <div class="prog-stat"><div class="prog-stat-val ti-stat">TZS 2B</div><div class="prog-stat-label">creator fund Jul 2026</div></div>
           </div>
         </div>
       </div>
-
-      <div class="section-title" style="color:var(--ti-deep)">Hot List — Timamu</div>
+      <div class="section-title">Hot List — Timamu</div>
       <div class="hot-list" id="timamu-hotlist"></div>
-
-      <div id="conflict-panel" class="conflict-banner" style="margin-top:var(--gap-lg)">
-        <div style="font-size:22px">⚠️</div>
-        <div>
+      <div class="conflict-panel" id="conflict-panel">
+        <div style="font-size:20px;flex-shrink:0">⚠️</div>
+        <div class="conflict-text">
           <strong>Cross-Programme Conflicts:</strong>
-          <div id="conflict-list" style="font-size:12px;color:#555;margin-top:4px"></div>
+          <div id="conflict-list" style="margin-top:4px"></div>
         </div>
       </div>
-
       <div class="section-title">All Timamu Funders</div>
       <div class="card">
         <div class="table-controls">
           <input class="search-input" id="timamu-search" type="text" placeholder="Search funders…" oninput="filterTable('timamu')">
           <select class="filter-select" id="timamu-status-filter" onchange="filterTable('timamu')">
-            <option value="">All Status</option>
-            <option value="partner">Partner</option>
-            <option value="prospect">Prospect</option>
+            <option value="">All Status</option><option value="prospect">Prospect</option><option value="partner">Partner</option>
           </select>
         </div>
-        <div class="funder-table-wrap"><table id="timamu-table"><thead><tr>
+        <div class="funder-table-wrap"><table><thead><tr>
           <th onclick="sortTable('timamu','name')">Funder</th>
           <th onclick="sortTable('timamu','tier')">Tier</th>
           <th onclick="sortTable('timamu','status')">Status</th>
@@ -595,29 +722,24 @@ td{padding:10px 14px;font-size:13px}
       </div>
     </div>
 
-    <!-- ── DOCUMENT STUDIO ── -->
+    <!-- ── DOC STUDIO ── -->
     <div id="tab-studio" class="tab-panel">
       <div id="doc-studio">
-        <h2 style="font-size:18px;font-weight:800;margin-bottom:4px">Document Studio</h2>
-        <p style="font-size:13px;color:#666;margin-bottom:var(--gap-lg)">
-          Generate proposals, LOIs, concept notes, and briefs — pre-filled with funder intelligence.
+        <h2 style="font-size:18px;font-weight:800;color:var(--text);margin-bottom:4px">Document Studio</h2>
+        <p style="font-size:13px;color:var(--text-2);margin-bottom:var(--gap-lg)">
+          Generate proposals, LOIs, concept notes, and briefs pre-filled with funder intelligence.
         </p>
         <div class="studio-grid">
           <div class="studio-controls">
-            <div>
-              <label>Programme</label>
+            <div><label>Programme</label>
               <select id="doc-prog" onchange="updateDocFunderList()">
                 <option value="soma">SOMA</option>
                 <option value="kiufunza">KiuFunza</option>
                 <option value="timamu">Timamu Foundation</option>
               </select>
             </div>
-            <div>
-              <label>Funder</label>
-              <select id="doc-funder"></select>
-            </div>
-            <div>
-              <label>Document Type</label>
+            <div><label>Funder</label><select id="doc-funder"></select></div>
+            <div><label>Document Type</label>
               <select id="doc-type">
                 <option value="loi">Letter of Inquiry (LOI)</option>
                 <option value="concept_note">Concept Note</option>
@@ -629,50 +751,36 @@ td{padding:10px 14px;font-size:13px}
                 <option value="board_update">Board Fundraising Update</option>
               </select>
             </div>
-            <div>
-              <label>Additional Context (optional)</label>
-              <textarea id="doc-context" rows="4" placeholder="Any specific angle, recent news, or meeting notes to include…"></textarea>
+            <div><label>Additional Context (optional)</label>
+              <textarea id="doc-context" rows="4" placeholder="Specific angle, recent news, or meeting notes…"></textarea>
             </div>
             <button class="btn-gold" onclick="generateDocument()" style="width:100%;padding:12px">
-              Generate Document
+              ✍ Generate Document
             </button>
-
             <div class="evidence-cards">
               <div class="section-title">Evidence Toolkit — Click to Copy</div>
-              <div class="ev-card" onclick="copyEvidence(this)">
-                SOMA: USD 3.12 per student per year — less than the cost of a school exercise book.
-              </div>
-              <div class="ev-card" onclick="copyEvidence(this)">
-                KiuFunza: +9.4 percentage points treatment effect, published Quarterly Journal of Economics.
-              </div>
-              <div class="ev-card" onclick="copyEvidence(this)">
-                LAYS cost: USD 12 per Learning-Adjusted Year of Schooling (modelled — Mtwara RCT verifies 2027).
-              </div>
-              <div class="ev-card" onclick="copyEvidence(this)">
-                Scale architecture: Tanzania → Zanzibar → Burundi → East Africa. Prove → Partner → Embed → Replicate.
-              </div>
-              <div class="ev-card" onclick="copyEvidence(this)">
-                Timamu: 9–10 million Tanzanians with disabilities. Tanzania Vision 2050: TZS 2B creator economy fund July 2026.
-              </div>
-              <div class="ev-card" onclick="copyEvidence(this)">
-                Government co-financing: Kibaha District Council co-funds SOMA delivery — proving government integration appetite.
-              </div>
+              <div class="ev-card" onclick="copyEvidence(this)">SOMA: USD 3.12 per student per year — less than the cost of a school exercise book.</div>
+              <div class="ev-card" onclick="copyEvidence(this)">KiuFunza: +9.4 percentage points treatment effect, published Quarterly Journal of Economics.</div>
+              <div class="ev-card" onclick="copyEvidence(this)">LAYS cost: USD 12 per Learning-Adjusted Year of Schooling (modelled — Mtwara RCT verifies 2027).</div>
+              <div class="ev-card" onclick="copyEvidence(this)">Scale architecture: Tanzania → Zanzibar → Burundi → East Africa. Prove → Partner → Embed → Replicate.</div>
+              <div class="ev-card" onclick="copyEvidence(this)">Timamu: 9–10 million Tanzanians with disabilities. Tanzania Vision 2050: TZS 2B creator economy fund July 2026.</div>
+              <div class="ev-card" onclick="copyEvidence(this)">Government co-financing: Kibaha District Council co-funds SOMA delivery — proving government integration appetite.</div>
             </div>
           </div>
           <div>
             <div class="studio-output">
               <div class="output-placeholder" id="doc-placeholder">
                 <div class="icon">✍️</div>
-                <div>Select a funder and document type,<br>then click Generate.</div>
+                <div style="color:var(--text-3);text-align:center">Select a funder and document type,<br>then click Generate.</div>
               </div>
               <div class="output-content" id="doc-output" style="display:none"></div>
               <div class="generating-overlay" id="doc-generating" style="display:none">
                 <div class="spinner"></div>
-                <div style="font-size:13px;color:#555">Generating document…</div>
+                <p>Generating document…</p>
               </div>
             </div>
             <div class="output-actions" id="doc-actions" style="display:none">
-              <button class="btn-secondary" onclick="copyDocument()">Copy to Clipboard</button>
+              <button class="btn-secondary" onclick="copyDocument()">Copy</button>
               <button class="btn-secondary" onclick="downloadDocument()">Download .md</button>
               <button class="btn-primary" onclick="saveToRepo()">Save to GitHub</button>
             </div>
@@ -680,34 +788,34 @@ td{padding:10px 14px;font-size:13px}
         </div>
       </div>
     </div>
-
   </main>
 </div>
 
-<!-- ── MONDAY BRIEF MODAL ── -->
-<div id="brief-view" style="display:none;position:fixed;inset:0;background:var(--li-bg);z-index:400;overflow-y:auto">
+<!-- ══ MONDAY BRIEF ════════════════════════════════════════ -->
+<div id="brief-view">
   <div style="max-width:800px;margin:0 auto;padding:var(--gap-xl)">
     <div class="brief-print-header">
       <div>
-        <div style="font-size:11px;font-weight:700;color:var(--li-gold);letter-spacing:.8px;text-transform:uppercase;margin-bottom:4px" id="brief-view-week"></div>
+        <div style="font-size:11px;font-weight:700;color:var(--accent);letter-spacing:.8px;
+          text-transform:uppercase;margin-bottom:4px" id="brief-view-week"></div>
         <div style="font-size:20px;font-weight:800">LearnImpact Fundraising Brief</div>
       </div>
       <div style="display:flex;gap:8px">
-        <button class="btn-secondary" onclick="window.print()" style="font-size:12px">Print / PDF</button>
-        <button class="btn-primary" onclick="closeBrief()" style="font-size:12px">Close</button>
+        <button class="btn-secondary" onclick="window.print()">Print / PDF</button>
+        <button class="btn-primary" onclick="closeBrief()">Close</button>
       </div>
     </div>
     <div id="brief-content"></div>
   </div>
 </div>
 
-<!-- ── CRM DRAWER ── -->
+<!-- ══ CRM DRAWER ══════════════════════════════════════════ -->
 <div id="crm-overlay" onclick="closeDrawer()"></div>
 <div id="crm-drawer">
   <div class="drawer-header">
     <button class="drawer-close" onclick="closeDrawer()">✕</button>
-    <h3 id="drawer-funder-name">Funder Name</h3>
-    <p id="drawer-funder-sub">Programme · Status</p>
+    <h3 id="drawer-funder-name">Funder</h3>
+    <p id="drawer-funder-sub"></p>
   </div>
   <div class="drawer-body">
     <div class="drawer-section">
@@ -721,14 +829,12 @@ td{padding:10px 14px;font-size:13px}
     <div class="drawer-section">
       <div class="drawer-section-title">Touchpoint Log</div>
       <div class="touchpoint-list" id="drawer-touchpoints"></div>
-      <div class="add-tp-form" id="drawer-tp-form">
-        <textarea id="tp-note" placeholder="Add touchpoint note…"></textarea>
+      <div class="add-tp-form">
+        <textarea id="tp-note" placeholder="Log a touchpoint…"></textarea>
         <div class="add-tp-row">
           <select id="tp-channel">
-            <option value="email">Email</option>
-            <option value="call">Call</option>
-            <option value="meeting">Meeting</option>
-            <option value="event">Event</option>
+            <option value="email">Email</option><option value="call">Call</option>
+            <option value="meeting">Meeting</option><option value="event">Event</option>
             <option value="conference">Conference</option>
           </select>
           <button class="btn-primary" onclick="addTouchpoint()">Log</button>
@@ -737,7 +843,7 @@ td{padding:10px 14px;font-size:13px}
     </div>
     <div class="drawer-section">
       <div class="drawer-section-title">Notes</div>
-      <div id="drawer-notes" style="font-size:13px;line-height:1.6;color:#555"></div>
+      <div class="drawer-notes" id="drawer-notes"></div>
     </div>
     <div class="drawer-section" style="display:flex;gap:8px;flex-wrap:wrap">
       <button class="btn-gold" onclick="openStudioForDrawerFunder()">✍ Generate Document</button>
@@ -746,23 +852,23 @@ td{padding:10px 14px;font-size:13px}
   </div>
 </div>
 
-<!-- ── SETTINGS MODAL ── -->
+<!-- ══ SETTINGS ════════════════════════════════════════════ -->
 <div id="settings-modal">
   <div class="modal-box">
     <h3>Settings</h3>
     <div class="field-group">
       <label>Anthropic API Key</label>
       <input type="password" id="api-key-input" placeholder="sk-ant-…">
-      <div class="field-note">Stored in your browser only. Used to generate documents in Doc Studio.</div>
+      <div class="field-note">Stored in your browser only. Powers Doc Studio document generation.</div>
     </div>
     <div class="field-group">
       <label>GitHub Token</label>
       <input type="password" id="gh-token-input" placeholder="ghp_…">
-      <div class="field-note">Personal access token with repo write access. Enables saving touchpoints and opportunities back to GitHub.</div>
+      <div class="field-note">Personal access token with repo write access. Enables saving touchpoints.</div>
     </div>
     <div class="field-group">
       <label>GitHub Repo</label>
-      <input type="text" id="gh-repo-input" value="kamukulumichael-blip/mk-fundraiser" placeholder="owner/repo">
+      <input type="text" id="gh-repo-input" value="kamukulumichael-blip/mk-fundraiser">
     </div>
     <div class="modal-actions">
       <button class="btn-secondary" onclick="closeSettings()">Cancel</button>
@@ -773,155 +879,150 @@ td{padding:10px 14px;font-size:13px}
 
 <script>
 // ══════════════════════════════════════════════════════════════
+// THEME
+// ══════════════════════════════════════════════════════════════
+function setTheme(t) {
+  document.documentElement.setAttribute('data-theme', t);
+  localStorage.setItem('mk_theme', t);
+  document.querySelectorAll('.theme-btn').forEach(b => b.classList.remove('active'));
+  const btn = document.getElementById('tbtn-' + t);
+  if (btn) btn.classList.add('active');
+}
+// Apply saved theme immediately (before anything else renders)
+(function() {
+  const saved = localStorage.getItem('mk_theme') || 'midnight';
+  document.documentElement.setAttribute('data-theme', saved);
+})();
+
+// ══════════════════════════════════════════════════════════════
 // CONSTANTS & STATE
 // ══════════════════════════════════════════════════════════════
 const HQ_SALT='li-hq-2026/', HQ_LEN=11,
       HQ_HASH='32225ce0e92945b98c44d020facb5724e886bfb1076ee178acdea58ba9fd08da';
 
 let APP = {
-  funders: [], opportunities: [], donors: [], alerts: null,
-  sortState: {soma:{col:'tier',dir:1}, kiufunza:{col:'tier',dir:1}, timamu:{col:'tier',dir:1}},
-  drawerFunderId: null, docOutputText: '', docFileName: '',
-  tapCount: 0, tapTimer: null
+  funders:[], opportunities:[], donors:[], alerts:null,
+  sortState:{soma:{col:'tier',dir:1},kiufunza:{col:'tier',dir:1},timamu:{col:'tier',dir:1}},
+  drawerFunderId:null, docOutputText:'', docFileName:'',
+  tapCount:0, tapTimer:null
 };
 
 // ══════════════════════════════════════════════════════════════
-// PASSPHRASE GATE
+// GATE
 // ══════════════════════════════════════════════════════════════
 async function sha256(str) {
   const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str));
   return Array.from(new Uint8Array(buf)).map(b=>b.toString(16).padStart(2,'0')).join('');
 }
-
 async function tryUnlock(pass) {
   if (!pass || pass.length !== HQ_LEN) { showGateErr('Incorrect passphrase'); return; }
   const h = await sha256(HQ_SALT + pass);
-  if (h === HQ_HASH) { unlock(); }
-  else { showGateErr('Incorrect passphrase'); }
+  if (h === HQ_HASH) unlock(); else showGateErr('Incorrect passphrase');
 }
-
 function showGateErr(msg) {
-  document.getElementById('gate-err').textContent = msg;
-  setTimeout(()=>{ document.getElementById('gate-err').textContent=''; }, 2000);
+  const el = document.getElementById('gate-err');
+  el.textContent = msg;
+  setTimeout(()=>{ el.textContent=''; }, 2000);
 }
-
 function unlock() {
-  document.getElementById('gate').classList.add('hidden');
-  setTimeout(()=>{ document.getElementById('gate').style.display='none'; },400);
+  const gate = document.getElementById('gate');
+  gate.classList.add('hidden');
+  setTimeout(()=>{ gate.style.display='none'; }, 400);
   document.getElementById('app').classList.add('visible');
+  // Sync theme buttons to current theme
+  const t = document.documentElement.getAttribute('data-theme') || 'midnight';
+  document.querySelectorAll('.theme-btn').forEach(b => b.classList.remove('active'));
+  const btn = document.getElementById('tbtn-' + t);
+  if (btn) btn.classList.add('active');
   loadAllData();
 }
-
 function lock() {
   document.getElementById('gate').style.display='flex';
   document.getElementById('gate').classList.remove('hidden');
   document.getElementById('app').classList.remove('visible');
   document.getElementById('gate-input').value='';
 }
-
-// Desktop: type passphrase directly (no visible prompt)
-let keyBuffer = '';
+let keyBuffer='';
 document.addEventListener('keydown', e => {
   if (document.getElementById('app').classList.contains('visible')) return;
-  if (document.getElementById('gate-dialog').style.display === 'flex') return;
-  if (e.key === 'Enter') { tryUnlock(keyBuffer); keyBuffer=''; return; }
-  if (e.key.length === 1) { keyBuffer += e.key; if (keyBuffer.length > 15) keyBuffer = keyBuffer.slice(-15); }
+  if (document.getElementById('gate-dialog').style.display==='flex') return;
+  if (e.key==='Enter') { tryUnlock(keyBuffer); keyBuffer=''; return; }
+  if (e.key.length===1) { keyBuffer+=e.key; if(keyBuffer.length>15) keyBuffer=keyBuffer.slice(-15); }
 });
-
-// Show gate dialog (for button click or mobile triple-tap)
 document.getElementById('gate-btn').onclick = () => tryUnlock(document.getElementById('gate-input').value);
 document.getElementById('gate-input').addEventListener('keydown', e => { if(e.key==='Enter') tryUnlock(e.target.value); });
-
-// Mobile: triple-tap header
 document.querySelector('nav')?.addEventListener('touchend', () => {
   APP.tapCount++;
   clearTimeout(APP.tapTimer);
   APP.tapTimer = setTimeout(()=>{ APP.tapCount=0; }, 600);
-  if (APP.tapCount >= 3) { APP.tapCount=0; showGateDialog(); }
+  if (APP.tapCount>=3) { APP.tapCount=0; showGateDialog(); }
 });
-
-// Show gate dialog for mobile
 function showGateDialog() {
   document.getElementById('gate-dialog').style.display='flex';
   document.getElementById('gate-hint').style.display='none';
   document.getElementById('gate-input').focus();
 }
-
-// Auto-show dialog on gate (desktop click)
+window.addEventListener('load', () => {
+  setTimeout(()=>{
+    document.getElementById('gate-dialog').style.display='flex';
+    document.getElementById('gate-hint').style.display='none';
+  }, 400);
+});
 document.getElementById('gate').addEventListener('click', e => {
-  if (e.target === document.getElementById('gate') ||
-      e.target === document.getElementById('gate-logo') ||
-      e.target === document.getElementById('gate-sub') ||
-      e.target === document.getElementById('gate-hint')) {
+  const noisy = ['gate','gate-logo','gate-sub','gate-hint'];
+  if (noisy.includes(e.target.id)) {
     document.getElementById('gate-dialog').style.display='flex';
     document.getElementById('gate-hint').style.display='none';
     document.getElementById('gate-input').focus();
   }
 });
-// Show dialog on load for clarity
-window.addEventListener('load', () => {
-  setTimeout(()=>{
-    document.getElementById('gate-dialog').style.display='flex';
-    document.getElementById('gate-hint').style.display='none';
-  }, 500);
-});
 
 // ══════════════════════════════════════════════════════════════
-// DATA LOADING
+// DATA
 // ══════════════════════════════════════════════════════════════
 async function fetchJSON(path) {
   const r = await fetch(path + '?v=' + Date.now());
   if (!r.ok) throw new Error('Failed: ' + path);
   return r.json();
 }
-
 async function loadAllData() {
   try {
-    const [f, o, d, a] = await Promise.all([
+    const [f,o,d,a] = await Promise.all([
       fetchJSON('./data/funders.json'),
       fetchJSON('./data/opportunities.json'),
       fetchJSON('./data/donors.json'),
       fetchJSON('./data/alerts.json')
     ]);
-    APP.funders = f.funders || [];
-    APP.opportunities = o.opportunities || [];
-    APP.donors = d.donors || [];
+    APP.funders = f.funders||[];
+    APP.opportunities = o.opportunities||[];
+    APP.donors = d.donors||[];
     APP.alerts = a;
     renderAll();
   } catch(e) {
-    console.error('Data load failed:', e);
-    document.getElementById('brief-summary').textContent = 'Error loading data. Refresh to retry.';
+    console.error('Data load:', e);
+    document.getElementById('brief-summary').textContent='Error loading data. Refresh to retry.';
   }
 }
 
 // ══════════════════════════════════════════════════════════════
-// RENDER EVERYTHING
+// RENDER
 // ══════════════════════════════════════════════════════════════
 function renderAll() {
-  renderActionCards();
-  renderBriefBanner();
-  renderPipeline();
-  renderGapBars();
-  renderHeatMap();
-  renderAlerts();
-  renderGrantCalendar();
-  renderHotList('soma', 'soma-hotlist');
-  renderHotList('kiufunza', 'kiufunza-hotlist');
-  renderHotList('timamu', 'timamu-hotlist');
-  renderFunderTable('soma', 'soma-tbody');
-  renderFunderTable('kiufunza', 'kf-tbody');
-  renderFunderTable('timamu', 'timamu-tbody');
-  renderConflicts();
-  renderPositioning();
-  updateDocFunderList();
+  renderActionCards(); renderBriefBanner(); renderPipeline();
+  renderGapBars(); renderHeatMap(); renderAlerts(); renderGrantCalendar();
+  renderHotList('soma','soma-hotlist');
+  renderHotList('kiufunza','kiufunza-hotlist');
+  renderHotList('timamu','timamu-hotlist');
+  renderFunderTable('soma','soma-tbody');
+  renderFunderTable('kiufunza','kf-tbody');
+  renderFunderTable('timamu','timamu-tbody');
+  renderConflicts(); renderPositioning(); updateDocFunderList();
 }
 
-// ── ACTION CARDS ──────────────────────────────────────────────
 function renderActionCards() {
-  const container = document.getElementById('action-cards-area');
+  const c = document.getElementById('action-cards-area');
   if (!APP.alerts) return;
-  const actions = (APP.alerts.this_week_actions || []).slice(0, 3);
-  container.innerHTML = actions.map(a => `
+  c.innerHTML = (APP.alerts.this_week_actions||[]).slice(0,3).map(a=>`
     <div class="action-card ${a.urgency}" onclick="openFunderByName('${a.funder}')">
       <div class="action-card-badges">
         <span class="prog-badge prog-${a.programme}">${a.programme.toUpperCase()}</span>
@@ -930,665 +1031,526 @@ function renderActionCards() {
       <h3>${a.funder}</h3>
       <p>${a.action}</p>
       <div class="action-due">Due: ${formatDate(a.due)}</div>
-    </div>
-  `).join('');
+    </div>`).join('');
 }
 
-// ── BRIEF BANNER ──────────────────────────────────────────────
 function renderBriefBanner() {
   if (!APP.alerts) return;
-  document.getElementById('brief-week').textContent = `Week ${APP.alerts.week_number} · ${APP.alerts.generated_at}`;
-  document.getElementById('brief-summary').textContent = (APP.alerts.monday_brief_summary || '').split('\n')[0];
-  document.getElementById('brief-ts').textContent = `Last generated: ${APP.alerts.generated_at}`;
-  const wv = document.getElementById('brief-view-week');
-  if (wv) wv.textContent = `Week ${APP.alerts.week_number} · ${APP.alerts.generated_at}`;
+  document.getElementById('brief-week').textContent=`Week ${APP.alerts.week_number} · ${APP.alerts.generated_at}`;
+  document.getElementById('brief-summary').textContent=(APP.alerts.monday_brief_summary||'').split('\n')[0];
+  document.getElementById('brief-ts').textContent=`Last generated: ${APP.alerts.generated_at}`;
+  const wv=document.getElementById('brief-view-week');
+  if(wv) wv.textContent=`Week ${APP.alerts.week_number} · ${APP.alerts.generated_at}`;
 }
 
-// ── PIPELINE ──────────────────────────────────────────────────
 function renderPipeline() {
-  const container = document.getElementById('pipeline-row');
-  const progs = ['soma','kiufunza','timamu'];
-  const labels = {soma:'SOMA',kiufunza:'KiuFunza',timamu:'Timamu'};
-  const stages = ['identified','cultivating','submitted','in_review','won'];
-  const stageLabels = {identified:'Identified',cultivating:'Cultivating',submitted:'Submitted',in_review:'In Review',won:'Won'};
-
-  container.innerHTML = progs.map(prog => {
-    const opps = APP.opportunities.filter(o => o.programme === prog);
-    const total = opps.reduce((s,o) => s + (o.ask_amount_usd||0), 0);
-    const stageCounts = {};
-    stages.forEach(s => stageCounts[s] = opps.filter(o => o.stage===s).length);
-    const maxCount = Math.max(...Object.values(stageCounts), 1);
-    return `
-      <div class="pipeline-card">
-        <h4><span>${labels[prog]}</span><span class="pipeline-total">${fmtUSD(total)}</span></h4>
-        <div class="pipeline-stages">
-          ${stages.map(s => `
-            <div class="pipeline-stage">
-              <span class="pipeline-stage-label">${stageLabels[s]}</span>
-              <div class="pipeline-bar-wrap">
-                <div class="pipeline-bar" style="width:${stageCounts[s]/maxCount*100}%"></div>
-              </div>
-              <span class="pipeline-count">${stageCounts[s]}</span>
-            </div>
-          `).join('')}
-        </div>
-      </div>`;
+  const c=document.getElementById('pipeline-row');
+  const progs=[{id:'soma',label:'SOMA'},{id:'kiufunza',label:'KiuFunza'},{id:'timamu',label:'Timamu'}];
+  const stages=['identified','cultivating','submitted','in_review','won'];
+  const sl={identified:'Identified',cultivating:'Cultivating',submitted:'Submitted',in_review:'In Review',won:'Won'};
+  c.innerHTML=progs.map(p=>{
+    const opps=APP.opportunities.filter(o=>o.programme===p.id);
+    const total=opps.reduce((s,o)=>s+(o.ask_amount_usd||0),0);
+    const counts={}; stages.forEach(s=>counts[s]=opps.filter(o=>o.stage===s).length);
+    const mx=Math.max(...Object.values(counts),1);
+    return `<div class="pipeline-card">
+      <h4>${p.label}<span class="pipeline-total">${fmtUSD(total)}</span></h4>
+      <div class="pipeline-stages">${stages.map(s=>`
+        <div class="pipeline-stage">
+          <span class="pipeline-stage-label">${sl[s]}</span>
+          <div class="pipeline-bar-wrap"><div class="pipeline-bar" style="width:${counts[s]/mx*100}%"></div></div>
+          <span class="pipeline-count">${counts[s]}</span>
+        </div>`).join('')}</div>
+    </div>`;
   }).join('');
 }
 
-// ── GAP BARS ──────────────────────────────────────────────────
 function renderGapBars() {
-  const container = document.getElementById('gap-bars');
-  if (!APP.alerts || !APP.alerts.funding_gap) return;
-  const g = APP.alerts.funding_gap;
-  const rows = [
-    {label:'SOMA', confirmed: g.soma_confirmed_usd, needed: g.soma_needed_usd, pipeline: g.soma_pipeline_usd},
-    {label:'KiuFunza', confirmed: g.kiufunza_confirmed_usd, needed: g.kiufunza_needed_usd, pipeline: 0},
-    {label:'Timamu', confirmed: g.timamu_confirmed_usd||0, needed: 200000, pipeline: g.timamu_pipeline_usd||0}
+  const c=document.getElementById('gap-bars');
+  if(!APP.alerts?.funding_gap) return;
+  const g=APP.alerts.funding_gap;
+  const rows=[
+    {label:'SOMA',conf:g.soma_confirmed_usd,need:g.soma_needed_usd,pipe:g.soma_pipeline_usd},
+    {label:'KiuFunza',conf:g.kiufunza_confirmed_usd,need:g.kiufunza_needed_usd,pipe:0},
+    {label:'Timamu',conf:g.timamu_confirmed_usd||0,need:200000,pipe:g.timamu_pipeline_usd||0}
   ];
-  container.innerHTML = rows.map(r => {
-    const max = Math.max(r.needed, r.pipeline, r.confirmed);
-    const confPct = max ? Math.round(r.confirmed/max*100) : 0;
-    const pipePct = max ? Math.round((r.confirmed+r.pipeline)/max*100) : 0;
+  c.innerHTML=rows.map(r=>{
+    const mx=Math.max(r.need,r.pipe,r.conf,1);
+    const cp=Math.round(r.conf/mx*100), pp=Math.round((r.conf+r.pipe)/mx*100);
     return `<div class="gap-row">
       <div class="gap-row-header">
         <span><strong>${r.label}</strong></span>
-        <span style="color:#888;font-weight:400">${fmtUSD(r.confirmed)} confirmed · ${fmtUSD(r.needed)} needed · ${fmtUSD(r.pipeline)} pipeline</span>
+        <span>${fmtUSD(r.conf)} confirmed · ${fmtUSD(r.need)} needed · ${fmtUSD(r.pipe)} pipeline</span>
       </div>
-      <div class="gap-track" style="height:10px;background:rgba(0,0,0,.06);border-radius:5px;position:relative">
-        <div style="position:absolute;left:0;top:0;height:100%;width:${pipePct}%;background:var(--li-sky);opacity:.35;border-radius:5px"></div>
-        <div style="position:absolute;left:0;top:0;height:100%;width:${confPct}%;background:var(--status-won);border-radius:5px"></div>
+      <div class="gap-track">
+        <div style="position:absolute;left:0;top:0;height:100%;width:${pp}%;background:var(--data);opacity:.3;border-radius:4px"></div>
+        <div style="position:absolute;left:0;top:0;height:100%;width:${cp}%;background:var(--status-won);border-radius:4px"></div>
       </div>
     </div>`;
   }).join('');
 }
 
-// ── HEAT MAP ──────────────────────────────────────────────────
 function renderHeatMap() {
-  const container = document.getElementById('heat-map');
-  if (!APP.donors.length) return;
-  container.innerHTML = APP.donors.map(d => {
-    const heat = d.relationship_health || 'warm';
-    const daysSince = d.last_touchpoint?.date ? daysBetween(d.last_touchpoint.date, new Date().toISOString().split('T')[0]) : 999;
+  const c=document.getElementById('heat-map');
+  if(!APP.donors.length){c.innerHTML='<div style="color:var(--text-3);font-size:13px">No relationship records yet.</div>';return;}
+  c.innerHTML=APP.donors.map(d=>{
+    const heat=d.relationship_health||'warm';
+    const days=d.last_touchpoint?.date?daysBetween(d.last_touchpoint.date,new Date().toISOString().split('T')[0]):999;
+    const dayColor=days>60?'var(--warn)':days>30?'#b8860b':'var(--status-won)';
     return `<div class="heat-contact heat-${heat}" onclick="openDrawer('${d.funder_id}')">
       <div class="heat-name">${d.contact_name}</div>
       <div class="heat-org">${d.contact_role}</div>
-      <div class="heat-days" style="color:${daysSince>60?'var(--status-hot)':daysSince>30?'#b8860b':'var(--status-won)'}">
-        ${daysSince < 999 ? daysSince + 'd ago' : 'No contact logged'}
-      </div>
+      <div class="heat-days" style="color:${dayColor}">${days<999?days+'d ago':'No contact logged'}</div>
     </div>`;
   }).join('');
 }
 
-// ── ALERTS ────────────────────────────────────────────────────
 function renderAlerts() {
-  const container = document.getElementById('alerts-strip');
-  if (!APP.alerts) return;
-  const items = [];
-
-  (APP.alerts.cross_programme_conflicts||[]).forEach(c => {
+  const c=document.getElementById('alerts-strip');
+  if(!APP.alerts)return;
+  const items=[];
+  (APP.alerts.cross_programme_conflicts||[]).forEach(cf=>{
     items.push(`<div class="alert-item alert-conflict">
       <div class="alert-icon">⚠️</div>
-      <div class="alert-text"><strong>Conflict: ${c.funder}</strong> appears in both ${c.programmes.join(' + ')} pools. ${c.note}</div>
+      <div class="alert-text"><strong>Conflict: ${cf.funder}</strong> — ${cf.programmes.join(' + ')} pools. ${cf.note}</div>
     </div>`);
   });
-
-  ['soma','kiufunza','timamu'].forEach(prog => {
-    const shifts = APP.alerts[prog]?.priority_shifts || [];
-    shifts.forEach(s => {
+  ['soma','kiufunza','timamu'].forEach(prog=>{
+    (APP.alerts[prog]?.priority_shifts||[]).forEach(s=>{
       items.push(`<div class="alert-item alert-shift">
         <div class="alert-icon">📡</div>
         <div class="alert-text"><strong>${s.funder} [${prog.toUpperCase()}]:</strong> ${s.what_changed} → ${s.action}</div>
       </div>`);
     });
-    const newFunders = APP.alerts[prog]?.new_funders_detected || [];
-    newFunders.forEach(n => {
-      items.push(`<div class="alert-item alert-opp">
-        <div class="alert-icon">🔍</div>
-        <div class="alert-text"><strong>New Funder Detected [${prog.toUpperCase()}]: ${n.name}</strong> — ${n.why_it_fits}</div>
-      </div>`);
-    });
   });
-
-  const cooling = APP.donors.filter(d => {
-    const days = d.last_touchpoint?.date ? daysBetween(d.last_touchpoint.date, new Date().toISOString().split('T')[0]) : 999;
-    return days > 60 && ['warm','cultivating'].includes(d.relationship_stage);
+  const cooling=APP.donors.filter(d=>{
+    const days=d.last_touchpoint?.date?daysBetween(d.last_touchpoint.date,new Date().toISOString().split('T')[0]):999;
+    return days>60&&['warm','cultivating'].includes(d.relationship_stage);
   });
-  cooling.forEach(d => {
+  cooling.forEach(d=>{
     items.push(`<div class="alert-item alert-cold">
       <div class="alert-icon">❄️</div>
-      <div class="alert-text"><strong>${d.contact_name}</strong> (${d.contact_role}) — no contact in 60+ days. Relationship at risk.</div>
+      <div class="alert-text"><strong>${d.contact_name}</strong> — no contact in 60+ days. Relationship cooling.</div>
     </div>`);
   });
-
-  container.innerHTML = items.slice(0, 8).join('') || '<div class="alert-item"><div class="alert-text" style="color:#888">No active alerts this week.</div></div>';
+  c.innerHTML=items.slice(0,8).join('')||'<div class="alert-item"><div class="alert-text" style="color:var(--text-3)">No active alerts.</div></div>';
 }
 
-// ── GRANT CALENDAR ────────────────────────────────────────────
 function renderGrantCalendar() {
-  const container = document.getElementById('cal-strip');
-  const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-  const curYear = new Date().getFullYear();
-  const events = {};
-  months.forEach((_,i) => events[i] = []);
-
-  APP.opportunities.forEach(o => {
-    if (!o.deadline) return;
-    const d = new Date(o.deadline);
-    if (d.getFullYear() !== curYear && d.getFullYear() !== curYear+1) return;
-    const m = d.getMonth();
-    const f = APP.funders.find(f => f.id === o.funder_id);
-    events[m] = events[m] || [];
-    events[m].push({label: f?.name || 'Unknown', prog: o.programme, opp: o});
+  const c=document.getElementById('cal-strip');
+  const months=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  const cy=new Date().getFullYear();
+  const evs={};
+  months.forEach((_,i)=>evs[i]=[]);
+  APP.opportunities.forEach(o=>{
+    if(!o.deadline)return;
+    const d=new Date(o.deadline);
+    if(d.getFullYear()!==cy&&d.getFullYear()!==cy+1)return;
+    const m=d.getMonth();
+    const f=APP.funders.find(f=>f.id===o.funder_id);
+    (evs[m]=evs[m]||[]).push({label:f?.name||'?',prog:o.programme,opp:o});
   });
-
-  container.innerHTML = months.map((m, i) => `
+  c.innerHTML=months.map((m,i)=>`
     <div class="cal-month">
       <div class="cal-month-label">${m}</div>
       <div class="cal-month-events">
-        ${(events[i]||[]).map(e =>
-          `<div class="cal-event cal-event-${e.prog}" title="${e.label} — ${e.prog}" onclick="openDrawer('${e.opp.funder_id}')">${e.label.split(' ')[0]}</div>`
-        ).join('')}
+        ${(evs[i]||[]).map(e=>`<div class="cal-event cal-event-${e.prog}" title="${e.label}" onclick="openDrawer('${e.opp.funder_id}')">${e.label.split(' ')[0]}</div>`).join('')}
       </div>
     </div>`).join('');
 }
 
-// ── HOT LIST ──────────────────────────────────────────────────
-function renderHotList(prog, containerId) {
-  const container = document.getElementById(containerId);
-  if (!APP.alerts) { container.innerHTML = '<div style="color:#888;font-size:13px">Loading…</div>'; return; }
-  const hotList = APP.alerts[prog]?.hot_list || [];
-  if (!hotList.length) { container.innerHTML = '<div class="card" style="color:#888;font-size:13px;text-align:center;padding:var(--gap-xl)">No hot list available for this programme.</div>'; return; }
-
-  container.innerHTML = hotList.map(h => {
-    const funder = APP.funders.find(f => f.id === h.funder_id);
-    const score = h.composite_score || 0;
-    const scoreColor = score >= 85 ? 'var(--status-hot)' : score >= 70 ? 'var(--li-cedar)' : 'var(--li-sky)';
-    const days = h.deadline ? daysBetween(new Date().toISOString().split('T')[0], h.deadline) : null;
-    const deadlineClass = days === null ? 'deadline-green' : days < 30 ? 'deadline-red' : days < 90 ? 'deadline-amber' : 'deadline-green';
-    return `
-      <div class="hot-card" onclick="openDrawer('${h.funder_id}')">
-        <div class="score-ring" style="background:${scoreColor}"><span>${score}</span></div>
-        <div class="hot-content">
-          <div class="hot-name">${funder?.name || h.funder_id}</div>
-          <div class="hot-why">${h.why_now}</div>
-          <div class="hot-action">▶ ${h.recommended_action}</div>
-          <div class="hot-footer">
-            ${days !== null ? `<span class="deadline-badge ${deadlineClass}">${days}d to deadline</span>` : '<span class="deadline-badge deadline-green">Rolling</span>'}
-            ${funder ? `<span style="font-size:11px;color:#888">${fmtUSDRange(funder.grant_size_usd_min, funder.grant_size_usd_max)}</span>` : ''}
-            <button class="hot-cta" onclick="event.stopPropagation();openStudio('${h.funder_id}','${prog}')">✍ Document</button>
-          </div>
+function renderHotList(prog,cid) {
+  const c=document.getElementById(cid);
+  if(!APP.alerts){c.innerHTML='<div style="color:var(--text-3)">Loading…</div>';return;}
+  const hl=APP.alerts[prog]?.hot_list||[];
+  if(!hl.length){c.innerHTML='<div class="card" style="color:var(--text-3);text-align:center;padding:var(--gap-xl)">No hot list data available.</div>';return;}
+  c.innerHTML=hl.map(h=>{
+    const f=APP.funders.find(f=>f.id===h.funder_id);
+    const sc=h.composite_score||0;
+    const scColor=sc>=85?'var(--warn)':sc>=70?'var(--li-cedar)':'var(--data)';
+    const days=h.deadline?daysBetween(new Date().toISOString().split('T')[0],h.deadline):null;
+    const dlc=days===null?'deadline-green':days<30?'deadline-red':days<90?'deadline-amber':'deadline-green';
+    return `<div class="hot-card" onclick="openDrawer('${h.funder_id}')">
+      <div class="score-ring" style="background:${scColor}">${sc}</div>
+      <div class="hot-content">
+        <div class="hot-name">${f?.name||h.funder_id}</div>
+        <div class="hot-why">${h.why_now}</div>
+        <div class="hot-action">▶ ${h.recommended_action}</div>
+        <div class="hot-footer">
+          ${days!==null?`<span class="deadline-badge ${dlc}">${days}d</span>`:'<span class="deadline-badge deadline-green">Rolling</span>'}
+          ${f?`<span style="font-size:11px;color:var(--text-3)">${fmtUSDRange(f.grant_size_usd_min,f.grant_size_usd_max)}</span>`:''}
+          <button class="hot-cta" onclick="event.stopPropagation();openStudio('${h.funder_id}','${prog}')">✍ Doc</button>
         </div>
-      </div>`;
+      </div>
+    </div>`;
   }).join('');
 }
 
-// ── FUNDER TABLE ──────────────────────────────────────────────
-function renderFunderTable(prog, tbodyId) {
-  const tbody = document.getElementById(tbodyId);
-  const searchId = prog === 'kiufunza' ? 'kf-search' : prog+'-search';
-  const tierFilter = prog === 'kiufunza' ? null : document.getElementById(prog+'-tier-filter');
-  const statusFilter = prog === 'kiufunza' ? document.getElementById('kf-status-filter') : document.getElementById(prog+'-status-filter');
-  const search = (document.getElementById(searchId)?.value || '').toLowerCase();
-  const tier = tierFilter ? tierFilter.value : '';
-  const status = statusFilter ? statusFilter.value : '';
-
-  let data = APP.funders.filter(f => {
-    if (!f.programmes.includes(prog)) return false;
-    if (tier && String(f.tier) !== tier) return false;
-    if (status && f.status !== status) return false;
-    if (search && !f.name.toLowerCase().includes(search) && !f.mission_summary?.toLowerCase().includes(search)) return false;
+function renderFunderTable(prog,tbid) {
+  const tbody=document.getElementById(tbid);
+  const si=prog==='kiufunza'?'kf-search':prog+'-search';
+  const sf=prog==='kiufunza'?'kf-status-filter':prog+'-status-filter';
+  const tf=prog==='kiufunza'?null:prog+'-tier-filter';
+  const search=(document.getElementById(si)?.value||'').toLowerCase();
+  const tier=tf?(document.getElementById(tf)?.value||''):'';
+  const status=document.getElementById(sf)?.value||'';
+  let data=APP.funders.filter(f=>{
+    if(!f.programmes.includes(prog))return false;
+    if(tier&&String(f.tier)!==tier)return false;
+    if(status&&f.status!==status)return false;
+    if(search&&!f.name.toLowerCase().includes(search)&&!f.mission_summary?.toLowerCase().includes(search))return false;
     return true;
   });
-
-  const sort = APP.sortState[prog] || {col:'tier',dir:1};
-  data.sort((a,b) => {
-    let va = a[sort.col], vb = b[sort.col];
-    if (typeof va === 'string') { va = va.toLowerCase(); vb = (vb||'').toLowerCase(); }
-    if (va < vb) return -sort.dir; if (va > vb) return sort.dir; return 0;
+  const s=APP.sortState[prog]||{col:'tier',dir:1};
+  data.sort((a,b)=>{
+    let va=a[s.col],vb=b[s.col];
+    if(typeof va==='string'){va=va.toLowerCase();vb=(vb||'').toLowerCase();}
+    if(va<vb)return -s.dir;if(va>vb)return s.dir;return 0;
   });
-
-  tbody.innerHTML = data.map(f => `
+  tbody.innerHTML=data.map(f=>`
     <tr onclick="openDrawer('${f.id}')">
-      <td>
-        <div style="font-weight:600">${f.name}</div>
-        <div style="font-size:11px;color:#888;margin-top:2px">${(f.thematic_eligibility||[]).slice(0,2).join(' · ')}</div>
-      </td>
+      <td><div style="font-weight:600;color:var(--text)">${f.name}</div>
+        <div style="font-size:11px;color:var(--text-3);margin-top:2px">${(f.thematic_eligibility||[]).slice(0,2).join(' · ')}</div></td>
       <td><span class="tier-chip tier-${f.tier}">${f.tier}</span></td>
-      <td><span class="status-chip st-${f.status.replace('-','')}">${f.status}</span></td>
-      <td style="white-space:nowrap">${fmtUSDRange(f.grant_size_usd_min, f.grant_size_usd_max)}</td>
+      <td><span class="status-chip st-${f.status.replace(/-/g,'')}">${f.status}</span></td>
+      <td style="white-space:nowrap;color:var(--text-2)">${fmtUSDRange(f.grant_size_usd_min,f.grant_size_usd_max)}</td>
       <td><div class="align-ring" style="background:${scoreColor(f.alignment_score)}">${f.alignment_score}</div></td>
       <td><div class="align-ring" style="background:${scoreColor(f.probability_score)}">${f.probability_score}</div></td>
-    </tr>`).join('') || '<tr><td colspan="6" style="text-align:center;color:#888;padding:var(--gap-xl)">No funders match your filters.</td></tr>';
+    </tr>`).join('')||`<tr><td colspan="6" style="text-align:center;color:var(--text-3);padding:var(--gap-xl)">No funders match filters.</td></tr>`;
 }
 
-function filterTable(prog) { renderFunderTable(prog, prog==='kiufunza'?'kf-tbody':prog+'-tbody'); }
-function sortTable(prog, col) {
-  const s = APP.sortState[prog] || {col:'tier',dir:1};
-  APP.sortState[prog] = {col, dir: s.col===col ? -s.dir : 1};
-  renderFunderTable(prog, prog==='kiufunza'?'kf-tbody':prog+'-tbody');
+function filterTable(prog){renderFunderTable(prog,prog==='kiufunza'?'kf-tbody':prog+'-tbody');}
+function sortTable(prog,col){
+  const s=APP.sortState[prog];
+  APP.sortState[prog]={col,dir:s.col===col?-s.dir:1};
+  filterTable(prog);
 }
 
-// ── CONFLICTS ─────────────────────────────────────────────────
 function renderConflicts() {
-  const list = document.getElementById('conflict-list');
-  if (!APP.alerts) return;
-  const conflicts = APP.alerts.cross_programme_conflicts || [];
-  if (!conflicts.length) { document.getElementById('conflict-panel').style.display='none'; return; }
-  list.innerHTML = conflicts.map(c =>
-    `<div style="margin-bottom:8px"><strong>${c.funder}</strong> — ${c.programmes.join(' + ')}: ${c.recommended_sequence}</div>`
-  ).join('');
+  const list=document.getElementById('conflict-list');
+  const panel=document.getElementById('conflict-panel');
+  if(!APP.alerts)return;
+  const cs=APP.alerts.cross_programme_conflicts||[];
+  if(!cs.length){if(panel)panel.style.display='none';return;}
+  list.innerHTML=cs.map(c=>`<div style="margin-bottom:8px">
+    <strong>${c.funder}</strong> — ${c.programmes.join(' + ')}: ${c.recommended_sequence}</div>`).join('');
 }
 
-// ── POSITIONING ───────────────────────────────────────────────
 function renderPositioning() {
-  const el = document.getElementById('soma-positioning');
-  if (!el || !APP.alerts) return;
-  const p = APP.alerts.soma?.positioning_advice;
-  if (p) el.innerHTML = `<div class="section-title" style="margin-bottom:8px">Positioning Advisor</div><div style="font-size:13px;line-height:1.7;color:#555">${p}</div>`;
+  const el=document.getElementById('soma-positioning');
+  if(!el||!APP.alerts)return;
+  const p=APP.alerts.soma?.positioning_advice;
+  if(p) el.innerHTML=`<div style="font-size:13px;line-height:1.75;color:var(--text-2)">${p}</div>`;
 }
 
 // ══════════════════════════════════════════════════════════════
-// CRM DRAWER
+// DRAWER
 // ══════════════════════════════════════════════════════════════
-function openDrawer(funderId) {
-  const funder = APP.funders.find(f => f.id === funderId);
-  if (!funder) return;
-  APP.drawerFunderId = funderId;
-
-  document.getElementById('drawer-funder-name').textContent = funder.name;
-  document.getElementById('drawer-funder-sub').textContent =
-    funder.programmes.join(' · ').toUpperCase() + ' · ' + funder.status;
-
-  const donor = APP.donors.find(d => d.funder_id === funderId);
-
-  document.getElementById('drawer-info').innerHTML = `
-    <div class="info-row"><span class="info-label">Entity</span><span class="info-val">${funder.entity === 'timamu' ? 'Timamu Foundation' : 'LearnImpact'}</span></div>
-    <div class="info-row"><span class="info-label">Tier</span><span class="info-val">${funder.tier}</span></div>
-    <div class="info-row"><span class="info-label">Grant Range</span><span class="info-val">${fmtUSDRange(funder.grant_size_usd_min, funder.grant_size_usd_max)}</span></div>
-    <div class="info-row"><span class="info-label">Process</span><span class="info-val">${funder.application_process || '—'}</span></div>
-    <div class="info-row"><span class="info-label">Alignment</span><span class="info-val" style="color:${scoreColor(funder.alignment_score)}">${funder.alignment_score}/100</span></div>
-    <div class="info-row"><span class="info-label">Probability</span><span class="info-val" style="color:${scoreColor(funder.probability_score)}">${funder.probability_score}%</span></div>
-    <div class="info-row"><span class="info-label">Effort</span><span class="info-val">${funder.effort_score}/5</span></div>
-    <div style="margin-top:10px;font-size:12px;color:#555;line-height:1.6">${funder.mission_summary||''}</div>
-    ${donor?.next_action ? `<div style="margin-top:10px;background:rgba(255,198,80,.1);border-radius:8px;padding:10px;font-size:12px"><strong>Next Action:</strong> ${donor.next_action}<br><span style="color:var(--li-cedar);font-size:11px">Due: ${formatDate(donor.next_action_due)}</span></div>` : ''}
+function openDrawer(fid) {
+  const f=APP.funders.find(f=>f.id===fid);
+  if(!f)return;
+  APP.drawerFunderId=fid;
+  document.getElementById('drawer-funder-name').textContent=f.name;
+  document.getElementById('drawer-funder-sub').textContent=f.programmes.join(' · ').toUpperCase()+' · '+f.status;
+  const d=APP.donors.find(d=>d.funder_id===fid);
+  document.getElementById('drawer-info').innerHTML=`
+    <div class="info-row"><span class="info-label">Entity</span><span class="info-val">${f.entity==='timamu'?'Timamu Foundation':'LearnImpact'}</span></div>
+    <div class="info-row"><span class="info-label">Tier</span><span class="info-val">${f.tier}</span></div>
+    <div class="info-row"><span class="info-label">Grant Range</span><span class="info-val">${fmtUSDRange(f.grant_size_usd_min,f.grant_size_usd_max)}</span></div>
+    <div class="info-row"><span class="info-label">Process</span><span class="info-val">${f.application_process||'—'}</span></div>
+    <div class="info-row"><span class="info-label">Alignment</span><span class="info-val" style="color:${scoreColor(f.alignment_score)}">${f.alignment_score}/100</span></div>
+    <div class="info-row"><span class="info-label">Probability</span><span class="info-val" style="color:${scoreColor(f.probability_score)}">${f.probability_score}%</span></div>
+    <div class="info-row"><span class="info-label">Effort</span><span class="info-val">${f.effort_score}/5</span></div>
+    <div style="margin-top:10px;font-size:12px;color:var(--text-2);line-height:1.6">${f.mission_summary||''}</div>
+    ${d?.next_action?`<div style="margin-top:10px;background:rgba(255,198,80,.08);border:1px solid rgba(255,198,80,.2);border-radius:8px;padding:10px;font-size:12px"><strong style="color:var(--text)">Next Action:</strong> ${d.next_action}<br><span style="color:var(--warn);font-size:11px">Due: ${formatDate(d.next_action_due)}</span></div>`:''}
   `;
-
-  document.getElementById('drawer-contacts').innerHTML =
-    (funder.key_contacts||[]).map(c => `
-      <div class="info-row"><span class="info-label">${c.name}</span><span class="info-val" style="font-size:12px">${c.role}${c.email?' · '+c.email:''}</span></div>
-    `).join('') || '<div style="color:#888;font-size:12px">No contacts recorded yet.</div>';
-
-  const touchpoints = [];
-  if (donor?.last_touchpoint) touchpoints.push(donor.last_touchpoint);
-  if (donor?.intelligence_notes) {
-    donor.intelligence_notes.forEach(n => touchpoints.push({date:n.date, note:n.note, channel:'note'}));
-  }
-  touchpoints.sort((a,b) => (b.date||'').localeCompare(a.date||''));
-
-  document.getElementById('drawer-touchpoints').innerHTML = touchpoints.map(tp => `
+  document.getElementById('drawer-contacts').innerHTML=
+    (f.key_contacts||[]).map(c=>`<div class="info-row"><span class="info-label">${c.name}</span><span class="info-val" style="font-size:12px">${c.role}${c.email?' · '+c.email:''}</span></div>`).join('')
+    ||'<div style="color:var(--text-3);font-size:12px">No contacts recorded yet.</div>';
+  const tps=[];
+  if(d?.last_touchpoint)tps.push(d.last_touchpoint);
+  (d?.intelligence_notes||[]).forEach(n=>tps.push({date:n.date,note:n.note,channel:'note'}));
+  tps.sort((a,b)=>(b.date||'').localeCompare(a.date||''));
+  document.getElementById('drawer-touchpoints').innerHTML=tps.map(tp=>`
     <div class="touchpoint-item">
       <div class="tp-date">${formatDate(tp.date)}</div>
       <span class="tp-channel">${tp.channel||'note'}</span>
-      <div>${tp.note||''}</div>
-    </div>`).join('') || '<div style="color:#888;font-size:12px;padding:4px">No touchpoints recorded yet.</div>';
-
-  document.getElementById('drawer-notes').textContent = funder.notes || 'No additional notes.';
-
+      <div style="color:var(--text-2)">${tp.note||''}</div>
+    </div>`).join('')||'<div style="color:var(--text-3);font-size:12px;padding:4px">No touchpoints yet.</div>';
+  document.getElementById('drawer-notes').textContent=f.notes||'No additional notes.';
   document.getElementById('crm-overlay').classList.add('open');
   document.getElementById('crm-drawer').classList.add('open');
 }
-
-function closeDrawer() {
+function closeDrawer(){
   document.getElementById('crm-overlay').classList.remove('open');
   document.getElementById('crm-drawer').classList.remove('open');
-  APP.drawerFunderId = null;
+  APP.drawerFunderId=null;
 }
-
-function openFunderByName(name) {
-  const funder = APP.funders.find(f => f.name.toLowerCase().includes(name.toLowerCase()));
-  if (funder) openDrawer(funder.id);
+function openFunderByName(name){
+  const f=APP.funders.find(f=>f.name.toLowerCase().includes(name.toLowerCase()));
+  if(f)openDrawer(f.id);
 }
-
-async function addTouchpoint() {
-  const note = document.getElementById('tp-note').value.trim();
-  const channel = document.getElementById('tp-channel').value;
-  if (!note || !APP.drawerFunderId) return;
-
-  const donor = APP.donors.find(d => d.funder_id === APP.drawerFunderId);
-  const today = new Date().toISOString().split('T')[0];
-  const tp = {date: today, note, channel};
-
-  if (donor) {
-    donor.last_touchpoint = tp;
-    donor.intelligence_notes = donor.intelligence_notes || [];
-    donor.intelligence_notes.unshift({date: today, note});
-    donor.updated_at = today;
-    await saveData('donors.json', {version:'1.0', donors: APP.donors});
+async function addTouchpoint(){
+  const note=document.getElementById('tp-note').value.trim();
+  const channel=document.getElementById('tp-channel').value;
+  if(!note||!APP.drawerFunderId)return;
+  const donor=APP.donors.find(d=>d.funder_id===APP.drawerFunderId);
+  const today=new Date().toISOString().split('T')[0];
+  if(donor){
+    donor.last_touchpoint={date:today,note,channel};
+    donor.intelligence_notes=donor.intelligence_notes||[];
+    donor.intelligence_notes.unshift({date:today,note});
+    donor.updated_at=today;
+    await saveData('donors.json',{version:'1.0',donors:APP.donors});
   }
-
-  document.getElementById('tp-note').value = '';
+  document.getElementById('tp-note').value='';
   openDrawer(APP.drawerFunderId);
 }
 
 // ══════════════════════════════════════════════════════════════
-// DOCUMENT STUDIO
+// DOC STUDIO
 // ══════════════════════════════════════════════════════════════
-function updateDocFunderList() {
-  const prog = document.getElementById('doc-prog').value;
-  const sel = document.getElementById('doc-funder');
-  const funders = APP.funders.filter(f => f.programmes.includes(prog));
-  funders.sort((a,b) => a.tier - b.tier || b.alignment_score - a.alignment_score);
-  sel.innerHTML = funders.map(f =>
-    `<option value="${f.id}">[T${f.tier}] ${f.name}</option>`
-  ).join('');
+function updateDocFunderList(){
+  const prog=document.getElementById('doc-prog').value;
+  const sel=document.getElementById('doc-funder');
+  const fs=APP.funders.filter(f=>f.programmes.includes(prog));
+  fs.sort((a,b)=>a.tier-b.tier||b.alignment_score-a.alignment_score);
+  sel.innerHTML=fs.map(f=>`<option value="${f.id}">[T${f.tier}] ${f.name}</option>`).join('');
 }
-
-function openStudio(funderId, prog) {
-  showTab('studio', document.querySelector('.nav-tab:nth-child(5)'));
-  if (prog) document.getElementById('doc-prog').value = prog;
+function openStudio(fid,prog){
+  showTab('studio',document.querySelector('.nav-tab:nth-child(5)'));
+  if(prog)document.getElementById('doc-prog').value=prog;
   updateDocFunderList();
-  if (funderId) document.getElementById('doc-funder').value = funderId;
+  if(fid)document.getElementById('doc-funder').value=fid;
 }
-
-function openStudioForDrawerFunder() {
-  if (!APP.drawerFunderId) return;
-  const funder = APP.funders.find(f => f.id === APP.drawerFunderId);
-  if (!funder) return;
+function openStudioForDrawerFunder(){
+  if(!APP.drawerFunderId)return;
+  const f=APP.funders.find(f=>f.id===APP.drawerFunderId);
+  if(!f)return;
   closeDrawer();
-  openStudio(funder.id, funder.programmes[0]);
+  openStudio(f.id,f.programmes[0]);
 }
-
-async function generateDocument() {
-  const apiKey = localStorage.getItem('mk_api_key');
-  if (!apiKey) { alert('Please enter your Anthropic API key in Settings.'); return; }
-
-  const progVal = document.getElementById('doc-prog').value;
-  const funderId = document.getElementById('doc-funder').value;
-  const docType = document.getElementById('doc-type').value;
-  const context = document.getElementById('doc-context').value.trim();
-
-  const funder = APP.funders.find(f => f.id === funderId);
-  if (!funder) { alert('Please select a funder.'); return; }
-
-  const typeLabels = {
-    loi:'Letter of Inquiry (LOI)', concept_note:'Concept Note',
-    full_proposal:'Full Proposal', exec_summary:'Executive Summary',
-    one_pager:'One-Pager (Funder-Specific)', meeting_prep:'Meeting Prep Brief',
-    follow_up:'Post-Meeting Follow-up Email', board_update:'Board Fundraising Update'
+async function generateDocument(){
+  const apiKey=localStorage.getItem('mk_api_key');
+  if(!apiKey){alert('Add your Anthropic API key in ⚙ Settings.');return;}
+  const prog=document.getElementById('doc-prog').value;
+  const fid=document.getElementById('doc-funder').value;
+  const dtype=document.getElementById('doc-type').value;
+  const ctx=document.getElementById('doc-context').value.trim();
+  const f=APP.funders.find(f=>f.id===fid);
+  if(!f){alert('Select a funder.');return;}
+  const typeLabels={loi:'Letter of Inquiry',concept_note:'Concept Note',full_proposal:'Full Proposal',
+    exec_summary:'Executive Summary',one_pager:'One-Pager',meeting_prep:'Meeting Prep Brief',
+    follow_up:'Post-Meeting Follow-up Email',board_update:'Board Fundraising Update'};
+  const progCtx={
+    soma:`SOMA — AI-enabled foundational learning. WhatsApp coaching chatbot (Mwalimu). USD 3.12/student/year. Kibaha pilot Term 3 2026 (10 schools). Mtwara RCT 2027 (70 schools). USD 12/LAYS modelled. Government co-financing: Kibaha District Council. LearnImpact entity. NEVER mention Twaweza.`,
+    kiufunza:`KiuFunza — teacher performance pay Grades 1-7. 265 schools. QJE +9.4pp. USD 7/child/year. LearnImpact entity. NEVER lead with Twaweza history. GoT sensitivity.`,
+    timamu:`Timamu Foundation — SEPARATE LEGAL ENTITY from LearnImpact. Persons with disabilities + creator economy + assistive technology. 9-10M Tanzanians with disabilities. Tanzania Vision 2050 TZS 2B creator economy fund. NEVER reference LearnImpact as implementing entity.`
   };
+  const prompt=`You are drafting a ${typeLabels[dtype]} for ${progCtx[prog]}
 
-  const progContext = {
-    soma: `Programme: SOMA — AI-enabled foundational learning. WhatsApp coaching chatbot (Mwalimu) for teachers. USD 3.12/student/year. 10 schools Kibaha Term 3 2026. Mtwara RCT 2027 (70 schools). USD 12/LAYS (modelled). Government co-financing from Kibaha District Council. LearnImpact entity. Implementer: LearnImpact, Dar es Salaam, Tanzania. ED: Michael Kamukulu. NEVER mention Twaweza.`,
-    kiufunza: `Programme: KiuFunza — teacher performance pay, Grades 1-7. 265 schools, 10 Tanzania regions. QJE-published +9.4pp treatment effect. USD 7/child/year. LearnImpact entity. NOTE: Do NOT lead with Twaweza history. Position as LearnImpact's independently verified programme. Contact: Youdi Schipper for research questions only.`,
-    timamu: `Programme: Timamu Foundation — SEPARATE LEGAL ENTITY from LearnImpact. Persons with disabilities + creator economy + assistive technology. 9-10M Tanzanians with disabilities. Tanzania Vision 2050: TZS 2B creator economy fund. Founded by Michael Kamukulu (founder, Timamu Foundation). NEVER reference LearnImpact as implementing entity.`
-  };
+Funder: ${f.name}
+Mission: ${f.mission_summary}
+Priorities: ${(f.current_priorities||[]).join(', ')}
+Language frame: ${f.language_frame}
+Grant size: ${fmtUSDRange(f.grant_size_usd_min,f.grant_size_usd_max)}
+DD requirements: ${(f.due_diligence_requirements||[]).join(', ')}
+Restrictions: ${(f.known_restrictions||[]).join(', ')}
+${ctx?`\nContext: ${ctx}`:''}
 
-  const prompt = `You are drafting a fundraising document for ${progContext[progVal]}
+Write in Michael Kamukulu's voice: evidence-led, direct, no jargon. Data does the persuading.
+${dtype==='meeting_prep'?'Format: Funder Background | Current Priorities | What They Will Ask | Our Strongest Points | What to Avoid | Talking Points | Follow-up Plan':''}
+${dtype==='board_update'?'Format: Pipeline Summary | Top Prospects | Active Submissions | Recent Wins/Losses | Actions Needed | Funding Gap':''}
+${dtype==='loi'?'Max 2 pages. Open with the problem in numbers. State the ask in paragraph 1.':''}
 
-Funder: ${funder.name}
-Funder mission: ${funder.mission_summary}
-Funder priorities: ${(funder.current_priorities||[]).join(', ')}
-Language frame: ${funder.language_frame}
-Grant size: ${fmtUSDRange(funder.grant_size_usd_min, funder.grant_size_usd_max)}
-Due diligence requirements: ${(funder.due_diligence_requirements||[]).join(', ')}
-Known restrictions: ${(funder.known_restrictions||[]).join(', ')}
-${context ? `\nAdditional context: ${context}` : ''}
+Write the complete document:`;
 
-Write a ${typeLabels[docType]} specifically tailored to ${funder.name}'s priorities and framing.
-
-Michael Kamukulu's voice: evidence-led, direct, no jargon. Data does the persuading. Never use corporate or donor-speak.
-
-${docType === 'meeting_prep' ? 'Format as: Funder Background | Current Priorities | What They Will Ask | Our Strongest Points | What to Avoid | Suggested Talking Points | Follow-up Plan' : ''}
-${docType === 'board_update' ? 'Format as: Pipeline Summary | Top 3 Prospects | Active Submissions | Recent Wins/Losses | Q Actions Needed | Funding Gap Status' : ''}
-${docType === 'loi' ? 'Max 2 pages. Open with the problem in numbers. State the ask in the first paragraph. Align evidence with their specific priorities.' : ''}
-${docType === 'concept_note' ? 'Structure: Problem | Solution | Evidence | Programme Design | Expected Results | Budget Snapshot | Why This Funder' : ''}
-
-Write the complete document now:`;
-
-  document.getElementById('doc-placeholder').style.display = 'none';
-  document.getElementById('doc-output').style.display = 'none';
-  document.getElementById('doc-generating').style.display = 'flex';
-  document.getElementById('doc-actions').style.display = 'none';
-
+  document.getElementById('doc-placeholder').style.display='none';
+  document.getElementById('doc-output').style.display='none';
+  document.getElementById('doc-generating').style.display='flex';
+  document.getElementById('doc-actions').style.display='none';
   try {
-    const res = await fetch('https://api.anthropic.com/v1/messages', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'x-api-key': apiKey,
-        'anthropic-version': '2023-06-01',
-        'anthropic-dangerous-direct-browser-access': 'true'
-      },
-      body: JSON.stringify({
-        model: 'claude-haiku-4-5-20251001',
-        max_tokens: 4096,
-        messages: [{ role: 'user', content: prompt }]
-      })
+    const res=await fetch('https://api.anthropic.com/v1/messages',{
+      method:'POST',
+      headers:{'Content-Type':'application/json','x-api-key':apiKey,
+        'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
+      body:JSON.stringify({model:'claude-haiku-4-5-20251001',max_tokens:4096,
+        messages:[{role:'user',content:prompt}]})
     });
-    if (!res.ok) throw new Error('API error: ' + res.status);
-    const data = await res.json();
-    const text = data.content?.[0]?.text || '';
-    APP.docOutputText = text;
-    APP.docFileName = `${funder.name.replace(/[^a-zA-Z0-9]/g,'_')}_${docType}_${new Date().toISOString().split('T')[0]}.md`;
-    document.getElementById('doc-output').textContent = text;
-    document.getElementById('doc-output').style.display = 'block';
-    document.getElementById('doc-actions').style.display = 'flex';
+    if(!res.ok)throw new Error('API '+res.status);
+    const data=await res.json();
+    APP.docOutputText=data.content?.[0]?.text||'';
+    APP.docFileName=`${f.name.replace(/[^a-zA-Z0-9]/g,'_')}_${dtype}_${new Date().toISOString().split('T')[0]}.md`;
+    document.getElementById('doc-output').textContent=APP.docOutputText;
+    document.getElementById('doc-output').style.display='block';
+    document.getElementById('doc-actions').style.display='flex';
   } catch(e) {
-    document.getElementById('doc-output').textContent = 'Error: ' + e.message + '\n\nCheck your API key in Settings.';
-    document.getElementById('doc-output').style.display = 'block';
+    document.getElementById('doc-output').textContent='Error: '+e.message+'\n\nCheck your API key in Settings.';
+    document.getElementById('doc-output').style.display='block';
   } finally {
-    document.getElementById('doc-generating').style.display = 'none';
+    document.getElementById('doc-generating').style.display='none';
   }
 }
-
-function copyEvidence(el) {
-  navigator.clipboard.writeText(el.textContent.trim()).then(() => {
+function copyEvidence(el){
+  navigator.clipboard.writeText(el.textContent.trim()).then(()=>{
     el.classList.add('copied');
-    setTimeout(() => el.classList.remove('copied'), 1500);
+    setTimeout(()=>el.classList.remove('copied'),1500);
   });
 }
-
-function copyDocument() {
-  navigator.clipboard.writeText(APP.docOutputText).then(() => alert('Copied to clipboard.'));
+function copyDocument(){navigator.clipboard.writeText(APP.docOutputText).then(()=>alert('Copied.'));}
+function downloadDocument(){
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(new Blob([APP.docOutputText],{type:'text/markdown'}));
+  a.download=APP.docFileName||'document.md';a.click();
 }
-
-function downloadDocument() {
-  const blob = new Blob([APP.docOutputText], {type:'text/markdown'});
-  const a = document.createElement('a');
-  a.href = URL.createObjectURL(blob);
-  a.download = APP.docFileName || 'document.md';
-  a.click();
-}
-
-async function saveToRepo() {
-  if (!APP.docOutputText) return;
-  const token = localStorage.getItem('mk_gh_token');
-  const repo = localStorage.getItem('mk_gh_repo') || 'kamukulumichael-blip/mk-fundraiser';
-  if (!token) { alert('Add your GitHub token in Settings to save documents.'); return; }
-  const prog = document.getElementById('doc-prog').value;
-  const path = `documents/${prog}/${APP.docFileName}`;
-  try {
-    const r = await fetch(`https://api.github.com/repos/${repo}/contents/${path}`, {
-      method: 'PUT',
-      headers: {'Authorization': `token ${token}`, 'Content-Type': 'application/json'},
-      body: JSON.stringify({
-        message: `Add document: ${APP.docFileName}`,
-        content: btoa(unescape(encodeURIComponent(APP.docOutputText)))
-      })
+async function saveToRepo(){
+  if(!APP.docOutputText)return;
+  const token=localStorage.getItem('mk_gh_token');
+  const repo=localStorage.getItem('mk_gh_repo')||'kamukulumichael-blip/mk-fundraiser';
+  if(!token){alert('Add your GitHub token in Settings.');return;}
+  const prog=document.getElementById('doc-prog').value;
+  const path=`documents/${prog}/${APP.docFileName}`;
+  try{
+    const r=await fetch(`https://api.github.com/repos/${repo}/contents/${path}`,{
+      method:'PUT',headers:{'Authorization':`token ${token}`,'Content-Type':'application/json'},
+      body:JSON.stringify({message:`Add: ${APP.docFileName}`,
+        content:btoa(unescape(encodeURIComponent(APP.docOutputText)))})
     });
-    if (r.ok) alert('Saved to GitHub: ' + path);
-    else { const e = await r.json(); alert('GitHub error: ' + (e.message||r.status)); }
-  } catch(e) { alert('Error saving: ' + e.message); }
+    if(r.ok)alert('Saved to GitHub: '+path);
+    else{const e=await r.json();alert('Error: '+(e.message||r.status));}
+  }catch(e){alert('Error: '+e.message);}
 }
 
 // ══════════════════════════════════════════════════════════════
-// MONDAY BRIEF VIEW
+// MONDAY BRIEF
 // ══════════════════════════════════════════════════════════════
-function showMondayBrief() {
-  if (!APP.alerts) return;
-  const a = APP.alerts;
-  const g = a.funding_gap || {};
-  const content = `
+function showMondayBrief(){
+  if(!APP.alerts)return;
+  const a=APP.alerts,g=a.funding_gap||{};
+  document.getElementById('brief-content').innerHTML=`
     <div class="brief-section">
       <h3>Week in Review</h3>
-      <div style="font-size:13px;line-height:1.8;color:#444">${(a.monday_brief_summary||'').replace(/\n/g,'<br>')}</div>
+      <div style="font-size:13px;line-height:1.8;color:var(--text-2)">${(a.monday_brief_summary||'').replace(/\n/g,'<br>')}</div>
     </div>
     <div class="brief-section">
       <h3>Top Actions This Week</h3>
-      ${(a.this_week_actions||[]).map(action => `
-        <div class="brief-action-row">
-          <div class="brief-action-text">
-            <span class="prog-badge prog-${action.programme}" style="margin-right:6px">${action.programme.toUpperCase()}</span>
-            <strong>${action.funder}</strong> — ${action.action}
-          </div>
-          <div class="brief-action-meta">${formatDate(action.due)}</div>
-        </div>`).join('')}
+      ${(a.this_week_actions||[]).map(x=>`<div class="brief-action-row">
+        <div class="brief-action-text"><span class="prog-badge prog-${x.programme}" style="margin-right:6px">${x.programme.toUpperCase()}</span><strong>${x.funder}</strong> — ${x.action}</div>
+        <div class="brief-action-meta">${formatDate(x.due)}</div></div>`).join('')}
     </div>
     <div class="brief-section">
       <h3>Upcoming Deadlines</h3>
-      ${(a.upcoming_deadlines||[]).slice(0,8).map(d => `
-        <div class="brief-action-row">
-          <div class="brief-action-text">
-            <span class="prog-badge prog-${d.programme}" style="margin-right:6px">${d.programme.toUpperCase()}</span>
-            <strong>${d.funder}</strong>
-          </div>
-          <div class="brief-action-meta" style="color:${d.days_remaining<30?'var(--status-hot)':d.days_remaining<90?'#b8860b':'var(--status-won)'}">
-            ${d.days_remaining}d · ${formatDate(d.deadline)}
-          </div>
-        </div>`).join('')}
+      ${(a.upcoming_deadlines||[]).slice(0,8).map(d=>`<div class="brief-action-row">
+        <div class="brief-action-text"><span class="prog-badge prog-${d.programme}" style="margin-right:6px">${d.programme.toUpperCase()}</span><strong>${d.funder}</strong></div>
+        <div class="brief-action-meta" style="color:${d.days_remaining<30?'var(--warn)':d.days_remaining<90?'#b8860b':'var(--status-won)'}">${d.days_remaining}d · ${formatDate(d.deadline)}</div></div>`).join('')}
     </div>
     <div class="brief-section">
       <h3>Funding Gap Status</h3>
-      <div style="font-size:13px;color:#555;line-height:1.8">
-        <strong>SOMA:</strong> ${fmtUSD(g.soma_confirmed_usd)} confirmed / ${fmtUSD(g.soma_needed_usd)} needed / ${fmtUSD(g.soma_pipeline_usd)} in pipeline<br>
-        <strong>KiuFunza:</strong> ${fmtUSD(g.kiufunza_confirmed_usd)} confirmed / ${fmtUSD(g.kiufunza_needed_usd)} needed<br>
-        <strong>Timamu:</strong> ${fmtUSD(g.timamu_confirmed_usd||0)} confirmed / ${fmtUSD(g.timamu_pipeline_usd||0)} in pipeline
+      <div style="font-size:13px;color:var(--text-2);line-height:1.9">
+        <strong style="color:var(--text)">SOMA:</strong> ${fmtUSD(g.soma_confirmed_usd)} confirmed / ${fmtUSD(g.soma_needed_usd)} needed / ${fmtUSD(g.soma_pipeline_usd)} pipeline<br>
+        <strong style="color:var(--text)">KiuFunza:</strong> ${fmtUSD(g.kiufunza_confirmed_usd)} confirmed / ${fmtUSD(g.kiufunza_needed_usd)} needed<br>
+        <strong style="color:var(--text)">Timamu:</strong> ${fmtUSD(g.timamu_confirmed_usd||0)} confirmed / ${fmtUSD(g.timamu_pipeline_usd||0)} pipeline
       </div>
     </div>
-    <div class="brief-section">
-      <h3>SOMA — Insight of the Week</h3>
-      <div style="font-size:13px;line-height:1.8;color:#444">${a.soma?.insight_of_week||'—'}</div>
-      <div style="margin-top:var(--gap-md);font-size:13px;color:#555"><strong>Positioning:</strong> ${a.soma?.positioning_advice||'—'}</div>
+    <div class="brief-section"><h3>SOMA — Insight of the Week</h3>
+      <div style="font-size:13px;line-height:1.8;color:var(--text-2)">${a.soma?.insight_of_week||'—'}</div>
+      <div style="margin-top:12px;font-size:13px;color:var(--text-2)"><strong style="color:var(--text)">Positioning:</strong> ${a.soma?.positioning_advice||'—'}</div>
     </div>
-    <div class="brief-section">
-      <h3>KiuFunza — Insight of the Week</h3>
-      <div style="font-size:13px;line-height:1.8;color:#444">${a.kiufunza?.insight_of_week||'—'}</div>
-    </div>
-    <div class="brief-section">
-      <h3>Timamu — Insight of the Week</h3>
-      <div style="font-size:13px;line-height:1.8;color:#444">${a.timamu?.insight_of_week||'—'}</div>
-    </div>
-    ${(a.cross_programme_conflicts||[]).length ? `
-    <div class="brief-section" style="border-left:4px solid var(--status-hot)">
+    <div class="brief-section"><h3>KiuFunza — Insight of the Week</h3>
+      <div style="font-size:13px;line-height:1.8;color:var(--text-2)">${a.kiufunza?.insight_of_week||'—'}</div></div>
+    <div class="brief-section"><h3>Timamu — Insight of the Week</h3>
+      <div style="font-size:13px;line-height:1.8;color:var(--text-2)">${a.timamu?.insight_of_week||'—'}</div></div>
+    ${(a.cross_programme_conflicts||[]).length?`<div class="brief-section" style="border-left:4px solid var(--warn)">
       <h3>Cross-Programme Conflicts</h3>
-      ${a.cross_programme_conflicts.map(c => `
-        <div class="brief-action-row">
-          <div class="brief-action-text"><strong>${c.funder}</strong> — ${c.note}</div>
-          <div class="brief-action-meta" style="color:var(--status-hot)">CONFLICT</div>
-        </div>`).join('')}
-    </div>` : ''}
+      ${a.cross_programme_conflicts.map(c=>`<div class="brief-action-row">
+        <div class="brief-action-text"><strong>${c.funder}</strong> — ${c.note}</div>
+        <div class="brief-action-meta" style="color:var(--warn)">CONFLICT</div></div>`).join('')}</div>`:''}
   `;
-  document.getElementById('brief-content').innerHTML = content;
-  document.getElementById('brief-view').style.display = 'block';
+  document.getElementById('brief-view').style.display='block';
 }
-
-function closeBrief() {
-  document.getElementById('brief-view').style.display = 'none';
-}
+function closeBrief(){document.getElementById('brief-view').style.display='none';}
 
 // ══════════════════════════════════════════════════════════════
 // SETTINGS
 // ══════════════════════════════════════════════════════════════
-function openSettings() {
-  document.getElementById('api-key-input').value = localStorage.getItem('mk_api_key') || '';
-  document.getElementById('gh-token-input').value = localStorage.getItem('mk_gh_token') || '';
-  document.getElementById('gh-repo-input').value = localStorage.getItem('mk_gh_repo') || 'kamukulumichael-blip/mk-fundraiser';
+function openSettings(){
+  document.getElementById('api-key-input').value=localStorage.getItem('mk_api_key')||'';
+  document.getElementById('gh-token-input').value=localStorage.getItem('mk_gh_token')||'';
+  document.getElementById('gh-repo-input').value=localStorage.getItem('mk_gh_repo')||'kamukulumichael-blip/mk-fundraiser';
   document.getElementById('settings-modal').classList.add('open');
 }
-
-function closeSettings() { document.getElementById('settings-modal').classList.remove('open'); }
-
-function saveSettings() {
-  localStorage.setItem('mk_api_key', document.getElementById('api-key-input').value.trim());
-  localStorage.setItem('mk_gh_token', document.getElementById('gh-token-input').value.trim());
-  localStorage.setItem('mk_gh_repo', document.getElementById('gh-repo-input').value.trim());
+function closeSettings(){document.getElementById('settings-modal').classList.remove('open');}
+function saveSettings(){
+  localStorage.setItem('mk_api_key',document.getElementById('api-key-input').value.trim());
+  localStorage.setItem('mk_gh_token',document.getElementById('gh-token-input').value.trim());
+  localStorage.setItem('mk_gh_repo',document.getElementById('gh-repo-input').value.trim());
   closeSettings();
 }
-
-// Close settings on overlay click
-document.getElementById('settings-modal').addEventListener('click', e => {
-  if (e.target === document.getElementById('settings-modal')) closeSettings();
+document.getElementById('settings-modal').addEventListener('click',e=>{
+  if(e.target===document.getElementById('settings-modal'))closeSettings();
 });
 
 // ══════════════════════════════════════════════════════════════
-// GITHUB DATA WRITE
+// GITHUB SAVE
 // ══════════════════════════════════════════════════════════════
-async function saveData(filename, data) {
-  const token = localStorage.getItem('mk_gh_token');
-  const repo = localStorage.getItem('mk_gh_repo') || 'kamukulumichael-blip/mk-fundraiser';
-  if (!token) return;
-  try {
-    const metaRes = await fetch(`https://api.github.com/repos/${repo}/contents/data/${filename}`,
-      {headers: {'Authorization': `token ${token}`}});
-    const meta = metaRes.ok ? await metaRes.json() : {};
-    await fetch(`https://api.github.com/repos/${repo}/contents/data/${filename}`, {
-      method: 'PUT',
-      headers: {'Authorization': `token ${token}`, 'Content-Type': 'application/json'},
-      body: JSON.stringify({
-        message: `Update ${filename} — touchpoint logged`,
-        content: btoa(unescape(encodeURIComponent(JSON.stringify(data, null, 2)))),
-        sha: meta.sha
-      })
+async function saveData(filename,data){
+  const token=localStorage.getItem('mk_gh_token');
+  const repo=localStorage.getItem('mk_gh_repo')||'kamukulumichael-blip/mk-fundraiser';
+  if(!token)return;
+  try{
+    const mr=await fetch(`https://api.github.com/repos/${repo}/contents/data/${filename}`,{headers:{'Authorization':`token ${token}`}});
+    const meta=mr.ok?await mr.json():{};
+    await fetch(`https://api.github.com/repos/${repo}/contents/data/${filename}`,{
+      method:'PUT',
+      headers:{'Authorization':`token ${token}`,'Content-Type':'application/json'},
+      body:JSON.stringify({message:`Update ${filename}`,
+        content:btoa(unescape(encodeURIComponent(JSON.stringify(data,null,2)))),
+        sha:meta.sha})
     });
-  } catch(e) { console.warn('GitHub save failed:', e); }
+  }catch(e){console.warn('GitHub save:',e);}
 }
 
 // ══════════════════════════════════════════════════════════════
 // NAV
 // ══════════════════════════════════════════════════════════════
-function showTab(id, btn) {
-  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
-  const panel = document.getElementById('tab-' + id);
-  if (panel) panel.classList.add('active');
-  if (btn) btn.classList.add('active');
+function showTab(id,btn){
+  document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(t=>t.classList.remove('active'));
+  const p=document.getElementById('tab-'+id);
+  if(p)p.classList.add('active');
+  if(btn)btn.classList.add('active');
 }
 
 // ══════════════════════════════════════════════════════════════
 // UTILS
 // ══════════════════════════════════════════════════════════════
-function fmtUSD(n) {
-  if (!n && n !== 0) return '—';
-  if (n >= 1000000) return '$' + (n/1000000).toFixed(1) + 'M';
-  if (n >= 1000) return '$' + Math.round(n/1000) + 'K';
-  return '$' + n;
+function fmtUSD(n){
+  if(!n&&n!==0)return'—';
+  if(n>=1000000)return'$'+(n/1000000).toFixed(1)+'M';
+  if(n>=1000)return'$'+Math.round(n/1000)+'K';
+  return'$'+n;
 }
-
-function fmtUSDRange(min, max) {
-  if (!min && !max) return '—';
-  if (min === max) return fmtUSD(min);
-  return fmtUSD(min) + '–' + fmtUSD(max);
+function fmtUSDRange(min,max){
+  if(!min&&!max)return'—';
+  if(min===max)return fmtUSD(min);
+  return fmtUSD(min)+'–'+fmtUSD(max);
 }
-
-function formatDate(str) {
-  if (!str) return '—';
-  const d = new Date(str);
-  if (isNaN(d)) return str;
-  return d.toLocaleDateString('en-GB', {day:'numeric',month:'short',year:'numeric'});
+function formatDate(s){
+  if(!s)return'—';
+  const d=new Date(s);
+  if(isNaN(d))return s;
+  return d.toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'});
 }
-
-function daysBetween(from, to) {
-  if (!from || !to) return 0;
-  return Math.round((new Date(to) - new Date(from)) / 86400000);
+function daysBetween(from,to){
+  if(!from||!to)return 0;
+  return Math.round((new Date(to)-new Date(from))/86400000);
 }
-
-function scoreColor(n) {
-  if (!n) return '#ccc';
-  if (n >= 85) return 'var(--status-hot)';
-  if (n >= 70) return 'var(--li-cedar)';
-  if (n >= 55) return '#b8860b';
-  return 'var(--li-sky)';
+function scoreColor(n){
+  if(!n)return'#555';
+  if(n>=85)return'var(--warn)';
+  if(n>=70)return'var(--li-cedar)';
+  if(n>=55)return'#b8860b';
+  return'var(--data)';
 }
 </script>
 </body>
