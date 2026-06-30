@@ -1,0 +1,39 @@
+name: Weekly Fundraising Research
+
+on:
+  schedule:
+    - cron: '0 3 * * 1'   # Monday 06:00 EAT (03:00 UTC)
+  workflow_dispatch:        # Manual trigger from GitHub UI
+
+permissions:
+  contents: write
+
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install anthropic requests
+
+      - name: Run weekly research
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: python research.py
+
+      - name: Commit updated data
+        run: |
+          git config user.name  "LearnImpact Research Bot"
+          git config user.email "actions@github.com"
+          git add data/alerts.json data/funders.json
+          git diff --cached --quiet && echo "No changes" || git commit -m "research: week $(date +%V) intelligence update [skip pages]"
+          git push

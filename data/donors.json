@@ -1,0 +1,144 @@
+{
+  "version": "1.0",
+  "donors": [
+    {
+      "id": "d-rosa-hempel",
+      "funder_id": "f-hempel",
+      "contact_name": "Rosa",
+      "contact_role": "Programme Officer / Relationship Manager",
+      "contact_email": "",
+      "relationship_stage": "partner",
+      "relationship_health": "warm",
+      "last_touchpoint": {
+        "date": "2026-05-15",
+        "note": "Steering Committee — Rosa spontaneously signalled renewal interest. Hearing Committee is the live decision moment.",
+        "channel": "meeting"
+      },
+      "next_action": "Provide Hearing Committee with any additional materials requested. Do not rush — relationship is strong.",
+      "next_action_due": "2026-07-31",
+      "programmes": ["kiufunza"],
+      "total_funded_usd": 587000,
+      "proposal_history": [
+        {"opportunity_id": "opp-hempel-kiufunza", "submitted": "2026-06-15", "outcome": "in_review", "amount_usd": 587000}
+      ],
+      "intelligence_notes": [
+        {"date": "2026-05-15", "note": "Steering Committee May 2026 — Rosa unprompted mentioned renewal. Hearing Committee is where decision happens. Maintain relationship quality, do not over-push."},
+        {"date": "2026-06-01", "note": "USD 587K confirmed for FY2026. This is the anchor grant — protect this relationship above all others."}
+      ],
+      "drive_notes_id": "",
+      "created_at": "2025-01-01",
+      "updated_at": "2026-06-30"
+    },
+    {
+      "id": "d-sandra-oswald-vtf",
+      "funder_id": "f-vtf",
+      "contact_name": "Sandra Oswald",
+      "contact_role": "VTF Programme Manager",
+      "contact_email": "",
+      "relationship_stage": "partner",
+      "relationship_health": "warm",
+      "last_touchpoint": {
+        "date": "2026-05-01",
+        "note": "Grant Agreement finalised for KiuFunza Phase 5 — TZS 462M confirmed.",
+        "channel": "email"
+      },
+      "next_action": "Start SOMA conversation with Sandra — position WhatsApp AI coaching (Mwalimu) as technology programme fitting VTF 80% mandate. Do this BEFORE KiuFunza phases down.",
+      "next_action_due": "2026-08-31",
+      "programmes": ["kiufunza", "soma"],
+      "total_funded_usd": 178000,
+      "proposal_history": [
+        {"opportunity_id": "opp-vtf-kiufunza-2026", "submitted": "2026-05-15", "outcome": "in_review", "amount_usd": 178000}
+      ],
+      "intelligence_notes": [
+        {"date": "2026-05-01", "note": "TZS 462M KiuFunza Phase 5 confirmed. Grant Agreement has Clause 2.3 re: TIF reallocation — may need updating."},
+        {"date": "2026-06-30", "note": "SOMA conversation NOT started with Sandra yet. This is urgent — VTF tech mandate (80%) maps perfectly to SOMA's WhatsApp AI chatbot. Window: before KiuFunza phases down and conversation becomes awkward."}
+      ],
+      "drive_notes_id": "",
+      "created_at": "2024-01-01",
+      "updated_at": "2026-06-30"
+    },
+    {
+      "id": "d-lorcan-clarke-fp",
+      "funder_id": "f-founders-pledge",
+      "contact_name": "Lorcan Clarke",
+      "contact_role": "Programme Officer",
+      "contact_email": "lorcan@founderspledge.com",
+      "relationship_stage": "submitted",
+      "relationship_health": "warm",
+      "last_touchpoint": {
+        "date": "2026-06-26",
+        "note": "Due diligence questions deadline. Lorcan asked for salary comparison and structural info. Michael handled questions 1.1-1.3 and 4.1-4.2 (structure, positioning, SOMA). Youdi handling 2.1-3.2 (KiuFunza research questions).",
+        "channel": "email"
+      },
+      "next_action": "Wait for Lorcan's review of DD responses. Follow up if no word by August 15. Decision expected Q1-Q2 2027.",
+      "next_action_due": "2026-08-15",
+      "programmes": ["soma", "kiufunza"],
+      "total_funded_usd": 0,
+      "proposal_history": [
+        {"opportunity_id": "opp-founders-pledge-soma", "submitted": "2026-06-01", "outcome": "in_review", "amount_usd": 5000000}
+      ],
+      "intelligence_notes": [
+        {"date": "2026-06-01", "note": "USD 5M proposal submitted for SOMA (4-year ask). Full proposal stage."},
+        {"date": "2026-06-26", "note": "DD questions received. Deadline for responses was June 26. Lorcan is reviewing. Decision Q1-Q2 2027 based on typical FP timeline (6-12 months)."},
+        {"date": "2026-06-30", "note": "Do not rush Lorcan. Founders Pledge process is deliberate. Let them lead. Maintain quality relationship — answer any follow-up questions quickly and thoroughly."}
+      ],
+      "drive_notes_id": "",
+      "created_at": "2026-04-01",
+      "updated_at": "2026-06-30"
+    },
+    {
+      "id": "d-ali-ellegard-dovetail",
+      "funder_id": "f-dovetail",
+      "contact_name": "Ali Ellegard",
+      "contact_role": "Programme Officer",
+      "contact_email": "",
+      "relationship_stage": "partner",
+      "relationship_health": "warm",
+      "last_touchpoint": {
+        "date": "2026-06-01",
+        "note": "Track 1 USD 100K confirmed. Ali Ellegard is the relationship manager.",
+        "channel": "email"
+      },
+      "next_action": "Start Track 2 SOMA conversation with Ali. Frame SOMA's AI assessment coaching as natural extension of Track 1 assessment technology work. Potential 10-year partnership.",
+      "next_action_due": "2026-09-01",
+      "programmes": ["kiufunza", "soma"],
+      "total_funded_usd": 100000,
+      "proposal_history": [
+        {"opportunity_id": "opp-dovetail-track1", "submitted": "2026-03-01", "outcome": "won", "amount_usd": 100000},
+        {"opportunity_id": "opp-dovetail-track2-soma", "submitted": null, "outcome": null, "amount_usd": 150000}
+      ],
+      "intelligence_notes": [
+        {"date": "2026-06-01", "note": "Track 1 $100K won. Dovetail/Prevail Fund is a strong relationship — potential for 10-year partnership according to our Drive docs."},
+        {"date": "2026-06-30", "note": "Track 2 conversation NOT started. Ali is warm after Track 1 success — this is a good moment to introduce SOMA. Frame as: 'Track 1 gave us the assessment baseline; Track 2 is the AI coaching loop that closes the improvement cycle'."}
+      ],
+      "drive_notes_id": "",
+      "created_at": "2026-01-15",
+      "updated_at": "2026-06-30"
+    },
+    {
+      "id": "d-youdi-schipper",
+      "funder_id": "f-founders-pledge",
+      "contact_name": "Youdi Schipper",
+      "contact_role": "External KiuFunza Research Advisor (KiuFunza lane only)",
+      "contact_email": "",
+      "relationship_stage": "warm",
+      "relationship_health": "warm",
+      "last_touchpoint": {
+        "date": "2026-06-26",
+        "note": "Handling Founders Pledge DD questions 2.1-3.2 (KiuFunza research questions). Youdi is KiuFunza lane only — not SOMA.",
+        "channel": "email"
+      },
+      "next_action": "Ensure Youdi has all KiuFunza data he needs for FP DD. Do NOT pull him into SOMA conversations — keep lane separation clean.",
+      "next_action_due": "2026-08-15",
+      "programmes": ["kiufunza"],
+      "total_funded_usd": 0,
+      "proposal_history": [],
+      "intelligence_notes": [
+        {"date": "2026-06-30", "note": "KIUFUNZA LANE ONLY. Youdi is handling FP due diligence questions 2.1-3.2 specifically about KiuFunza research quality. Do not involve in SOMA conversations. Keep separate."}
+      ],
+      "drive_notes_id": "",
+      "created_at": "2026-06-01",
+      "updated_at": "2026-06-30"
+    }
+  ]
+}
