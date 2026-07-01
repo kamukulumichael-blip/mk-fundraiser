@@ -29,13 +29,13 @@
       "deadline": "2026-07-15",
       "submitted_date": "2026-05-15",
       "document_type": "full_proposal",
-      "outcome": null,
-      "won_amount_usd": null,
+      "outcome": "signing_imminent",
+      "won_amount_usd": 178000,
       "drive_proposal_id": "",
-      "won_lost_notes": "TZS 462M (~USD 178K at 2600 TZS/USD) near-confirmed. Grant Agreement active.",
-      "pattern_tags": ["technology-mandate", "Tanzania-CSR", "KiuFunza-renewal"],
+      "won_lost_notes": "Agreement finalised 2026-07-01. Sandra confirmed readiness to sign. TZS 462M (~USD 178K). Signing expected before 2026-07-10. Prepare onboarding pack for VTF comms team.",
+      "pattern_tags": ["technology-mandate", "Tanzania-CSR", "KiuFunza-renewal", "signing-imminent"],
       "created_at": "2026-04-01",
-      "updated_at": "2026-06-30"
+      "updated_at": "2026-07-01"
     },
     {
       "id": "opp-hempel-kiufunza",

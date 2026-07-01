@@ -561,6 +561,200 @@ html[data-theme="obsidian"] .timamu-theme .hot-cta{background:var(--ti-coral)}
   nav,.bottom-nav,#settings-modal,#crm-overlay,#crm-drawer,.theme-switcher{display:none!important}
   .brief-section{box-shadow:none;border:1px solid #ddd;page-break-inside:avoid}
 }
+
+/* ═══════════════════════════════════════════════════════════
+   FAB — QUICK CAPTURE
+═══════════════════════════════════════════════════════════ */
+.fab{
+  position:fixed;bottom:calc(68px + 12px);right:16px;
+  width:52px;height:52px;border-radius:50%;border:none;cursor:pointer;
+  background:var(--accent);color:#000;font-size:26px;font-weight:700;
+  display:none;align-items:center;justify-content:center;
+  box-shadow:var(--shadow-lg);z-index:90;transition:transform .15s;
+  line-height:1;
+}
+.fab:active{transform:scale(.92)}
+#app.visible~.fab{display:flex}
+
+/* ═══════════════════════════════════════════════════════════
+   FUNDER TYPE BADGES
+═══════════════════════════════════════════════════════════ */
+.type-badge{
+  display:inline-block;padding:1px 6px;border-radius:4px;
+  font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.3px;
+}
+.tb-lc{background:#354062;color:#fff}.tb-lg{background:#1A7060;color:#fff}
+.tb-re{background:#5EA6B8;color:#000}.tb-if{background:#FFC650;color:#000}
+.tb-ib{background:#BE6243;color:#fff}.tb-im{background:#7c5cbf;color:#fff}
+.tb-hn{background:#c84020;color:#fff}
+
+/* ═══════════════════════════════════════════════════════════
+   TYPE FILTER TOGGLE
+═══════════════════════════════════════════════════════════ */
+.type-toggle{display:flex;flex-wrap:wrap;gap:6px;padding:8px 0 4px}
+.ttbtn{
+  padding:4px 10px;border-radius:20px;border:1px solid var(--border);
+  background:transparent;color:var(--text-2);font-size:11px;font-weight:600;
+  cursor:pointer;transition:all var(--trans);white-space:nowrap;
+}
+.ttbtn:hover{border-color:var(--accent);color:var(--text)}
+.ttbtn.active{background:var(--accent);color:#000;border-color:var(--accent)}
+
+/* ═══════════════════════════════════════════════════════════
+   SECTION ROW (title + action inline)
+═══════════════════════════════════════════════════════════ */
+.section-hrow{
+  display:flex;align-items:center;justify-content:space-between;
+  margin-bottom:var(--gap-md);flex-wrap:wrap;gap:8px;
+}
+.section-hrow .section-title{margin-bottom:0}
+.inbox-badge{
+  display:inline-block;background:var(--accent);color:#000;
+  font-size:11px;font-weight:800;border-radius:10px;padding:1px 8px;
+  margin-left:8px;vertical-align:middle;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   RESEARCH INBOX
+═══════════════════════════════════════════════════════════ */
+.inbox-tabs{display:flex;gap:4px;margin-bottom:var(--gap-md)}
+.itab{
+  padding:6px 16px;border-radius:6px;border:1px solid var(--border);
+  background:transparent;color:var(--text-2);font-size:12px;font-weight:600;
+  cursor:pointer;transition:all var(--trans);
+}
+.itab.active{background:var(--surface-2);color:var(--text);border-color:var(--accent)}
+.prospect-card{
+  background:var(--surface-2);border:1px solid var(--border);border-radius:10px;
+  padding:var(--gap-md);margin-bottom:8px;transition:border-color var(--trans);
+}
+.prospect-card:hover{border-color:var(--accent)}
+.prospect-name{font-size:14px;font-weight:700;color:var(--text);margin-bottom:4px}
+.prospect-meta{font-size:11px;color:var(--text-3);margin-bottom:6px;display:flex;gap:8px;flex-wrap:wrap}
+.prospect-why{font-size:13px;color:var(--text-2);line-height:1.5;margin-bottom:10px}
+.prospect-actions{display:flex;gap:8px;flex-wrap:wrap}
+.btn-xs{
+  padding:4px 12px;border-radius:6px;font-size:11px;font-weight:700;
+  cursor:pointer;border:1px solid var(--border);background:var(--surface);color:var(--text-2);
+  transition:all var(--trans);
+}
+.btn-xs:hover{background:var(--surface-2);color:var(--text)}
+.btn-xs.promote{background:var(--accent);color:#000;border-color:var(--accent)}
+.btn-xs.discard{border-color:#e44;color:#e44;background:transparent}
+.btn-xs.discard:hover{background:#e44;color:#fff}
+.inbox-empty{text-align:center;padding:32px;color:var(--text-3);font-size:13px}
+
+/* ═══════════════════════════════════════════════════════════
+   INTELLIGENCE SOURCES
+═══════════════════════════════════════════════════════════ */
+.source-card{
+  display:flex;align-items:flex-start;gap:12px;
+  background:var(--surface-2);border:1px solid var(--border);border-radius:10px;
+  padding:var(--gap-md);margin-bottom:8px;transition:border-color var(--trans);
+}
+.source-card:hover{border-color:var(--accent)}
+.source-icon{
+  width:36px;height:36px;border-radius:8px;flex-shrink:0;
+  background:var(--accent);color:#000;display:flex;align-items:center;
+  justify-content:center;font-size:16px;font-weight:800;
+}
+.source-info{flex:1;min-width:0}
+.source-name{font-size:13px;font-weight:700;color:var(--text);margin-bottom:2px}
+.source-url{font-size:11px;color:var(--text-3);margin-bottom:6px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.source-tags{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:6px}
+.source-tag{background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:1px 6px;font-size:10px;color:var(--text-3)}
+.source-actions{display:flex;gap:6px;align-items:center;flex-shrink:0}
+.src-toggle{
+  width:42px;height:22px;border-radius:11px;border:1px solid var(--border);cursor:pointer;
+  position:relative;transition:background .2s;flex-shrink:0;
+}
+.src-toggle.on{background:var(--accent);border-color:var(--accent)}
+.src-toggle.off{background:var(--surface-2)}
+.src-toggle::after{
+  content:'';position:absolute;top:2px;width:16px;height:16px;
+  border-radius:50%;background:#fff;transition:left .2s;
+}
+.src-toggle.on::after{left:calc(100% - 18px)}
+.src-toggle.off::after{left:2px}
+
+/* ═══════════════════════════════════════════════════════════
+   EVENTS & NETWORKING
+═══════════════════════════════════════════════════════════ */
+.event-card{
+  display:flex;align-items:flex-start;gap:var(--gap-md);
+  background:var(--surface-2);border:1px solid var(--border);border-radius:10px;
+  padding:var(--gap-md);margin-bottom:8px;transition:border-color var(--trans);
+}
+.event-card:hover{border-color:var(--accent)}
+.event-date-col{
+  display:flex;flex-direction:column;align-items:center;min-width:44px;flex-shrink:0;
+}
+.event-day{font-size:22px;font-weight:800;color:var(--accent);line-height:1}
+.event-mon{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--text-3)}
+.event-info{flex:1;min-width:0}
+.event-name{font-size:13px;font-weight:700;color:var(--text);margin-bottom:2px}
+.event-loc{font-size:11px;color:var(--text-3);margin-bottom:6px}
+.event-chips{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:6px}
+.event-chip{padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;background:var(--surface);border:1px solid var(--border);color:var(--text-2)}
+.event-chip.high{border-color:var(--warn);color:var(--warn)}
+.event-chip.reg{background:var(--accent);color:#000;border-color:var(--accent)}
+.event-prep{font-size:11px;color:var(--text-2);line-height:1.5}
+
+/* ═══════════════════════════════════════════════════════════
+   MODALS — LARGE (Quick Capture, Add Source, Meeting Log)
+═══════════════════════════════════════════════════════════ */
+.modal-overlay{
+  position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:200;
+  display:none;align-items:center;justify-content:center;padding:var(--gap-lg);
+}
+.modal-overlay.open{display:flex}
+.modal-box-lg{
+  background:var(--surface);border:1px solid var(--border);border-radius:16px;
+  padding:var(--gap-xl);width:100%;max-width:540px;max-height:90vh;
+  overflow-y:auto;box-shadow:var(--shadow-lg);
+}
+.modal-box-lg h3{font-size:16px;font-weight:800;margin-bottom:var(--gap-lg);color:var(--text)}
+.modal-field{margin-bottom:var(--gap-md)}
+.modal-field label{display:block;font-size:12px;font-weight:600;color:var(--text-2);margin-bottom:6px}
+.modal-field input,.modal-field textarea,.modal-field select{
+  width:100%;padding:10px 12px;border-radius:8px;border:1px solid var(--input-border);
+  background:var(--input-bg);color:var(--text);font-size:13px;font-family:inherit;
+  box-sizing:border-box;
+}
+.modal-field textarea{min-height:80px;resize:vertical}
+.modal-field .field-hint{font-size:11px;color:var(--text-3);margin-top:4px}
+.modal-actions-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:var(--gap-lg);justify-content:flex-end}
+.meeting-followup{
+  background:var(--surface-2);border:1px solid var(--border);border-radius:8px;
+  padding:var(--gap-md);font-size:13px;color:var(--text-2);line-height:1.7;
+  white-space:pre-wrap;max-height:200px;overflow-y:auto;margin-top:var(--gap-md);
+  display:none;
+}
+.meeting-followup.visible{display:block}
+
+/* ═══════════════════════════════════════════════════════════
+   IPAD (769px – 1024px)
+═══════════════════════════════════════════════════════════ */
+@media(min-width:769px) and (max-width:1024px){
+  .action-cards{grid-template-columns:repeat(3,1fr)}
+  .pipeline-row{grid-template-columns:repeat(3,1fr)}
+  .bottom-nav{display:none!important}
+  #main-nav .nav-tabs{display:flex}
+  .source-actions{flex-direction:column}
+}
+
+/* ═══════════════════════════════════════════════════════════
+   DESKTOP (1280px+)
+═══════════════════════════════════════════════════════════ */
+@media(min-width:1280px){
+  main{padding:var(--gap-xl) 40px;max-width:1240px;margin:0 auto}
+  .action-cards{grid-template-columns:repeat(3,1fr);gap:var(--gap-lg)}
+  .pipeline-row{grid-template-columns:repeat(3,1fr);gap:var(--gap-lg)}
+  .bottom-nav{display:none!important}
+  #main-nav .nav-tabs{display:flex}
+  #crm-drawer{width:480px}
+  .fab{bottom:var(--gap-xl)}
+}
 </style>
 </head>
 <body>
@@ -614,6 +808,27 @@ html[data-theme="obsidian"] .timamu-theme .hot-cta{background:var(--ti-coral)}
         <div class="section-title">Funding Gap Status</div>
         <div class="gap-bars" id="gap-bars"></div>
       </div>
+      <!-- ── RESEARCH INBOX ── -->
+      <div class="section-hrow">
+        <div class="section-title">Research Inbox <span class="inbox-badge" id="inbox-count">0</span></div>
+        <button class="btn-xs promote" onclick="openQC()">+ Quick Capture</button>
+      </div>
+      <div class="card" style="margin-bottom:var(--gap-lg)">
+        <div class="inbox-tabs">
+          <button class="itab active" id="itab-prospects" onclick="switchInboxTab('prospects')">My Prospects</button>
+          <button class="itab" id="itab-sources" onclick="switchInboxTab('sources')">Intelligence Sources</button>
+        </div>
+        <div id="inbox-prospects"></div>
+        <div id="inbox-sources" style="display:none"></div>
+      </div>
+
+      <!-- ── EVENTS & NETWORKING ── -->
+      <div class="section-hrow">
+        <div class="section-title">Events &amp; Networking</div>
+        <button class="btn-xs" onclick="openAddEvent()">+ Add Event</button>
+      </div>
+      <div class="card" id="events-section" style="margin-bottom:var(--gap-lg)"></div>
+
       <div class="section-title">Relationship Heat Map</div>
       <div class="card" style="margin-bottom:var(--gap-lg)">
         <div class="heat-map" id="heat-map"></div>
@@ -657,6 +872,15 @@ html[data-theme="obsidian"] .timamu-theme .hot-cta{background:var(--ti-coral)}
             <option value="">All Status</option><option value="partner">Partner</option>
             <option value="submitted">Submitted</option><option value="prospect">Prospect</option>
           </select>
+        </div>
+        <div class="type-toggle" id="soma-type-toggle">
+          <button class="ttbtn active" onclick="setTypeFilter('soma','')">All</button>
+          <button class="ttbtn" onclick="setTypeFilter('soma','local')">Local</button>
+          <button class="ttbtn" onclick="setTypeFilter('soma','regional')">Regional</button>
+          <button class="ttbtn" onclick="setTypeFilter('soma','international_foundation')">Intl Foundation</button>
+          <button class="ttbtn" onclick="setTypeFilter('soma','international_bilateral')">Bilateral</button>
+          <button class="ttbtn" onclick="setTypeFilter('soma','international_multilateral')">Multilateral</button>
+          <button class="ttbtn" onclick="setTypeFilter('soma','high_net_worth')">HNW</button>
         </div>
         <div class="funder-table-wrap"><table><thead><tr>
           <th onclick="sortTable('soma','name')">Funder</th>
@@ -704,6 +928,15 @@ html[data-theme="obsidian"] .timamu-theme .hot-cta{background:var(--ti-coral)}
             <option value="">All Status</option><option value="partner">Partner</option>
             <option value="submitted">Submitted</option><option value="prospect">Prospect</option>
           </select>
+        </div>
+        <div class="type-toggle" id="kiufunza-type-toggle">
+          <button class="ttbtn active" onclick="setTypeFilter('kiufunza','')">All</button>
+          <button class="ttbtn" onclick="setTypeFilter('kiufunza','local')">Local</button>
+          <button class="ttbtn" onclick="setTypeFilter('kiufunza','regional')">Regional</button>
+          <button class="ttbtn" onclick="setTypeFilter('kiufunza','international_foundation')">Intl Foundation</button>
+          <button class="ttbtn" onclick="setTypeFilter('kiufunza','international_bilateral')">Bilateral</button>
+          <button class="ttbtn" onclick="setTypeFilter('kiufunza','international_multilateral')">Multilateral</button>
+          <button class="ttbtn" onclick="setTypeFilter('kiufunza','high_net_worth')">HNW</button>
         </div>
         <div class="funder-table-wrap"><table><thead><tr>
           <th onclick="sortTable('kiufunza','name')">Funder</th>
@@ -755,6 +988,15 @@ html[data-theme="obsidian"] .timamu-theme .hot-cta{background:var(--ti-coral)}
           <select class="filter-select" id="timamu-status-filter" onchange="filterTable('timamu')">
             <option value="">All Status</option><option value="prospect">Prospect</option><option value="partner">Partner</option>
           </select>
+        </div>
+        <div class="type-toggle" id="timamu-type-toggle">
+          <button class="ttbtn active" onclick="setTypeFilter('timamu','')">All</button>
+          <button class="ttbtn" onclick="setTypeFilter('timamu','local')">Local</button>
+          <button class="ttbtn" onclick="setTypeFilter('timamu','regional')">Regional</button>
+          <button class="ttbtn" onclick="setTypeFilter('timamu','international_foundation')">Intl Foundation</button>
+          <button class="ttbtn" onclick="setTypeFilter('timamu','international_bilateral')">Bilateral</button>
+          <button class="ttbtn" onclick="setTypeFilter('timamu','international_multilateral')">Multilateral</button>
+          <button class="ttbtn" onclick="setTypeFilter('timamu','high_net_worth')">HNW</button>
         </div>
         <div class="funder-table-wrap"><table><thead><tr>
           <th onclick="sortTable('timamu','name')">Funder</th>
@@ -914,6 +1156,7 @@ html[data-theme="obsidian"] .timamu-theme .hot-cta{background:var(--ti-coral)}
     </div>
     <div class="drawer-section" style="display:flex;gap:8px;flex-wrap:wrap">
       <button class="btn-gold" onclick="openStudioForDrawerFunder()">✍ Generate Document</button>
+      <button class="btn-secondary" onclick="openMeetingModal(APP.drawerFunderId)">📝 Log Meeting</button>
       <button class="btn-secondary" onclick="closeDrawer()">Close</button>
     </div>
   </div>
@@ -944,6 +1187,174 @@ html[data-theme="obsidian"] .timamu-theme .hot-cta{background:var(--ti-coral)}
   </div>
 </div>
 
+<!-- FAB -->
+<button class="fab" onclick="openQC()" title="Quick Capture prospect">+</button>
+
+<!-- ══ QUICK CAPTURE MODAL ══════════════════════════════════ -->
+<div id="qc-modal" class="modal-overlay" onclick="if(event.target===this)closeQC()">
+  <div class="modal-box-lg">
+    <h3>Quick Capture — New Prospect</h3>
+    <div class="modal-field">
+      <label>Funder / Organisation Name</label>
+      <input type="text" id="qc-name" placeholder="e.g. Luminate Foundation">
+    </div>
+    <div class="modal-field">
+      <label>Programme</label>
+      <select id="qc-prog">
+        <option value="soma">SOMA</option>
+        <option value="kiufunza">KiuFunza</option>
+        <option value="timamu">Timamu</option>
+      </select>
+    </div>
+    <div class="modal-field">
+      <label>Funder Type</label>
+      <select id="qc-type">
+        <option value="international_foundation">International Foundation</option>
+        <option value="international_bilateral">International Bilateral</option>
+        <option value="international_multilateral">International Multilateral</option>
+        <option value="local_corporate">Local Corporate / CSR</option>
+        <option value="local_government">Local Government</option>
+        <option value="regional">Regional (Africa-based)</option>
+        <option value="high_net_worth">High Net Worth Individual</option>
+      </select>
+    </div>
+    <div class="modal-field">
+      <label>Why it fits — one sentence</label>
+      <textarea id="qc-why" placeholder="e.g. New Gates Foundation initiative on AI tutoring in Sub-Saharan Africa — perfect SOMA fit"></textarea>
+    </div>
+    <div class="modal-field">
+      <label>Source / How you found it</label>
+      <select id="qc-source">
+        <option value="linkedin">LinkedIn</option>
+        <option value="web_research">Web Research</option>
+        <option value="newsletter">Newsletter (Devex / PND)</option>
+        <option value="conference">Conference / Event</option>
+        <option value="referral">Referral</option>
+        <option value="ms365">MS 365 (email/calendar)</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+    <div class="modal-actions-row">
+      <button class="btn-secondary" onclick="closeQC()">Cancel</button>
+      <button class="btn-primary" onclick="saveProspect()">Save to Inbox</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══ ADD SOURCE MODAL ══════════════════════════════════════ -->
+<div id="src-modal" class="modal-overlay" onclick="if(event.target===this)closeSrcModal()">
+  <div class="modal-box-lg">
+    <h3>Add Intelligence Source</h3>
+    <div class="modal-field">
+      <label>Source Name</label>
+      <input type="text" id="src-name" placeholder="e.g. Devex Funding">
+    </div>
+    <div class="modal-field">
+      <label>URL / LinkedIn Profile URL</label>
+      <input type="url" id="src-url" placeholder="https://…">
+    </div>
+    <div class="modal-field">
+      <label>Type</label>
+      <select id="src-type">
+        <option value="website">Website / News Source</option>
+        <option value="newsletter">Newsletter</option>
+        <option value="linkedin_person">LinkedIn — Person / Creator</option>
+        <option value="linkedin_org">LinkedIn — Organisation</option>
+      </select>
+    </div>
+    <div class="modal-field">
+      <label>Relevant Programmes</label>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:4px">
+        <label style="font-weight:400;font-size:13px"><input type="checkbox" id="src-soma" value="soma"> SOMA</label>
+        <label style="font-weight:400;font-size:13px"><input type="checkbox" id="src-kf" value="kiufunza"> KiuFunza</label>
+        <label style="font-weight:400;font-size:13px"><input type="checkbox" id="src-timamu" value="timamu"> Timamu</label>
+      </div>
+    </div>
+    <div class="modal-field">
+      <label>Why monitor this source?</label>
+      <textarea id="src-desc" placeholder="What kind of intelligence does this source provide?"></textarea>
+    </div>
+    <div class="modal-actions-row">
+      <button class="btn-secondary" onclick="closeSrcModal()">Cancel</button>
+      <button class="btn-primary" onclick="saveSource()">Add Source</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══ ADD EVENT MODAL ══════════════════════════════════════ -->
+<div id="evt-modal" class="modal-overlay" onclick="if(event.target===this)closeAddEvent()">
+  <div class="modal-box-lg">
+    <h3>Add Event / Conference</h3>
+    <div class="modal-field">
+      <label>Event Name</label>
+      <input type="text" id="evt-name" placeholder="e.g. African Philanthropy Forum 2027">
+    </div>
+    <div class="modal-field">
+      <label>Date</label>
+      <input type="date" id="evt-date">
+    </div>
+    <div class="modal-field">
+      <label>Location</label>
+      <input type="text" id="evt-loc" placeholder="e.g. Nairobi, Kenya">
+    </div>
+    <div class="modal-field">
+      <label>Priority</label>
+      <select id="evt-priority">
+        <option value="high">High — key funders attending</option>
+        <option value="medium">Medium — worth attending</option>
+        <option value="low">Low — monitor only</option>
+      </select>
+    </div>
+    <div class="modal-field">
+      <label>Notes / Who's attending</label>
+      <textarea id="evt-notes" placeholder="Which funders likely attending? What's the opportunity?"></textarea>
+    </div>
+    <div class="modal-actions-row">
+      <button class="btn-secondary" onclick="closeAddEvent()">Cancel</button>
+      <button class="btn-primary" onclick="saveEvent()">Add Event</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══ MEETING LOG MODAL ══════════════════════════════════════ -->
+<div id="meeting-modal" class="modal-overlay" onclick="if(event.target===this)closeMeetingModal()">
+  <div class="modal-box-lg">
+    <h3>Log Meeting</h3>
+    <div style="font-size:13px;color:var(--text-2);margin-bottom:var(--gap-lg)" id="meeting-funder-name"></div>
+    <div class="modal-field">
+      <label>Date</label>
+      <input type="date" id="meeting-date">
+    </div>
+    <div class="modal-field">
+      <label>Channel</label>
+      <select id="meeting-channel">
+        <option value="meeting">In-person Meeting</option>
+        <option value="call">Call / Video Call</option>
+        <option value="email">Email Exchange</option>
+        <option value="conference">Conference / Event</option>
+      </select>
+    </div>
+    <div class="modal-field">
+      <label>What was discussed?</label>
+      <textarea id="meeting-notes" rows="5" placeholder="Key points discussed, their priorities, what they said, any signals…"></textarea>
+    </div>
+    <div class="modal-field">
+      <label>Key outcomes / decisions</label>
+      <textarea id="meeting-outcomes" rows="3" placeholder="What was agreed, promised, or decided?"></textarea>
+    </div>
+    <div class="modal-field">
+      <label>Next action agreed</label>
+      <input type="text" id="meeting-next-action" placeholder="e.g. Send concept note by July 20">
+    </div>
+    <div id="meeting-followup-text" class="meeting-followup"></div>
+    <div class="modal-actions-row">
+      <button class="btn-secondary" onclick="closeMeetingModal()">Cancel</button>
+      <button class="btn-secondary" onclick="saveMeeting(false)">Save Notes</button>
+      <button class="btn-gold" onclick="saveMeeting(true)">Save + Draft Follow-up</button>
+    </div>
+  </div>
+</div>
+
 <script>
 // ══════════════════════════════════════════════════════════════
 // THEME
@@ -969,9 +1380,11 @@ const HQ_SALT='li-hq-2026/', HQ_LEN=11,
 
 let APP = {
   funders:[], opportunities:[], donors:[], alerts:null,
+  sources:[], events:[], prospects:[],
   sortState:{soma:{col:'tier',dir:1},kiufunza:{col:'tier',dir:1},timamu:{col:'tier',dir:1}},
   drawerFunderId:null, docOutputText:'', docFileName:'',
-  tapCount:0, tapTimer:null
+  tapCount:0, tapTimer:null,
+  inboxTab:'prospects', typeFilters:{soma:'',kiufunza:'',timamu:''}
 };
 
 // ══════════════════════════════════════════════════════════════
@@ -1054,16 +1467,22 @@ async function fetchJSON(path) {
 }
 async function loadAllData() {
   try {
-    const [f,o,d,a] = await Promise.all([
+    const [f,o,d,a,src,evt,prs] = await Promise.all([
       fetchJSON('./data/funders.json'),
       fetchJSON('./data/opportunities.json'),
       fetchJSON('./data/donors.json'),
-      fetchJSON('./data/alerts.json')
+      fetchJSON('./data/alerts.json'),
+      fetchJSON('./data/sources.json').catch(()=>({sources:[]})),
+      fetchJSON('./data/events.json').catch(()=>({events:[]})),
+      fetchJSON('./data/prospects.json').catch(()=>({prospects:[]}))
     ]);
     APP.funders = f.funders||[];
     APP.opportunities = o.opportunities||[];
     APP.donors = d.donors||[];
     APP.alerts = a;
+    APP.sources = src.sources||[];
+    APP.events = evt.events||[];
+    APP.prospects = prs.prospects||[];
     renderAll();
   } catch(e) {
     console.error('Data load:', e);
@@ -1084,6 +1503,7 @@ function renderAll() {
   renderFunderTable('kiufunza','kf-tbody');
   renderFunderTable('timamu','timamu-tbody');
   renderConflicts(); renderPositioning(); updateDocFunderList();
+  renderResearchInbox(); renderEventsSection();
 }
 
 function renderActionCards() {
@@ -1261,11 +1681,17 @@ function renderFunderTable(prog,tbid) {
   const search=(document.getElementById(si)?.value||'').toLowerCase();
   const tier=tf?(document.getElementById(tf)?.value||''):'';
   const status=document.getElementById(sf)?.value||'';
+  const typeF=APP.typeFilters[prog]||'';
   let data=APP.funders.filter(f=>{
     if(!f.programmes.includes(prog))return false;
     if(tier&&String(f.tier)!==tier)return false;
     if(status&&f.status!==status)return false;
     if(search&&!f.name.toLowerCase().includes(search)&&!f.mission_summary?.toLowerCase().includes(search))return false;
+    if(typeF){
+      const ft=f.funder_type||'';
+      if(typeF==='local'&&!ft.startsWith('local'))return false;
+      else if(typeF!=='local'&&ft!==typeF)return false;
+    }
     return true;
   });
   const s=APP.sortState[prog]||{col:'tier',dir:1};
@@ -1276,8 +1702,13 @@ function renderFunderTable(prog,tbid) {
   });
   tbody.innerHTML=data.map(f=>`
     <tr onclick="openDrawer('${f.id}')">
-      <td><div style="font-weight:600;color:var(--text)">${f.name}</div>
-        <div style="font-size:11px;color:var(--text-3);margin-top:2px">${(f.thematic_eligibility||[]).slice(0,2).join(' · ')}</div></td>
+      <td>
+        <div style="font-weight:600;color:var(--text)">${f.name}</div>
+        <div style="font-size:11px;color:var(--text-3);margin-top:2px;display:flex;gap:6px;flex-wrap:wrap;align-items:center">
+          ${f.funder_type?getFunderTypeBadge(f.funder_type):''}
+          <span>${(f.thematic_eligibility||[]).slice(0,2).join(' · ')}</span>
+        </div>
+      </td>
       <td><span class="tier-chip tier-${f.tier}">${f.tier}</span></td>
       <td><span class="status-chip st-${f.status.replace(/-/g,'')}">${f.status}</span></td>
       <td style="white-space:nowrap;color:var(--text-2)">${fmtUSDRange(f.grant_size_usd_min,f.grant_size_usd_max)}</td>
@@ -1287,6 +1718,31 @@ function renderFunderTable(prog,tbid) {
 }
 
 function filterTable(prog){renderFunderTable(prog,prog==='kiufunza'?'kf-tbody':prog+'-tbody');}
+
+function setTypeFilter(prog, type) {
+  APP.typeFilters[prog] = type;
+  const tog = document.getElementById(prog+'-type-toggle') || document.getElementById('kiufunza-type-toggle');
+  if(!tog) return;
+  tog.querySelectorAll('.ttbtn').forEach(b => {
+    b.classList.toggle('active', b.textContent.trim() === (type===''?'All':type==='local'?'Local':type==='international_foundation'?'Intl Foundation':type==='international_bilateral'?'Bilateral':type==='international_multilateral'?'Multilateral':type==='high_net_worth'?'HNW':'Regional'));
+  });
+  filterTable(prog);
+}
+
+function getFunderTypeBadge(type) {
+  const map = {
+    local_corporate:'LC',local_government:'GOV',regional:'REG',
+    international_foundation:'IF',international_bilateral:'IB',
+    international_multilateral:'IM',high_net_worth:'HNW'
+  };
+  const cls = {
+    local_corporate:'tb-lc',local_government:'tb-lg',regional:'tb-re',
+    international_foundation:'tb-if',international_bilateral:'tb-ib',
+    international_multilateral:'tb-im',high_net_worth:'tb-hn'
+  };
+  const lbl=map[type]||type;
+  return `<span class="type-badge ${cls[type]||''}">${lbl}</span>`;
+}
 function sortTable(prog,col){
   const s=APP.sortState[prog];
   APP.sortState[prog]={col,dir:s.col===col?-s.dir:1};
@@ -1624,6 +2080,331 @@ function scoreColor(n){
   if(n>=70)return'var(--li-cedar)';
   if(n>=55)return'#b8860b';
   return'var(--data)';
+}
+
+// ══════════════════════════════════════════════════════════════
+// RESEARCH INBOX
+// ══════════════════════════════════════════════════════════════
+function switchInboxTab(tab) {
+  APP.inboxTab = tab;
+  document.getElementById('itab-prospects').classList.toggle('active', tab==='prospects');
+  document.getElementById('itab-sources').classList.toggle('active', tab==='sources');
+  document.getElementById('inbox-prospects').style.display = tab==='prospects'?'':'none';
+  document.getElementById('inbox-sources').style.display = tab==='sources'?'':'none';
+}
+
+function renderResearchInbox() {
+  renderProspects();
+  renderSources();
+  const count = APP.prospects.length;
+  const badge = document.getElementById('inbox-count');
+  if(badge) badge.textContent = count;
+}
+
+function renderProspects() {
+  const el = document.getElementById('inbox-prospects');
+  if(!el) return;
+  const ps = APP.prospects;
+  if(!ps.length) {
+    el.innerHTML = `<div class="inbox-empty">No prospects yet. Use Quick Capture (+) to add a funder you've discovered.</div>`;
+    return;
+  }
+  el.innerHTML = ps.map(p => `
+    <div class="prospect-card" id="pcard-${p.id}">
+      <div class="prospect-name">${p.name}</div>
+      <div class="prospect-meta">
+        <span>${p.programme?.toUpperCase()||'—'}</span>
+        <span>${getFunderTypeBadge(p.funder_type||'')}</span>
+        <span>Via: ${p.source||'—'}</span>
+        <span>${formatDate(p.added_date)}</span>
+      </div>
+      <div class="prospect-why">${p.why_it_fits||''}</div>
+      <div class="prospect-actions">
+        <button class="btn-xs promote" onclick="promoteProspect('${p.id}')">✓ Move to Database</button>
+        <button class="btn-xs discard" onclick="discardProspect('${p.id}')">✕ Discard</button>
+      </div>
+    </div>`).join('');
+}
+
+function renderSources() {
+  const el = document.getElementById('inbox-sources');
+  if(!el) return;
+  const srcs = APP.sources;
+  if(!srcs.length) {
+    el.innerHTML = `<div class="inbox-empty">No sources added yet. <button class="btn-xs" onclick="openAddSource()">+ Add Source</button></div>`;
+    return;
+  }
+  const addBtn = `<div style="margin-bottom:var(--gap-md)"><button class="btn-xs promote" onclick="openAddSource()">+ Add Source</button></div>`;
+  el.innerHTML = addBtn + srcs.map(s => {
+    const icon = s.name.charAt(0).toUpperCase();
+    const typeLabel = {website:'Web',newsletter:'Newsletter',linkedin_person:'LinkedIn',linkedin_org:'LinkedIn Org'}[s.type]||s.type;
+    const progs = (s.programmes||[]).map(p=>`<span class="source-tag">${p}</span>`).join('');
+    return `<div class="source-card">
+      <div class="source-icon">${icon}</div>
+      <div class="source-info">
+        <div class="source-name">${s.name} <span class="type-badge tb-re" style="font-size:9px">${typeLabel}</span></div>
+        <div class="source-url">${s.url||''}</div>
+        <div class="source-tags">${progs}</div>
+        <div style="font-size:11px;color:var(--text-3)">${s.description||''}</div>
+      </div>
+      <div class="source-actions">
+        <button class="src-toggle ${s.active?'on':'off'}" onclick="toggleSource('${s.id}')" title="${s.active?'Active — click to pause':'Paused — click to activate'}"></button>
+        <span style="font-size:10px;color:var(--text-3)">${s.active?'ON':'OFF'}</span>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function openQC() {
+  document.getElementById('qc-name').value='';
+  document.getElementById('qc-why').value='';
+  document.getElementById('qc-modal').classList.add('open');
+  setTimeout(()=>document.getElementById('qc-name').focus(),100);
+}
+function closeQC() { document.getElementById('qc-modal').classList.remove('open'); }
+
+function saveProspect() {
+  const name = document.getElementById('qc-name').value.trim();
+  if(!name) { alert('Please enter a funder name.'); return; }
+  const p = {
+    id: 'prs-'+Date.now(),
+    name,
+    programme: document.getElementById('qc-prog').value,
+    funder_type: document.getElementById('qc-type').value,
+    why_it_fits: document.getElementById('qc-why').value.trim(),
+    source: document.getElementById('qc-source').value,
+    added_date: new Date().toISOString().slice(0,10),
+    ai_score: null, ai_assessment: null
+  };
+  APP.prospects.push(p);
+  saveData('data/prospects.json', {version:'1.0', prospects:APP.prospects});
+  renderResearchInbox();
+  closeQC();
+}
+
+function promoteProspect(id) {
+  const p = APP.prospects.find(x=>x.id===id);
+  if(!p) return;
+  if(!confirm(`Move "${p.name}" to the funder database as a new prospect? You can edit details in the CRM drawer.`)) return;
+  const newFunder = {
+    id: 'f-'+p.name.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/-+/g,'-').replace(/^-|-$/g,''),
+    name: p.name,
+    programmes: [p.programme],
+    funder_type: p.funder_type,
+    tier: 3,
+    status: 'prospect',
+    mission_summary: p.why_it_fits,
+    current_priorities: [],
+    geography: [],
+    thematic_eligibility: [],
+    grant_size_usd_min: null, grant_size_usd_max: null,
+    typical_duration_years: null,
+    alignment_score: null, probability_score: null, effort_score: null,
+    notes: `Added from Research Inbox ${p.added_date}. Source: ${p.source}.`
+  };
+  APP.funders.push(newFunder);
+  APP.prospects = APP.prospects.filter(x=>x.id!==id);
+  saveData('data/funders.json', {version:'1.0', last_updated:new Date().toISOString().slice(0,10), funders:APP.funders});
+  saveData('data/prospects.json', {version:'1.0', prospects:APP.prospects});
+  renderResearchInbox();
+  renderFunderTable(p.programme, p.programme==='kiufunza'?'kf-tbody':p.programme+'-tbody');
+}
+
+function discardProspect(id) {
+  APP.prospects = APP.prospects.filter(x=>x.id!==id);
+  saveData('data/prospects.json', {version:'1.0', prospects:APP.prospects});
+  renderResearchInbox();
+}
+
+function toggleSource(id) {
+  const s = APP.sources.find(x=>x.id===id);
+  if(!s) return;
+  s.active = !s.active;
+  saveData('data/sources.json', {version:'1.0', sources:APP.sources});
+  renderSources();
+}
+
+function openAddSource() {
+  document.getElementById('src-name').value='';
+  document.getElementById('src-url').value='';
+  document.getElementById('src-desc').value='';
+  ['src-soma','src-kf','src-timamu'].forEach(id=>document.getElementById(id).checked=false);
+  document.getElementById('src-modal').classList.add('open');
+  setTimeout(()=>document.getElementById('src-name').focus(),100);
+}
+function closeSrcModal() { document.getElementById('src-modal').classList.remove('open'); }
+
+function saveSource() {
+  const name = document.getElementById('src-name').value.trim();
+  const url = document.getElementById('src-url').value.trim();
+  if(!name) { alert('Please enter a source name.'); return; }
+  const progs = [];
+  if(document.getElementById('src-soma').checked) progs.push('soma');
+  if(document.getElementById('src-kf').checked) progs.push('kiufunza');
+  if(document.getElementById('src-timamu').checked) progs.push('timamu');
+  const src = {
+    id: 'src-'+Date.now(),
+    name, url,
+    type: document.getElementById('src-type').value,
+    description: document.getElementById('src-desc').value.trim(),
+    programmes: progs,
+    credibility: 'medium',
+    active: true,
+    added_date: new Date().toISOString().slice(0,10),
+    last_checked: null
+  };
+  APP.sources.push(src);
+  saveData('data/sources.json', {version:'1.0', sources:APP.sources});
+  renderSources();
+  closeSrcModal();
+}
+
+// ══════════════════════════════════════════════════════════════
+// EVENTS & NETWORKING
+// ══════════════════════════════════════════════════════════════
+function renderEventsSection() {
+  const el = document.getElementById('events-section');
+  if(!el) return;
+  const evts = (APP.events||[]).sort((a,b)=>new Date(a.date)-new Date(b.date));
+  if(!evts.length) {
+    el.innerHTML = `<div class="inbox-empty">No events yet. Use + Add Event to track conferences and networking opportunities.</div>`;
+    return;
+  }
+  el.innerHTML = evts.map(ev => {
+    const d = new Date(ev.date);
+    const day = d.getDate();
+    const mon = d.toLocaleString('en',{month:'short'}).toUpperCase();
+    const daysAway = Math.ceil((d-new Date())/(1000*60*60*24));
+    const isReg = ev.registered;
+    const progs = (ev.programmes||[]).map(p=>`<span class="event-chip prog-${p}">${p.toUpperCase()}</span>`).join('');
+    const funders = (ev.attendee_funder_ids||[]).length;
+    return `<div class="event-card">
+      <div class="event-date-col">
+        <div class="event-day">${day}</div>
+        <div class="event-mon">${mon}</div>
+      </div>
+      <div class="event-info">
+        <div class="event-name">${ev.name}</div>
+        <div class="event-loc">📍 ${ev.location||'TBC'} · ${daysAway>0?daysAway+' days away':'Past'}</div>
+        <div class="event-chips">
+          <span class="event-chip ${ev.priority==='high'?'high':''}">${ev.priority?.toUpperCase()||'—'}</span>
+          ${isReg?'<span class="event-chip reg">REGISTERED</span>':''}
+          ${progs}
+          ${funders?`<span class="event-chip">${funders} funder${funders>1?'s':''}</span>`:''}
+        </div>
+        <div class="event-prep">${ev.notes||''}</div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function openAddEvent() {
+  document.getElementById('evt-name').value='';
+  document.getElementById('evt-date').value='';
+  document.getElementById('evt-loc').value='';
+  document.getElementById('evt-notes').value='';
+  document.getElementById('evt-modal').classList.add('open');
+  setTimeout(()=>document.getElementById('evt-name').focus(),100);
+}
+function closeAddEvent() { document.getElementById('evt-modal').classList.remove('open'); }
+
+function saveEvent() {
+  const name = document.getElementById('evt-name').value.trim();
+  const date = document.getElementById('evt-date').value;
+  if(!name||!date) { alert('Please enter event name and date.'); return; }
+  const ev = {
+    id: 'evt-'+Date.now(),
+    name, date,
+    location: document.getElementById('evt-loc').value.trim(),
+    priority: document.getElementById('evt-priority').value,
+    notes: document.getElementById('evt-notes').value.trim(),
+    programmes: [],
+    attendee_funder_ids: [],
+    registered: false,
+    prep_done: false,
+    created_at: new Date().toISOString().slice(0,10)
+  };
+  APP.events.push(ev);
+  saveData('data/events.json', {version:'1.0', events:APP.events});
+  renderEventsSection();
+  closeAddEvent();
+}
+
+// ══════════════════════════════════════════════════════════════
+// MEETING LOG
+// ══════════════════════════════════════════════════════════════
+function openMeetingModal(funderId) {
+  const funder = APP.funders.find(f=>f.id===funderId);
+  document.getElementById('meeting-funder-name').textContent = funder ? 'Meeting with: ' + funder.name : '';
+  document.getElementById('meeting-date').value = new Date().toISOString().slice(0,10);
+  document.getElementById('meeting-notes').value = '';
+  document.getElementById('meeting-outcomes').value = '';
+  document.getElementById('meeting-next-action').value = '';
+  const fu = document.getElementById('meeting-followup-text');
+  fu.textContent = '';
+  fu.classList.remove('visible');
+  document.getElementById('meeting-modal').classList.add('open');
+  document.getElementById('meeting-modal').dataset.funderId = funderId||'';
+}
+function closeMeetingModal() { document.getElementById('meeting-modal').classList.remove('open'); }
+
+async function saveMeeting(withFollowup) {
+  const funderId = document.getElementById('meeting-modal').dataset.funderId;
+  const date = document.getElementById('meeting-date').value;
+  const channel = document.getElementById('meeting-channel').value;
+  const notes = document.getElementById('meeting-notes').value.trim();
+  const outcomes = document.getElementById('meeting-outcomes').value.trim();
+  const nextAction = document.getElementById('meeting-next-action').value.trim();
+  if(!notes) { alert('Please add meeting notes.'); return; }
+
+  const noteText = `Meeting ${date}${outcomes?'\nOutcomes: '+outcomes:''}${nextAction?'\nNext action: '+nextAction:''}`;
+
+  const funder = APP.funders.find(f=>f.id===funderId);
+  const donor = APP.donors.find(d=>d.funder_id===funderId);
+
+  if(donor) {
+    if(!donor.intelligence_notes) donor.intelligence_notes = [];
+    donor.intelligence_notes.unshift({date, note: noteText});
+    if(nextAction) { donor.next_action = nextAction; donor.next_action_due = ''; }
+    donor.last_touchpoint = {date, note: notes, channel};
+    donor.updated_at = date;
+    saveData('data/donors.json', {version:'1.0', donors:APP.donors});
+  }
+
+  if(withFollowup) {
+    const key = localStorage.getItem('mk_api_key');
+    if(!key) { alert('Add your Anthropic API key in Settings to draft follow-ups.'); return; }
+    const fu = document.getElementById('meeting-followup-text');
+    fu.textContent = 'Drafting follow-up email…';
+    fu.classList.add('visible');
+    try {
+      const resp = await fetch('https://api.anthropic.com/v1/messages', {
+        method:'POST',
+        headers:{
+          'Content-Type':'application/json',
+          'x-api-key':key,
+          'anthropic-version':'2023-06-01',
+          'anthropic-dangerous-direct-browser-access':'true'
+        },
+        body:JSON.stringify({
+          model:'claude-haiku-4-5-20251001', max_tokens:600,
+          system:`You are drafting a follow-up email from Michael Kamukulu, Executive Director of LearnImpact, to a funder contact after a meeting.
+Michael's voice: direct, evidence-led, warm but not over-familiar, professional.
+Keep it short (3-5 sentences + sign-off). Never mention Twaweza.`,
+          messages:[{role:'user',content:`Write a brief follow-up email for this meeting:
+Funder: ${funder?.name||'the contact'}
+Date: ${date}
+Meeting notes: ${notes}
+Outcomes / agreed: ${outcomes||'none specified'}
+Next action: ${nextAction||'TBD'}`}]
+        })
+      });
+      const data = await resp.json();
+      fu.textContent = data.content?.[0]?.text||'Could not generate follow-up.';
+    } catch(e) {
+      fu.textContent = 'Error generating follow-up. Check your API key in Settings.';
+    }
+  }
 }
 </script>
 </body>

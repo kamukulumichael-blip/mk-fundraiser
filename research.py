@@ -2,7 +2,8 @@
 """
 LearnImpact Fundraising Intelligence Hub — Weekly Research Script
 Runs every Monday 06:00 EAT (03:00 UTC) via GitHub Actions.
-Generates alerts.json with hot list, insights, priority shifts, and cross-programme conflicts.
+Generates alerts.json with hot list, insights, priority shifts, cross-programme conflicts,
+and source intelligence feed from registered websites/LinkedIn creators.
 """
 
 import json, os, datetime, anthropic, base64, requests, sys
@@ -78,13 +79,13 @@ PROGRAMME CONTEXT:
 {ctx}
 
 CURRENT FUNDER DATABASE ({len(funder_list)} funders for {programme}):
-{json.dumps([{{k: f.get(k) for k in ['id','name','tier','status','alignment_score','probability_score','effort_score','current_priorities','detected_priority_shift','recent_news']}} for f in funder_list[:20]], indent=2)}
+{json.dumps([{k: f.get(k) for k in ['id','name','tier','status','alignment_score','probability_score','effort_score','current_priorities','detected_priority_shift','recent_news']} for f in funder_list[:20]], indent=2)}
 
 ACTIVE OPPORTUNITIES:
 {json.dumps(active_opps, indent=2)}
 
 RELATIONSHIP NOTES:
-{json.dumps([{{k: d.get(k) for k in ['contact_name','contact_role','relationship_stage','relationship_health','next_action','next_action_due','intelligence_notes']}} for d in donor_list], indent=2)}
+{json.dumps([{k: d.get(k) for k in ['contact_name','contact_role','relationship_stage','relationship_health','next_action','next_action_due','intelligence_notes']} for d in donor_list], indent=2)}
 
 Generate a weekly intelligence brief for {programme.upper()}. Return ONLY valid JSON with this exact structure:
 {{
@@ -120,7 +121,6 @@ Be specific and actionable. No generic advice."""
             messages=[{"role": "user", "content": prompt}]
         )
         text = msg.content[0].text
-        # Extract JSON from response
         start = text.find("{")
         end = text.rfind("}") + 1
         if start >= 0 and end > start:
@@ -135,25 +135,96 @@ Be specific and actionable. No generic advice."""
     }
 
 
+def web_research_sources(sources):
+    """Use Claude with web_search to gather intelligence from registered sources.
+    Returns a list of findings relevant to LearnImpact / Timamu programmes."""
+    active = [s for s in sources if s.get("active", True)]
+    if not active:
+        print("No active sources — skipping web research.")
+        return []
+
+    source_lines = "\n".join([
+        f"- {s['name']}: {s.get('url', 'no URL')} ({', '.join(s.get('programmes', []))})"
+        for s in active[:12]
+    ])
+
+    prompt = f"""You are a fundraising intelligence analyst for LearnImpact (SOMA, KiuFunza) and Timamu Foundation in Tanzania. Today: {TODAY}.
+
+Search the following intelligence sources for the past 7 days of relevant content:
+
+REGISTERED SOURCES TO CHECK:
+{source_lines}
+
+Also search for:
+- New RFPs or grant calls matching: foundational learning, teacher coaching, AI in education, East Africa education, disability inclusion Tanzania
+- Any announcements from these funders: Gates Foundation, Founders Pledge, Hempel Foundation, Dovetail/Prevail Fund, Vodacom Foundation, Ford Foundation, Microsoft AI for Accessibility, Adobe Foundation, GPE, FCDO
+- LinkedIn posts (past 7 days) about: education funding Africa, evidence-based development grants, disability inclusion funding, AI education technology grants
+- Tanzania education news that signals government funding appetite or World Bank / GPE activity
+
+For each finding, assess relevance to:
+- SOMA (AI teacher coaching, foundational learning, Tanzania, $3/student)
+- KiuFunza (teacher performance pay, QJE evidence, East Africa)
+- Timamu (PWD inclusion, assistive technology, creator economy)
+
+Return ONLY valid JSON:
+{{
+  "findings": [
+    {{
+      "source": "source name",
+      "title": "specific headline or finding",
+      "relevance": "soma|kiufunza|timamu|learnimpact",
+      "why_relevant": "specific reason — name the funder/RFP/amount if applicable",
+      "url": "url or null",
+      "action": "exact next step for Michael",
+      "urgency": "high|medium|low"
+    }}
+  ]
+}}
+
+Only include genuinely relevant findings. Maximum 10 findings. Be specific — name funders, amounts, deadlines."""
+
+    try:
+        print("Running web research across registered sources…")
+        msg = client.messages.create(
+            model="claude-haiku-4-5-20251001",
+            max_tokens=2000,
+            tools=[{"type": "web_search_20250305", "name": "web_search"}],
+            messages=[{"role": "user", "content": prompt}]
+        )
+        # Collect text from all content blocks (Claude may have done multiple searches)
+        full_text = ""
+        for block in msg.content:
+            if hasattr(block, "text"):
+                full_text += block.text
+        start = full_text.find("{")
+        end = full_text.rfind("}") + 1
+        if start >= 0 and end > start:
+            result = json.loads(full_text[start:end])
+            findings = result.get("findings", [])
+            print(f"Web research: {len(findings)} findings.")
+            return findings
+    except Exception as e:
+        print(f"Web research error (continuing without): {e}")
+    return []
+
+
 def detect_cross_programme_conflicts(funders):
     """Detect funders appearing in multiple entity pools."""
     li_funders = {f["id"]: f["name"] for f in funders if f.get("entity") == "learnimpact"}
     ti_funders = {f["id"]: f["name"] for f in funders if f.get("entity") == "timamu"}
-    # Also check by name for name-based matches
     li_names = {f["name"].lower(): f for f in funders if f.get("entity") == "learnimpact"}
     conflicts = []
     for fid, name in ti_funders.items():
         if fid in li_funders or name.lower() in li_names:
             li_f = li_funders.get(fid) or li_names.get(name.lower(), {}).get("name", name)
-            progs_li = [p for f in funders if f.get("name") == li_f or f["id"] == fid
+            progs_li = [p for f in funders if (f.get("name") == li_f or f["id"] == fid)
                         and f.get("entity") == "learnimpact" for p in f.get("programmes", [])]
-            progs_ti = ["timamu"]
             conflicts.append({
                 "funder_id": fid,
                 "funder": name,
-                "programmes": list(set(progs_li + progs_ti)) or ["learnimpact", "timamu"],
-                "note": f"Same funder appears in both LearnImpact and Timamu pools. "
-                        f"Coordinate before approaching — never allow simultaneous asks to same contact.",
+                "programmes": list(set(progs_li + ["timamu"])) or ["learnimpact", "timamu"],
+                "note": "Same funder appears in both LearnImpact and Timamu pools. "
+                        "Coordinate before approaching — never allow simultaneous asks to same contact.",
                 "recommended_sequence": "Decide priority entity first. LearnImpact asks first if active programme ongoing."
             })
     return conflicts
@@ -203,7 +274,6 @@ def build_this_week_actions(soma_res, kf_res, timamu_res, donors):
                 "urgency": "high" if (h.get("composite_score") or 0) >= 80 else "medium"
             })
 
-    # Add overdue CRM touchpoints
     for d in donors:
         tp_date = (d.get("last_touchpoint") or {}).get("date")
         if tp_date:
@@ -217,7 +287,6 @@ def build_this_week_actions(soma_res, kf_res, timamu_res, donors):
                     "urgency": "high"
                 })
 
-    # Sort: high urgency first
     actions.sort(key=lambda a: (0 if a["urgency"] == "high" else 1, a.get("due", "")))
     return actions[:10]
 
@@ -228,10 +297,12 @@ def main():
     funders_data   = load_json("funders.json")
     opps_data      = load_json("opportunities.json")
     donors_data    = load_json("donors.json")
+    sources_data   = load_json("sources.json")
 
-    funders      = funders_data.get("funders", [])
+    funders       = funders_data.get("funders", [])
     opportunities = opps_data.get("opportunities", [])
-    donors       = donors_data.get("donors", [])
+    donors        = donors_data.get("donors", [])
+    sources       = sources_data.get("sources", [])
 
     print("Researching SOMA…")
     soma_res = research_programme("soma", funders, opportunities, donors)
@@ -242,13 +313,15 @@ def main():
     print("Researching Timamu…")
     timamu_res = research_programme("timamu", funders, opportunities, donors)
 
+    # Web research across registered intelligence sources
+    source_feed = web_research_sources(sources)
+
     conflicts = detect_cross_programme_conflicts(funders)
 
     upcoming = sorted(
         [o for o in opportunities if o.get("deadline") and o["stage"] not in ["won","lost"]],
         key=lambda o: o["deadline"]
     )
-    today_str = datetime.date.today().isoformat()
     upcoming_dl = [{
         "opportunity_id": o["id"],
         "funder": next((f["name"] for f in funders if f["id"] == o.get("funder_id")), o.get("funder_id","")),
@@ -257,7 +330,6 @@ def main():
         "days_remaining": (datetime.date.fromisoformat(o["deadline"]) - datetime.date.today()).days
     } for o in upcoming[:10]]
 
-    # Current funding gap (static seed — will be updated manually or via future automation)
     funding_gap = {
         "soma_confirmed_usd": 229000,
         "soma_needed_usd": 866000,
@@ -270,7 +342,6 @@ def main():
     }
 
     this_week_actions = build_this_week_actions(soma_res, kf_res, timamu_res, donors)
-
     monday_summary = generate_monday_brief(soma_res, kf_res, timamu_res, opportunities, funding_gap)
 
     alerts = {
@@ -279,6 +350,7 @@ def main():
         "soma": soma_res,
         "kiufunza": kf_res,
         "timamu": timamu_res,
+        "source_feed": source_feed,
         "cross_programme_conflicts": conflicts,
         "this_week_actions": this_week_actions,
         "upcoming_deadlines": upcoming_dl,
@@ -289,7 +361,6 @@ def main():
     save_json("alerts.json", alerts)
     print("Generated alerts.json")
 
-    # Update funder research dates
     for f in funders:
         if not f.get("last_research_date") or f["last_research_date"] < TODAY:
             f["last_research_date"] = TODAY

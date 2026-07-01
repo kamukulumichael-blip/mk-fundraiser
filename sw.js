@@ -1,4 +1,4 @@
-const CACHE = 'mk-fundraiser-v1';
+const CACHE = 'mk-fundraiser-v2';
 const STATIC = ['./','./index.html','./manifest.json'];
 
 self.addEventListener('install', e => {
