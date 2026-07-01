@@ -5,60 +5,145 @@
     {
       "id": "f-gates",
       "name": "Bill & Melinda Gates Foundation",
-      "programmes": ["soma"],
+      "programmes": [
+        "soma"
+      ],
       "entity": "learnimpact",
+      "funder_type": "international_foundation",
       "tier": 1,
       "status": "prospect",
       "mission_summary": "Gates Foundation's Global Education Program committed USD 240M in 2025 to foundational learning. In December 2025, they co-announced a USD 40M, 4-year AI-education partnership with ADQ specifically targeting sub-Saharan Africa. They are actively searching for programmes combining AI tools with rigorous RCT evidence.",
-      "current_priorities": ["AI-enabled foundational learning", "sub-Saharan Africa", "government systems strengthening", "cost-effectiveness", "LAYS metric"],
-      "geography": ["Sub-Saharan Africa", "Tanzania", "East Africa"],
-      "thematic_eligibility": ["foundational literacy", "foundational numeracy", "AI in education", "teacher support", "government co-financing"],
+      "current_priorities": [
+        "AI-enabled foundational learning",
+        "sub-Saharan Africa",
+        "government systems strengthening",
+        "cost-effectiveness",
+        "LAYS metric"
+      ],
+      "geography": [
+        "Sub-Saharan Africa",
+        "Tanzania",
+        "East Africa"
+      ],
+      "thematic_eligibility": [
+        "foundational literacy",
+        "foundational numeracy",
+        "AI in education",
+        "teacher support",
+        "government co-financing"
+      ],
       "grant_size_usd_min": 2000000,
       "grant_size_usd_max": 20000000,
       "typical_duration_years": 4,
-      "recent_portfolio": ["Gates/ADQ $40M AI-education initiative (Dec 2025)", "Global Education Program $240M (2025)", "Global Coalition for Foundational Learning"],
-      "due_diligence_requirements": ["audited financials 3 years", "theory of change", "MEL framework", "cost-effectiveness analysis", "RCT evidence", "government partnership letters"],
+      "recent_portfolio": [
+        "Gates/ADQ $40M AI-education initiative (Dec 2025)",
+        "Global Education Program $240M (2025)",
+        "Global Coalition for Foundational Learning"
+      ],
+      "due_diligence_requirements": [
+        "audited financials 3 years",
+        "theory of change",
+        "MEL framework",
+        "cost-effectiveness analysis",
+        "RCT evidence",
+        "government partnership letters"
+      ],
       "application_process": "invite-only",
-      "cycle_months": ["January", "July"],
+      "cycle_months": [
+        "January",
+        "July"
+      ],
       "language_frame": "evidence-based cost-effectiveness LAYS government-systems",
-      "key_contacts": [{"name": "Global Education Program Team", "role": "Programme Officer", "email": "gep@gatesfoundation.org", "linkedin": ""}],
-      "known_restrictions": ["Religious organisations ineligible", "Must have published evidence", "Government relationship required"],
+      "key_contacts": [
+        {
+          "name": "Global Education Program Team",
+          "role": "Programme Officer",
+          "email": "gep@gatesfoundation.org",
+          "linkedin": ""
+        }
+      ],
+      "known_restrictions": [
+        "Religious organisations ineligible",
+        "Must have published evidence",
+        "Government relationship required"
+      ],
       "alignment_score": 96,
       "probability_score": 35,
       "effort_score": 5,
       "detected_priority_shift": null,
-      "recent_news": ["Dec 2025: $40M AI-education partnership with ADQ announced for sub-Saharan Africa", "2025: $240M Global Education Program commitment"],
+      "recent_news": [
+        "Dec 2025: $40M AI-education partnership with ADQ announced for sub-Saharan Africa",
+        "2025: $240M Global Education Program commitment"
+      ],
       "drive_profile_id": "",
       "drive_due_diligence_id": "",
       "last_research_date": "2026-06-30",
-      "notes": "Invite-only. Requires thought leadership visibility as prerequisite. Michael's QJE evidence and SOMA cost architecture positions LearnImpact well. Ideal entry: through the Gates/ADQ AI-education initiative. Long game — 2027-2028 realistic."
+      "notes": "Invite-only. Requires thought leadership visibility as prerequisite. Michael's QJE evidence and SOMA cost architecture positions LearnImpact well. Ideal entry: through the Gates/ADQ AI-education initiative. Long game \u2014 2027-2028 realistic."
     },
     {
       "id": "f-adq",
       "name": "ADQ (Abu Dhabi Developmental Holding)",
-      "programmes": ["soma"],
+      "programmes": [
+        "soma"
+      ],
       "entity": "learnimpact",
+      "funder_type": "international_foundation",
       "tier": 1,
       "status": "prospect",
       "mission_summary": "UAE sovereign wealth fund and development holding company. Co-announced a USD 40M, 4-year AI-education partnership with the Gates Foundation in December 2025 specifically for AI-enabled foundational learning in sub-Saharan Africa. Actively deploying capital into education technology and AI programmes with rigorous evidence.",
-      "current_priorities": ["AI-enabled education", "sub-Saharan Africa", "foundational learning", "scalable technology solutions", "impact investing"],
-      "geography": ["Sub-Saharan Africa", "East Africa", "Middle East/Africa"],
-      "thematic_eligibility": ["AI in education", "foundational literacy", "foundational numeracy", "EdTech", "teacher coaching technology"],
+      "current_priorities": [
+        "AI-enabled education",
+        "sub-Saharan Africa",
+        "foundational learning",
+        "scalable technology solutions",
+        "impact investing"
+      ],
+      "geography": [
+        "Sub-Saharan Africa",
+        "East Africa",
+        "Middle East/Africa"
+      ],
+      "thematic_eligibility": [
+        "AI in education",
+        "foundational literacy",
+        "foundational numeracy",
+        "EdTech",
+        "teacher coaching technology"
+      ],
       "grant_size_usd_min": 2000000,
       "grant_size_usd_max": 15000000,
       "typical_duration_years": 4,
-      "recent_portfolio": ["Gates/ADQ $40M AI-education initiative (Dec 2025)"],
-      "due_diligence_requirements": ["rigorous evidence base", "AI/technology component required", "scale pathway", "government engagement"],
+      "recent_portfolio": [
+        "Gates/ADQ $40M AI-education initiative (Dec 2025)"
+      ],
+      "due_diligence_requirements": [
+        "rigorous evidence base",
+        "AI/technology component required",
+        "scale pathway",
+        "government engagement"
+      ],
       "application_process": "invite-only",
       "cycle_months": [],
       "language_frame": "AI technology scalability evidence-based economic-returns",
-      "key_contacts": [{"name": "Education Programme Team", "role": "Programme Officer", "email": "", "linkedin": ""}],
-      "known_restrictions": ["Technology component required", "Scale ambition required"],
+      "key_contacts": [
+        {
+          "name": "Education Programme Team",
+          "role": "Programme Officer",
+          "email": "",
+          "linkedin": ""
+        }
+      ],
+      "known_restrictions": [
+        "Technology component required",
+        "Scale ambition required"
+      ],
       "alignment_score": 95,
       "probability_score": 30,
       "effort_score": 5,
       "detected_priority_shift": null,
-      "recent_news": ["Dec 2025: $40M AI-education partnership with Gates Foundation announced"],
+      "recent_news": [
+        "Dec 2025: $40M AI-education partnership with Gates Foundation announced"
+      ],
       "drive_profile_id": "",
       "drive_due_diligence_id": "",
       "last_research_date": "2026-06-30",
@@ -67,29 +152,80 @@
     {
       "id": "f-founders-pledge",
       "name": "Founders Pledge",
-      "programmes": ["soma", "kiufunza"],
+      "programmes": [
+        "soma",
+        "kiufunza"
+      ],
       "entity": "learnimpact",
+      "funder_type": "high_net_worth",
       "tier": 1,
       "status": "submitted",
       "mission_summary": "UK-based initiative where entrepreneurs pledge a percentage of proceeds to highly effective charities. Funds rigorous, cost-effective interventions with strong evidence. Their education portfolio is oriented toward LAYS-based cost-effectiveness analysis. Currently in active due diligence on LearnImpact.",
-      "current_priorities": ["cost-effectiveness (LAYS metric)", "rigorous RCT evidence", "government partnership models", "foundational learning", "East Africa"],
-      "geography": ["East Africa", "Sub-Saharan Africa", "Tanzania"],
-      "thematic_eligibility": ["foundational literacy", "foundational numeracy", "teacher incentives", "government systems"],
+      "current_priorities": [
+        "cost-effectiveness (LAYS metric)",
+        "rigorous RCT evidence",
+        "government partnership models",
+        "foundational learning",
+        "East Africa"
+      ],
+      "geography": [
+        "East Africa",
+        "Sub-Saharan Africa",
+        "Tanzania"
+      ],
+      "thematic_eligibility": [
+        "foundational literacy",
+        "foundational numeracy",
+        "teacher incentives",
+        "government systems"
+      ],
       "grant_size_usd_min": 2000000,
       "grant_size_usd_max": 8000000,
       "typical_duration_years": 4,
-      "recent_portfolio": ["Multiple GiveWell-adjacent education programmes", "Evidence Action"],
-      "due_diligence_requirements": ["RCT evidence required", "LAYS cost-effectiveness model", "salary benchmarking", "governance documentation", "scale pathway", "top-end budget projections"],
+      "recent_portfolio": [
+        "Multiple GiveWell-adjacent education programmes",
+        "Evidence Action"
+      ],
+      "due_diligence_requirements": [
+        "RCT evidence required",
+        "LAYS cost-effectiveness model",
+        "salary benchmarking",
+        "governance documentation",
+        "scale pathway",
+        "top-end budget projections"
+      ],
       "application_process": "invite-only",
-      "cycle_months": ["Q1", "Q2"],
+      "cycle_months": [
+        "Q1",
+        "Q2"
+      ],
       "language_frame": "evidence-based cost-effectiveness LAYS scalability",
-      "key_contacts": [{"name": "Lorcan Clarke", "role": "Programme Officer", "email": "lorcan@founderspledge.com", "linkedin": ""}, {"name": "Vadim", "role": "Donor / Pledge Member", "email": "", "linkedin": ""}],
-      "known_restrictions": ["Evidence required (RCT preferred)", "Cost-per-outcome must be competitive"],
+      "key_contacts": [
+        {
+          "name": "Lorcan Clarke",
+          "role": "Programme Officer",
+          "email": "lorcan@founderspledge.com",
+          "linkedin": ""
+        },
+        {
+          "name": "Vadim",
+          "role": "Donor / Pledge Member",
+          "email": "",
+          "linkedin": ""
+        }
+      ],
+      "known_restrictions": [
+        "Evidence required (RCT preferred)",
+        "Cost-per-outcome must be competitive"
+      ],
       "alignment_score": 94,
       "probability_score": 55,
       "effort_score": 4,
       "detected_priority_shift": null,
-      "recent_news": ["June 2026: Due diligence questions submitted by Lorcan Clarke, deadline June 26", "Active ask: USD 5M for SOMA over 4 years"],
+      "recent_news": [
+        "June 2026: Due diligence questions submitted by Lorcan Clarke, deadline June 26",
+        "Active ask: USD 5M for SOMA over 4 years"
+      ],
       "drive_profile_id": "",
       "drive_due_diligence_id": "",
       "last_research_date": "2026-06-30",
@@ -98,148 +234,324 @@
     {
       "id": "f-hempel",
       "name": "Hempel Foundation",
-      "programmes": ["kiufunza", "soma"],
+      "programmes": [
+        "kiufunza",
+        "soma"
+      ],
       "entity": "learnimpact",
+      "funder_type": "international_foundation",
       "tier": 1,
       "status": "partner",
       "mission_summary": "LearnImpact's most important long-term anchor donor. Has funded KiuFunza historically. At the May 2026 Steering Committee spontaneously signalled renewal interest. Hearing Committee is the live decision moment for renewal. Contact: Rosa.",
-      "current_priorities": ["KiuFunza continuation", "learning outcomes", "teacher incentive programmes", "Tanzania", "East Africa"],
-      "geography": ["Tanzania", "East Africa"],
-      "thematic_eligibility": ["teacher performance pay", "foundational learning", "KiuFunza specifically"],
+      "current_priorities": [
+        "KiuFunza continuation",
+        "learning outcomes",
+        "teacher incentive programmes",
+        "Tanzania",
+        "East Africa"
+      ],
+      "geography": [
+        "Tanzania",
+        "East Africa"
+      ],
+      "thematic_eligibility": [
+        "teacher performance pay",
+        "foundational learning",
+        "KiuFunza specifically"
+      ],
       "grant_size_usd_min": 400000,
       "grant_size_usd_max": 800000,
       "typical_duration_years": 2,
-      "recent_portfolio": ["KiuFunza Phase 4 (ongoing)", "LearnImpact org funding (USD 587,000 confirmed FY2026)"],
-      "due_diligence_requirements": ["annual reports", "audited financials", "programme results", "Steering Committee relationship"],
+      "recent_portfolio": [
+        "KiuFunza Phase 4 (ongoing)",
+        "LearnImpact org funding (USD 587,000 confirmed FY2026)"
+      ],
+      "due_diligence_requirements": [
+        "annual reports",
+        "audited financials",
+        "programme results",
+        "Steering Committee relationship"
+      ],
       "application_process": "invite-only",
       "cycle_months": [],
       "language_frame": "evidence-based teacher-incentive learning-outcomes",
-      "key_contacts": [{"name": "Rosa", "role": "Programme Officer / Relationship Manager", "email": "", "linkedin": ""}],
-      "known_restrictions": ["Relationship-based — managed through Steering Committee"],
+      "key_contacts": [
+        {
+          "name": "Rosa",
+          "role": "Programme Officer / Relationship Manager",
+          "email": "",
+          "linkedin": ""
+        }
+      ],
+      "known_restrictions": [
+        "Relationship-based \u2014 managed through Steering Committee"
+      ],
       "alignment_score": 90,
       "probability_score": 70,
       "effort_score": 2,
       "detected_priority_shift": null,
-      "recent_news": ["May 2026: Spontaneous renewal signal at Steering Committee. Hearing Committee is live decision."],
+      "recent_news": [
+        "May 2026: Spontaneous renewal signal at Steering Committee. Hearing Committee is live decision."
+      ],
       "drive_profile_id": "",
       "drive_due_diligence_id": "",
       "last_research_date": "2026-06-30",
-      "notes": "ANCHOR DONOR. Do not take for granted. Hearing Committee is the live decision. Rosa manages the relationship — ensure she has everything she needs. Must transition SOMA conversation carefully — do not signal KiuFunza is being phased out before renewal confirmed."
+      "notes": "ANCHOR DONOR. Do not take for granted. Hearing Committee is the live decision. Rosa manages the relationship \u2014 ensure she has everything she needs. Must transition SOMA conversation carefully \u2014 do not signal KiuFunza is being phased out before renewal confirmed."
     },
     {
       "id": "f-vtf",
       "name": "Vodacom Tanzania Foundation (VTF)",
-      "programmes": ["kiufunza", "soma"],
+      "programmes": [
+        "kiufunza",
+        "soma"
+      ],
       "entity": "learnimpact",
+      "funder_type": "local_corporate",
       "tier": 1,
       "status": "partner",
       "mission_summary": "Corporate foundation of Vodacom Tanzania with an 80% technology mandate. Near-confirmed KiuFunza Phase 5 funder. Has contributed TZS 462M to KiuFunza 2026-27. The technology mandate makes VTF a natural fit for SOMA's AI chatbot component. Must extend conversation to SOMA before KiuFunza phases down.",
-      "current_priorities": ["technology-enabled programmes", "education", "Tanzania", "community impact"],
-      "geography": ["Tanzania"],
-      "thematic_eligibility": ["technology in education", "teacher coaching technology", "AI tools", "KiuFunza"],
+      "current_priorities": [
+        "technology-enabled programmes",
+        "education",
+        "Tanzania",
+        "community impact"
+      ],
+      "geography": [
+        "Tanzania"
+      ],
+      "thematic_eligibility": [
+        "technology in education",
+        "teacher coaching technology",
+        "AI tools",
+        "KiuFunza"
+      ],
       "grant_size_usd_min": 100000,
       "grant_size_usd_max": 250000,
       "typical_duration_years": 1,
-      "recent_portfolio": ["KiuFunza Phase 5 - TZS 462M confirmed for 2026-27"],
-      "due_diligence_requirements": ["Grant Agreement compliance", "quarterly reporting", "Vodacom visibility in communications"],
+      "recent_portfolio": [
+        "KiuFunza Phase 5 - TZS 462M confirmed for 2026-27"
+      ],
+      "due_diligence_requirements": [
+        "Grant Agreement compliance",
+        "quarterly reporting",
+        "Vodacom visibility in communications"
+      ],
       "application_process": "invite-only",
       "cycle_months": [],
       "language_frame": "technology impact community Tanzania",
-      "key_contacts": [{"name": "Sandra Oswald", "role": "VTF Programme Manager", "email": "", "linkedin": ""}],
-      "known_restrictions": ["80% technology mandate", "Tanzania only", "Vodacom visibility required"],
+      "key_contacts": [
+        {
+          "name": "Sandra Oswald",
+          "role": "VTF Programme Manager",
+          "email": "",
+          "linkedin": ""
+        }
+      ],
+      "known_restrictions": [
+        "80% technology mandate",
+        "Tanzania only",
+        "Vodacom visibility required"
+      ],
       "alignment_score": 82,
       "probability_score": 80,
       "effort_score": 2,
       "detected_priority_shift": null,
-      "recent_news": ["2026: TZS 462M committed to KiuFunza. Grant Agreement active."],
+      "recent_news": [
+        "2026: TZS 462M committed to KiuFunza. Grant Agreement active."
+      ],
       "drive_profile_id": "",
       "drive_due_diligence_id": "",
       "last_research_date": "2026-06-30",
-      "notes": "ACTIVE PARTNER. Contact: Sandra Oswald. VTF 80% tech mandate = strong SOMA fit (WhatsApp AI chatbot). SOMA conversation with VTF NOT YET STARTED — this is urgent. Must happen before KiuFunza phases down. Clause 2.3 in current Grant Agreement may need updating re: TIF reallocation."
+      "notes": "ACTIVE PARTNER. Contact: Sandra Oswald. VTF 80% tech mandate = strong SOMA fit (WhatsApp AI chatbot). SOMA conversation with VTF NOT YET STARTED \u2014 this is urgent. Must happen before KiuFunza phases down. Clause 2.3 in current Grant Agreement may need updating re: TIF reallocation."
     },
     {
       "id": "f-dovetail",
       "name": "Dovetail / Prevail Fund",
-      "programmes": ["kiufunza", "soma"],
+      "programmes": [
+        "kiufunza",
+        "soma"
+      ],
       "entity": "learnimpact",
+      "funder_type": "international_foundation",
       "tier": 1,
       "status": "partner",
       "mission_summary": "USD 100K confirmed for LearnImpact Track 1 (KiuFunza). Contact Ali Ellegard. Assessment technology is the entry point for SOMA conversations. Track 2 (SOMA) is a separate conversation not yet started. Potential 10-year partnership.",
-      "current_priorities": ["evidence-based education", "assessment technology", "East Africa", "teacher performance"],
-      "geography": ["East Africa", "Tanzania"],
-      "thematic_eligibility": ["KiuFunza", "SOMA assessment component", "teacher incentives"],
+      "current_priorities": [
+        "evidence-based education",
+        "assessment technology",
+        "East Africa",
+        "teacher performance"
+      ],
+      "geography": [
+        "East Africa",
+        "Tanzania"
+      ],
+      "thematic_eligibility": [
+        "KiuFunza",
+        "SOMA assessment component",
+        "teacher incentives"
+      ],
       "grant_size_usd_min": 75000,
       "grant_size_usd_max": 300000,
       "typical_duration_years": 2,
-      "recent_portfolio": ["LearnImpact Track 1 USD 100K (2026 confirmed)"],
-      "due_diligence_requirements": ["Annual reporting", "programme results"],
+      "recent_portfolio": [
+        "LearnImpact Track 1 USD 100K (2026 confirmed)"
+      ],
+      "due_diligence_requirements": [
+        "Annual reporting",
+        "programme results"
+      ],
       "application_process": "invite-only",
       "cycle_months": [],
       "language_frame": "evidence-based assessment technology impact",
-      "key_contacts": [{"name": "Ali Ellegard", "role": "Programme Officer", "email": "", "linkedin": ""}],
+      "key_contacts": [
+        {
+          "name": "Ali Ellegard",
+          "role": "Programme Officer",
+          "email": "",
+          "linkedin": ""
+        }
+      ],
       "known_restrictions": [],
       "alignment_score": 80,
       "probability_score": 72,
       "effort_score": 2,
       "detected_priority_shift": null,
-      "recent_news": ["2026: USD 100K Track 1 confirmed. Track 2 (SOMA) conversation not started."],
+      "recent_news": [
+        "2026: USD 100K Track 1 confirmed. Track 2 (SOMA) conversation not started."
+      ],
       "drive_profile_id": "",
       "drive_due_diligence_id": "",
       "last_research_date": "2026-06-30",
-      "notes": "ACTIVE PARTNER. Track 2 SOMA conversation must start soon — assessment technology angle. Ali Ellegard is the contact. Potential for long-term (10-year) partnership according to Drive docs."
+      "notes": "ACTIVE PARTNER. Track 2 SOMA conversation must start soon \u2014 assessment technology angle. Ali Ellegard is the contact. Potential for long-term (10-year) partnership according to Drive docs."
     },
     {
       "id": "f-open-philanthropy",
       "name": "Open Philanthropy",
-      "programmes": ["soma"],
+      "programmes": [
+        "soma"
+      ],
       "entity": "learnimpact",
+      "funder_type": "international_foundation",
       "tier": 1,
       "status": "prospect",
       "mission_summary": "Large US philanthropic organisation with effective altruism principles. Prioritises cost-effectiveness and rigorous evidence (GiveWell-aligned). Global health and wellbeing is a major focus. Education programmes must demonstrate compelling cost-per-outcome metrics in LAYS terms.",
-      "current_priorities": ["global health and wellbeing", "cost-effectiveness", "RCT evidence", "low-income countries", "foundational learning"],
-      "geography": ["Sub-Saharan Africa", "Low-income countries globally"],
-      "thematic_eligibility": ["foundational literacy", "foundational numeracy", "evidence-based interventions", "cost-per-outcome"],
+      "current_priorities": [
+        "global health and wellbeing",
+        "cost-effectiveness",
+        "RCT evidence",
+        "low-income countries",
+        "foundational learning"
+      ],
+      "geography": [
+        "Sub-Saharan Africa",
+        "Low-income countries globally"
+      ],
+      "thematic_eligibility": [
+        "foundational literacy",
+        "foundational numeracy",
+        "evidence-based interventions",
+        "cost-per-outcome"
+      ],
       "grant_size_usd_min": 500000,
       "grant_size_usd_max": 10000000,
       "typical_duration_years": 3,
-      "recent_portfolio": ["GiveWell top charities", "Evidence Action", "Dispensers for Safe Water"],
-      "due_diligence_requirements": ["RCT evidence required", "LAYS cost-effectiveness", "rigorous MEL", "cost transparency"],
+      "recent_portfolio": [
+        "GiveWell top charities",
+        "Evidence Action",
+        "Dispensers for Safe Water"
+      ],
+      "due_diligence_requirements": [
+        "RCT evidence required",
+        "LAYS cost-effectiveness",
+        "rigorous MEL",
+        "cost transparency"
+      ],
       "application_process": "rolling",
       "cycle_months": [],
       "language_frame": "evidence-based cost-effectiveness LAYS scalability",
-      "key_contacts": [{"name": "Education Team", "role": "Programme Officers", "email": "contact@openphilanthropy.org", "linkedin": ""}],
-      "known_restrictions": ["Must have strong quantitative evidence", "USD 12/LAYS claim must be verified or clearly modelled"],
+      "key_contacts": [
+        {
+          "name": "Education Team",
+          "role": "Programme Officers",
+          "email": "contact@openphilanthropy.org",
+          "linkedin": ""
+        }
+      ],
+      "known_restrictions": [
+        "Must have strong quantitative evidence",
+        "USD 12/LAYS claim must be verified or clearly modelled"
+      ],
       "alignment_score": 88,
       "probability_score": 40,
       "effort_score": 4,
       "detected_priority_shift": null,
-      "recent_news": ["Ongoing: EA-aligned funders actively seeking education programmes with LAYS evidence"],
+      "recent_news": [
+        "Ongoing: EA-aligned funders actively seeking education programmes with LAYS evidence"
+      ],
       "drive_profile_id": "",
       "drive_due_diligence_id": "",
       "last_research_date": "2026-06-30",
-      "notes": "Strong alignment on evidence but SOMA has no published results yet. Position as: 'funding the evidence generation' — the RCT is the product. Mtwara endline (2027) is the unlock. Submit LOI in 2027 when preliminary results available. KiuFunza QJE evidence is the credibility anchor."
+      "notes": "Strong alignment on evidence but SOMA has no published results yet. Position as: 'funding the evidence generation' \u2014 the RCT is the product. Mtwara endline (2027) is the unlock. Submit LOI in 2027 when preliminary results available. KiuFunza QJE evidence is the credibility anchor."
     },
     {
       "id": "f-arnold",
       "name": "Arnold Ventures",
-      "programmes": ["soma", "kiufunza"],
+      "programmes": [
+        "soma",
+        "kiufunza"
+      ],
       "entity": "learnimpact",
+      "funder_type": "international_foundation",
       "tier": 1,
       "status": "prospect",
       "mission_summary": "Houston-based philanthropy with strong commitment to evidence-based policy and RCT-rigorous interventions. Criminal justice, education, and health focus. Education portfolio prioritises interventions with credible causal evidence and potential for government adoption.",
-      "current_priorities": ["evidence-based education policy", "RCT-backed interventions", "government integration", "cost-effectiveness", "scale pathway"],
-      "geography": ["Global", "Sub-Saharan Africa", "US domestic priority but international considered"],
-      "thematic_eligibility": ["evidence-based education", "teacher effectiveness", "foundational learning", "government policy integration"],
+      "current_priorities": [
+        "evidence-based education policy",
+        "RCT-backed interventions",
+        "government integration",
+        "cost-effectiveness",
+        "scale pathway"
+      ],
+      "geography": [
+        "Global",
+        "Sub-Saharan Africa",
+        "US domestic priority but international considered"
+      ],
+      "thematic_eligibility": [
+        "evidence-based education",
+        "teacher effectiveness",
+        "foundational learning",
+        "government policy integration"
+      ],
       "grant_size_usd_min": 500000,
       "grant_size_usd_max": 5000000,
       "typical_duration_years": 3,
-      "recent_portfolio": ["J-PAL affiliated researchers", "Evidence-based policy initiatives"],
-      "due_diligence_requirements": ["published RCT evidence preferred", "government partnership", "theory of change", "rigorous MEL"],
+      "recent_portfolio": [
+        "J-PAL affiliated researchers",
+        "Evidence-based policy initiatives"
+      ],
+      "due_diligence_requirements": [
+        "published RCT evidence preferred",
+        "government partnership",
+        "theory of change",
+        "rigorous MEL"
+      ],
       "application_process": "rolling",
       "cycle_months": [],
       "language_frame": "evidence-based policy-change government-integration scalability",
-      "key_contacts": [{"name": "Education Team", "role": "Programme Officers", "email": "", "linkedin": ""}],
-      "known_restrictions": ["Evidence required", "Policy/government integration preferred"],
+      "key_contacts": [
+        {
+          "name": "Education Team",
+          "role": "Programme Officers",
+          "email": "",
+          "linkedin": ""
+        }
+      ],
+      "known_restrictions": [
+        "Evidence required",
+        "Policy/government integration preferred"
+      ],
       "alignment_score": 85,
       "probability_score": 38,
       "effort_score": 4,
@@ -248,34 +560,70 @@
       "drive_profile_id": "",
       "drive_due_diligence_id": "",
       "last_research_date": "2026-06-30",
-      "notes": "Good fit — QJE published evidence is the right credential. Position as 'RCT-backed teacher incentive programme seeking to test AI-enabled delivery model'. Government co-financing angle (Kibaha DC) is compelling for policy integration story."
+      "notes": "Good fit \u2014 QJE published evidence is the right credential. Position as 'RCT-backed teacher incentive programme seeking to test AI-enabled delivery model'. Government co-financing angle (Kibaha DC) is compelling for policy integration story."
     },
     {
       "id": "f-schmidt",
       "name": "Schmidt Futures",
-      "programmes": ["soma"],
+      "programmes": [
+        "soma"
+      ],
       "entity": "learnimpact",
+      "funder_type": "international_foundation",
       "tier": 1,
       "status": "prospect",
       "mission_summary": "Eric Schmidt's philanthropic initiative, focused on AI, science, and education at the intersection of technology and human potential. Strong interest in AI applications that improve educational outcomes, particularly in underserved communities. Prefer novel approaches combining technology with evidence.",
-      "current_priorities": ["AI in education", "technology for learning", "novel AI applications", "underserved communities", "scientific rigor"],
-      "geography": ["Global", "Sub-Saharan Africa"],
-      "thematic_eligibility": ["AI-enabled education", "teacher coaching technology", "foundational learning", "EdTech with evidence"],
+      "current_priorities": [
+        "AI in education",
+        "technology for learning",
+        "novel AI applications",
+        "underserved communities",
+        "scientific rigor"
+      ],
+      "geography": [
+        "Global",
+        "Sub-Saharan Africa"
+      ],
+      "thematic_eligibility": [
+        "AI-enabled education",
+        "teacher coaching technology",
+        "foundational learning",
+        "EdTech with evidence"
+      ],
       "grant_size_usd_min": 500000,
       "grant_size_usd_max": 5000000,
       "typical_duration_years": 3,
-      "recent_portfolio": ["AI research institutes", "Technology-enabled learning programmes"],
-      "due_diligence_requirements": ["technology innovation required", "evidence-base or rigorous evaluation plan", "AI component essential"],
+      "recent_portfolio": [
+        "AI research institutes",
+        "Technology-enabled learning programmes"
+      ],
+      "due_diligence_requirements": [
+        "technology innovation required",
+        "evidence-base or rigorous evaluation plan",
+        "AI component essential"
+      ],
       "application_process": "invite-only",
       "cycle_months": [],
       "language_frame": "AI-technology evidence-based innovation",
-      "key_contacts": [{"name": "Education Programme Team", "role": "Programme Officers", "email": "", "linkedin": ""}],
-      "known_restrictions": ["Technology/AI component essential", "Novel approach preferred"],
+      "key_contacts": [
+        {
+          "name": "Education Programme Team",
+          "role": "Programme Officers",
+          "email": "",
+          "linkedin": ""
+        }
+      ],
+      "known_restrictions": [
+        "Technology/AI component essential",
+        "Novel approach preferred"
+      ],
       "alignment_score": 87,
       "probability_score": 32,
       "effort_score": 4,
       "detected_priority_shift": null,
-      "recent_news": ["2025-2026: Increasing focus on AI applications in education globally"],
+      "recent_news": [
+        "2025-2026: Increasing focus on AI applications in education globally"
+      ],
       "drive_profile_id": "",
       "drive_due_diligence_id": "",
       "last_research_date": "2026-06-30",
@@ -284,60 +632,139 @@
     {
       "id": "f-hewlett",
       "name": "William & Flora Hewlett Foundation",
-      "programmes": ["soma", "kiufunza"],
+      "programmes": [
+        "soma",
+        "kiufunza"
+      ],
       "entity": "learnimpact",
+      "funder_type": "international_foundation",
       "tier": 2,
       "status": "prospect",
       "mission_summary": "One of the world's largest private foundations. Education portfolio focuses on deeper learning, quality education in developing countries, and open educational resources. Strong interest in Sub-Saharan Africa foundational learning. Previously funded TaRL work and evidence-based approaches.",
-      "current_priorities": ["deeper learning", "education quality in Sub-Saharan Africa", "evidence-based approaches", "government capacity", "open educational resources"],
-      "geography": ["Sub-Saharan Africa", "East Africa", "Tanzania"],
-      "thematic_eligibility": ["foundational learning", "teacher effectiveness", "education quality", "government capacity"],
+      "current_priorities": [
+        "deeper learning",
+        "education quality in Sub-Saharan Africa",
+        "evidence-based approaches",
+        "government capacity",
+        "open educational resources"
+      ],
+      "geography": [
+        "Sub-Saharan Africa",
+        "East Africa",
+        "Tanzania"
+      ],
+      "thematic_eligibility": [
+        "foundational learning",
+        "teacher effectiveness",
+        "education quality",
+        "government capacity"
+      ],
       "grant_size_usd_min": 300000,
       "grant_size_usd_max": 3000000,
       "typical_duration_years": 3,
-      "recent_portfolio": ["TaRL Africa", "J-PAL", "Evidence-based education programmes"],
-      "due_diligence_requirements": ["programme evidence", "theory of change", "government partnership", "MEL plan"],
+      "recent_portfolio": [
+        "TaRL Africa",
+        "J-PAL",
+        "Evidence-based education programmes"
+      ],
+      "due_diligence_requirements": [
+        "programme evidence",
+        "theory of change",
+        "government partnership",
+        "MEL plan"
+      ],
       "application_process": "invite-only",
       "cycle_months": [],
       "language_frame": "evidence-based quality-education government-capacity",
-      "key_contacts": [{"name": "Education Programme", "role": "Programme Officers", "email": "", "linkedin": ""}],
+      "key_contacts": [
+        {
+          "name": "Education Programme",
+          "role": "Programme Officers",
+          "email": "",
+          "linkedin": ""
+        }
+      ],
       "known_restrictions": [],
       "alignment_score": 82,
       "probability_score": 35,
       "effort_score": 4,
       "detected_priority_shift": null,
-      "recent_news": ["2025: Continued focus on foundational learning in Sub-Saharan Africa"],
+      "recent_news": [
+        "2025: Continued focus on foundational learning in Sub-Saharan Africa"
+      ],
       "drive_profile_id": "",
       "drive_due_diligence_id": "",
       "last_research_date": "2026-06-30",
-      "notes": "TaRL Africa connection is useful — Hewlett funds TaRL. SOMA builds on TaRL methodology. Useful angle: 'The TaRL methodology has been proven; SOMA is testing whether AI + accountability infrastructure can deliver it at $3.12/student without expensive NGO presence'."
+      "notes": "TaRL Africa connection is useful \u2014 Hewlett funds TaRL. SOMA builds on TaRL methodology. Useful angle: 'The TaRL methodology has been proven; SOMA is testing whether AI + accountability infrastructure can deliver it at $3.12/student without expensive NGO presence'."
     },
     {
       "id": "f-mastercard-li",
       "name": "Mastercard Foundation",
-      "programmes": ["soma", "kiufunza"],
+      "programmes": [
+        "soma",
+        "kiufunza"
+      ],
       "entity": "learnimpact",
+      "funder_type": "international_foundation",
       "tier": 2,
       "status": "prospect",
       "mission_summary": "One of the largest foundations in the world. Africa focus. Partners for Learning initiative specifically targets foundational learning in Africa. Wants programmes that work with governments and can reach national scale. Strong interest in evidence and systems change at government level.",
-      "current_priorities": ["Partners for Learning programme", "foundational learning in Africa", "government systems", "secondary education", "teacher development", "youth employment"],
-      "geography": ["Africa", "Sub-Saharan Africa", "East Africa"],
-      "thematic_eligibility": ["foundational literacy", "foundational numeracy", "teacher effectiveness", "government education systems"],
+      "current_priorities": [
+        "Partners for Learning programme",
+        "foundational learning in Africa",
+        "government systems",
+        "secondary education",
+        "teacher development",
+        "youth employment"
+      ],
+      "geography": [
+        "Africa",
+        "Sub-Saharan Africa",
+        "East Africa"
+      ],
+      "thematic_eligibility": [
+        "foundational literacy",
+        "foundational numeracy",
+        "teacher effectiveness",
+        "government education systems"
+      ],
       "grant_size_usd_min": 1000000,
       "grant_size_usd_max": 20000000,
       "typical_duration_years": 5,
-      "recent_portfolio": ["Partners for Learning initiative", "Secondary education in Africa", "TVET programmes"],
-      "due_diligence_requirements": ["large organisation preferred", "government partnership required", "scale ambition", "Africa-led preferred"],
+      "recent_portfolio": [
+        "Partners for Learning initiative",
+        "Secondary education in Africa",
+        "TVET programmes"
+      ],
+      "due_diligence_requirements": [
+        "large organisation preferred",
+        "government partnership required",
+        "scale ambition",
+        "Africa-led preferred"
+      ],
       "application_process": "invite-only",
       "cycle_months": [],
       "language_frame": "systems-change Africa government-partnership scale youth",
-      "key_contacts": [{"name": "Education Programme", "role": "Programme Officers", "email": "", "linkedin": ""}],
-      "known_restrictions": ["Prefer larger/established organisations", "Africa-led organisations preferred", "Government partnership essential"],
+      "key_contacts": [
+        {
+          "name": "Education Programme",
+          "role": "Programme Officers",
+          "email": "",
+          "linkedin": ""
+        }
+      ],
+      "known_restrictions": [
+        "Prefer larger/established organisations",
+        "Africa-led organisations preferred",
+        "Government partnership essential"
+      ],
       "alignment_score": 78,
       "probability_score": 28,
       "effort_score": 5,
       "detected_priority_shift": null,
-      "recent_news": ["2025-2026: Partners for Learning initiative actively seeking foundational learning partners in East Africa"],
+      "recent_news": [
+        "2025-2026: Partners for Learning initiative actively seeking foundational learning partners in East Africa"
+      ],
       "drive_profile_id": "",
       "drive_due_diligence_id": "",
       "last_research_date": "2026-06-30",
@@ -346,29 +773,65 @@
     {
       "id": "f-gpe",
       "name": "Global Partnership for Education (GPE)",
-      "programmes": ["soma"],
+      "programmes": [
+        "soma"
+      ],
       "entity": "learnimpact",
+      "funder_type": "international_multilateral",
       "tier": 2,
       "status": "prospect",
       "mission_summary": "Multilateral funding mechanism co-hosted by World Bank. Tanzania received an USD 88M GPE grant beginning 2026. GPE is part of the Global Coalition for Foundational Learning and commits USD 15B through 2030. Strong alignment with government education systems and TaRL-adjacent approaches.",
-      "current_priorities": ["foundational learning", "government education systems", "Tanzania (active $88M grant)", "Global Coalition for Foundational Learning", "teacher training"],
-      "geography": ["Tanzania", "Sub-Saharan Africa"],
-      "thematic_eligibility": ["foundational literacy", "foundational numeracy", "government education", "teacher support"],
+      "current_priorities": [
+        "foundational learning",
+        "government education systems",
+        "Tanzania (active $88M grant)",
+        "Global Coalition for Foundational Learning",
+        "teacher training"
+      ],
+      "geography": [
+        "Tanzania",
+        "Sub-Saharan Africa"
+      ],
+      "thematic_eligibility": [
+        "foundational literacy",
+        "foundational numeracy",
+        "government education",
+        "teacher support"
+      ],
       "grant_size_usd_min": 500000,
       "grant_size_usd_max": 5000000,
       "typical_duration_years": 3,
-      "recent_portfolio": ["Tanzania $88M grant (2026)", "Global Coalition for Foundational Learning"],
-      "due_diligence_requirements": ["government endorsement required", "align with national education plan", "strong MEL"],
+      "recent_portfolio": [
+        "Tanzania $88M grant (2026)",
+        "Global Coalition for Foundational Learning"
+      ],
+      "due_diligence_requirements": [
+        "government endorsement required",
+        "align with national education plan",
+        "strong MEL"
+      ],
       "application_process": "expression-of-interest",
       "cycle_months": [],
       "language_frame": "government-systems foundational-learning national-plan",
-      "key_contacts": [{"name": "Tanzania Programme Officer", "role": "GPE Country Team", "email": "", "linkedin": ""}],
-      "known_restrictions": ["Government endorsement required", "Must align with National Education Sector Plan"],
+      "key_contacts": [
+        {
+          "name": "Tanzania Programme Officer",
+          "role": "GPE Country Team",
+          "email": "",
+          "linkedin": ""
+        }
+      ],
+      "known_restrictions": [
+        "Government endorsement required",
+        "Must align with National Education Sector Plan"
+      ],
       "alignment_score": 80,
       "probability_score": 40,
       "effort_score": 4,
       "detected_priority_shift": null,
-      "recent_news": ["2026: Tanzania received $88M GPE grant. Active country programme."],
+      "recent_news": [
+        "2026: Tanzania received $88M GPE grant. Active country programme."
+      ],
       "drive_profile_id": "",
       "drive_due_diligence_id": "",
       "last_research_date": "2026-06-30",
@@ -377,55 +840,135 @@
     {
       "id": "f-fcdo",
       "name": "FCDO (UK Foreign, Commonwealth & Development Office)",
-      "programmes": ["soma", "kiufunza"],
+      "programmes": [
+        "soma",
+        "kiufunza"
+      ],
       "entity": "learnimpact",
+      "funder_type": "international_bilateral",
       "tier": 2,
       "status": "prospect",
       "mission_summary": "UK bilateral development agency. Strong evidence-based mandate. Tanzania is an active FCDO country. Education and girls' learning are strategic priorities. Funds programmes with government partnerships and credible evidence. Competitive procurement process.",
-      "current_priorities": ["education in low-income countries", "foundational learning", "girls education", "evidence-based interventions", "government capacity"],
-      "geography": ["Tanzania", "East Africa", "Sub-Saharan Africa"],
-      "thematic_eligibility": ["foundational literacy", "numeracy", "teacher effectiveness", "government education systems"],
+      "current_priorities": [
+        "education in low-income countries",
+        "foundational learning",
+        "girls education",
+        "evidence-based interventions",
+        "government capacity"
+      ],
+      "geography": [
+        "Tanzania",
+        "East Africa",
+        "Sub-Saharan Africa"
+      ],
+      "thematic_eligibility": [
+        "foundational literacy",
+        "numeracy",
+        "teacher effectiveness",
+        "government education systems"
+      ],
       "grant_size_usd_min": 500000,
       "grant_size_usd_max": 10000000,
       "typical_duration_years": 4,
-      "recent_portfolio": ["RISE programme", "various education programmes in Tanzania"],
-      "due_diligence_requirements": ["procurement/tender process", "audited financials", "safeguarding policy", "gender equality plan", "MEL framework"],
+      "recent_portfolio": [
+        "RISE programme",
+        "various education programmes in Tanzania"
+      ],
+      "due_diligence_requirements": [
+        "procurement/tender process",
+        "audited financials",
+        "safeguarding policy",
+        "gender equality plan",
+        "MEL framework"
+      ],
       "application_process": "open",
-      "cycle_months": ["January", "April", "October"],
+      "cycle_months": [
+        "January",
+        "April",
+        "October"
+      ],
       "language_frame": "evidence-based government-partnership cost-effectiveness girls-education",
-      "key_contacts": [{"name": "Tanzania Education Team", "role": "FCDO Dar es Salaam", "email": "", "linkedin": ""}],
-      "known_restrictions": ["Procurement compliance required", "Safeguarding mandatory", "Gender equity plan required"],
+      "key_contacts": [
+        {
+          "name": "Tanzania Education Team",
+          "role": "FCDO Dar es Salaam",
+          "email": "",
+          "linkedin": ""
+        }
+      ],
+      "known_restrictions": [
+        "Procurement compliance required",
+        "Safeguarding mandatory",
+        "Gender equity plan required"
+      ],
       "alignment_score": 78,
       "probability_score": 35,
       "effort_score": 4,
       "detected_priority_shift": null,
-      "recent_news": ["Post-2025 ODA cuts: FCDO education budget reduced but Tanzania remains active country"],
+      "recent_news": [
+        "Post-2025 ODA cuts: FCDO education budget reduced but Tanzania remains active country"
+      ],
       "drive_profile_id": "",
       "drive_due_diligence_id": "",
       "last_research_date": "2026-06-30",
-      "notes": "Watch for open tenders in Tanzania education. FCDO requires procurement compliance — budget for that effort. QJE evidence is the right credentialing. Note: ODA cuts post-2025 have reduced FCDO Tanzania budget — confirm current priorities before approaching."
+      "notes": "Watch for open tenders in Tanzania education. FCDO requires procurement compliance \u2014 budget for that effort. QJE evidence is the right credentialing. Note: ODA cuts post-2025 have reduced FCDO Tanzania budget \u2014 confirm current priorities before approaching."
     },
     {
       "id": "f-giz",
-      "name": "GIZ (Deutsche Gesellschaft für Internationale Zusammenarbeit)",
-      "programmes": ["soma", "kiufunza"],
+      "name": "GIZ (Deutsche Gesellschaft f\u00fcr Internationale Zusammenarbeit)",
+      "programmes": [
+        "soma",
+        "kiufunza"
+      ],
       "entity": "learnimpact",
+      "funder_type": "international_bilateral",
       "tier": 2,
       "status": "prospect",
       "mission_summary": "German development agency. Active in Tanzania across education, health, and economic development. Funds capacity building, technical assistance, and pilot programmes. Often works through government channels. Prefers implementation partnerships.",
-      "current_priorities": ["vocational training", "basic education", "digital transformation", "government capacity", "Tanzania active programme"],
-      "geography": ["Tanzania", "East Africa"],
-      "thematic_eligibility": ["basic education", "teacher training", "government capacity", "digital tools in education"],
+      "current_priorities": [
+        "vocational training",
+        "basic education",
+        "digital transformation",
+        "government capacity",
+        "Tanzania active programme"
+      ],
+      "geography": [
+        "Tanzania",
+        "East Africa"
+      ],
+      "thematic_eligibility": [
+        "basic education",
+        "teacher training",
+        "government capacity",
+        "digital tools in education"
+      ],
       "grant_size_usd_min": 200000,
       "grant_size_usd_max": 2000000,
       "typical_duration_years": 3,
-      "recent_portfolio": ["Education programmes in Tanzania", "Vocational training"],
-      "due_diligence_requirements": ["German procurement rules (VOL/VOF)", "audited financials", "technical competence"],
+      "recent_portfolio": [
+        "Education programmes in Tanzania",
+        "Vocational training"
+      ],
+      "due_diligence_requirements": [
+        "German procurement rules (VOL/VOF)",
+        "audited financials",
+        "technical competence"
+      ],
       "application_process": "invite-only",
       "cycle_months": [],
       "language_frame": "government-capacity systems-change technical-assistance",
-      "key_contacts": [{"name": "GIZ Tanzania Education Team", "role": "Programme Officer", "email": "", "linkedin": ""}],
-      "known_restrictions": ["German procurement rules apply", "Government co-implementation preferred"],
+      "key_contacts": [
+        {
+          "name": "GIZ Tanzania Education Team",
+          "role": "Programme Officer",
+          "email": "",
+          "linkedin": ""
+        }
+      ],
+      "known_restrictions": [
+        "German procurement rules apply",
+        "Government co-implementation preferred"
+      ],
       "alignment_score": 72,
       "probability_score": 38,
       "effort_score": 3,
@@ -434,65 +977,133 @@
       "drive_profile_id": "",
       "drive_due_diligence_id": "",
       "last_research_date": "2026-06-30",
-      "notes": "GIZ Tanzania has active education programme. Entry via GIZ Dar es Salaam office. Technical assistance model may be a better fit than grant — GIZ could engage LearnImpact as technical service provider for SOMA-adjacent government work."
+      "notes": "GIZ Tanzania has active education programme. Entry via GIZ Dar es Salaam office. Technical assistance model may be a better fit than grant \u2014 GIZ could engage LearnImpact as technical service provider for SOMA-adjacent government work."
     },
     {
       "id": "f-google-org",
       "name": "Google.org",
-      "programmes": ["soma"],
+      "programmes": [
+        "soma"
+      ],
       "entity": "learnimpact",
+      "funder_type": "international_foundation",
       "tier": 2,
       "status": "prospect",
       "mission_summary": "Google's philanthropic arm. Provides grants and technical support to nonprofits using technology for social good. Strong interest in AI for social impact, particularly in education and economic opportunity. Rapid response grants and longer-term programme grants available.",
-      "current_priorities": ["AI for social good", "education technology", "economic opportunity", "Sub-Saharan Africa", "AI-enabled tools for underserved communities"],
-      "geography": ["Sub-Saharan Africa", "Global"],
-      "thematic_eligibility": ["AI tools", "education technology", "foundational learning", "teacher support technology"],
+      "current_priorities": [
+        "AI for social good",
+        "education technology",
+        "economic opportunity",
+        "Sub-Saharan Africa",
+        "AI-enabled tools for underserved communities"
+      ],
+      "geography": [
+        "Sub-Saharan Africa",
+        "Global"
+      ],
+      "thematic_eligibility": [
+        "AI tools",
+        "education technology",
+        "foundational learning",
+        "teacher support technology"
+      ],
       "grant_size_usd_min": 100000,
       "grant_size_usd_max": 2000000,
       "typical_duration_years": 2,
-      "recent_portfolio": ["AI for social impact grantees", "Education technology nonprofits"],
-      "due_diligence_requirements": ["technology component required", "Google product integration preferred", "measurable outcomes"],
+      "recent_portfolio": [
+        "AI for social impact grantees",
+        "Education technology nonprofits"
+      ],
+      "due_diligence_requirements": [
+        "technology component required",
+        "Google product integration preferred",
+        "measurable outcomes"
+      ],
       "application_process": "rolling",
       "cycle_months": [],
       "language_frame": "AI-technology social-impact scalability",
-      "key_contacts": [{"name": "Google.org Team", "role": "Grants", "email": "", "linkedin": ""}],
-      "known_restrictions": ["Technology component essential", "Preferably integrates Google products"],
+      "key_contacts": [
+        {
+          "name": "Google.org Team",
+          "role": "Grants",
+          "email": "",
+          "linkedin": ""
+        }
+      ],
+      "known_restrictions": [
+        "Technology component essential",
+        "Preferably integrates Google products"
+      ],
       "alignment_score": 80,
       "probability_score": 42,
       "effort_score": 3,
       "detected_priority_shift": null,
-      "recent_news": ["2025-2026: Increased focus on AI for social impact grants"],
+      "recent_news": [
+        "2025-2026: Increased focus on AI for social impact grants"
+      ],
       "drive_profile_id": "",
       "drive_due_diligence_id": "",
       "last_research_date": "2026-06-30",
-      "notes": "ENTITY DECISION LOCKED (2026-07-01): LearnImpact/SOMA leads Google.org. Timamu deferred — approach separately only after LearnImpact relationship is established.\n\nPREREQUISITES RESOLVED:\n- Registration: LearnImpact fully registered (Reg. 00NGO/R/8931)\n- Domain: learnimpact.org (main) + learnimpact.or.tz (alias) — secured\n- Website: in progress — will carry registration number, mission, board, contact\n- NOT a startup: 10+ years KiuFunza evidence, QJE-published +9.4pp, 265 schools, newly independent from Twaweza\n\nTWO-TRACK APPROACH:\nTrack 1 (immediate): Google for Nonprofits via Goodstack. $10K/month search ad credits + free Workspace. Rolling — apply once website is live. Submit: reg certificate + constitution to Goodstack (10-14 day turnaround).\nTrack 2 (competitive): Google.org Impact Challenge Africa — cash grant $100K-$2M+. No open call currently. Build relationship with Google.org Africa team BEFORE call opens.\n\nTECH HOOK: Mwalimu WhatsApp AI coaching chatbot. Frame: AI-powered teacher coaching at $3.12/student/year with government co-financing and QJE evidence base. Not a theoretical idea — live Kibaha pilot Term 3 2026.\n\nNEXT STEP: Complete learnimpact.org website → Goodstack submission → Ad Grant → Google.org Africa relationship."
+      "notes": "ENTITY DECISION LOCKED (2026-07-01): LearnImpact/SOMA leads Google.org. Timamu deferred \u2014 approach separately only after LearnImpact relationship is established.\n\nPREREQUISITES RESOLVED:\n- Registration: LearnImpact fully registered (Reg. 00NGO/R/8931)\n- Domain: learnimpact.org (main) + learnimpact.or.tz (alias) \u2014 secured\n- Website: in progress \u2014 will carry registration number, mission, board, contact\n- NOT a startup: 10+ years KiuFunza evidence, QJE-published +9.4pp, 265 schools, newly independent from Twaweza\n\nTWO-TRACK APPROACH:\nTrack 1 (immediate): Google for Nonprofits via Goodstack. $10K/month search ad credits + free Workspace. Rolling \u2014 apply once website is live. Submit: reg certificate + constitution to Goodstack (10-14 day turnaround).\nTrack 2 (competitive): Google.org Impact Challenge Africa \u2014 cash grant $100K-$2M+. No open call currently. Build relationship with Google.org Africa team BEFORE call opens.\n\nTECH HOOK: Mwalimu WhatsApp AI coaching chatbot. Frame: AI-powered teacher coaching at $3.12/student/year with government co-financing and QJE evidence base. Not a theoretical idea \u2014 live Kibaha pilot Term 3 2026.\n\nNEXT STEP: Complete learnimpact.org website \u2192 Goodstack submission \u2192 Ad Grant \u2192 Google.org Africa relationship."
     },
     {
       "id": "f-microsoft-philanthropies",
       "name": "Microsoft Philanthropies",
-      "programmes": ["soma"],
+      "programmes": [
+        "soma"
+      ],
       "entity": "learnimpact",
+      "funder_type": "international_foundation",
       "tier": 2,
       "status": "prospect",
       "mission_summary": "Microsoft's philanthropic arm. Focus on AI for humanitarian applications, digital skills, and education technology. Provides grants, Azure cloud credits, and technical partnerships. Interested in AI applications that improve education outcomes at scale.",
-      "current_priorities": ["AI for good", "digital skills", "education technology", "Africa digital transformation"],
-      "geography": ["Africa", "Global"],
-      "thematic_eligibility": ["AI in education", "digital literacy", "teacher technology tools"],
+      "current_priorities": [
+        "AI for good",
+        "digital skills",
+        "education technology",
+        "Africa digital transformation"
+      ],
+      "geography": [
+        "Africa",
+        "Global"
+      ],
+      "thematic_eligibility": [
+        "AI in education",
+        "digital literacy",
+        "teacher technology tools"
+      ],
       "grant_size_usd_min": 100000,
       "grant_size_usd_max": 1000000,
       "typical_duration_years": 2,
-      "recent_portfolio": ["AI for Good grantees", "Digital skills programmes"],
-      "due_diligence_requirements": ["technology component required", "Microsoft alignment preferred"],
+      "recent_portfolio": [
+        "AI for Good grantees",
+        "Digital skills programmes"
+      ],
+      "due_diligence_requirements": [
+        "technology component required",
+        "Microsoft alignment preferred"
+      ],
       "application_process": "rolling",
       "cycle_months": [],
       "language_frame": "AI-technology digital-transformation impact",
-      "key_contacts": [{"name": "Microsoft Philanthropies Africa", "role": "Programme Officers", "email": "", "linkedin": ""}],
-      "known_restrictions": ["Technology component required"],
+      "key_contacts": [
+        {
+          "name": "Microsoft Philanthropies Africa",
+          "role": "Programme Officers",
+          "email": "",
+          "linkedin": ""
+        }
+      ],
+      "known_restrictions": [
+        "Technology component required"
+      ],
       "alignment_score": 76,
       "probability_score": 40,
       "effort_score": 3,
       "detected_priority_shift": null,
-      "recent_news": ["2025-2026: Microsoft AI for Good programme expanding in Africa"],
+      "recent_news": [
+        "2025-2026: Microsoft AI for Good programme expanding in Africa"
+      ],
       "drive_profile_id": "",
       "drive_due_diligence_id": "",
       "last_research_date": "2026-06-30",
@@ -501,23 +1112,53 @@
     {
       "id": "f-omidyar",
       "name": "Omidyar Network",
-      "programmes": ["soma"],
+      "programmes": [
+        "soma"
+      ],
       "entity": "learnimpact",
+      "funder_type": "international_foundation",
       "tier": 2,
       "status": "prospect",
       "mission_summary": "Pierre Omidyar's investment and grant-making firm. Luminate spin-off handles civic tech. Omidyar Network funds technology-enabled social change with potential for systemic impact. Education at the nexus of technology and policy is a key focus.",
-      "current_priorities": ["technology-enabled education", "India and Africa", "systems change", "digital inclusion"],
-      "geography": ["Africa", "India", "Global"],
-      "thematic_eligibility": ["EdTech", "foundational learning", "government technology partnerships"],
+      "current_priorities": [
+        "technology-enabled education",
+        "India and Africa",
+        "systems change",
+        "digital inclusion"
+      ],
+      "geography": [
+        "Africa",
+        "India",
+        "Global"
+      ],
+      "thematic_eligibility": [
+        "EdTech",
+        "foundational learning",
+        "government technology partnerships"
+      ],
       "grant_size_usd_min": 200000,
       "grant_size_usd_max": 3000000,
       "typical_duration_years": 3,
-      "recent_portfolio": ["EdTech investments and grants", "Digital inclusion initiatives"],
-      "due_diligence_requirements": ["technology component", "systems change potential", "evidence base"],
+      "recent_portfolio": [
+        "EdTech investments and grants",
+        "Digital inclusion initiatives"
+      ],
+      "due_diligence_requirements": [
+        "technology component",
+        "systems change potential",
+        "evidence base"
+      ],
       "application_process": "invite-only",
       "cycle_months": [],
       "language_frame": "systems-change technology-enabled scalability",
-      "key_contacts": [{"name": "Education Programme", "role": "Programme Officers", "email": "", "linkedin": ""}],
+      "key_contacts": [
+        {
+          "name": "Education Programme",
+          "role": "Programme Officers",
+          "email": "",
+          "linkedin": ""
+        }
+      ],
       "known_restrictions": [],
       "alignment_score": 75,
       "probability_score": 30,
@@ -527,29 +1168,65 @@
       "drive_profile_id": "",
       "drive_due_diligence_id": "",
       "last_research_date": "2026-06-30",
-      "notes": "Omidyar funds across the spectrum (grants + equity investments). For SOMA, pure grant approach. Luminate (spun off) focuses on civic tech — not education. Omidyar Network directly is the right target."
+      "notes": "Omidyar funds across the spectrum (grants + equity investments). For SOMA, pure grant approach. Luminate (spun off) focuses on civic tech \u2014 not education. Omidyar Network directly is the right target."
     },
     {
       "id": "f-skoll",
       "name": "Skoll Foundation",
-      "programmes": ["soma", "kiufunza"],
+      "programmes": [
+        "soma",
+        "kiufunza"
+      ],
       "entity": "learnimpact",
+      "funder_type": "international_foundation",
       "tier": 2,
       "status": "prospect",
       "mission_summary": "Jeff Skoll's foundation, focused on social entrepreneurship and scaling proven solutions. Funds Skoll Awardees (proven social entrepreneurs). LearnImpact/Michael could pursue a Skoll Award nomination in 2027-2028 once SOMA has initial evidence.",
-      "current_priorities": ["social entrepreneurship", "proven solutions at scale", "climate", "healthcare", "education systems"],
-      "geography": ["Global", "Sub-Saharan Africa"],
-      "thematic_eligibility": ["proven educational models", "systems change", "entrepreneurial organisations"],
+      "current_priorities": [
+        "social entrepreneurship",
+        "proven solutions at scale",
+        "climate",
+        "healthcare",
+        "education systems"
+      ],
+      "geography": [
+        "Global",
+        "Sub-Saharan Africa"
+      ],
+      "thematic_eligibility": [
+        "proven educational models",
+        "systems change",
+        "entrepreneurial organisations"
+      ],
       "grant_size_usd_min": 500000,
       "grant_size_usd_max": 3000000,
       "typical_duration_years": 3,
-      "recent_portfolio": ["Skoll Awardees across education, health, climate"],
-      "due_diligence_requirements": ["Proven track record required (Skoll Award)", "entrepreneurial leader", "scale pathway"],
+      "recent_portfolio": [
+        "Skoll Awardees across education, health, climate"
+      ],
+      "due_diligence_requirements": [
+        "Proven track record required (Skoll Award)",
+        "entrepreneurial leader",
+        "scale pathway"
+      ],
       "application_process": "invite-only",
-      "cycle_months": ["October", "November"],
+      "cycle_months": [
+        "October",
+        "November"
+      ],
       "language_frame": "systems-change proven-model entrepreneurship scale",
-      "key_contacts": [{"name": "Skoll Award Team", "role": "Programme Officers", "email": "", "linkedin": ""}],
-      "known_restrictions": ["Skoll Award — must have proven model, not pilots", "Entrepreneurial leader as face of organisation"],
+      "key_contacts": [
+        {
+          "name": "Skoll Award Team",
+          "role": "Programme Officers",
+          "email": "",
+          "linkedin": ""
+        }
+      ],
+      "known_restrictions": [
+        "Skoll Award \u2014 must have proven model, not pilots",
+        "Entrepreneurial leader as face of organisation"
+      ],
       "alignment_score": 74,
       "probability_score": 25,
       "effort_score": 4,
@@ -563,23 +1240,58 @@
     {
       "id": "f-dubai-cares",
       "name": "Dubai Cares",
-      "programmes": ["soma", "kiufunza"],
+      "programmes": [
+        "soma",
+        "kiufunza"
+      ],
       "entity": "learnimpact",
+      "funder_type": "international_foundation",
       "tier": 2,
       "status": "prospect",
       "mission_summary": "UAE-based global philanthropic organisation focused on quality education in developing countries. Partners with organisations in Africa, Asia, and Latin America. Strong interest in foundational learning, school infrastructure, and teacher training.",
-      "current_priorities": ["quality education in developing countries", "foundational literacy and numeracy", "teacher training", "school access", "East Africa"],
-      "geography": ["Sub-Saharan Africa", "East Africa", "Tanzania"],
-      "thematic_eligibility": ["foundational literacy", "numeracy", "teacher training", "education quality"],
+      "current_priorities": [
+        "quality education in developing countries",
+        "foundational literacy and numeracy",
+        "teacher training",
+        "school access",
+        "East Africa"
+      ],
+      "geography": [
+        "Sub-Saharan Africa",
+        "East Africa",
+        "Tanzania"
+      ],
+      "thematic_eligibility": [
+        "foundational literacy",
+        "numeracy",
+        "teacher training",
+        "education quality"
+      ],
       "grant_size_usd_min": 200000,
       "grant_size_usd_max": 3000000,
       "typical_duration_years": 3,
-      "recent_portfolio": ["Education programmes across Africa and Asia"],
-      "due_diligence_requirements": ["programme evidence", "government partnership preferred", "beneficiary numbers"],
+      "recent_portfolio": [
+        "Education programmes across Africa and Asia"
+      ],
+      "due_diligence_requirements": [
+        "programme evidence",
+        "government partnership preferred",
+        "beneficiary numbers"
+      ],
       "application_process": "open",
-      "cycle_months": ["February", "September"],
+      "cycle_months": [
+        "February",
+        "September"
+      ],
       "language_frame": "education-quality teacher-training foundational-learning",
-      "key_contacts": [{"name": "Programme Team", "role": "Programme Officers", "email": "info@dubaicares.ae", "linkedin": ""}],
+      "key_contacts": [
+        {
+          "name": "Programme Team",
+          "role": "Programme Officers",
+          "email": "info@dubaicares.ae",
+          "linkedin": ""
+        }
+      ],
       "known_restrictions": [],
       "alignment_score": 76,
       "probability_score": 38,
@@ -594,23 +1306,59 @@
     {
       "id": "f-aga-khan",
       "name": "Aga Khan Foundation (AKF)",
-      "programmes": ["soma", "kiufunza"],
+      "programmes": [
+        "soma",
+        "kiufunza"
+      ],
       "entity": "learnimpact",
+      "funder_type": "international_foundation",
       "tier": 2,
       "status": "prospect",
       "mission_summary": "Part of the Aga Khan Development Network. Active in East Africa including Tanzania and Kenya. Education Quality Programme focuses on teacher professional development, school improvement, and community engagement. Strong government partnership model.",
-      "current_priorities": ["teacher professional development", "school improvement", "East Africa", "government partnership", "community engagement", "early childhood education"],
-      "geography": ["Tanzania", "Kenya", "Uganda", "East Africa"],
-      "thematic_eligibility": ["teacher development", "foundational learning", "school improvement", "community-government partnership"],
+      "current_priorities": [
+        "teacher professional development",
+        "school improvement",
+        "East Africa",
+        "government partnership",
+        "community engagement",
+        "early childhood education"
+      ],
+      "geography": [
+        "Tanzania",
+        "Kenya",
+        "Uganda",
+        "East Africa"
+      ],
+      "thematic_eligibility": [
+        "teacher development",
+        "foundational learning",
+        "school improvement",
+        "community-government partnership"
+      ],
       "grant_size_usd_min": 200000,
       "grant_size_usd_max": 2000000,
       "typical_duration_years": 3,
-      "recent_portfolio": ["Education Quality Programme in East Africa", "Teacher training", "School improvement"],
-      "due_diligence_requirements": ["programme evidence", "government partnership", "community engagement component"],
+      "recent_portfolio": [
+        "Education Quality Programme in East Africa",
+        "Teacher training",
+        "School improvement"
+      ],
+      "due_diligence_requirements": [
+        "programme evidence",
+        "government partnership",
+        "community engagement component"
+      ],
       "application_process": "invite-only",
       "cycle_months": [],
       "language_frame": "teacher-development school-improvement community government-partnership",
-      "key_contacts": [{"name": "AKF East Africa", "role": "Programme Officers", "email": "", "linkedin": ""}],
+      "key_contacts": [
+        {
+          "name": "AKF East Africa",
+          "role": "Programme Officers",
+          "email": "",
+          "linkedin": ""
+        }
+      ],
       "known_restrictions": [],
       "alignment_score": 73,
       "probability_score": 35,
@@ -620,28 +1368,58 @@
       "drive_profile_id": "",
       "drive_due_diligence_id": "",
       "last_research_date": "2026-06-30",
-      "notes": "AKF Tanzania office in Dar es Salaam. Possible implementation partnership rather than just grant. Teacher professional development is AKF's language — translate SOMA's 'coaching' into their vocabulary."
+      "notes": "AKF Tanzania office in Dar es Salaam. Possible implementation partnership rather than just grant. Teacher professional development is AKF's language \u2014 translate SOMA's 'coaching' into their vocabulary."
     },
     {
       "id": "f-macarthur",
       "name": "MacArthur Foundation",
-      "programmes": ["soma"],
+      "programmes": [
+        "soma"
+      ],
       "entity": "learnimpact",
+      "funder_type": "international_foundation",
       "tier": 2,
       "status": "prospect",
       "mission_summary": "Chicago-based foundation with 100&Change competition (single $100M grant) and programme grants in education, climate, and nuclear risk reduction. Education portfolio includes foundational learning in Sub-Saharan Africa.",
-      "current_priorities": ["foundational learning", "Africa", "climate solutions", "systemic change"],
-      "geography": ["Sub-Saharan Africa", "Global"],
-      "thematic_eligibility": ["foundational literacy", "numeracy", "systems change in education"],
+      "current_priorities": [
+        "foundational learning",
+        "Africa",
+        "climate solutions",
+        "systemic change"
+      ],
+      "geography": [
+        "Sub-Saharan Africa",
+        "Global"
+      ],
+      "thematic_eligibility": [
+        "foundational literacy",
+        "numeracy",
+        "systems change in education"
+      ],
       "grant_size_usd_min": 300000,
       "grant_size_usd_max": 100000000,
       "typical_duration_years": 5,
-      "recent_portfolio": ["100&Change awardees", "Education in Africa", "Climate solutions"],
-      "due_diligence_requirements": ["systemic change potential", "scale pathway", "evidence base"],
+      "recent_portfolio": [
+        "100&Change awardees",
+        "Education in Africa",
+        "Climate solutions"
+      ],
+      "due_diligence_requirements": [
+        "systemic change potential",
+        "scale pathway",
+        "evidence base"
+      ],
       "application_process": "invite-only",
       "cycle_months": [],
       "language_frame": "systems-change scale evidence-based",
-      "key_contacts": [{"name": "Education Programme", "role": "Programme Officers", "email": "", "linkedin": ""}],
+      "key_contacts": [
+        {
+          "name": "Education Programme",
+          "role": "Programme Officers",
+          "email": "",
+          "linkedin": ""
+        }
+      ],
       "known_restrictions": [],
       "alignment_score": 72,
       "probability_score": 22,
@@ -656,29 +1434,64 @@
     {
       "id": "f-usaid-edu",
       "name": "USAID Education",
-      "programmes": ["soma", "kiufunza"],
+      "programmes": [
+        "soma",
+        "kiufunza"
+      ],
       "entity": "learnimpact",
+      "funder_type": "international_bilateral",
       "tier": 2,
       "status": "prospect",
-      "mission_summary": "US government bilateral development agency. Education programme in Tanzania historically active. However, 2025-2026 US ODA cuts have dramatically reduced USAID programming globally — Tanzania education funding significantly impacted. Monitor for remaining open opportunities.",
-      "current_priorities": ["foundational literacy", "reading programmes", "government systems", "teacher training (where budget remains)"],
-      "geography": ["Tanzania", "East Africa"],
-      "thematic_eligibility": ["foundational literacy", "numeracy", "teacher training"],
+      "mission_summary": "US government bilateral development agency. Education programme in Tanzania historically active. However, 2025-2026 US ODA cuts have dramatically reduced USAID programming globally \u2014 Tanzania education funding significantly impacted. Monitor for remaining open opportunities.",
+      "current_priorities": [
+        "foundational literacy",
+        "reading programmes",
+        "government systems",
+        "teacher training (where budget remains)"
+      ],
+      "geography": [
+        "Tanzania",
+        "East Africa"
+      ],
+      "thematic_eligibility": [
+        "foundational literacy",
+        "numeracy",
+        "teacher training"
+      ],
       "grant_size_usd_min": 500000,
       "grant_size_usd_max": 10000000,
       "typical_duration_years": 5,
-      "recent_portfolio": ["USAID Tanzania Education (pre-2025 cuts)"],
-      "due_diligence_requirements": ["US government procurement compliance", "FAR regulations", "audited financials", "NICRA"],
+      "recent_portfolio": [
+        "USAID Tanzania Education (pre-2025 cuts)"
+      ],
+      "due_diligence_requirements": [
+        "US government procurement compliance",
+        "FAR regulations",
+        "audited financials",
+        "NICRA"
+      ],
       "application_process": "open",
       "cycle_months": [],
       "language_frame": "government-capacity reading literacy teacher-effectiveness",
-      "key_contacts": [{"name": "USAID Tanzania Mission", "role": "Education Officer", "email": "", "linkedin": ""}],
-      "known_restrictions": ["US procurement rules", "2025-2026: severe budget cuts make this low priority"],
+      "key_contacts": [
+        {
+          "name": "USAID Tanzania Mission",
+          "role": "Education Officer",
+          "email": "",
+          "linkedin": ""
+        }
+      ],
+      "known_restrictions": [
+        "US procurement rules",
+        "2025-2026: severe budget cuts make this low priority"
+      ],
       "alignment_score": 65,
       "probability_score": 18,
       "effort_score": 5,
-      "detected_priority_shift": "2025: US ODA cut 56.9% — USAID education funding severely reduced globally and in Tanzania",
-      "recent_news": ["2025: Historic USAID budget cuts under new US administration. Tanzania education programme uncertain."],
+      "detected_priority_shift": "2025: US ODA cut 56.9% \u2014 USAID education funding severely reduced globally and in Tanzania",
+      "recent_news": [
+        "2025: Historic USAID budget cuts under new US administration. Tanzania education programme uncertain."
+      ],
       "drive_profile_id": "",
       "drive_due_diligence_id": "",
       "last_research_date": "2026-06-30",
@@ -687,24 +1500,57 @@
     {
       "id": "f-wellcome",
       "name": "Wellcome Trust",
-      "programmes": ["soma"],
+      "programmes": [
+        "soma"
+      ],
       "entity": "learnimpact",
+      "funder_type": "international_foundation",
       "tier": 3,
       "status": "prospect",
       "mission_summary": "UK health research foundation increasingly interested in the education-health nexus. Funds rigorous research on what improves child development and learning. Education interventions must have strong research design (RCT preferred). Emerging interest in AI tools for health and education.",
-      "current_priorities": ["child health and development", "education-health nexus", "mental health", "global health research", "AI tools in health/education"],
-      "geography": ["Global", "Sub-Saharan Africa"],
-      "thematic_eligibility": ["child development", "foundational learning (as health determinant)", "research rigour"],
+      "current_priorities": [
+        "child health and development",
+        "education-health nexus",
+        "mental health",
+        "global health research",
+        "AI tools in health/education"
+      ],
+      "geography": [
+        "Global",
+        "Sub-Saharan Africa"
+      ],
+      "thematic_eligibility": [
+        "child development",
+        "foundational learning (as health determinant)",
+        "research rigour"
+      ],
       "grant_size_usd_min": 200000,
       "grant_size_usd_max": 5000000,
       "typical_duration_years": 4,
-      "recent_portfolio": ["Global health research", "Mental health initiatives"],
-      "due_diligence_requirements": ["Research rigour (RCT preferred)", "health nexus required", "academic partnership"],
+      "recent_portfolio": [
+        "Global health research",
+        "Mental health initiatives"
+      ],
+      "due_diligence_requirements": [
+        "Research rigour (RCT preferred)",
+        "health nexus required",
+        "academic partnership"
+      ],
       "application_process": "open",
       "cycle_months": [],
       "language_frame": "evidence-based health-nexus rigorous-research",
-      "key_contacts": [{"name": "Research Grants Team", "role": "Programme Officers", "email": "", "linkedin": ""}],
-      "known_restrictions": ["Health angle required", "Research institution partnership often needed"],
+      "key_contacts": [
+        {
+          "name": "Research Grants Team",
+          "role": "Programme Officers",
+          "email": "",
+          "linkedin": ""
+        }
+      ],
+      "known_restrictions": [
+        "Health angle required",
+        "Research institution partnership often needed"
+      ],
       "alignment_score": 62,
       "probability_score": 22,
       "effort_score": 4,
@@ -718,24 +1564,57 @@
     {
       "id": "f-luminate",
       "name": "Luminate (Omidyar Group)",
-      "programmes": ["soma"],
+      "programmes": [
+        "soma"
+      ],
       "entity": "learnimpact",
+      "funder_type": "international_foundation",
       "tier": 3,
       "status": "prospect",
       "mission_summary": "Spun off from Omidyar Network. Focuses on civic empowerment, independent media, and data/digital rights. Emerging interest in AI governance and digital public goods. Less direct fit for education but potential for digital rights + education AI angle.",
-      "current_priorities": ["civic empowerment", "independent media", "data rights", "digital public goods", "AI governance"],
-      "geography": ["Global", "Africa"],
-      "thematic_eligibility": ["digital public goods", "open AI tools", "civic technology"],
+      "current_priorities": [
+        "civic empowerment",
+        "independent media",
+        "data rights",
+        "digital public goods",
+        "AI governance"
+      ],
+      "geography": [
+        "Global",
+        "Africa"
+      ],
+      "thematic_eligibility": [
+        "digital public goods",
+        "open AI tools",
+        "civic technology"
+      ],
       "grant_size_usd_min": 200000,
       "grant_size_usd_max": 2000000,
       "typical_duration_years": 2,
-      "recent_portfolio": ["Digital rights organisations", "Independent media", "Civic tech"],
-      "due_diligence_requirements": ["open source preferred", "civic component"],
+      "recent_portfolio": [
+        "Digital rights organisations",
+        "Independent media",
+        "Civic tech"
+      ],
+      "due_diligence_requirements": [
+        "open source preferred",
+        "civic component"
+      ],
       "application_process": "invite-only",
       "cycle_months": [],
       "language_frame": "digital-rights open-source civic-empowerment",
-      "key_contacts": [{"name": "Luminate Programme Team", "role": "Programme Officers", "email": "", "linkedin": ""}],
-      "known_restrictions": ["Civic/rights angle required", "Open source preferred"],
+      "key_contacts": [
+        {
+          "name": "Luminate Programme Team",
+          "role": "Programme Officers",
+          "email": "",
+          "linkedin": ""
+        }
+      ],
+      "known_restrictions": [
+        "Civic/rights angle required",
+        "Open source preferred"
+      ],
       "alignment_score": 52,
       "probability_score": 18,
       "effort_score": 4,
@@ -749,55 +1628,124 @@
     {
       "id": "f-world-bank-edu",
       "name": "World Bank / Education Global Practice",
-      "programmes": ["soma", "kiufunza"],
+      "programmes": [
+        "soma",
+        "kiufunza"
+      ],
       "entity": "learnimpact",
+      "funder_type": "international_multilateral",
       "tier": 2,
       "status": "prospect",
       "mission_summary": "World Bank funds education through government lending and grants. The LAYS metric was developed by the World Bank. Strong interest in programmes that can demonstrate LAYS-based cost-effectiveness. Tanzania is an active World Bank country with existing education operations.",
-      "current_priorities": ["LAYS-based cost-effectiveness", "foundational learning", "government education systems", "human capital", "Tanzania education sector"],
-      "geography": ["Tanzania", "Sub-Saharan Africa"],
-      "thematic_eligibility": ["foundational learning", "teacher effectiveness", "government education systems", "LAYS"],
+      "current_priorities": [
+        "LAYS-based cost-effectiveness",
+        "foundational learning",
+        "government education systems",
+        "human capital",
+        "Tanzania education sector"
+      ],
+      "geography": [
+        "Tanzania",
+        "Sub-Saharan Africa"
+      ],
+      "thematic_eligibility": [
+        "foundational learning",
+        "teacher effectiveness",
+        "government education systems",
+        "LAYS"
+      ],
       "grant_size_usd_min": 500000,
       "grant_size_usd_max": 5000000,
       "typical_duration_years": 4,
-      "recent_portfolio": ["Tanzania Human Capital Project", "Global Coalition for Foundational Learning"],
-      "due_diligence_requirements": ["government counterpart required", "World Bank procurement", "LAYS evidence"],
+      "recent_portfolio": [
+        "Tanzania Human Capital Project",
+        "Global Coalition for Foundational Learning"
+      ],
+      "due_diligence_requirements": [
+        "government counterpart required",
+        "World Bank procurement",
+        "LAYS evidence"
+      ],
       "application_process": "invite-only",
       "cycle_months": [],
       "language_frame": "LAYS government-systems human-capital cost-effectiveness",
-      "key_contacts": [{"name": "World Bank Tanzania Education", "role": "Senior Education Specialist", "email": "", "linkedin": ""}],
-      "known_restrictions": ["Government as primary counterpart", "World Bank procurement rules"],
+      "key_contacts": [
+        {
+          "name": "World Bank Tanzania Education",
+          "role": "Senior Education Specialist",
+          "email": "",
+          "linkedin": ""
+        }
+      ],
+      "known_restrictions": [
+        "Government as primary counterpart",
+        "World Bank procurement rules"
+      ],
       "alignment_score": 76,
       "probability_score": 30,
       "effort_score": 5,
       "detected_priority_shift": null,
-      "recent_news": ["2026: Global Coalition for Foundational Learning — $15B commitment through 2030"],
+      "recent_news": [
+        "2026: Global Coalition for Foundational Learning \u2014 $15B commitment through 2030"
+      ],
       "drive_profile_id": "",
       "drive_due_diligence_id": "",
       "last_research_date": "2026-06-30",
-      "notes": "World Bank uses LAYS — SOMA's USD 12/LAYS projection is directly their language. Entry: position Michael as thought leader on cost-effective foundational learning in Tanzania. World Bank Tanzania office in Dar es Salaam is entry point."
+      "notes": "World Bank uses LAYS \u2014 SOMA's USD 12/LAYS projection is directly their language. Entry: position Michael as thought leader on cost-effective foundational learning in Tanzania. World Bank Tanzania office in Dar es Salaam is entry point."
     },
     {
       "id": "f-afd",
-      "name": "AFD (Agence Française de Développement)",
-      "programmes": ["soma"],
+      "name": "AFD (Agence Fran\u00e7aise de D\u00e9veloppement)",
+      "programmes": [
+        "soma"
+      ],
       "entity": "learnimpact",
+      "funder_type": "international_bilateral",
       "tier": 3,
       "status": "prospect",
       "mission_summary": "French development agency. Active in East Africa. Education is one of AFD's priority sectors with focus on vocational training and basic education. Less focused on foundational learning specifically but funds education system strengthening.",
-      "current_priorities": ["education system strengthening", "vocational training", "climate", "urban development", "East Africa"],
-      "geography": ["Tanzania", "East Africa", "Francophone Africa"],
-      "thematic_eligibility": ["education quality", "basic education", "teacher training"],
+      "current_priorities": [
+        "education system strengthening",
+        "vocational training",
+        "climate",
+        "urban development",
+        "East Africa"
+      ],
+      "geography": [
+        "Tanzania",
+        "East Africa",
+        "Francophone Africa"
+      ],
+      "thematic_eligibility": [
+        "education quality",
+        "basic education",
+        "teacher training"
+      ],
       "grant_size_usd_min": 500000,
       "grant_size_usd_max": 5000000,
       "typical_duration_years": 4,
-      "recent_portfolio": ["Various East Africa education projects"],
-      "due_diligence_requirements": ["French procurement rules", "government partnership"],
+      "recent_portfolio": [
+        "Various East Africa education projects"
+      ],
+      "due_diligence_requirements": [
+        "French procurement rules",
+        "government partnership"
+      ],
       "application_process": "invite-only",
       "cycle_months": [],
       "language_frame": "education-quality government-capacity systems",
-      "key_contacts": [{"name": "AFD Nairobi or Dar es Salaam", "role": "Education Programme Officer", "email": "", "linkedin": ""}],
-      "known_restrictions": ["French procurement rules", "Often funds through government"],
+      "key_contacts": [
+        {
+          "name": "AFD Nairobi or Dar es Salaam",
+          "role": "Education Programme Officer",
+          "email": "",
+          "linkedin": ""
+        }
+      ],
+      "known_restrictions": [
+        "French procurement rules",
+        "Often funds through government"
+      ],
       "alignment_score": 58,
       "probability_score": 22,
       "effort_score": 4,
@@ -811,24 +1759,58 @@
     {
       "id": "f-unicef-tz",
       "name": "UNICEF Tanzania",
-      "programmes": ["soma"],
+      "programmes": [
+        "soma"
+      ],
       "entity": "learnimpact",
+      "funder_type": "international_multilateral",
       "tier": 3,
       "status": "prospect",
-      "mission_summary": "UN agency for children. Active education programme in Tanzania. Funds learning assessments, teacher training, and government capacity building. Often a convener rather than a funder of NGOs — but implementation partnerships possible.",
-      "current_priorities": ["foundational learning", "Tanzania education", "child protection", "WASH in schools", "teacher training"],
-      "geography": ["Tanzania"],
-      "thematic_eligibility": ["foundational literacy", "numeracy", "assessment systems", "teacher training"],
+      "mission_summary": "UN agency for children. Active education programme in Tanzania. Funds learning assessments, teacher training, and government capacity building. Often a convener rather than a funder of NGOs \u2014 but implementation partnerships possible.",
+      "current_priorities": [
+        "foundational learning",
+        "Tanzania education",
+        "child protection",
+        "WASH in schools",
+        "teacher training"
+      ],
+      "geography": [
+        "Tanzania"
+      ],
+      "thematic_eligibility": [
+        "foundational literacy",
+        "numeracy",
+        "assessment systems",
+        "teacher training"
+      ],
       "grant_size_usd_min": 100000,
       "grant_size_usd_max": 500000,
       "typical_duration_years": 2,
-      "recent_portfolio": ["Tanzania education sector", "ASER adaptation", "Teacher training"],
-      "due_diligence_requirements": ["UN procurement", "government endorsement", "safeguarding"],
+      "recent_portfolio": [
+        "Tanzania education sector",
+        "ASER adaptation",
+        "Teacher training"
+      ],
+      "due_diligence_requirements": [
+        "UN procurement",
+        "government endorsement",
+        "safeguarding"
+      ],
       "application_process": "invite-only",
       "cycle_months": [],
       "language_frame": "child-rights government-capacity learning-outcomes",
-      "key_contacts": [{"name": "UNICEF Tanzania Education", "role": "Education Specialist", "email": "", "linkedin": ""}],
-      "known_restrictions": ["UN procurement rules", "Government partner required"],
+      "key_contacts": [
+        {
+          "name": "UNICEF Tanzania Education",
+          "role": "Education Specialist",
+          "email": "",
+          "linkedin": ""
+        }
+      ],
+      "known_restrictions": [
+        "UN procurement rules",
+        "Government partner required"
+      ],
       "alignment_score": 65,
       "probability_score": 30,
       "effort_score": 4,
@@ -837,97 +1819,206 @@
       "drive_profile_id": "",
       "drive_due_diligence_id": "",
       "last_research_date": "2026-06-30",
-      "notes": "SOMA uses ASER-adapted assessment — common language with UNICEF. Better as a convener/validator than funder. UNICEF endorsement could be valuable for government conversations even if direct grant is small."
+      "notes": "SOMA uses ASER-adapted assessment \u2014 common language with UNICEF. Better as a convener/validator than funder. UNICEF endorsement could be valuable for government conversations even if direct grant is small."
     },
-
     {
       "id": "f-mastercard-timamu",
       "name": "Mastercard Foundation",
-      "programmes": ["timamu"],
+      "programmes": [
+        "timamu"
+      ],
       "entity": "timamu",
+      "funder_type": "international_foundation",
       "tier": 1,
       "status": "prospect",
       "mission_summary": "One of the world's largest foundations. EduFinance and Young Africa Works programmes focus on youth economic empowerment across Africa, including digital skills and livelihoods. The creator economy and digital livelihoods angle maps strongly to Timamu's Digital Creation pathway.",
-      "current_priorities": ["Young Africa Works", "youth economic empowerment", "digital skills", "creator economy", "Africa-led solutions", "disability inclusion (emerging)"],
-      "geography": ["Africa", "Sub-Saharan Africa", "Tanzania"],
-      "thematic_eligibility": ["youth digital livelihoods", "creator economy", "digital economic inclusion", "persons with disabilities (emerging priority)"],
+      "current_priorities": [
+        "Young Africa Works",
+        "youth economic empowerment",
+        "digital skills",
+        "creator economy",
+        "Africa-led solutions",
+        "disability inclusion (emerging)"
+      ],
+      "geography": [
+        "Africa",
+        "Sub-Saharan Africa",
+        "Tanzania"
+      ],
+      "thematic_eligibility": [
+        "youth digital livelihoods",
+        "creator economy",
+        "digital economic inclusion",
+        "persons with disabilities (emerging priority)"
+      ],
       "grant_size_usd_min": 500000,
       "grant_size_usd_max": 10000000,
       "typical_duration_years": 5,
-      "recent_portfolio": ["Young Africa Works", "Digital skills programmes", "TVET Africa"],
-      "due_diligence_requirements": ["Africa-led organisation preferred", "scale ambition", "government alignment", "evidence of approach"],
+      "recent_portfolio": [
+        "Young Africa Works",
+        "Digital skills programmes",
+        "TVET Africa"
+      ],
+      "due_diligence_requirements": [
+        "Africa-led organisation preferred",
+        "scale ambition",
+        "government alignment",
+        "evidence of approach"
+      ],
       "application_process": "invite-only",
       "cycle_months": [],
       "language_frame": "youth Africa digital-livelihoods systems-change scale economic-inclusion",
-      "key_contacts": [{"name": "Young Africa Works Team", "role": "Programme Officers", "email": "", "linkedin": ""}],
-      "known_restrictions": ["Africa-led organisations strongly preferred", "Phase 1 organisations unlikely — build track record first"],
+      "key_contacts": [
+        {
+          "name": "Young Africa Works Team",
+          "role": "Programme Officers",
+          "email": "",
+          "linkedin": ""
+        }
+      ],
+      "known_restrictions": [
+        "Africa-led organisations strongly preferred",
+        "Phase 1 organisations unlikely \u2014 build track record first"
+      ],
       "alignment_score": 80,
       "probability_score": 22,
       "effort_score": 5,
       "detected_priority_shift": null,
-      "recent_news": ["2025-2026: Young Africa Works expanding digital livelihoods focus"],
+      "recent_news": [
+        "2025-2026: Young Africa Works expanding digital livelihoods focus"
+      ],
       "drive_profile_id": "",
       "drive_due_diligence_id": "",
       "last_research_date": "2026-06-30",
-      "notes": "TIMAMU FUNDER. Strong thematic fit on creator economy + digital livelihoods. Timamu is Phase 1 — too early for Mastercard's typical grant size. Build track record through 2026-2027, approach in 2028 with evidence of programme delivery. Note: Mastercard Foundation ALSO appears for LearnImpact — no simultaneous approach to same contact."
+      "notes": "TIMAMU FUNDER. Strong thematic fit on creator economy + digital livelihoods. Timamu is Phase 1 \u2014 too early for Mastercard's typical grant size. Build track record through 2026-2027, approach in 2028 with evidence of programme delivery. Note: Mastercard Foundation ALSO appears for LearnImpact \u2014 no simultaneous approach to same contact."
     },
     {
       "id": "f-google-org-timamu",
       "name": "Google.org (Accessibility focus)",
-      "programmes": ["timamu"],
+      "programmes": [
+        "timamu"
+      ],
       "entity": "timamu",
+      "funder_type": "international_foundation",
       "tier": 1,
       "status": "prospect",
       "mission_summary": "Google.org funds organisations using technology to improve lives, including specific programmes for disability inclusion and digital accessibility. Google has committed to making AI tools accessible to persons with disabilities. Strong alignment with Timamu's assistive technology pathway.",
-      "current_priorities": ["digital accessibility", "AI for disability inclusion", "assistive technology", "Africa digital inclusion", "creator economy tools"],
-      "geography": ["Africa", "Global"],
-      "thematic_eligibility": ["assistive technology", "digital accessibility", "disability inclusion + technology", "creator economy tools for PWDs"],
+      "current_priorities": [
+        "digital accessibility",
+        "AI for disability inclusion",
+        "assistive technology",
+        "Africa digital inclusion",
+        "creator economy tools"
+      ],
+      "geography": [
+        "Africa",
+        "Global"
+      ],
+      "thematic_eligibility": [
+        "assistive technology",
+        "digital accessibility",
+        "disability inclusion + technology",
+        "creator economy tools for PWDs"
+      ],
       "grant_size_usd_min": 100000,
       "grant_size_usd_max": 2000000,
       "typical_duration_years": 2,
-      "recent_portfolio": ["Disability inclusion tech grants", "AI for accessibility"],
-      "due_diligence_requirements": ["technology component required", "disability inclusion evidence", "measurable outcomes"],
+      "recent_portfolio": [
+        "Disability inclusion tech grants",
+        "AI for accessibility"
+      ],
+      "due_diligence_requirements": [
+        "technology component required",
+        "disability inclusion evidence",
+        "measurable outcomes"
+      ],
       "application_process": "rolling",
       "cycle_months": [],
       "language_frame": "AI-accessibility technology-for-disability digital-inclusion",
-      "key_contacts": [{"name": "Google.org Africa", "role": "Grants Team", "email": "", "linkedin": ""}],
-      "known_restrictions": ["Technology component required"],
+      "key_contacts": [
+        {
+          "name": "Google.org Africa",
+          "role": "Grants Team",
+          "email": "",
+          "linkedin": ""
+        }
+      ],
+      "known_restrictions": [
+        "Technology component required"
+      ],
       "alignment_score": 88,
       "probability_score": 42,
       "effort_score": 3,
       "detected_priority_shift": null,
-      "recent_news": ["2025-2026: Google AI for accessibility commitments expanding"],
+      "recent_news": [
+        "2025-2026: Google AI for accessibility commitments expanding"
+      ],
       "drive_profile_id": "",
       "drive_due_diligence_id": "",
       "last_research_date": "2026-06-30",
-      "notes": "DEFERRED — DO NOT APPROACH (2026-07-01 decision). LearnImpact/SOMA leads with Google.org first. Timamu approaches Google.org separately only AFTER: (a) LearnImpact has an established Google.org relationship, AND (b) Timamu is registered as an independent entity in Tanzania. Timamu registration is currently pending — this is a hard prerequisite for any Google application. Revisit no earlier than 2027."
+      "notes": "DEFERRED \u2014 DO NOT APPROACH (2026-07-01 decision). LearnImpact/SOMA leads with Google.org first. Timamu approaches Google.org separately only AFTER: (a) LearnImpact has an established Google.org relationship, AND (b) Timamu is registered as an independent entity in Tanzania. Timamu registration is currently pending \u2014 this is a hard prerequisite for any Google application. Revisit no earlier than 2027."
     },
     {
       "id": "f-microsoft-accessibility",
       "name": "Microsoft Philanthropies (Accessibility)",
-      "programmes": ["timamu"],
+      "programmes": [
+        "timamu"
+      ],
       "entity": "timamu",
+      "funder_type": "international_foundation",
       "tier": 1,
       "status": "prospect",
       "mission_summary": "Microsoft has a specific AI for Accessibility programme committing $25M to NGOs using AI to empower persons with disabilities. Perfect fit for Timamu's assistive technology + creator economy pathways. Also provides Azure credits and technical partnerships.",
-      "current_priorities": ["AI for accessibility", "disability inclusion", "assistive technology", "digital inclusion for PWDs", "Africa digital transformation"],
-      "geography": ["Africa", "Global"],
-      "thematic_eligibility": ["AI for disability inclusion", "assistive technology", "digital accessibility", "employment for PWDs"],
+      "current_priorities": [
+        "AI for accessibility",
+        "disability inclusion",
+        "assistive technology",
+        "digital inclusion for PWDs",
+        "Africa digital transformation"
+      ],
+      "geography": [
+        "Africa",
+        "Global"
+      ],
+      "thematic_eligibility": [
+        "AI for disability inclusion",
+        "assistive technology",
+        "digital accessibility",
+        "employment for PWDs"
+      ],
       "grant_size_usd_min": 100000,
       "grant_size_usd_max": 1000000,
       "typical_duration_years": 2,
-      "recent_portfolio": ["AI for Accessibility grantees globally", "Disability inclusion tech programmes"],
-      "due_diligence_requirements": ["AI/technology component required", "disability inclusion mission", "Microsoft AI for Accessibility grant form"],
+      "recent_portfolio": [
+        "AI for Accessibility grantees globally",
+        "Disability inclusion tech programmes"
+      ],
+      "due_diligence_requirements": [
+        "AI/technology component required",
+        "disability inclusion mission",
+        "Microsoft AI for Accessibility grant form"
+      ],
       "application_process": "rolling",
       "cycle_months": [],
       "language_frame": "AI-accessibility disability-inclusion technology-for-PWDs",
-      "key_contacts": [{"name": "Microsoft AI for Accessibility", "role": "Programme Manager", "email": "msaccess@microsoft.com", "linkedin": ""}],
-      "known_restrictions": ["Must use AI/technology for disability inclusion"],
+      "key_contacts": [
+        {
+          "name": "Microsoft AI for Accessibility",
+          "role": "Programme Manager",
+          "email": "msaccess@microsoft.com",
+          "linkedin": ""
+        }
+      ],
+      "known_restrictions": [
+        "Must use AI/technology for disability inclusion"
+      ],
       "alignment_score": 93,
       "probability_score": 52,
       "effort_score": 2,
       "detected_priority_shift": null,
-      "recent_news": ["Active: Microsoft AI for Accessibility programme ongoing with rolling applications"],
+      "recent_news": [
+        "Active: Microsoft AI for Accessibility programme ongoing with rolling applications"
+      ],
       "drive_profile_id": "",
       "drive_due_diligence_id": "",
       "last_research_date": "2026-06-30",
@@ -936,24 +2027,58 @@
     {
       "id": "f-cbm",
       "name": "CBM Global (Christian Blind Mission)",
-      "programmes": ["timamu"],
+      "programmes": [
+        "timamu"
+      ],
       "entity": "timamu",
+      "funder_type": "international_foundation",
       "tier": 1,
       "status": "prospect",
-      "mission_summary": "International disability inclusion organisation and major funder/implementer of disability programmes globally. Active in East Africa. Funds disability-inclusive development, assistive technology, and inclusion programmes. Strong partner potential for Timamu — both as funder and implementation partner.",
-      "current_priorities": ["disability-inclusive development", "assistive technology", "inclusive education", "East Africa", "persons with disabilities"],
-      "geography": ["Tanzania", "Kenya", "East Africa"],
-      "thematic_eligibility": ["disability inclusion", "assistive technology", "employment for PWDs", "inclusive economic development"],
+      "mission_summary": "International disability inclusion organisation and major funder/implementer of disability programmes globally. Active in East Africa. Funds disability-inclusive development, assistive technology, and inclusion programmes. Strong partner potential for Timamu \u2014 both as funder and implementation partner.",
+      "current_priorities": [
+        "disability-inclusive development",
+        "assistive technology",
+        "inclusive education",
+        "East Africa",
+        "persons with disabilities"
+      ],
+      "geography": [
+        "Tanzania",
+        "Kenya",
+        "East Africa"
+      ],
+      "thematic_eligibility": [
+        "disability inclusion",
+        "assistive technology",
+        "employment for PWDs",
+        "inclusive economic development"
+      ],
       "grant_size_usd_min": 50000,
       "grant_size_usd_max": 500000,
       "typical_duration_years": 3,
-      "recent_portfolio": ["East Africa disability inclusion programmes", "Assistive technology access"],
-      "due_diligence_requirements": ["disability inclusion focus required", "localised approach", "partner organisations preferred"],
+      "recent_portfolio": [
+        "East Africa disability inclusion programmes",
+        "Assistive technology access"
+      ],
+      "due_diligence_requirements": [
+        "disability inclusion focus required",
+        "localised approach",
+        "partner organisations preferred"
+      ],
       "application_process": "invite-only",
       "cycle_months": [],
       "language_frame": "disability-inclusion assistive-technology rights-based",
-      "key_contacts": [{"name": "CBM East Africa", "role": "Programme Officer", "email": "", "linkedin": ""}],
-      "known_restrictions": ["Disability focus required"],
+      "key_contacts": [
+        {
+          "name": "CBM East Africa",
+          "role": "Programme Officer",
+          "email": "",
+          "linkedin": ""
+        }
+      ],
+      "known_restrictions": [
+        "Disability focus required"
+      ],
       "alignment_score": 87,
       "probability_score": 48,
       "effort_score": 3,
@@ -962,29 +2087,59 @@
       "drive_profile_id": "",
       "drive_due_diligence_id": "",
       "last_research_date": "2026-06-30",
-      "notes": "TIMAMU TIER 1. CBM has offices in East Africa. Both funder AND potential implementation partner — they have community networks Timamu can work through. CBM's partner-first model aligns exactly with Timamu's own model. Explore partnership before grant ask."
+      "notes": "TIMAMU TIER 1. CBM has offices in East Africa. Both funder AND potential implementation partner \u2014 they have community networks Timamu can work through. CBM's partner-first model aligns exactly with Timamu's own model. Explore partnership before grant ask."
     },
     {
       "id": "f-humanity-inclusion",
       "name": "Humanity & Inclusion (Handicap International)",
-      "programmes": ["timamu"],
+      "programmes": [
+        "timamu"
+      ],
       "entity": "timamu",
+      "funder_type": "international_foundation",
       "tier": 1,
       "status": "prospect",
       "mission_summary": "International NGO focused on disability inclusion and humanitarian action. Active in Tanzania. Implements disability inclusion programmes and also funds/partners with local organisations. Strong focus on economic inclusion for persons with disabilities.",
-      "current_priorities": ["disability inclusion", "economic inclusion for PWDs", "assistive technology", "East Africa", "humanitarian + development"],
-      "geography": ["Tanzania", "East Africa"],
-      "thematic_eligibility": ["disability economic inclusion", "assistive technology", "digital inclusion for PWDs"],
+      "current_priorities": [
+        "disability inclusion",
+        "economic inclusion for PWDs",
+        "assistive technology",
+        "East Africa",
+        "humanitarian + development"
+      ],
+      "geography": [
+        "Tanzania",
+        "East Africa"
+      ],
+      "thematic_eligibility": [
+        "disability economic inclusion",
+        "assistive technology",
+        "digital inclusion for PWDs"
+      ],
       "grant_size_usd_min": 50000,
       "grant_size_usd_max": 300000,
       "typical_duration_years": 2,
-      "recent_portfolio": ["East Africa disability inclusion programmes"],
-      "due_diligence_requirements": ["disability focus", "local partner approach"],
+      "recent_portfolio": [
+        "East Africa disability inclusion programmes"
+      ],
+      "due_diligence_requirements": [
+        "disability focus",
+        "local partner approach"
+      ],
       "application_process": "invite-only",
       "cycle_months": [],
       "language_frame": "disability-rights economic-inclusion community-based",
-      "key_contacts": [{"name": "HI Tanzania", "role": "Programme Officer", "email": "", "linkedin": ""}],
-      "known_restrictions": ["Disability focus required"],
+      "key_contacts": [
+        {
+          "name": "HI Tanzania",
+          "role": "Programme Officer",
+          "email": "",
+          "linkedin": ""
+        }
+      ],
+      "known_restrictions": [
+        "Disability focus required"
+      ],
       "alignment_score": 84,
       "probability_score": 45,
       "effort_score": 3,
@@ -993,34 +2148,73 @@
       "drive_profile_id": "",
       "drive_due_diligence_id": "",
       "last_research_date": "2026-06-30",
-      "notes": "TIMAMU TIER 1. HI Tanzania is active on the ground. Both potential funder and implementation partner. Digital inclusion for PWDs is their newer focus — Timamu fits exactly. Approach via HI Dar es Salaam office."
+      "notes": "TIMAMU TIER 1. HI Tanzania is active on the ground. Both potential funder and implementation partner. Digital inclusion for PWDs is their newer focus \u2014 Timamu fits exactly. Approach via HI Dar es Salaam office."
     },
     {
       "id": "f-ford-foundation",
       "name": "Ford Foundation",
-      "programmes": ["timamu"],
+      "programmes": [
+        "timamu"
+      ],
       "entity": "timamu",
+      "funder_type": "international_foundation",
       "tier": 1,
       "status": "prospect",
-      "mission_summary": "April 2025: Ford announced a $15M, 3-year global commitment to disability rights — their first major dedicated disability programme. Simultaneously committed that 25%+ of ALL Ford grantmaking will be disability-inclusive. Active Africa office. Partnering with Africa No Filter on creator economy content (Work Reimagined StoryLab) — direct overlap with Timamu's creator economy pathway.",
-      "current_priorities": ["disability rights (new $15M commitment)", "creator economy in Africa", "economic inclusion", "structural change", "technology + disability rights"],
-      "geography": ["Africa", "East Africa", "Global"],
-      "thematic_eligibility": ["disability rights and inclusion", "creator economy", "technology + disability", "economic inclusion for PWDs"],
+      "mission_summary": "April 2025: Ford announced a $15M, 3-year global commitment to disability rights \u2014 their first major dedicated disability programme. Simultaneously committed that 25%+ of ALL Ford grantmaking will be disability-inclusive. Active Africa office. Partnering with Africa No Filter on creator economy content (Work Reimagined StoryLab) \u2014 direct overlap with Timamu's creator economy pathway.",
+      "current_priorities": [
+        "disability rights (new $15M commitment)",
+        "creator economy in Africa",
+        "economic inclusion",
+        "structural change",
+        "technology + disability rights"
+      ],
+      "geography": [
+        "Africa",
+        "East Africa",
+        "Global"
+      ],
+      "thematic_eligibility": [
+        "disability rights and inclusion",
+        "creator economy",
+        "technology + disability",
+        "economic inclusion for PWDs"
+      ],
       "grant_size_usd_min": 250000,
       "grant_size_usd_max": 1000000,
       "typical_duration_years": 3,
-      "recent_portfolio": ["Work Reimagined StoryLab with Africa No Filter", "$15M disability rights commitment (2025)", "Africa media and creator economy"],
-      "due_diligence_requirements": ["structural change potential", "community-led preferred", "organisational led by persons with disabilities preferred"],
+      "recent_portfolio": [
+        "Work Reimagined StoryLab with Africa No Filter",
+        "$15M disability rights commitment (2025)",
+        "Africa media and creator economy"
+      ],
+      "due_diligence_requirements": [
+        "structural change potential",
+        "community-led preferred",
+        "organisational led by persons with disabilities preferred"
+      ],
       "application_process": "invite-only",
       "cycle_months": [],
       "language_frame": "structural-change disability-rights economic-inclusion technology Africa",
-      "key_contacts": [{"name": "Ford Foundation Africa", "role": "Programme Officer", "email": "", "linkedin": ""}],
-      "known_restrictions": ["Disability programme newer — more US-focused currently", "Prefer community-led or led-by-PWD organisations"],
+      "key_contacts": [
+        {
+          "name": "Ford Foundation Africa",
+          "role": "Programme Officer",
+          "email": "",
+          "linkedin": ""
+        }
+      ],
+      "known_restrictions": [
+        "Disability programme newer \u2014 more US-focused currently",
+        "Prefer community-led or led-by-PWD organisations"
+      ],
       "alignment_score": 86,
       "probability_score": 35,
       "effort_score": 4,
-      "detected_priority_shift": "2025: Major new disability rights commitment — first in Ford's history",
-      "recent_news": ["April 2025: $15M disability rights commitment + 25% disability inclusion across all grantmaking", "Partnership with Africa No Filter on Work Reimagined StoryLab"],
+      "detected_priority_shift": "2025: Major new disability rights commitment \u2014 first in Ford's history",
+      "recent_news": [
+        "April 2025: $15M disability rights commitment + 25% disability inclusion across all grantmaking",
+        "Partnership with Africa No Filter on Work Reimagined StoryLab"
+      ],
       "drive_profile_id": "1jR7GLww2tof6bkD63vp5kE01h4g3LinNppfXjbg8OIE",
       "drive_due_diligence_id": "",
       "last_research_date": "2026-06-30",
@@ -1029,29 +2223,64 @@
     {
       "id": "f-adobe-foundation",
       "name": "Adobe Foundation",
-      "programmes": ["timamu"],
+      "programmes": [
+        "timamu"
+      ],
       "entity": "timamu",
+      "funder_type": "international_foundation",
       "tier": 2,
       "status": "prospect",
       "mission_summary": "Adobe Foundation funds creative and digital inclusion specifically for persons with disabilities. 'Creativity for all' is Adobe's mission. Grantees include organisations enabling PWDs to earn through digital creation. Timamu's Digital Creation pathway is an exact match.",
-      "current_priorities": ["creativity for persons with disabilities", "digital creative tools for PWDs", "creator economy access for PWDs", "global reach"],
-      "geography": ["Global", "Africa"],
-      "thematic_eligibility": ["digital creativity for PWDs", "creator economy + disability", "digital tools for disability inclusion"],
+      "current_priorities": [
+        "creativity for persons with disabilities",
+        "digital creative tools for PWDs",
+        "creator economy access for PWDs",
+        "global reach"
+      ],
+      "geography": [
+        "Global",
+        "Africa"
+      ],
+      "thematic_eligibility": [
+        "digital creativity for PWDs",
+        "creator economy + disability",
+        "digital tools for disability inclusion"
+      ],
       "grant_size_usd_min": 25000,
       "grant_size_usd_max": 75000,
       "typical_duration_years": 2,
-      "recent_portfolio": ["Sense India (education for deaf/blind)", "Amba (digital data work for PWDs)", "Adobe UK Community Fund (£432K, 12 disability orgs)", "TakingITGlobal $700K creativity grants"],
-      "due_diligence_requirements": ["disability + creativity focus", "digital tools component"],
+      "recent_portfolio": [
+        "Sense India (education for deaf/blind)",
+        "Amba (digital data work for PWDs)",
+        "Adobe UK Community Fund (\u00a3432K, 12 disability orgs)",
+        "TakingITGlobal $700K creativity grants"
+      ],
+      "due_diligence_requirements": [
+        "disability + creativity focus",
+        "digital tools component"
+      ],
       "application_process": "rolling",
       "cycle_months": [],
       "language_frame": "creativity digital-tools disability-inclusion creator-economy",
-      "key_contacts": [{"name": "Adobe Foundation", "role": "Grants Team", "email": "", "linkedin": ""}],
-      "known_restrictions": ["Digital creativity component required"],
+      "key_contacts": [
+        {
+          "name": "Adobe Foundation",
+          "role": "Grants Team",
+          "email": "",
+          "linkedin": ""
+        }
+      ],
+      "known_restrictions": [
+        "Digital creativity component required"
+      ],
       "alignment_score": 90,
       "probability_score": 55,
       "effort_score": 2,
       "detected_priority_shift": null,
-      "recent_news": ["Adobe UK Community Fund: £432K to 12 disability orgs", "TakingITGlobal $700K creativity grants in 18 countries"],
+      "recent_news": [
+        "Adobe UK Community Fund: \u00a3432K to 12 disability orgs",
+        "TakingITGlobal $700K creativity grants in 18 countries"
+      ],
       "drive_profile_id": "1jR7GLww2tof6bkD63vp5kE01h4g3LinNppfXjbg8OIE",
       "drive_due_diligence_id": "",
       "last_research_date": "2026-06-30",
@@ -1060,29 +2289,61 @@
     {
       "id": "f-sida",
       "name": "Sida (Swedish International Development Cooperation Agency)",
-      "programmes": ["timamu"],
+      "programmes": [
+        "timamu"
+      ],
       "entity": "timamu",
+      "funder_type": "international_bilateral",
       "tier": 2,
       "status": "prospect",
-      "mission_summary": "Sweden's bilateral development agency. Tanzania is an active Sida country — recently signed SEK 78M research agreement with UDSM. Sweden ratified UN CRPD and disability mainstreaming is binding in all Sida programming. Digital transformation + disability inclusion = strong dual mandate fit.",
-      "current_priorities": ["Tanzania (active country programme)", "disability rights mainstreaming (CRPD-binding)", "digital transformation", "civil society support"],
-      "geography": ["Tanzania", "East Africa"],
-      "thematic_eligibility": ["disability inclusion", "digital skills", "economic inclusion", "civil society"],
+      "mission_summary": "Sweden's bilateral development agency. Tanzania is an active Sida country \u2014 recently signed SEK 78M research agreement with UDSM. Sweden ratified UN CRPD and disability mainstreaming is binding in all Sida programming. Digital transformation + disability inclusion = strong dual mandate fit.",
+      "current_priorities": [
+        "Tanzania (active country programme)",
+        "disability rights mainstreaming (CRPD-binding)",
+        "digital transformation",
+        "civil society support"
+      ],
+      "geography": [
+        "Tanzania",
+        "East Africa"
+      ],
+      "thematic_eligibility": [
+        "disability inclusion",
+        "digital skills",
+        "economic inclusion",
+        "civil society"
+      ],
       "grant_size_usd_min": 50000,
       "grant_size_usd_max": 500000,
       "typical_duration_years": 3,
-      "recent_portfolio": ["UDSM research agreement SEK 78M", "Civil society support Tanzania"],
-      "due_diligence_requirements": ["audited financials", "Swedish Embassy relationship", "CRPD alignment"],
+      "recent_portfolio": [
+        "UDSM research agreement SEK 78M",
+        "Civil society support Tanzania"
+      ],
+      "due_diligence_requirements": [
+        "audited financials",
+        "Swedish Embassy relationship",
+        "CRPD alignment"
+      ],
       "application_process": "open",
       "cycle_months": [],
       "language_frame": "disability-rights digital-inclusion CRPD civil-society",
-      "key_contacts": [{"name": "Swedish Embassy Dar es Salaam", "role": "Development Cooperation Officer", "email": "", "linkedin": ""}],
+      "key_contacts": [
+        {
+          "name": "Swedish Embassy Dar es Salaam",
+          "role": "Development Cooperation Officer",
+          "email": "",
+          "linkedin": ""
+        }
+      ],
       "known_restrictions": [],
       "alignment_score": 82,
       "probability_score": 40,
       "effort_score": 3,
       "detected_priority_shift": null,
-      "recent_news": ["Active Tanzania programme. SEK 78M UDSM agreement."],
+      "recent_news": [
+        "Active Tanzania programme. SEK 78M UDSM agreement."
+      ],
       "drive_profile_id": "1jR7GLww2tof6bkD63vp5kE01h4g3LinNppfXjbg8OIE",
       "drive_due_diligence_id": "",
       "last_research_date": "2026-06-30",
@@ -1091,24 +2352,55 @@
     {
       "id": "f-myright",
       "name": "MyRight (We believe in equal rights)",
-      "programmes": ["timamu"],
+      "programmes": [
+        "timamu"
+      ],
       "entity": "timamu",
+      "funder_type": "international_foundation",
       "tier": 2,
       "status": "prospect",
       "mission_summary": "Swedish disability rights organisation funded by Sida. Active in East Africa supporting local DPO organisations. Could be either a funder (sub-grant through Sida funds) or an implementation partner that brings Timamu into their network.",
-      "current_priorities": ["disability rights", "DPO strengthening", "East Africa", "persons with disabilities + economic inclusion"],
-      "geography": ["East Africa", "Tanzania", "Uganda", "Kenya"],
-      "thematic_eligibility": ["disability rights", "economic inclusion for PWDs", "DPO capacity"],
+      "current_priorities": [
+        "disability rights",
+        "DPO strengthening",
+        "East Africa",
+        "persons with disabilities + economic inclusion"
+      ],
+      "geography": [
+        "East Africa",
+        "Tanzania",
+        "Uganda",
+        "Kenya"
+      ],
+      "thematic_eligibility": [
+        "disability rights",
+        "economic inclusion for PWDs",
+        "DPO capacity"
+      ],
       "grant_size_usd_min": 20000,
       "grant_size_usd_max": 150000,
       "typical_duration_years": 2,
-      "recent_portfolio": ["DPO support in East Africa"],
-      "due_diligence_requirements": ["disability rights mission", "DPO alignment"],
+      "recent_portfolio": [
+        "DPO support in East Africa"
+      ],
+      "due_diligence_requirements": [
+        "disability rights mission",
+        "DPO alignment"
+      ],
       "application_process": "invite-only",
       "cycle_months": [],
       "language_frame": "disability-rights DPO-partnership CRPD-alignment",
-      "key_contacts": [{"name": "MyRight East Africa", "role": "Regional Representative", "email": "", "linkedin": ""}],
-      "known_restrictions": ["DPO or disability rights focus required"],
+      "key_contacts": [
+        {
+          "name": "MyRight East Africa",
+          "role": "Regional Representative",
+          "email": "",
+          "linkedin": ""
+        }
+      ],
+      "known_restrictions": [
+        "DPO or disability rights focus required"
+      ],
       "alignment_score": 78,
       "probability_score": 42,
       "effort_score": 2,
@@ -1117,28 +2409,59 @@
       "drive_profile_id": "",
       "drive_due_diligence_id": "",
       "last_research_date": "2026-06-30",
-      "notes": "TIMAMU. MyRight = gateway to Sida civil society funds AND DPO networks in Tanzania. Approach as partner first — they open doors to communities Timamu needs to serve. Could co-apply to Sida together."
+      "notes": "TIMAMU. MyRight = gateway to Sida civil society funds AND DPO networks in Tanzania. Approach as partner first \u2014 they open doors to communities Timamu needs to serve. Could co-apply to Sida together."
     },
     {
       "id": "f-open-society-timamu",
       "name": "Open Society Foundations",
-      "programmes": ["timamu"],
+      "programmes": [
+        "timamu"
+      ],
       "entity": "timamu",
+      "funder_type": "international_foundation",
       "tier": 2,
       "status": "prospect",
       "mission_summary": "George Soros' global foundations network. Active in disability rights through the Open Society Initiative for Eastern Africa (OSIEA). Funds civil society, human rights, and disability inclusion. Tanzania is an active OSIEA country.",
-      "current_priorities": ["human rights", "disability rights", "civil society", "digital rights", "Africa"],
-      "geography": ["Tanzania", "East Africa"],
-      "thematic_eligibility": ["disability rights", "economic inclusion", "civil society", "digital inclusion"],
+      "current_priorities": [
+        "human rights",
+        "disability rights",
+        "civil society",
+        "digital rights",
+        "Africa"
+      ],
+      "geography": [
+        "Tanzania",
+        "East Africa"
+      ],
+      "thematic_eligibility": [
+        "disability rights",
+        "economic inclusion",
+        "civil society",
+        "digital inclusion"
+      ],
       "grant_size_usd_min": 50000,
       "grant_size_usd_max": 300000,
       "typical_duration_years": 2,
-      "recent_portfolio": ["OSIEA disability rights grantees", "Tanzania civil society"],
-      "due_diligence_requirements": ["civil society organisation", "human rights alignment", "registered organisation"],
+      "recent_portfolio": [
+        "OSIEA disability rights grantees",
+        "Tanzania civil society"
+      ],
+      "due_diligence_requirements": [
+        "civil society organisation",
+        "human rights alignment",
+        "registered organisation"
+      ],
       "application_process": "invite-only",
       "cycle_months": [],
       "language_frame": "human-rights disability-rights civil-society digital-rights",
-      "key_contacts": [{"name": "OSIEA (Nairobi)", "role": "Programme Officer", "email": "", "linkedin": ""}],
+      "key_contacts": [
+        {
+          "name": "OSIEA (Nairobi)",
+          "role": "Programme Officer",
+          "email": "",
+          "linkedin": ""
+        }
+      ],
       "known_restrictions": [],
       "alignment_score": 74,
       "probability_score": 35,
@@ -1153,24 +2476,54 @@
     {
       "id": "f-vodacom-foundation-timamu",
       "name": "Vodacom Foundation Tanzania",
-      "programmes": ["timamu"],
+      "programmes": [
+        "timamu"
+      ],
       "entity": "timamu",
+      "funder_type": "local_corporate",
       "tier": 2,
       "status": "prospect",
-      "mission_summary": "Vodacom Tanzania Foundation with 80% technology mandate. Active in Tanzania. Digital inclusion for persons with disabilities is a natural fit. NOTE: VTF is already an active LearnImpact partner — cross-programme conflict flag applies. Cannot approach for Timamu while active LearnImpact relationship ongoing without deliberate coordination.",
-      "current_priorities": ["technology for social impact", "Tanzania", "digital inclusion", "community development"],
-      "geography": ["Tanzania"],
-      "thematic_eligibility": ["technology-enabled disability inclusion", "digital accessibility", "community technology"],
+      "mission_summary": "Vodacom Tanzania Foundation with 80% technology mandate. Active in Tanzania. Digital inclusion for persons with disabilities is a natural fit. NOTE: VTF is already an active LearnImpact partner \u2014 cross-programme conflict flag applies. Cannot approach for Timamu while active LearnImpact relationship ongoing without deliberate coordination.",
+      "current_priorities": [
+        "technology for social impact",
+        "Tanzania",
+        "digital inclusion",
+        "community development"
+      ],
+      "geography": [
+        "Tanzania"
+      ],
+      "thematic_eligibility": [
+        "technology-enabled disability inclusion",
+        "digital accessibility",
+        "community technology"
+      ],
       "grant_size_usd_min": 50000,
       "grant_size_usd_max": 200000,
       "typical_duration_years": 1,
-      "recent_portfolio": ["KiuFunza (LearnImpact)", "Various Tanzania technology programmes"],
-      "due_diligence_requirements": ["technology component", "Tanzania focus", "Vodacom visibility"],
+      "recent_portfolio": [
+        "KiuFunza (LearnImpact)",
+        "Various Tanzania technology programmes"
+      ],
+      "due_diligence_requirements": [
+        "technology component",
+        "Tanzania focus",
+        "Vodacom visibility"
+      ],
       "application_process": "invite-only",
       "cycle_months": [],
       "language_frame": "technology digital-inclusion Tanzania community",
-      "key_contacts": [{"name": "Sandra Oswald", "role": "VTF Programme Manager", "email": "", "linkedin": ""}],
-      "known_restrictions": ["CROSS-PROGRAMME CONFLICT: active LearnImpact partner. Do not approach for Timamu without explicit coordination decision."],
+      "key_contacts": [
+        {
+          "name": "Sandra Oswald",
+          "role": "VTF Programme Manager",
+          "email": "",
+          "linkedin": ""
+        }
+      ],
+      "known_restrictions": [
+        "CROSS-PROGRAMME CONFLICT: active LearnImpact partner. Do not approach for Timamu without explicit coordination decision."
+      ],
       "alignment_score": 72,
       "probability_score": 38,
       "effort_score": 3,
@@ -1179,29 +2532,61 @@
       "drive_profile_id": "",
       "drive_due_diligence_id": "",
       "last_research_date": "2026-06-30",
-      "notes": "⚠️ CROSS-PROGRAMME CONFLICT. VTF = active LearnImpact partner (KiuFunza + SOMA pipeline). Cannot approach for Timamu simultaneously without deliberate coordination. Michael must decide which relationship takes priority. Sandra Oswald is the contact for BOTH entities — extreme care required."
+      "notes": "\u26a0\ufe0f CROSS-PROGRAMME CONFLICT. VTF = active LearnImpact partner (KiuFunza + SOMA pipeline). Cannot approach for Timamu simultaneously without deliberate coordination. Michael must decide which relationship takes priority. Sandra Oswald is the contact for BOTH entities \u2014 extreme care required."
     },
     {
       "id": "f-mtn-foundation",
       "name": "MTN Foundation Tanzania / MTN BRIGHT",
-      "programmes": ["timamu"],
+      "programmes": [
+        "timamu"
+      ],
       "entity": "timamu",
+      "funder_type": "local_corporate",
       "tier": 2,
       "status": "prospect",
       "mission_summary": "MTN Group's philanthropic arm. Education and digital skills focus across Africa. Tanzania MTN Foundation active. Digital inclusion and connectivity are strategic CSR priorities. Disability + digital = emerging priority.",
-      "current_priorities": ["digital skills", "education", "connectivity", "youth economic empowerment", "Tanzania"],
-      "geography": ["Tanzania", "Africa"],
-      "thematic_eligibility": ["digital skills", "economic inclusion", "technology for youth", "disability + digital"],
+      "current_priorities": [
+        "digital skills",
+        "education",
+        "connectivity",
+        "youth economic empowerment",
+        "Tanzania"
+      ],
+      "geography": [
+        "Tanzania",
+        "Africa"
+      ],
+      "thematic_eligibility": [
+        "digital skills",
+        "economic inclusion",
+        "technology for youth",
+        "disability + digital"
+      ],
       "grant_size_usd_min": 30000,
       "grant_size_usd_max": 150000,
       "typical_duration_years": 1,
-      "recent_portfolio": ["Digital skills Tanzania", "Education programmes"],
-      "due_diligence_requirements": ["Tanzania focus", "MTN visibility"],
+      "recent_portfolio": [
+        "Digital skills Tanzania",
+        "Education programmes"
+      ],
+      "due_diligence_requirements": [
+        "Tanzania focus",
+        "MTN visibility"
+      ],
       "application_process": "open",
       "cycle_months": [],
       "language_frame": "digital-skills youth economic-inclusion Tanzania",
-      "key_contacts": [{"name": "MTN Tanzania Foundation", "role": "CSR Manager", "email": "", "linkedin": ""}],
-      "known_restrictions": ["MTN market focus"],
+      "key_contacts": [
+        {
+          "name": "MTN Tanzania Foundation",
+          "role": "CSR Manager",
+          "email": "",
+          "linkedin": ""
+        }
+      ],
+      "known_restrictions": [
+        "MTN market focus"
+      ],
       "alignment_score": 68,
       "probability_score": 42,
       "effort_score": 2,
@@ -1210,28 +2595,59 @@
       "drive_profile_id": "",
       "drive_due_diligence_id": "",
       "last_research_date": "2026-06-30",
-      "notes": "TIMAMU. Smaller grants but accessible. Digital inclusion for PWDs in Tanzania is a good fit. Also explore MTN mobile money integration for programme participant earnings (not just funding — product partnership)."
+      "notes": "TIMAMU. Smaller grants but accessible. Digital inclusion for PWDs in Tanzania is a good fit. Also explore MTN mobile money integration for programme participant earnings (not just funding \u2014 product partnership)."
     },
     {
       "id": "f-omidyar-timamu",
       "name": "Omidyar Network (Economic Inclusion)",
-      "programmes": ["timamu"],
+      "programmes": [
+        "timamu"
+      ],
       "entity": "timamu",
+      "funder_type": "international_foundation",
       "tier": 2,
       "status": "prospect",
       "mission_summary": "Omidyar Network's economic inclusion portfolio focuses on livelihoods, digital financial inclusion, and gig economy platforms. Timamu's gig economy + disability pathway (Phase 2) and creator economy pathway map to their portfolio. Also invests in Africa-focused technology ventures.",
-      "current_priorities": ["economic inclusion", "digital livelihoods", "gig economy platforms", "financial inclusion", "Africa"],
-      "geography": ["Africa", "Global"],
-      "thematic_eligibility": ["digital economic inclusion", "gig economy", "creator economy", "livelihoods for marginalised groups"],
+      "current_priorities": [
+        "economic inclusion",
+        "digital livelihoods",
+        "gig economy platforms",
+        "financial inclusion",
+        "Africa"
+      ],
+      "geography": [
+        "Africa",
+        "Global"
+      ],
+      "thematic_eligibility": [
+        "digital economic inclusion",
+        "gig economy",
+        "creator economy",
+        "livelihoods for marginalised groups"
+      ],
       "grant_size_usd_min": 200000,
       "grant_size_usd_max": 2000000,
       "typical_duration_years": 3,
-      "recent_portfolio": ["Digital financial inclusion", "Gig economy platforms Africa"],
-      "due_diligence_requirements": ["scale potential", "technology component", "evidence base"],
+      "recent_portfolio": [
+        "Digital financial inclusion",
+        "Gig economy platforms Africa"
+      ],
+      "due_diligence_requirements": [
+        "scale potential",
+        "technology component",
+        "evidence base"
+      ],
       "application_process": "invite-only",
       "cycle_months": [],
       "language_frame": "economic-inclusion digital-livelihoods scale systems-change",
-      "key_contacts": [{"name": "Omidyar Economic Inclusion", "role": "Programme Officers", "email": "", "linkedin": ""}],
+      "key_contacts": [
+        {
+          "name": "Omidyar Economic Inclusion",
+          "role": "Programme Officers",
+          "email": "",
+          "linkedin": ""
+        }
+      ],
       "known_restrictions": [],
       "alignment_score": 74,
       "probability_score": 28,
@@ -1241,60 +2657,121 @@
       "drive_profile_id": "",
       "drive_due_diligence_id": "",
       "last_research_date": "2026-06-30",
-      "notes": "TIMAMU. Gig economy (Phase 2) and creator economy pathways map to Omidyar economic inclusion. Phase 1 Timamu may be too early — needs evidence of delivery. 2027-2028 target."
+      "notes": "TIMAMU. Gig economy (Phase 2) and creator economy pathways map to Omidyar economic inclusion. Phase 1 Timamu may be too early \u2014 needs evidence of delivery. 2027-2028 target."
     },
     {
       "id": "f-fcdo-disability",
       "name": "FCDO (Disability Inclusion)",
-      "programmes": ["timamu"],
+      "programmes": [
+        "timamu"
+      ],
       "entity": "timamu",
+      "funder_type": "international_bilateral",
       "tier": 2,
       "status": "prospect",
-      "mission_summary": "FCDO has a disability inclusion commitment across all bilateral programming. Disability-inclusive digital development is an explicit priority. Tanzania FCDO has active programmes. Note: Same agency as LearnImpact's FCDO prospect — different programme streams, but same agency risk of over-exposure.",
-      "current_priorities": ["disability-inclusive development", "digital inclusion for PWDs", "East Africa", "women and girls with disabilities"],
-      "geography": ["Tanzania", "East Africa"],
-      "thematic_eligibility": ["disability economic inclusion", "digital livelihoods for PWDs", "assistive technology"],
+      "mission_summary": "FCDO has a disability inclusion commitment across all bilateral programming. Disability-inclusive digital development is an explicit priority. Tanzania FCDO has active programmes. Note: Same agency as LearnImpact's FCDO prospect \u2014 different programme streams, but same agency risk of over-exposure.",
+      "current_priorities": [
+        "disability-inclusive development",
+        "digital inclusion for PWDs",
+        "East Africa",
+        "women and girls with disabilities"
+      ],
+      "geography": [
+        "Tanzania",
+        "East Africa"
+      ],
+      "thematic_eligibility": [
+        "disability economic inclusion",
+        "digital livelihoods for PWDs",
+        "assistive technology"
+      ],
       "grant_size_usd_min": 200000,
       "grant_size_usd_max": 2000000,
       "typical_duration_years": 3,
-      "recent_portfolio": ["Disability-inclusive development Tanzania"],
-      "due_diligence_requirements": ["procurement compliance", "disability focus", "gender equity"],
+      "recent_portfolio": [
+        "Disability-inclusive development Tanzania"
+      ],
+      "due_diligence_requirements": [
+        "procurement compliance",
+        "disability focus",
+        "gender equity"
+      ],
       "application_process": "open",
       "cycle_months": [],
       "language_frame": "disability-rights economic-inclusion digital",
-      "key_contacts": [{"name": "FCDO Tanzania", "role": "Disability Inclusion Lead", "email": "", "linkedin": ""}],
-      "known_restrictions": ["⚠️ Same agency as LearnImpact FCDO prospect — coordinate approaches"],
+      "key_contacts": [
+        {
+          "name": "FCDO Tanzania",
+          "role": "Disability Inclusion Lead",
+          "email": "",
+          "linkedin": ""
+        }
+      ],
+      "known_restrictions": [
+        "\u26a0\ufe0f Same agency as LearnImpact FCDO prospect \u2014 coordinate approaches"
+      ],
       "alignment_score": 76,
       "probability_score": 32,
       "effort_score": 4,
       "detected_priority_shift": null,
-      "recent_news": ["ODA cuts impact Timamu track too — monitor"],
+      "recent_news": [
+        "ODA cuts impact Timamu track too \u2014 monitor"
+      ],
       "drive_profile_id": "",
       "drive_due_diligence_id": "",
       "last_research_date": "2026-06-30",
-      "notes": "⚠️ CROSS-PROGRAMME RISK. FCDO appears in both LearnImpact and Timamu lists — different programme streams (education vs disability inclusion) but same donor agency. Coordinate approaches carefully. Do not submit from both entities in same cycle without deliberate coordination."
+      "notes": "\u26a0\ufe0f CROSS-PROGRAMME RISK. FCDO appears in both LearnImpact and Timamu lists \u2014 different programme streams (education vs disability inclusion) but same donor agency. Coordinate approaches carefully. Do not submit from both entities in same cycle without deliberate coordination."
     },
     {
       "id": "f-giz-timamu",
       "name": "GIZ (Digital Transformation / Disability)",
-      "programmes": ["timamu"],
+      "programmes": [
+        "timamu"
+      ],
       "entity": "timamu",
+      "funder_type": "international_bilateral",
       "tier": 3,
       "status": "prospect",
       "mission_summary": "GIZ's digital transformation programme includes digital inclusion and economic empowerment components. Disability mainstreaming is a requirement across GIZ programmes. Potential for technical assistance partnership rather than direct grant.",
-      "current_priorities": ["digital transformation", "economic empowerment", "disability mainstreaming", "Tanzania"],
-      "geography": ["Tanzania"],
-      "thematic_eligibility": ["digital inclusion", "disability mainstreaming", "economic empowerment"],
+      "current_priorities": [
+        "digital transformation",
+        "economic empowerment",
+        "disability mainstreaming",
+        "Tanzania"
+      ],
+      "geography": [
+        "Tanzania"
+      ],
+      "thematic_eligibility": [
+        "digital inclusion",
+        "disability mainstreaming",
+        "economic empowerment"
+      ],
       "grant_size_usd_min": 100000,
       "grant_size_usd_max": 500000,
       "typical_duration_years": 3,
-      "recent_portfolio": ["Tanzania digital transformation programme"],
-      "due_diligence_requirements": ["German procurement", "government alignment"],
+      "recent_portfolio": [
+        "Tanzania digital transformation programme"
+      ],
+      "due_diligence_requirements": [
+        "German procurement",
+        "government alignment"
+      ],
       "application_process": "invite-only",
       "cycle_months": [],
       "language_frame": "digital-transformation inclusive-development government-capacity",
-      "key_contacts": [{"name": "GIZ Tanzania", "role": "Digital Inclusion Lead", "email": "", "linkedin": ""}],
-      "known_restrictions": ["German procurement", "⚠️ Also appears in LearnImpact list — coordinate"],
+      "key_contacts": [
+        {
+          "name": "GIZ Tanzania",
+          "role": "Digital Inclusion Lead",
+          "email": "",
+          "linkedin": ""
+        }
+      ],
+      "known_restrictions": [
+        "German procurement",
+        "\u26a0\ufe0f Also appears in LearnImpact list \u2014 coordinate"
+      ],
       "alignment_score": 65,
       "probability_score": 30,
       "effort_score": 3,
@@ -1303,28 +2780,55 @@
       "drive_profile_id": "",
       "drive_due_diligence_id": "",
       "last_research_date": "2026-06-30",
-      "notes": "TIMAMU + ⚠️ CROSS-PROGRAMME. Lower priority but worth monitoring. Technical assistance partnership with GIZ may be more realistic than direct grant for Phase 1 Timamu."
+      "notes": "TIMAMU + \u26a0\ufe0f CROSS-PROGRAMME. Lower priority but worth monitoring. Technical assistance partnership with GIZ may be more realistic than direct grant for Phase 1 Timamu."
     },
     {
       "id": "f-ida",
       "name": "International Disability Alliance (IDA)",
-      "programmes": ["timamu"],
+      "programmes": [
+        "timamu"
+      ],
       "entity": "timamu",
+      "funder_type": "international_multilateral",
       "tier": 2,
       "status": "prospect",
       "mission_summary": "Global network of DPOs and disability rights organisations. Convenes disability rights actors globally and in East Africa. Less a traditional funder, more a legitimacy-building partner. Membership/affiliation could open doors to IDA-aligned bilateral donors.",
-      "current_priorities": ["disability rights", "UN CRPD implementation", "DPO strengthening", "East Africa"],
-      "geography": ["Global", "East Africa"],
-      "thematic_eligibility": ["disability rights", "CRPD implementation", "economic rights for PWDs"],
+      "current_priorities": [
+        "disability rights",
+        "UN CRPD implementation",
+        "DPO strengthening",
+        "East Africa"
+      ],
+      "geography": [
+        "Global",
+        "East Africa"
+      ],
+      "thematic_eligibility": [
+        "disability rights",
+        "CRPD implementation",
+        "economic rights for PWDs"
+      ],
       "grant_size_usd_min": 10000,
       "grant_size_usd_max": 100000,
       "typical_duration_years": 1,
-      "recent_portfolio": ["DPO capacity grants"],
-      "due_diligence_requirements": ["disability rights mission", "CRPD alignment"],
+      "recent_portfolio": [
+        "DPO capacity grants"
+      ],
+      "due_diligence_requirements": [
+        "disability rights mission",
+        "CRPD alignment"
+      ],
       "application_process": "open",
       "cycle_months": [],
       "language_frame": "disability-rights CRPD DPO-partnership",
-      "key_contacts": [{"name": "IDA Secretariat", "role": "Programme Officer", "email": "", "linkedin": ""}],
+      "key_contacts": [
+        {
+          "name": "IDA Secretariat",
+          "role": "Programme Officer",
+          "email": "",
+          "linkedin": ""
+        }
+      ],
       "known_restrictions": [],
       "alignment_score": 70,
       "probability_score": 40,
@@ -1338,87 +2842,182 @@
     },
     {
       "id": "f-tanzanian-govt-creator",
-      "name": "Tanzania Government — Creator Economy Fund",
-      "programmes": ["timamu"],
+      "name": "Tanzania Government \u2014 Creator Economy Fund",
+      "programmes": [
+        "timamu"
+      ],
       "entity": "timamu",
+      "funder_type": "local_government",
       "tier": 1,
       "status": "prospect",
-      "mission_summary": "Tanzania Vision 2050 has allocated TZS 2 billion specifically for online content creators (equipment, production, professional development) beginning July 2026. Digital and creative industries is a named priority sector. Timamu positions as capability partner — government funds infrastructure, Timamu builds economic capability for PWDs.",
-      "current_priorities": ["Tanzania Vision 2050", "creator economy", "digital livelihoods", "youth digital skills"],
-      "geography": ["Tanzania"],
-      "thematic_eligibility": ["creator economy", "digital livelihoods", "capacity building"],
+      "mission_summary": "Tanzania Vision 2050 has allocated TZS 2 billion specifically for online content creators (equipment, production, professional development) beginning July 2026. Digital and creative industries is a named priority sector. Timamu positions as capability partner \u2014 government funds infrastructure, Timamu builds economic capability for PWDs.",
+      "current_priorities": [
+        "Tanzania Vision 2050",
+        "creator economy",
+        "digital livelihoods",
+        "youth digital skills"
+      ],
+      "geography": [
+        "Tanzania"
+      ],
+      "thematic_eligibility": [
+        "creator economy",
+        "digital livelihoods",
+        "capacity building"
+      ],
       "grant_size_usd_min": 50000,
       "grant_size_usd_max": 500000,
       "typical_duration_years": 1,
-      "recent_portfolio": ["TZS 2B creator economy allocation (from July 2026)"],
-      "due_diligence_requirements": ["Government procurement", "Tanzania registration", "Ministry alignment"],
+      "recent_portfolio": [
+        "TZS 2B creator economy allocation (from July 2026)"
+      ],
+      "due_diligence_requirements": [
+        "Government procurement",
+        "Tanzania registration",
+        "Ministry alignment"
+      ],
       "application_process": "open",
-      "cycle_months": ["July", "August"],
+      "cycle_months": [
+        "July",
+        "August"
+      ],
       "language_frame": "Tanzania-Vision-2050 creator-economy youth-digital national-priority",
-      "key_contacts": [{"name": "Ministry of Information, Communication and ICT Tanzania", "role": "Director of ICT", "email": "", "linkedin": ""}],
-      "known_restrictions": ["Must be Tanzania-registered", "Government procurement"],
+      "key_contacts": [
+        {
+          "name": "Ministry of Information, Communication and ICT Tanzania",
+          "role": "Director of ICT",
+          "email": "",
+          "linkedin": ""
+        }
+      ],
+      "known_restrictions": [
+        "Must be Tanzania-registered",
+        "Government procurement"
+      ],
       "alignment_score": 82,
       "probability_score": 45,
       "effort_score": 3,
       "detected_priority_shift": "July 2026: TZS 2B creator economy fund activates",
-      "recent_news": ["Tanzania Vision 2050: TZS 2B for creator economy begins July 2026"],
+      "recent_news": [
+        "Tanzania Vision 2050: TZS 2B for creator economy begins July 2026"
+      ],
       "drive_profile_id": "",
       "drive_due_diligence_id": "",
       "last_research_date": "2026-06-30",
-      "notes": "TIMAMU PRIORITY. This fund activates July 2026 — immediate action needed once Timamu is legally registered. Position: government funds the infrastructure and equipment; Timamu provides the disability-inclusive capability programme. PWD angle gives Timamu unique positioning versus general creator economy applicants."
+      "notes": "TIMAMU PRIORITY. This fund activates July 2026 \u2014 immediate action needed once Timamu is legally registered. Position: government funds the infrastructure and equipment; Timamu provides the disability-inclusive capability programme. PWD angle gives Timamu unique positioning versus general creator economy applicants."
     },
     {
       "id": "f-taril-africa",
       "name": "TaRL Africa",
-      "programmes": ["soma"],
+      "programmes": [
+        "soma"
+      ],
       "entity": "learnimpact",
+      "funder_type": "regional",
       "tier": 3,
       "status": "warm",
-      "mission_summary": "Pan-African TaRL implementation arm. Operates in Tanzania directly. Collaborative with LearnImpact — not competitive. Potential partner for SOMA evidence legitimacy and network access. Also useful for navigating USAID and bilateral relationships.",
-      "current_priorities": ["TaRL implementation Africa", "government partnerships", "foundational learning"],
-      "geography": ["Africa", "Tanzania"],
-      "thematic_eligibility": ["TaRL methodology", "foundational learning"],
+      "mission_summary": "Pan-African TaRL implementation arm. Operates in Tanzania directly. Collaborative with LearnImpact \u2014 not competitive. Potential partner for SOMA evidence legitimacy and network access. Also useful for navigating USAID and bilateral relationships.",
+      "current_priorities": [
+        "TaRL implementation Africa",
+        "government partnerships",
+        "foundational learning"
+      ],
+      "geography": [
+        "Africa",
+        "Tanzania"
+      ],
+      "thematic_eligibility": [
+        "TaRL methodology",
+        "foundational learning"
+      ],
       "grant_size_usd_min": 0,
       "grant_size_usd_max": 0,
       "typical_duration_years": 0,
-      "recent_portfolio": ["TaRL Tanzania (direct operations)", "80M children reached globally"],
+      "recent_portfolio": [
+        "TaRL Tanzania (direct operations)",
+        "80M children reached globally"
+      ],
       "due_diligence_requirements": [],
       "application_process": "invite-only",
       "cycle_months": [],
       "language_frame": "TaRL foundational-learning government-partnership",
-      "key_contacts": [{"name": "TaRL Africa Tanzania", "role": "Country Director", "email": "", "linkedin": ""}],
+      "key_contacts": [
+        {
+          "name": "TaRL Africa Tanzania",
+          "role": "Country Director",
+          "email": "",
+          "linkedin": ""
+        }
+      ],
       "known_restrictions": [],
       "alignment_score": 60,
       "probability_score": 0,
       "effort_score": 2,
       "detected_priority_shift": null,
-      "recent_news": ["TaRL reached 80M children globally — now mainstream methodology"],
+      "recent_news": [
+        "TaRL reached 80M children globally \u2014 now mainstream methodology"
+      ],
       "drive_profile_id": "",
       "drive_due_diligence_id": "",
       "last_research_date": "2026-06-30",
-      "notes": "Not a funder — a partner/validator. TaRL Africa endorsement of SOMA's approach adds credibility with funders who back TaRL globally (Hewlett, Gates). Maintain collaborative relationship."
+      "notes": "Not a funder \u2014 a partner/validator. TaRL Africa endorsement of SOMA's approach adds credibility with funders who back TaRL globally (Hewlett, Gates). Maintain collaborative relationship."
     },
     {
       "id": "f-jacobs-foundation",
       "name": "Jacobs Foundation",
-      "programmes": ["soma"],
+      "programmes": [
+        "soma"
+      ],
       "entity": "learnimpact",
+      "funder_type": "international_foundation",
       "tier": 2,
       "status": "prospect",
       "mission_summary": "Swiss foundation focused on child and youth development. Funds research and evidence generation in education. Strong interest in Africa and teacher effectiveness. Funds J-PAL affiliated researchers and implementation partners.",
-      "current_priorities": ["child and youth development", "teacher effectiveness", "Africa education", "evidence generation"],
-      "geography": ["Africa", "Global"],
-      "thematic_eligibility": ["teacher effectiveness", "child learning outcomes", "foundational learning", "evidence generation"],
+      "current_priorities": [
+        "child and youth development",
+        "teacher effectiveness",
+        "Africa education",
+        "evidence generation"
+      ],
+      "geography": [
+        "Africa",
+        "Global"
+      ],
+      "thematic_eligibility": [
+        "teacher effectiveness",
+        "child learning outcomes",
+        "foundational learning",
+        "evidence generation"
+      ],
       "grant_size_usd_min": 200000,
       "grant_size_usd_max": 2000000,
       "typical_duration_years": 3,
-      "recent_portfolio": ["J-PAL affiliated researchers", "Teacher effectiveness research"],
-      "due_diligence_requirements": ["research rigour", "academic partnership", "evidence generation plan"],
+      "recent_portfolio": [
+        "J-PAL affiliated researchers",
+        "Teacher effectiveness research"
+      ],
+      "due_diligence_requirements": [
+        "research rigour",
+        "academic partnership",
+        "evidence generation plan"
+      ],
       "application_process": "open",
-      "cycle_months": ["October"],
+      "cycle_months": [
+        "October"
+      ],
       "language_frame": "evidence-generation teacher-effectiveness child-development",
-      "key_contacts": [{"name": "Jacobs Foundation", "role": "Programme Officers", "email": "", "linkedin": ""}],
-      "known_restrictions": ["Research rigour required", "Academic partnership preferred"],
+      "key_contacts": [
+        {
+          "name": "Jacobs Foundation",
+          "role": "Programme Officers",
+          "email": "",
+          "linkedin": ""
+        }
+      ],
+      "known_restrictions": [
+        "Research rigour required",
+        "Academic partnership preferred"
+      ],
       "alignment_score": 78,
       "probability_score": 35,
       "effort_score": 3,
@@ -1427,28 +3026,54 @@
       "drive_profile_id": "",
       "drive_due_diligence_id": "",
       "last_research_date": "2026-06-30",
-      "notes": "Mtwara RCT is the entry point — Jacobs funds the type of rigorous evidence generation SOMA is doing. Partner with UDSM or J-PAL to strengthen research credentials. Apply to October cycle once Mtwara baseline is designed and pre-registered."
+      "notes": "Mtwara RCT is the entry point \u2014 Jacobs funds the type of rigorous evidence generation SOMA is doing. Partner with UDSM or J-PAL to strengthen research credentials. Apply to October cycle once Mtwara baseline is designed and pre-registered."
     },
     {
       "id": "f-ieq",
       "name": "International Education and Quality (IEQ) Funders",
-      "programmes": ["soma", "kiufunza"],
+      "programmes": [
+        "soma",
+        "kiufunza"
+      ],
       "entity": "learnimpact",
+      "funder_type": "international_foundation",
       "tier": 3,
       "status": "prospect",
       "mission_summary": "Category: Smaller evidence-based education funders including CIFF (Children's Investment Fund Foundation), co-impact, and the LEGO Foundation. Each has specific alignment points with SOMA or KiuFunza.",
-      "current_priorities": ["foundational learning", "quality education", "early childhood development", "systems change"],
-      "geography": ["Sub-Saharan Africa", "Global"],
-      "thematic_eligibility": ["foundational learning", "teacher effectiveness", "early learning"],
+      "current_priorities": [
+        "foundational learning",
+        "quality education",
+        "early childhood development",
+        "systems change"
+      ],
+      "geography": [
+        "Sub-Saharan Africa",
+        "Global"
+      ],
+      "thematic_eligibility": [
+        "foundational learning",
+        "teacher effectiveness",
+        "early learning"
+      ],
       "grant_size_usd_min": 200000,
       "grant_size_usd_max": 5000000,
       "typical_duration_years": 3,
       "recent_portfolio": [],
-      "due_diligence_requirements": ["evidence required", "theory of change"],
+      "due_diligence_requirements": [
+        "evidence required",
+        "theory of change"
+      ],
       "application_process": "invite-only",
       "cycle_months": [],
       "language_frame": "evidence-based foundational-learning systems-change",
-      "key_contacts": [{"name": "Various", "role": "Programme Officers", "email": "", "linkedin": ""}],
+      "key_contacts": [
+        {
+          "name": "Various",
+          "role": "Programme Officers",
+          "email": "",
+          "linkedin": ""
+        }
+      ],
       "known_restrictions": [],
       "alignment_score": 68,
       "probability_score": 28,
@@ -1458,7 +3083,7 @@
       "drive_profile_id": "",
       "drive_due_diligence_id": "",
       "last_research_date": "2026-06-30",
-      "notes": "Placeholder for CIFF, Co-Impact, LEGO Foundation — each warrants individual research. Add as separate funder records in weekly research phase."
+      "notes": "Placeholder for CIFF, Co-Impact, LEGO Foundation \u2014 each warrants individual research. Add as separate funder records in weekly research phase."
     }
   ]
 }
