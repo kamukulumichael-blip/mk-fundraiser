@@ -46,6 +46,43 @@ Adobe Foundation ($50K, rolling), Tanzania creator economy fund, Ford Foundation
 CRITICAL: Never reference LearnImpact as implementing entity for Timamu.
 """.strip()
 
+PIPELINE_BRIEF_SYSTEM = """You are Pipeline — LearnImpact's fundraising strategy agent. Monday Mode 3: automated weekly scan.
+Produce a Monday briefing for Michael Kamukulu (Executive Director). Be specific, named, opinionated.
+The 2027 SOMA gap is the urgent constraint: USD 229K confirmed / USD 866K needed / Gap: USD 637K.
+Locked cost evidence: SOMA = USD 3.12/student/year; KiuFunza = +9.4pp (Quarterly Journal of Economics).
+LearnImpact is NOT a startup — established NGO Reg. 00NGO/R/8931, 10+ years evidence, newly independent from Twaweza May 2026.
+Never re-derive cost figures. Michael owns all donor relationships. Name names. Flag risks early.
+
+Return ONLY valid JSON:
+{
+  "this_week_focus": "One sentence — the single most important thing Michael should focus on this week. Name names and numbers.",
+  "top_3_actions": [
+    {
+      "action": "Exact, specific action — not vague",
+      "funder": "Funder or contact name",
+      "programme": "soma|kiufunza|timamu",
+      "urgency": "high|medium",
+      "reasoning": "Why this specific week — what changes if this is delayed"
+    }
+  ],
+  "pipeline_health": {
+    "soma": "One sentence with specific numbers and named funders",
+    "kiufunza": "One sentence — include VTF signing and Hempel status",
+    "timamu": "One sentence",
+    "concentration_risk": "Specific named risk or null",
+    "gap_progress": "Honest trajectory — specific and named"
+  },
+  "positioning_move": "What Michael should publish, speak, or post in the next 7 days to stay visible with the top prospect",
+  "flags": [
+    {
+      "flag": "Specific named risk or opportunity",
+      "urgency": "high|medium",
+      "response": "Recommended action"
+    }
+  ],
+  "weekly_narrative": "3-4 sentences. Pipeline's strategic read. Named funders, amounts, timelines. What matters most and what is at risk if nothing moves."
+}"""
+
 
 def load_json(filename):
     try:
@@ -291,6 +328,64 @@ def build_this_week_actions(soma_res, kf_res, timamu_res, donors):
     return actions[:10]
 
 
+def run_pipeline_brief(soma_res, kf_res, timamu_res, opportunities, donors, monday_summary):
+    """Generate automated Pipeline Monday brief using Pipeline agent reasoning."""
+    active_opps = [o for o in opportunities if o.get("stage") not in ["won", "lost"]]
+    hot_donors = [d for d in donors if d.get("relationship_health") in ["hot", "warm"]]
+
+    context = f"""WEEKLY INTELLIGENCE — {TODAY} (Week {WEEK_NUM})
+
+MONDAY BRIEF:
+{monday_summary}
+
+ACTIVE PIPELINE:
+{json.dumps([{k: o.get(k) for k in ['title','programme','stage','ask_amount_usd','deadline','outcome','won_lost_notes']} for o in active_opps[:8]], indent=2)}
+
+CRM — HOT/WARM CONTACTS:
+{json.dumps([{k: d.get(k) for k in ['contact_name','contact_role','relationship_health','next_action','next_action_due']} for d in hot_donors], indent=2)}
+
+SOMA INTELLIGENCE:
+Insight: {soma_res.get('insight_of_week','')}
+Top hot-list: {json.dumps((soma_res.get('hot_list') or [{}])[0], indent=2)}
+New RFPs detected: {len(soma_res.get('new_rfps',[]))}
+Priority shifts: {len(soma_res.get('priority_shifts',[]))}
+
+KIUFUNZA INTELLIGENCE:
+Insight: {kf_res.get('insight_of_week','')}
+
+TIMAMU INTELLIGENCE:
+Insight: {timamu_res.get('insight_of_week','')}
+"""
+    try:
+        print("Generating Pipeline Monday brief…")
+        msg = client.messages.create(
+            model="claude-haiku-4-5-20251001",
+            max_tokens=1500,
+            system=PIPELINE_BRIEF_SYSTEM,
+            messages=[{"role": "user", "content": context}]
+        )
+        text = msg.content[0].text
+        start = text.find("{")
+        end = text.rfind("}") + 1
+        if start >= 0 and end > start:
+            result = json.loads(text[start:end])
+            result["generated_at"] = TODAY
+            result["week_number"] = WEEK_NUM
+            return result
+    except Exception as e:
+        print(f"Pipeline brief error: {e}")
+    return {
+        "generated_at": TODAY,
+        "week_number": WEEK_NUM,
+        "this_week_focus": "Pipeline brief unavailable — check logs and retry.",
+        "top_3_actions": [],
+        "pipeline_health": {"soma": "", "kiufunza": "", "timamu": "", "concentration_risk": None, "gap_progress": ""},
+        "positioning_move": "",
+        "flags": [],
+        "weekly_narrative": ""
+    }
+
+
 def main():
     print(f"LearnImpact Fundraising Intelligence — Week {WEEK_NUM} ({TODAY})")
 
@@ -360,6 +455,11 @@ def main():
 
     save_json("alerts.json", alerts)
     print("Generated alerts.json")
+
+    # Pipeline Monday brief — automated agent analysis
+    pipeline_brief = run_pipeline_brief(soma_res, kf_res, timamu_res, opportunities, donors, monday_summary)
+    save_json("pipeline_monday_brief.json", pipeline_brief)
+    print("Generated pipeline_monday_brief.json")
 
     for f in funders:
         if not f.get("last_research_date") or f["last_research_date"] < TODAY:

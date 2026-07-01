@@ -1,0 +1,54 @@
+{
+  "generated_at": "2026-07-01",
+  "week_number": 27,
+  "this_week_focus": "VTF signing is imminent — confirm Sandra Oswald's signing date before July 10 to lock USD 178K and keep KiuFunza Phase 5 on track.",
+  "top_3_actions": [
+    {
+      "action": "Email Sandra Oswald to confirm signing date and request MoU timeline",
+      "funder": "Sandra Oswald / Vodacom Foundation",
+      "programme": "kiufunza",
+      "urgency": "high",
+      "reasoning": "VTF agreement is finalised but unsigned. Signing window closes July 10. Every day of delay risks slipping into Q3 and creating cash-flow pressure for KiuFunza operations."
+    },
+    {
+      "action": "Log Google for Nonprofits as active track in pipeline — website completion is now the only blocker. Set internal deadline: website live by July 31.",
+      "funder": "Google for Nonprofits / Goodstack",
+      "programme": "soma",
+      "urgency": "high",
+      "reasoning": "USD 120K/year in ad credits + free Workspace. Rolling application. Prerequisites all resolved. Every week without a live website is a week without this asset."
+    },
+    {
+      "action": "Send Lorcan Clarke a brief SOMA update (Kibaha pilot confirmation + any preliminary data) to keep Founders Pledge warm ahead of the August 15 follow-up window.",
+      "funder": "Lorcan Clarke / Founders Pledge",
+      "programme": "soma",
+      "urgency": "medium",
+      "reasoning": "USD 5M in review. No contact since submission June 1. Lorcan needs visible programme momentum before the FP decision cycle. Pilot confirmation from Kibaha is the right signal."
+    }
+  ],
+  "pipeline_health": {
+    "soma": "USD 229K confirmed vs USD 866K needed — gap of USD 637K. Founders Pledge USD 5M in review (decision Q1-Q2 2027) is the only major bet. Dovetail Track 2 and VTF SOMA not yet started.",
+    "kiufunza": "Strong but concentrated. VTF signing imminent (USD 178K, by July 10). Hempel USD 587K in Hearing Committee — do not push. Dovetail Track 1 USD 100K won. Phase-down timeline requires SOMA bridge before KiuFunza phases out.",
+    "timamu": "Pipeline not yet active. Timamu registration is the hard prerequisite for Microsoft and Google. Adobe Foundation (USD 50K rolling) is the most accessible near-term grant once registered.",
+    "concentration_risk": "KiuFunza revenue is 87% dependent on two funders (Hempel + VTF). If Hempel Hearing Committee delays, Q3 cash position is at risk.",
+    "gap_progress": "SOMA gap unchanged at USD 637K. Founders Pledge represents the only pipeline bet large enough to close it. Google for Nonprofits (USD 120K/yr) is the most immediate achievable action."
+  },
+  "positioning_move": "Publish a brief LinkedIn update on the Kibaha pilot launch (Term 3 2026 start) — one paragraph, one cost figure (USD 3.12/student), one government partnership callout (Kibaha DC). Tags: Lorcan Clarke, Founders Pledge research community. This keeps SOMA visible without over-claiming before the pilot data is in.",
+  "flags": [
+    {
+      "flag": "VTF unsigned agreement — July 10 deadline in 9 days",
+      "urgency": "high",
+      "response": "Proactive email to Sandra today. Do not wait for her to initiate."
+    },
+    {
+      "flag": "No SOMA ask to VTF yet — existing relationship is KiuFunza only",
+      "urgency": "medium",
+      "response": "Begin SOMA conversation with VTF after KiuFunza signing is confirmed. VTF 80% tech mandate maps perfectly to Mwalimu WhatsApp AI coaching."
+    },
+    {
+      "flag": "Dovetail Track 2 (SOMA, USD 150K) not yet initiated — Ali Ellegard is the warm contact",
+      "urgency": "medium",
+      "response": "Schedule Track 2 conversation for September 2026 after Kibaha pilot launch. Do not initiate before Track 1 reporting is complete."
+    }
+  ],
+  "weekly_narrative": "Week 27 opens with the VTF signing as the single most time-sensitive task — nine days to confirm USD 178K and remove it from the risk column. Beyond VTF, the SOMA gap at USD 637K remains the strategic problem: Founders Pledge is the right bet but it is an 8-month wait. The Google for Nonprofits track is immediately achievable and removes a USD 120K/yr constraint the moment the website is live. Pipeline health is solid for KiuFunza but SOMA diversification is critically thin — only one active ask of meaningful size. The week's priority is simple: close VTF, unblock Google, keep Founders Pledge warm."
+}

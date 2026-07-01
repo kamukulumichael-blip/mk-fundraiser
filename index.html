@@ -230,6 +230,20 @@ html[data-theme="obsidian"] .brief-banner{background:#0D0D0D;border-color:rgba(1
   color:var(--accent);margin-bottom:8px}
 .brief-summary{font-size:13px;line-height:1.75;color:var(--nav-text);opacity:.85}
 .brief-ts{font-size:11px;color:rgba(255,255,255,.25);margin-top:8px}
+.agent-brief-section{background:var(--surface);border:1px solid var(--border);
+  border-left:3px solid var(--accent);border-radius:var(--radius-lg);
+  padding:var(--gap-lg);margin-bottom:var(--gap-lg)}
+.agent-brief-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.agent-brief-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.9px;color:var(--accent)}
+.agent-brief-focus{font-size:14px;font-weight:600;color:var(--text);line-height:1.5}
+.agent-brief-detail{margin-top:var(--gap-md)}
+.agent-brief-action{padding:10px 0;border-bottom:1px solid var(--border)}
+.agent-brief-action:last-child{border-bottom:none;padding-bottom:0}
+.agent-brief-action-text{font-size:13px;color:var(--text);line-height:1.5}
+.agent-brief-action-meta{font-size:11px;color:var(--text-3);display:flex;gap:8px;align-items:center;margin-top:4px}
+.agent-brief-flag{font-size:12px;padding:8px 12px;border-radius:6px;background:var(--surface-2);margin-top:6px;line-height:1.5}
+.agent-brief-narrative{font-size:13px;color:var(--text-2);line-height:1.75;margin-top:var(--gap-md);
+  padding-top:var(--gap-md);border-top:1px solid var(--border);font-style:italic}
 
 /* ═══════════════════════════════════════════════════════════
    HOT LIST
@@ -804,6 +818,19 @@ html[data-theme="obsidian"] .timamu-theme .hot-cta{background:var(--ti-coral)}
         <div class="brief-week" id="brief-week"></div>
         <div class="brief-summary" id="brief-summary">Loading weekly brief…</div>
         <div class="brief-ts" id="brief-ts"></div>
+      </div>
+      <!-- ── PIPELINE AGENT BRIEF ── -->
+      <div class="agent-brief-section" id="agent-brief-section" style="display:none">
+        <div class="agent-brief-header">
+          <span class="agent-brief-label">Pipeline Agent · Week <span id="ab-week"></span></span>
+          <button class="btn-xs" id="ab-toggle" onclick="toggleAgentBrief()">Expand ▼</button>
+        </div>
+        <div class="agent-brief-focus" id="ab-focus"></div>
+        <div class="agent-brief-detail" id="ab-detail" style="display:none">
+          <div id="ab-actions"></div>
+          <div id="ab-flags"></div>
+          <div class="agent-brief-narrative" id="ab-narrative"></div>
+        </div>
       </div>
       <div class="pipeline-row" id="pipeline-row"></div>
       <div class="gap-section">
@@ -1382,7 +1409,7 @@ const HQ_SALT='li-hq-2026/', HQ_LEN=11,
 
 let APP = {
   funders:[], opportunities:[], donors:[], alerts:null,
-  sources:[], events:[], prospects:[],
+  sources:[], events:[], prospects:[], pipelineBrief:null,
   sortState:{soma:{col:'tier',dir:1},kiufunza:{col:'tier',dir:1},timamu:{col:'tier',dir:1}},
   drawerFunderId:null, docOutputText:'', docFileName:'',
   tapCount:0, tapTimer:null,
@@ -1484,13 +1511,16 @@ async function loadAllData() {
     Promise.all([
       fetchJSON('./data/sources.json').catch(()=>({sources:[]})),
       fetchJSON('./data/events.json').catch(()=>({events:[]})),
-      fetchJSON('./data/prospects.json').catch(()=>({prospects:[]}))
-    ]).then(([src,evt,prs]) => {
+      fetchJSON('./data/prospects.json').catch(()=>({prospects:[]})),
+      fetchJSON('./data/pipeline_monday_brief.json').catch(()=>({}))
+    ]).then(([src,evt,prs,pb]) => {
       APP.sources = src.sources||[];
       APP.events = evt.events||[];
       APP.prospects = prs.prospects||[];
+      APP.pipelineBrief = pb;
       renderResearchInbox();
       renderEventsSection();
+      renderPipelineBrief();
     });
   } catch(e) {
     console.error('Data load:', e);
@@ -2304,6 +2334,41 @@ function renderEventsSection() {
       </div>
     </div>`;
   }).join('');
+}
+
+function renderPipelineBrief() {
+  const pb = APP.pipelineBrief;
+  const el = document.getElementById('agent-brief-section');
+  if (!pb || !el || !pb.this_week_focus) return;
+  el.style.display = '';
+  document.getElementById('ab-week').textContent = pb.week_number || '';
+  document.getElementById('ab-focus').textContent = pb.this_week_focus || '';
+  const acts = (pb.top_3_actions || []).slice(0, 3);
+  document.getElementById('ab-actions').innerHTML = acts.map(a => `
+    <div class="agent-brief-action">
+      <div class="agent-brief-action-text">${a.action}</div>
+      <div class="agent-brief-action-meta">
+        <span class="prog-badge prog-${a.programme}">${a.programme.toUpperCase()}</span>
+        <span class="urg-chip urg-${a.urgency}">${a.urgency}</span>
+        <span>${a.funder}</span>
+      </div>
+      <div style="font-size:12px;color:var(--text-3);margin-top:3px;font-style:italic">${a.reasoning}</div>
+    </div>`).join('');
+  const flags = (pb.flags || []).filter(f => f.urgency === 'high').slice(0, 3);
+  document.getElementById('ab-flags').innerHTML = flags.map(f => `
+    <div class="agent-brief-flag">
+      <span class="urg-chip urg-${f.urgency}" style="margin-right:6px">${f.urgency}</span>
+      <strong>${f.flag}</strong> — ${f.response}
+    </div>`).join('');
+  document.getElementById('ab-narrative').textContent = pb.weekly_narrative || '';
+}
+
+function toggleAgentBrief() {
+  const detail = document.getElementById('ab-detail');
+  const btn = document.getElementById('ab-toggle');
+  const expanded = detail.style.display !== 'none';
+  detail.style.display = expanded ? 'none' : '';
+  btn.textContent = expanded ? 'Expand ▼' : 'Collapse ▲';
 }
 
 function openAddEvent() {
