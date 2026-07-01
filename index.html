@@ -8,6 +8,8 @@
 <meta name="theme-color" content="#060B18">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="preconnect" href="https://kamukulumichael-blip.github.io">
+<link rel="dns-prefetch" href="https://kamukulumichael-blip.github.io">
 <style>
 /* ═══════════════════════════════════════════════════════════
    THEME TOKENS — override per data-theme attribute on <html>
@@ -1443,10 +1445,8 @@ function showGateDialog() {
   document.getElementById('gate-input').focus();
 }
 window.addEventListener('load', () => {
-  setTimeout(()=>{
-    document.getElementById('gate-dialog').style.display='flex';
-    document.getElementById('gate-hint').style.display='none';
-  }, 400);
+  document.getElementById('gate-dialog').style.display='flex';
+  document.getElementById('gate-hint').style.display='none';
 });
 document.getElementById('gate').addEventListener('click', e => {
   const noisy = ['gate','gate-logo','gate-sub','gate-hint'];
@@ -1467,23 +1467,31 @@ async function fetchJSON(path) {
 }
 async function loadAllData() {
   try {
-    const [f,o,d,a,src,evt,prs] = await Promise.all([
+    // Core data first — render immediately on arrival
+    const [f,o,d,a] = await Promise.all([
       fetchJSON('./data/funders.json'),
       fetchJSON('./data/opportunities.json'),
       fetchJSON('./data/donors.json'),
-      fetchJSON('./data/alerts.json'),
-      fetchJSON('./data/sources.json').catch(()=>({sources:[]})),
-      fetchJSON('./data/events.json').catch(()=>({events:[]})),
-      fetchJSON('./data/prospects.json').catch(()=>({prospects:[]}))
+      fetchJSON('./data/alerts.json')
     ]);
     APP.funders = f.funders||[];
     APP.opportunities = o.opportunities||[];
     APP.donors = d.donors||[];
     APP.alerts = a;
-    APP.sources = src.sources||[];
-    APP.events = evt.events||[];
-    APP.prospects = prs.prospects||[];
     renderAll();
+
+    // Secondary data — load in background after first paint
+    Promise.all([
+      fetchJSON('./data/sources.json').catch(()=>({sources:[]})),
+      fetchJSON('./data/events.json').catch(()=>({events:[]})),
+      fetchJSON('./data/prospects.json').catch(()=>({prospects:[]}))
+    ]).then(([src,evt,prs]) => {
+      APP.sources = src.sources||[];
+      APP.events = evt.events||[];
+      APP.prospects = prs.prospects||[];
+      renderResearchInbox();
+      renderEventsSection();
+    });
   } catch(e) {
     console.error('Data load:', e);
     document.getElementById('brief-summary').textContent='Error loading data. Refresh to retry.';
