@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-06",
-  "week_number": 28,
+  "generated_at": "2026-07-13",
+  "week_number": 29,
   "soma": {
     "insight_of_week": "Research unavailable for soma \u2014 retry next week.",
     "hot_list": [],
@@ -34,8 +34,8 @@
       "funder_id": "f-mastercard-timamu",
       "funder": "Mastercard Foundation",
       "programmes": [
-        "kiufunza",
         "soma",
+        "kiufunza",
         "timamu"
       ],
       "note": "Same funder appears in both LearnImpact and Timamu pools. Coordinate before approaching \u2014 never allow simultaneous asks to same contact.",
@@ -49,73 +49,73 @@
       "funder": "Vodacom Tanzania Foundation (VTF)",
       "programme": "kiufunza",
       "deadline": "2026-07-15",
-      "days_remaining": 9
+      "days_remaining": 2
     },
     {
       "opportunity_id": "opp-hempel-kiufunza",
       "funder": "Hempel Foundation",
       "programme": "kiufunza",
       "deadline": "2026-08-31",
-      "days_remaining": 56
+      "days_remaining": 49
     },
     {
       "opportunity_id": "opp-adobe-timamu",
       "funder": "Adobe Foundation",
       "programme": "timamu",
       "deadline": "2026-09-01",
-      "days_remaining": 57
+      "days_remaining": 50
     },
     {
       "opportunity_id": "opp-tz-creator-fund",
       "funder": "Tanzania Government \u2014 Creator Economy Fund",
       "programme": "timamu",
       "deadline": "2026-09-30",
-      "days_remaining": 86
+      "days_remaining": 79
     },
     {
       "opportunity_id": "opp-microsoft-timamu",
       "funder": "Microsoft Philanthropies (Accessibility)",
       "programme": "timamu",
       "deadline": "2026-10-01",
-      "days_remaining": 87
+      "days_remaining": 80
     },
     {
       "opportunity_id": "opp-google-nonprofits-learnimpact",
       "funder": "Google.org",
       "programme": "soma",
       "deadline": "2026-10-01",
-      "days_remaining": 87
+      "days_remaining": 80
     },
     {
       "opportunity_id": "opp-dovetail-track2-soma",
       "funder": "Dovetail / Prevail Fund",
       "programme": "soma",
       "deadline": "2026-12-01",
-      "days_remaining": 148
+      "days_remaining": 141
     },
     {
       "opportunity_id": "opp-vtf-soma-pipeline",
       "funder": "Vodacom Tanzania Foundation (VTF)",
       "programme": "soma",
       "deadline": "2027-03-01",
-      "days_remaining": 238
+      "days_remaining": 231
     },
     {
       "opportunity_id": "opp-founders-pledge-soma",
       "funder": "Founders Pledge",
       "programme": "soma",
       "deadline": "2027-03-31",
-      "days_remaining": 268
+      "days_remaining": 261
     },
     {
       "opportunity_id": "opp-gpe-soma",
       "funder": "Global Partnership for Education (GPE)",
       "programme": "soma",
       "deadline": "2027-06-01",
-      "days_remaining": 330
+      "days_remaining": 323
     }
   ],
-  "monday_brief_summary": "Week 28 (2026-07-06).\n\nSOMA insight: Research unavailable for soma \u2014 retry next week.\n\nKiuFunza insight: Research unavailable for kiufunza \u2014 retry next week.\n\nTimamu insight: Research unavailable for timamu \u2014 retry next week.\n\nTop actions: \n\nNext deadline: KiuFunza Phase 5 \u2014 VTF Renewal 2026-2027 \u2014 2026-07-15.",
+  "monday_brief_summary": "Week 29 (2026-07-13).\n\nSOMA insight: Research unavailable for soma \u2014 retry next week.\n\nKiuFunza insight: Research unavailable for kiufunza \u2014 retry next week.\n\nTimamu insight: Research unavailable for timamu \u2014 retry next week.\n\nTop actions: \n\nNext deadline: KiuFunza Phase 5 \u2014 VTF Renewal 2026-2027 \u2014 2026-07-15.",
   "funding_gap": {
     "soma_confirmed_usd": 229000,
     "soma_needed_usd": 866000,
