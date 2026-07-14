@@ -976,6 +976,10 @@ html[data-theme="light"] .dock-tab.active{color:#0b0b0c !important}
   /* ── Main: ensure content clears exec strip + nav on scroll ── */
   main{padding:10px 10px 76px}
 
+  /* ── Flatten cmd-grid on mobile — same structure as all other tabs ── */
+  .cmd-grid{display:block}
+  .cmd-sidebar{display:none}
+
   /* ── Prevent iOS auto-zoom on input focus (font-size must be ≥16px) ── */
   .field-group input,.field-group select,
   .modal-field input,.modal-field select,.modal-field textarea,
@@ -991,20 +995,17 @@ html[data-theme="light"] .dock-tab.active{color:#0b0b0c !important}
   .action-card p{font-size:12px;line-height:1.55}
   .action-due{font-size:12px;margin-top:10px}
 
-  /* ── Pipeline: horizontal scroll (3 cards side-by-side, swipeable) ── */
-  .pipeline-row{
-    display:flex;overflow-x:auto;gap:12px;
-    padding-bottom:8px;margin-bottom:var(--gap-lg);
-    scrollbar-width:none;scroll-snap-type:x mandatory;
-  }
-  .pipeline-row::-webkit-scrollbar{display:none}
-  .pipeline-card{min-width:220px;flex-shrink:0;scroll-snap-align:start}
+  /* ── Pipeline: 2-column compact grid on mobile ── */
+  .pipeline-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:var(--gap-lg)}
+  .pipeline-card{padding:12px}
+  .pipeline-card h4{font-size:12px;margin-bottom:10px}
   .pipeline-bar-wrap{height:10px;border-radius:5px}
   .pipeline-bar{border-radius:5px}
   .pipeline-stages{gap:9px}
-  .pipeline-stage{font-size:12px}
-  .pipeline-stage-label{width:72px;font-size:11px}
-  .pipeline-total{font-size:22px}
+  .pipeline-stage{font-size:11px;gap:6px}
+  .pipeline-stage-label{width:60px;font-size:10px}
+  .pipeline-count{width:18px;font-size:11px}
+  .pipeline-total{font-size:18px}
 
   /* ── Brief banner: bigger summary text ── */
   .brief-summary{font-size:13px;line-height:1.7;opacity:.9}
