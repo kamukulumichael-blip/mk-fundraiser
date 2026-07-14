@@ -1,0 +1,9 @@
+{
+  "enabled": false,
+  "recipients": [],
+  "frequency": "weekly",
+  "send_day": "Monday",
+  "send_time": "morning",
+  "last_sent": null,
+  "send_now": false
+}

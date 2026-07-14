@@ -474,6 +474,42 @@ html[data-theme="obsidian"] .btn-primary{background:var(--accent);color:var(--ac
 .field-group input::placeholder{color:var(--text-3)}
 .field-note{font-size:11px;color:var(--text-3);margin-top:4px}
 .modal-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:var(--gap-lg)}
+.modal-box{max-height:90vh;overflow-y:auto}
+.settings-divider{border:none;border-top:1px solid var(--border);margin:var(--gap-lg) 0}
+.settings-section-title{font-size:11px;font-weight:700;color:var(--text-2);
+  text-transform:uppercase;letter-spacing:.08em;margin-bottom:var(--gap-md)}
+/* toggle switch */
+.toggle-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:var(--gap-md)}
+.toggle-row span{font-size:13px;color:var(--text)}
+.toggle-switch{position:relative;display:inline-block;width:40px;height:22px}
+.toggle-switch input{opacity:0;width:0;height:0}
+.toggle-slider{position:absolute;inset:0;background:var(--border);border-radius:22px;cursor:pointer;transition:.2s}
+.toggle-slider:before{content:'';position:absolute;width:16px;height:16px;left:3px;bottom:3px;
+  background:#fff;border-radius:50%;transition:.2s}
+.toggle-switch input:checked+.toggle-slider{background:var(--accent)}
+.toggle-switch input:checked+.toggle-slider:before{transform:translateX(18px)}
+/* recipient tags */
+.recipient-input-row{display:flex;gap:6px;margin-bottom:8px}
+.recipient-input-row input{flex:1;padding:8px 10px;border:1.5px solid var(--input-border);
+  background:var(--input-bg);color:var(--text);border-radius:var(--radius);font-size:12px}
+.recipient-input-row input:focus{border-color:var(--accent);outline:none}
+.recipient-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px;min-height:28px}
+.recipient-tag{display:inline-flex;align-items:center;gap:5px;background:rgba(53,64,98,.15);
+  border:1px solid var(--border);border-radius:12px;padding:3px 10px;font-size:11px;color:var(--text)}
+.recipient-tag button{background:none;border:none;cursor:pointer;color:var(--text-3);
+  font-size:13px;line-height:1;padding:0}
+.recipient-tag button:hover{color:var(--danger,#e44)}
+/* inline radio/select groups */
+.field-row{display:flex;gap:8px;margin-bottom:var(--gap-sm)}
+.field-row .field-group{flex:1;margin-bottom:0}
+.field-group select{width:100%;padding:9px 10px;border:1.5px solid var(--input-border);
+  background:var(--input-bg);color:var(--text);border-radius:var(--radius);font-size:12px}
+.radio-group{display:flex;gap:6px;flex-wrap:wrap}
+.radio-chip input[type=radio]{display:none}
+.radio-chip label{display:block;padding:5px 11px;border-radius:12px;border:1.5px solid var(--border);
+  font-size:11px;font-weight:600;cursor:pointer;color:var(--text-2);transition:.15s}
+.radio-chip input:checked+label{background:var(--accent);border-color:var(--accent);color:#1a1a1a}
+.settings-status{font-size:11px;color:var(--text-3);margin-top:var(--gap-sm)}
 
 /* ═══════════════════════════════════════════════════════════
    PROGRAMME CONTEXT BANNERS
@@ -1450,6 +1486,55 @@ html[data-theme="stealth"] .funder-table-wrap{border:0.5px solid var(--border)}
       <label>GitHub Repo</label>
       <input type="text" id="gh-repo-input" value="kamukulumichael-blip/mk-fundraiser">
     </div>
+
+    <hr class="settings-divider">
+    <div class="settings-section-title">Email Brief Delivery</div>
+
+    <div class="toggle-row">
+      <span>Send brief by email</span>
+      <label class="toggle-switch">
+        <input type="checkbox" id="email-enabled">
+        <span class="toggle-slider"></span>
+      </label>
+    </div>
+
+    <div class="field-group">
+      <label>Recipients</label>
+      <div class="recipient-tags" id="recipient-tags"></div>
+      <div class="recipient-input-row">
+        <input type="email" id="recipient-input" placeholder="email@example.com" onkeydown="if(event.key==='Enter'){event.preventDefault();addRecipient();}">
+        <button class="btn-xs" onclick="addRecipient()">Add</button>
+      </div>
+    </div>
+
+    <div class="field-group">
+      <label>Frequency</label>
+      <div class="radio-group">
+        <span class="radio-chip"><input type="radio" name="email-freq" id="freq-weekly" value="weekly"><label for="freq-weekly">Weekly</label></span>
+        <span class="radio-chip"><input type="radio" name="email-freq" id="freq-biweekly" value="biweekly"><label for="freq-biweekly">Biweekly</label></span>
+        <span class="radio-chip"><input type="radio" name="email-freq" id="freq-monthly" value="monthly"><label for="freq-monthly">Monthly</label></span>
+      </div>
+    </div>
+
+    <div class="field-row">
+      <div class="field-group">
+        <label>Day</label>
+        <select id="email-day">
+          <option>Monday</option><option>Tuesday</option><option>Wednesday</option>
+          <option>Thursday</option><option>Friday</option><option>Saturday</option><option>Sunday</option>
+        </select>
+      </div>
+      <div class="field-group">
+        <label>Time (EAT)</label>
+        <select id="email-time">
+          <option value="morning">Morning · 6am</option>
+          <option value="afternoon">Afternoon · 1pm</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="settings-status" id="email-status"></div>
+
     <div class="modal-actions">
       <button class="btn-secondary" onclick="closeSettings()">Cancel</button>
       <button class="btn-primary" onclick="saveSettings()">Save</button>
@@ -1754,12 +1839,14 @@ async function loadAllData() {
       fetchJSON('./data/sources.json').catch(()=>({sources:[]})),
       fetchJSON('./data/events.json').catch(()=>({events:[]})),
       fetchJSON('./data/prospects.json').catch(()=>({prospects:[]})),
-      fetchJSON('./data/pipeline_monday_brief.json').catch(()=>({}))
-    ]).then(([src,evt,prs,pb]) => {
+      fetchJSON('./data/pipeline_monday_brief.json').catch(()=>({})),
+      fetchJSON('./data/email_config.json').catch(()=>({}))
+    ]).then(([src,evt,prs,pb,ecfg]) => {
       APP.sources = src.sources||[];
       APP.events = evt.events||[];
       APP.prospects = prs.prospects||[];
       APP.pipelineBrief = pb;
+      APP.emailConfig = ecfg;
       renderResearchInbox();
       renderEventsSection();
       renderPipelineBrief();
@@ -2279,18 +2366,68 @@ function closeBrief(){document.getElementById('brief-view').style.display='none'
 // ══════════════════════════════════════════════════════════════
 // SETTINGS
 // ══════════════════════════════════════════════════════════════
+// ── email brief state ──────────────────────────────────────
+let _emailRecipients = [];
+
 function openSettings(){
   document.getElementById('api-key-input').value=localStorage.getItem('mk_api_key')||'';
   document.getElementById('gh-token-input').value=localStorage.getItem('mk_gh_token')||'';
   document.getElementById('gh-repo-input').value=localStorage.getItem('mk_gh_repo')||'kamukulumichael-blip/mk-fundraiser';
+  // load email config
+  const cfg = APP.emailConfig || {};
+  document.getElementById('email-enabled').checked = !!cfg.enabled;
+  _emailRecipients = (cfg.recipients || []).slice();
+  renderRecipientTags();
+  const freq = cfg.frequency || 'weekly';
+  const freqEl = document.getElementById('freq-' + freq);
+  if(freqEl) freqEl.checked = true;
+  else document.getElementById('freq-weekly').checked = true;
+  document.getElementById('email-day').value = cfg.send_day || 'Monday';
+  document.getElementById('email-time').value = cfg.send_time || 'morning';
+  const st = document.getElementById('email-status');
+  if(cfg.last_sent) st.textContent = 'Last sent: ' + new Date(cfg.last_sent).toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'});
+  else st.textContent = 'Not yet sent.';
   document.getElementById('settings-modal').classList.add('open');
 }
 function closeSettings(){document.getElementById('settings-modal').classList.remove('open');}
-function saveSettings(){
+async function saveSettings(){
   localStorage.setItem('mk_api_key',document.getElementById('api-key-input').value.trim());
   localStorage.setItem('mk_gh_token',document.getElementById('gh-token-input').value.trim());
   localStorage.setItem('mk_gh_repo',document.getElementById('gh-repo-input').value.trim());
+  // save email config to GitHub
+  const freqEl = document.querySelector('input[name="email-freq"]:checked');
+  const emailCfg = {
+    enabled: document.getElementById('email-enabled').checked,
+    recipients: _emailRecipients.slice(),
+    frequency: freqEl ? freqEl.value : 'weekly',
+    send_day: document.getElementById('email-day').value,
+    send_time: document.getElementById('email-time').value,
+    last_sent: (APP.emailConfig || {}).last_sent || null,
+    send_now: false
+  };
+  APP.emailConfig = emailCfg;
+  await saveData('email_config.json', emailCfg);
   closeSettings();
+}
+function renderRecipientTags(){
+  const wrap = document.getElementById('recipient-tags');
+  if(!wrap) return;
+  wrap.innerHTML = _emailRecipients.map(e=>`
+    <span class="recipient-tag">${e}
+      <button onclick="removeRecipient('${e}')" title="Remove">×</button>
+    </span>`).join('');
+}
+function addRecipient(){
+  const inp = document.getElementById('recipient-input');
+  const val = (inp.value||'').trim().toLowerCase();
+  if(!val || !val.includes('@')) return;
+  if(!_emailRecipients.includes(val)) _emailRecipients.push(val);
+  inp.value = '';
+  renderRecipientTags();
+}
+function removeRecipient(email){
+  _emailRecipients = _emailRecipients.filter(e=>e!==email);
+  renderRecipientTags();
 }
 document.getElementById('settings-modal').addEventListener('click',e=>{
   if(e.target===document.getElementById('settings-modal'))closeSettings();

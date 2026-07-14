@@ -32,12 +32,14 @@ jobs:
           MS_CLIENT_ID: ${{ secrets.MS_CLIENT_ID }}
           MS_CLIENT_SECRET: ${{ secrets.MS_CLIENT_SECRET }}
           MS_REFRESH_TOKEN: ${{ secrets.MS_REFRESH_TOKEN }}
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
         run: python research.py
 
       - name: Commit updated data
         run: |
           git config user.name  "LearnImpact Research Bot"
           git config user.email "actions@github.com"
-          git add data/alerts.json data/funders.json data/pipeline_monday_brief.json
+          git add data/alerts.json data/funders.json data/pipeline_monday_brief.json data/email_config.json
           git diff --cached --quiet && echo "No changes" || git commit -m "research: week $(date +%V) intelligence update [skip pages]"
           git push

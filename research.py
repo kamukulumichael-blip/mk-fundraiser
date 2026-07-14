@@ -349,25 +349,62 @@ def fetch_ms365_intelligence():
         r = requests.get(
             f"https://graph.microsoft.com/v1.0/users/{user}/calendarView"
             f"?startDateTime={now}&endDateTime={future}"
-            "&$select=subject,start,end,attendees"
+            "&$select=id,subject,start,end,attendees,body,onlineMeeting,bodyPreview"
             "&$top=20",
             headers=headers
         )
         if r.status_code == 200:
             for item in r.json().get("value", []):
                 attendees = [a.get("emailAddress", {}).get("name", "") for a in item.get("attendees", [])[:5]]
-                events.append({
+                body_content = item.get("body", {}).get("content", "")
+                # Strip HTML tags for plain-text preview
+                import re as _re
+                notes_preview = _re.sub(r'<[^>]+>', ' ', body_content).strip()[:600] if body_content else ""
+                event_record = {
                     "subject": item.get("subject", ""),
                     "start": item.get("start", {}).get("dateTime", "")[:10],
-                    "attendees": attendees
-                })
+                    "attendees": attendees,
+                    "notes_preview": notes_preview
+                }
+                events.append(event_record)
             print(f"MS365: {len(events)} upcoming events.")
         else:
             print(f"MS365 calendar error {r.status_code}: {r.text[:200]}")
     except Exception as e:
         print(f"MS365 calendar exception: {e}")
 
-    return {"emails": emails, "events": events, "synced_at": TODAY}
+    # Past meeting notes (last 30 days) — for briefing context
+    meeting_notes = []
+    try:
+        past = (datetime.datetime.utcnow() - datetime.timedelta(days=30)).isoformat() + "Z"
+        now_str = datetime.datetime.utcnow().isoformat() + "Z"
+        r = requests.get(
+            f"https://graph.microsoft.com/v1.0/users/{user}/calendarView"
+            f"?startDateTime={past}&endDateTime={now_str}"
+            "&$select=subject,start,end,attendees,body,bodyPreview"
+            "&$top=15&$orderby=start/dateTime desc",
+            headers=headers
+        )
+        if r.status_code == 200:
+            import re as _re
+            for item in r.json().get("value", []):
+                body_content = item.get("body", {}).get("content", "")
+                notes = _re.sub(r'<[^>]+>', ' ', body_content).strip()[:800] if body_content else item.get("bodyPreview", "")[:400]
+                attendees = [a.get("emailAddress", {}).get("name", "") for a in item.get("attendees", [])[:6]]
+                if notes.strip():
+                    meeting_notes.append({
+                        "date": item.get("start", {}).get("dateTime", "")[:10],
+                        "title": item.get("subject", ""),
+                        "notes": notes,
+                        "attendees": attendees
+                    })
+            print(f"MS365: {len(meeting_notes)} past meetings with notes.")
+        else:
+            print(f"MS365 past meetings error {r.status_code}: {r.text[:100]}")
+    except Exception as e:
+        print(f"MS365 meeting notes exception: {e}")
+
+    return {"emails": emails, "events": events, "meeting_notes": meeting_notes, "synced_at": TODAY}
 
 
 def detect_cross_programme_conflicts(funders):
@@ -617,6 +654,216 @@ def main():
     save_json("funders.json", funders_data)
 
     print(f"Done. Week {WEEK_NUM} research complete.")
+
+    # Email brief dispatch (if configured)
+    try:
+        check_and_send_email(alerts, pipeline_brief)
+    except Exception as e:
+        print(f"Email dispatch error: {e}")
+
+
+# ══════════════════════════════════════════════════════════════
+# EMAIL BRIEF
+# ══════════════════════════════════════════════════════════════
+def load_email_config():
+    cfg_path = DATA_DIR / "email_config.json"
+    if not cfg_path.exists():
+        return {}
+    with open(cfg_path) as f:
+        return json.load(f)
+
+
+def save_email_config(cfg):
+    cfg_path = DATA_DIR / "email_config.json"
+    with open(cfg_path, "w") as f:
+        json.dump(cfg, f, indent=2)
+
+
+def should_send_today(cfg):
+    """Return True if conditions are met to send the brief now."""
+    if not cfg.get("enabled") or not cfg.get("recipients"):
+        return False
+    if cfg.get("send_now"):
+        return True
+
+    day_names = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]
+    today_name = day_names[datetime.datetime.utcnow().weekday()]
+    if cfg.get("send_day", "Monday") != today_name:
+        return False
+
+    # Frequency: biweekly = even ISO weeks; monthly = first occurrence of weekday in month
+    freq = cfg.get("frequency", "weekly")
+    if freq == "biweekly":
+        week_num = int(datetime.datetime.utcnow().strftime("%V"))
+        if week_num % 2 != 0:
+            return False
+    elif freq == "monthly":
+        # First occurrence of send_day in the month
+        today = datetime.datetime.utcnow()
+        if today.day > 7:
+            return False
+
+    # Avoid double-send: check last_sent
+    last_sent = cfg.get("last_sent")
+    if last_sent and last_sent[:10] == TODAY:
+        return False
+
+    return True
+
+
+def build_email_html(alerts, brief):
+    """Build a clean branded HTML email from research outputs."""
+    week = alerts.get("week_number", "")
+    soma = alerts.get("soma", {})
+    kf   = alerts.get("kiufunza", {})
+    tim  = alerts.get("timamu", {})
+    gap  = alerts.get("funding_gap", {})
+    actions = (alerts.get("this_week_actions") or [])[:3]
+
+    # Top 3 actions rows
+    action_rows = ""
+    for a in actions:
+        urgency_color = {"high": "#BE6243", "medium": "#FFC650", "low": "#5EA6B8"}.get(a.get("urgency",""), "#5EA6B8")
+        action_rows += f"""
+        <tr>
+          <td style="padding:8px 12px;border-bottom:1px solid #e8e8e8">
+            <span style="display:inline-block;background:{urgency_color};color:#fff;font-size:10px;font-weight:700;
+              padding:2px 7px;border-radius:10px;margin-right:6px;text-transform:uppercase">{a.get('urgency','')}</span>
+            <strong style="font-size:12px;color:#354062">{a.get('funder','')}</strong>
+            <span style="font-size:11px;color:#666;margin-left:4px">· {a.get('programme','').upper()}</span><br>
+            <span style="font-size:12px;color:#333">{a.get('action','')}</span>
+          </td>
+        </tr>"""
+
+    soma_pipeline = gap.get("soma_pipeline_usd", 0)
+    soma_confirmed = gap.get("soma_confirmed_usd", 0)
+    soma_needed = gap.get("soma_needed_usd", 0)
+
+    brief_focus = ""
+    if brief and brief.get("this_week_focus"):
+        brief_focus = f"""
+        <tr><td style="padding:16px 24px 0">
+          <p style="margin:0;font-size:13px;font-style:italic;color:#354062;border-left:3px solid #FFC650;padding-left:12px">
+            {brief['this_week_focus']}</p>
+        </td></tr>"""
+
+    return f"""<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Raisr Pipeline Brief — Week {week}</title></head>
+<body style="margin:0;padding:0;background:#f4f4f4;font-family:'Helvetica Neue',Arial,sans-serif">
+<table width="100%" cellpadding="0" cellspacing="0" style="background:#f4f4f4;padding:24px 0">
+<tr><td align="center">
+<table width="600" cellpadding="0" cellspacing="0" style="background:#fff;border-radius:8px;overflow:hidden;
+  box-shadow:0 2px 8px rgba(0,0,0,.08);max-width:600px;width:100%">
+
+  <!-- Header -->
+  <tr><td style="background:#354062;padding:24px 28px">
+    <p style="margin:0;font-size:11px;font-weight:700;color:#FFC650;text-transform:uppercase;letter-spacing:.08em">
+      LearnImpact · Raisr</p>
+    <h1 style="margin:4px 0 0;font-size:22px;font-weight:800;color:#fff">
+      Pipeline Brief · Week {week}</h1>
+    <p style="margin:6px 0 0;font-size:12px;color:rgba(255,255,255,.6)">{TODAY}</p>
+  </td></tr>
+
+  {brief_focus}
+
+  <!-- Top actions -->
+  <tr><td style="padding:20px 24px 8px">
+    <p style="margin:0 0 10px;font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:.08em">
+      This Week's Actions</p>
+    <table width="100%" cellpadding="0" cellspacing="0" style="border:1px solid #e8e8e8;border-radius:6px;overflow:hidden">
+      {action_rows if action_rows else '<tr><td style="padding:12px;color:#999;font-size:12px">No actions this week.</td></tr>'}
+    </table>
+  </td></tr>
+
+  <!-- Programme insights -->
+  <tr><td style="padding:16px 24px 8px">
+    <p style="margin:0 0 12px;font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:.08em">
+      Programme Insights</p>
+    {"".join([f'''<div style="margin-bottom:10px;padding:12px 14px;background:#f9f9f9;border-radius:6px;border-left:3px solid {'#354062' if prog=='SOMA' else '#5EA6B8' if prog=='KiuFunza' else '#BE6243'}">
+      <span style="font-size:10px;font-weight:700;color:#888;text-transform:uppercase">{prog}</span>
+      <p style="margin:4px 0 0;font-size:12px;color:#333">{res.get('insight_of_week','—')}</p>
+    </div>''' for prog, res in [("SOMA", soma), ("KiuFunza", kf), ("Timamu", tim)] if res.get('insight_of_week')])}
+  </td></tr>
+
+  <!-- Funding gap -->
+  <tr><td style="padding:16px 24px">
+    <p style="margin:0 0 10px;font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:.08em">
+      SOMA Funding Gap</p>
+    <table width="100%" cellpadding="0" cellspacing="0">
+      <tr>
+        <td style="font-size:12px;color:#666">Confirmed</td>
+        <td style="font-size:12px;color:#666">Pipeline</td>
+        <td style="font-size:12px;color:#666">Needed</td>
+      </tr>
+      <tr>
+        <td style="font-size:16px;font-weight:700;color:#1A7060">${soma_confirmed:,.0f}</td>
+        <td style="font-size:16px;font-weight:700;color:#354062">${soma_pipeline:,.0f}</td>
+        <td style="font-size:16px;font-weight:700;color:#BE6243">${soma_needed:,.0f}</td>
+      </tr>
+    </table>
+  </td></tr>
+
+  <!-- Footer -->
+  <tr><td style="background:#f0f2f7;padding:16px 24px;border-top:1px solid #e0e4ef">
+    <p style="margin:0;font-size:11px;color:#888">
+      Raisr Pipeline Intelligence · LearnImpact, Dar es Salaam<br>
+      Generated automatically · <a href="https://kamukulumichael-blip.github.io/mk-fundraiser/"
+        style="color:#354062">Open dashboard</a>
+    </p>
+  </td></tr>
+
+</table>
+</td></tr></table>
+</body></html>"""
+
+
+def send_via_gmail(recipients, subject, html_body):
+    """Send HTML email via Gmail SMTP using app password."""
+    import smtplib
+    from email.mime.multipart import MIMEMultipart
+    from email.mime.text import MIMEText
+
+    gmail_user = os.environ.get("GMAIL_USER", "")
+    gmail_pass = os.environ.get("GMAIL_APP_PASSWORD", "")
+    if not gmail_user or not gmail_pass:
+        print("Email: GMAIL_USER / GMAIL_APP_PASSWORD not set — skipping.")
+        return False
+
+    msg = MIMEMultipart("alternative")
+    msg["Subject"] = subject
+    msg["From"] = f"Raisr · LearnImpact <{gmail_user}>"
+    msg["To"] = ", ".join(recipients)
+    msg.attach(MIMEText(html_body, "html", "utf-8"))
+
+    try:
+        with smtplib.SMTP_SSL("smtp.gmail.com", 465) as smtp:
+            smtp.login(gmail_user, gmail_pass)
+            smtp.sendmail(gmail_user, recipients, msg.as_string())
+        print(f"Email sent to {len(recipients)} recipient(s).")
+        return True
+    except Exception as e:
+        print(f"Email send failed: {e}")
+        return False
+
+
+def check_and_send_email(alerts, brief):
+    """Send the pipeline brief by email if configured and conditions are met."""
+    cfg = load_email_config()
+    if not should_send_today(cfg):
+        return
+
+    html = build_email_html(alerts, brief)
+    week = alerts.get("week_number", "")
+    subject = f"Raisr Pipeline Brief — Week {week} · {TODAY}"
+    sent = send_via_gmail(cfg["recipients"], subject, html)
+
+    if sent:
+        cfg["last_sent"] = datetime.datetime.utcnow().isoformat() + "Z"
+        cfg["send_now"] = False
+        save_email_config(cfg)
+        print(f"Email config updated with last_sent={cfg['last_sent']}")
 
 
 if __name__ == "__main__":
