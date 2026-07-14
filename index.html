@@ -823,8 +823,12 @@ html[data-theme="obsidian"] .timamu-theme .hot-cta{background:var(--ti-coral)}
       <div class="agent-brief-section" id="agent-brief-section" style="display:none">
         <div class="agent-brief-header">
           <span class="agent-brief-label">Pipeline Agent · Week <span id="ab-week"></span></span>
-          <button class="btn-xs" id="ab-toggle" onclick="toggleAgentBrief()">Expand ▼</button>
+          <div style="display:flex;gap:6px;align-items:center">
+            <button class="btn-xs" id="run-research-btn" onclick="triggerResearch()" title="Re-run weekly research now">↻ Run Research</button>
+            <button class="btn-xs" id="ab-toggle" onclick="toggleAgentBrief()">Expand ▼</button>
+          </div>
         </div>
+        <div id="run-research-status" style="display:none;font-size:11px;margin-bottom:8px;padding:6px 10px;border-radius:6px;background:var(--surface-2)"></div>
         <div class="agent-brief-focus" id="ab-focus"></div>
         <div class="agent-brief-detail" id="ab-detail" style="display:none">
           <div id="ab-actions"></div>
@@ -2369,6 +2373,47 @@ function toggleAgentBrief() {
   const expanded = detail.style.display !== 'none';
   detail.style.display = expanded ? 'none' : '';
   btn.textContent = expanded ? 'Expand ▼' : 'Collapse ▲';
+}
+
+async function triggerResearch() {
+  const token = localStorage.getItem('mk_gh_token');
+  const repo = localStorage.getItem('mk_gh_repo') || 'kamukulumichael-blip/mk-fundraiser';
+  const btn = document.getElementById('run-research-btn');
+  const status = document.getElementById('run-research-status');
+  if (!token) {
+    status.style.display = '';
+    status.style.color = 'var(--accent)';
+    status.textContent = '⚠ No GitHub token saved — add it in Settings (gear icon) first.';
+    return;
+  }
+  btn.disabled = true;
+  btn.textContent = '↻ Triggering…';
+  status.style.display = '';
+  status.style.color = 'var(--text-2)';
+  status.textContent = 'Sending request to GitHub Actions…';
+  try {
+    const r = await fetch(`https://api.github.com/repos/${repo}/actions/workflows/research.yml/dispatches`, {
+      method: 'POST',
+      headers: { 'Authorization': `token ${token}`, 'Accept': 'application/vnd.github.v3+json', 'Content-Type': 'application/json' },
+      body: JSON.stringify({ ref: 'main' })
+    });
+    if (r.status === 204) {
+      status.style.color = '#4caf50';
+      status.textContent = '✓ Research triggered — runs in ~2 min. Reload Raisr in 3 minutes to see updated intelligence.';
+      btn.textContent = '✓ Triggered';
+    } else {
+      const err = await r.json().catch(() => ({}));
+      status.style.color = '#e44';
+      status.textContent = `✗ GitHub returned ${r.status}: ${err.message || 'unknown error'}. Check your GitHub token has workflow scope.`;
+      btn.disabled = false;
+      btn.textContent = '↻ Run Research';
+    }
+  } catch(e) {
+    status.style.color = '#e44';
+    status.textContent = `✗ Request failed: ${e.message}`;
+    btn.disabled = false;
+    btn.textContent = '↻ Run Research';
+  }
 }
 
 function openAddEvent() {
