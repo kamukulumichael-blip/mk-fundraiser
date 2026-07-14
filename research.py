@@ -270,6 +270,86 @@ Only include genuinely relevant findings. Maximum 10 findings. Be specific — n
     return []
 
 
+def fetch_ms365_intelligence():
+    """Fetch funder-related emails and calendar events from Michael's M365 Outlook via Graph API."""
+    tenant_id = os.environ.get("MS_TENANT_ID", "")
+    client_id = os.environ.get("MS_CLIENT_ID", "")
+    client_secret = os.environ.get("MS_CLIENT_SECRET", "")
+
+    if not all([tenant_id, client_id, client_secret]):
+        print("MS365 credentials not set — skipping Outlook sync.")
+        return {"emails": [], "events": [], "synced_at": TODAY, "error": "credentials_missing"}
+
+    token_resp = requests.post(
+        f"https://login.microsoftonline.com/{tenant_id}/oauth2/v2.0/token",
+        data={
+            "grant_type": "client_credentials",
+            "client_id": client_id,
+            "client_secret": client_secret,
+            "scope": "https://graph.microsoft.com/.default"
+        }
+    )
+    if token_resp.status_code != 200:
+        err = token_resp.text[:200]
+        print(f"MS365 token error {token_resp.status_code}: {err}")
+        return {"emails": [], "events": [], "synced_at": TODAY, "error": f"token_{token_resp.status_code}"}
+
+    token = token_resp.json().get("access_token", "")
+    headers = {"Authorization": f"Bearer {token}"}
+    user = "mkamukulu@learnimpact.org"
+
+    emails = []
+    try:
+        r = requests.get(
+            f"https://graph.microsoft.com/v1.0/users/{user}/messages"
+            "?$search=\"VTF OR Hempel OR Founders OR Lorcan OR Sandra OR Dovetail OR Vodacom OR Rosa\""
+            "&$top=20"
+            "&$select=subject,from,receivedDateTime,bodyPreview",
+            headers=headers
+        )
+        if r.status_code == 200:
+            for item in r.json().get("value", []):
+                emails.append({
+                    "subject": item.get("subject", ""),
+                    "from": item.get("from", {}).get("emailAddress", {}).get("name", ""),
+                    "from_email": item.get("from", {}).get("emailAddress", {}).get("address", ""),
+                    "received": item.get("receivedDateTime", "")[:10],
+                    "preview": item.get("bodyPreview", "")[:400]
+                })
+            print(f"MS365: {len(emails)} funder emails.")
+        else:
+            print(f"MS365 email error {r.status_code}: {r.text[:200]}")
+    except Exception as e:
+        print(f"MS365 email exception: {e}")
+
+    events = []
+    try:
+        now = datetime.datetime.utcnow().isoformat() + "Z"
+        future = (datetime.datetime.utcnow() + datetime.timedelta(days=45)).isoformat() + "Z"
+        r = requests.get(
+            f"https://graph.microsoft.com/v1.0/users/{user}/calendarView"
+            f"?startDateTime={now}&endDateTime={future}"
+            "&$select=subject,start,end,attendees"
+            "&$top=20",
+            headers=headers
+        )
+        if r.status_code == 200:
+            for item in r.json().get("value", []):
+                attendees = [a.get("emailAddress", {}).get("name", "") for a in item.get("attendees", [])[:5]]
+                events.append({
+                    "subject": item.get("subject", ""),
+                    "start": item.get("start", {}).get("dateTime", "")[:10],
+                    "attendees": attendees
+                })
+            print(f"MS365: {len(events)} upcoming events.")
+        else:
+            print(f"MS365 calendar error {r.status_code}: {r.text[:200]}")
+    except Exception as e:
+        print(f"MS365 calendar exception: {e}")
+
+    return {"emails": emails, "events": events, "synced_at": TODAY}
+
+
 def detect_cross_programme_conflicts(funders):
     """Detect funders appearing in multiple entity pools."""
     li_funders = {f["id"]: f["name"] for f in funders if f.get("entity") == "learnimpact"}
@@ -353,15 +433,28 @@ def build_this_week_actions(soma_res, kf_res, timamu_res, donors):
     return actions[:10]
 
 
-def run_pipeline_brief(soma_res, kf_res, timamu_res, opportunities, donors, monday_summary):
+def run_pipeline_brief(soma_res, kf_res, timamu_res, opportunities, donors, monday_summary, ms365_intel=None):
     """Generate automated Pipeline Monday brief using Pipeline agent reasoning."""
     active_opps = [o for o in opportunities if o.get("stage") not in ["won", "lost"]]
     hot_donors = [d for d in donors if d.get("relationship_health") in ["hot", "warm"]]
 
+    ms365_block = ""
+    if ms365_intel and (ms365_intel.get("emails") or ms365_intel.get("events")):
+        recent_emails = ms365_intel.get("emails", [])[:8]
+        upcoming_events = ms365_intel.get("events", [])[:8]
+        ms365_block = f"""
+
+OUTLOOK INTELLIGENCE (synced {ms365_intel.get('synced_at', TODAY)}):
+Recent funder emails ({len(recent_emails)}):
+{json.dumps(recent_emails, indent=2)}
+
+Upcoming calendar events ({len(upcoming_events)}):
+{json.dumps(upcoming_events, indent=2)}"""
+
     context = f"""WEEKLY INTELLIGENCE — {TODAY} (Week {WEEK_NUM})
 
 MONDAY BRIEF:
-{monday_summary}
+{monday_summary}{ms365_block}
 
 ACTIVE PIPELINE:
 {json.dumps([{k: o.get(k) for k in ['title','programme','stage','ask_amount_usd','deadline','outcome','won_lost_notes']} for o in active_opps[:8]], indent=2)}
@@ -432,6 +525,9 @@ def main():
     donors        = donors_data.get("donors", [])
     sources       = sources_data.get("sources", [])
 
+    print("Syncing MS365 Outlook intelligence…")
+    ms365_intel = fetch_ms365_intelligence()
+
     print("Researching SOMA…")
     soma_res = research_programme("soma", funders, opportunities, donors)
 
@@ -479,6 +575,7 @@ def main():
         "kiufunza": kf_res,
         "timamu": timamu_res,
         "source_feed": source_feed,
+        "ms365_sync": ms365_intel,
         "cross_programme_conflicts": conflicts,
         "this_week_actions": this_week_actions,
         "upcoming_deadlines": upcoming_dl,
@@ -490,7 +587,7 @@ def main():
     print("Generated alerts.json")
 
     # Pipeline Monday brief — automated agent analysis
-    pipeline_brief = run_pipeline_brief(soma_res, kf_res, timamu_res, opportunities, donors, monday_summary)
+    pipeline_brief = run_pipeline_brief(soma_res, kf_res, timamu_res, opportunities, donors, monday_summary, ms365_intel)
     save_json("pipeline_monday_brief.json", pipeline_brief)
     print("Generated pipeline_monday_brief.json")
 
