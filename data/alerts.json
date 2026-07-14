@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-13",
+  "generated_at": "2026-07-14",
   "week_number": 29,
   "soma": {
     "insight_of_week": "Research unavailable for soma \u2014 retry next week.",
@@ -28,7 +28,62 @@
     "out_of_industry": [],
     "positioning_advice": ""
   },
-  "source_feed": [],
+  "source_feed": [
+    {
+      "source": "Gates Foundation / Elimu-Soko Teaching Innovation Lab",
+      "title": "Teaching Innovation Lab: $150,000 Grants for Foundational Literacy Teacher Development in East Africa",
+      "relevance": "soma|kiufunza|learnimpact",
+      "why_relevant": "Gates Foundation backed RFP seeking low-cost, scalable teacher coaching solutions for foundational literacy. Direct match to SOMA (AI-enabled teacher coaching for foundational learning) and KiuFunza (evidence-based teacher effectiveness). 6-12 month pilots, targeting 200+ teachers. Tanzania explicitly listed as eligible country.",
+      "url": "https://techcabal.com/2026/01/20/elimu-soko-150k-funding-call-clasroom-innovation/",
+      "action": "Michael: Verify SOMA/KiuFunza pilots meet 'low-cost, government-scalable' criterion. Submit EOI by deadline (passed Jan 30; confirm if rolling). Position as complement to government TVET system, not replacement. Full proposal due Feb 27, 2026 if selected.",
+      "urgency": "high"
+    },
+    {
+      "source": "World Bank / Tanzania Government",
+      "title": "Education and Skills for Productive Jobs II (ESPJ-II): $300M Program - Foundational & Technical Skills, Teacher Capacity",
+      "relevance": "soma|kiufunza|learnimpact",
+      "why_relevant": "World Bank approved $300M IDA financing (Mar 31, 2026) for Tanzania TVET system reform, teacher upgrading, and foundational learning alignment with labor market. Approved program expects 656,000 graduates, 45%+ women. Government priority on teacher workforce planning & deployment to disadvantaged areas. SOMA's cost-effective model ($3/student) aligns with government efficiency demands.",
+      "url": "https://www.worldbank.org/en/news/press-release/2026/03/31/world-bank-approves-programs-to-support-skills-jobs-and-social-protection-for-three-million-tanzanians",
+      "action": "Michael: Monitor Tanzania MoEST/World Bank tender notices (PPRA portal). ESPJ-II will procure teacher coaching vendors in FY2027. Request prequalification documents. Position SOMA as aligned to 'evidence-based teacher effectiveness improvement' priority cited in program design.",
+      "urgency": "high"
+    },
+    {
+      "source": "Global Partnership for Education Board Meeting",
+      "title": "GPE June 2026 Board: $238B Domestic Financing Pledges + Multiply Possibility Summit Rescheduled to September 23, 2026",
+      "relevance": "learnimpact",
+      "why_relevant": "GPE Board (June 3-4, 2026) confirmed $238B domestic resource commitments from 44 partner countries, including Tanzania. Foundation for GPE launched June 2. Multiply Possibility Global Education Summit now Sept 23 (rescheduled). Signals GPE readiness for new country/program allocations in Dec 2026. Tanzania explicitly active in KIX hub and Education Out Loud advocacy fund.",
+      "url": "https://www.globalpartnership.org/news/unprecedented-worldwide-support-global-partnership-education-and-addressing-global-learning-crisis",
+      "action": "Michael: Flag GPE's December 2026 allocation cycle. If SOMA/KiuFunza can position under GPE's 'foundational learning' or 'teacher effectiveness' pillars (aligned with Tanzania's 2024-2026 Education Out Loud grants), prepare pre-concept brief by Oct 2026 for GPE country office review.",
+      "urgency": "medium"
+    },
+    {
+      "source": "Microsoft AI for Accessibility Grants Program",
+      "title": "Microsoft AI for Accessibility Grants: $10K\u2013$20K Azure Credits + Cash for Education/Assistive Tech Innovations",
+      "relevance": "timamu|learnimpact",
+      "why_relevant": "Ongoing open call (rolling deadline, worldwide eligible). Microsoft seeks AI+assistive tech projects for PWD in education and employment. Timamu's creator economy + accessibility focus matches. Requirements: AI-core, impact on disability outcomes, 1-year deliverables, scalability. 80% of PWD in LMICs lack AT access (Microsoft context). Tanzania context highly relevant for low-cost assistive solutions.",
+      "url": "https://www.microsoft.com/en-us/ai/ai-for-accessibility-grants",
+      "action": "Michael: If Timamu has AI-enabled literacy/numeracy tools for blind/deaf students or vocational training modules, Microsoft AI4A grants can fund proof-of-concept in Tanzania. Budget Azure compute + research expenses. Rolling applications; submit Q3 2026 to align with Timamu scaling timeline.",
+      "urgency": "medium"
+    },
+    {
+      "source": "FCDO DevTracker / Shule Bora Programme",
+      "title": "Shule Bora (Quality Education): FCDO-Funded National Education Programme with PWD Inclusion & Evidence-Based Teacher Coaching",
+      "relevance": "soma|kiufunza|timamu",
+      "why_relevant": "FCDO-funded ongoing programme across 9 Tanzania regions. Payment-by-results model with technical assistance. Explicitly targets: foundational learning outcomes (literacy/numeracy), teacher effectiveness via evidence-based coaching, PWD inclusion in mainstream schools. Matches all three organizations. Managing Agent model suggests procurement opportunities for coaching vendors/tech providers.",
+      "url": "https://devtracker.fcdo.gov.uk/programme/GB-1-205254/summary",
+      "action": "Michael: Research Shule Bora Managing Agent (identifies who holds contracts). Request to participate in vendor workshops or co-design feedback loops. FCDO payment-by-results offers pathway: if SOMA/KiuFunza can deliver teacher coaching within Shule Bora's DLI targets (reading/math at Grade 1-3), negotiate cost-share or technical partnership with FCDO regional teams.",
+      "urgency": "medium"
+    },
+    {
+      "source": "Foundational Learning Research Grants (ESSA/REAL Centre/Gates Foundation)",
+      "title": "ESSA/REAL Centre Foundational Learning Research Grants: Up to $15,000 for FL Researchers in Sub-Saharan Africa (Phase 2)",
+      "relevance": "soma|kiufunza",
+      "why_relevant": "Gates Foundation + GPE Knowledge and Innovation Exchange (KIX) funded. Phase 2 open for researchers in Ghana, Kenya, Senegal, Zambia (no Tanzania listed, but regional hub context). Funds evidence generation that shapes policy/practice on foundational learning. SOMA's $3/student model and KiuFunza's QJE evidence could merit research collaboration or spin-off study design.",
+      "url": "https://essa-africa.org/node/2029",
+      "action": "Michael: If regional expansion planned, consider ESSA partnership for impact evaluation design. Alternatively, SOMA/KiuFunza evidence could be presented to Gates Foundation's Foundational Literacy Compact (mentioned in search results as multi-donor trust fund for sub-Saharan Africa FL support).",
+      "urgency": "low"
+    }
+  ],
   "cross_programme_conflicts": [
     {
       "funder_id": "f-mastercard-timamu",
@@ -49,73 +104,73 @@
       "funder": "Vodacom Tanzania Foundation (VTF)",
       "programme": "kiufunza",
       "deadline": "2026-07-15",
-      "days_remaining": 2
+      "days_remaining": 1
     },
     {
       "opportunity_id": "opp-hempel-kiufunza",
       "funder": "Hempel Foundation",
       "programme": "kiufunza",
       "deadline": "2026-08-31",
-      "days_remaining": 49
+      "days_remaining": 48
     },
     {
       "opportunity_id": "opp-adobe-timamu",
       "funder": "Adobe Foundation",
       "programme": "timamu",
       "deadline": "2026-09-01",
-      "days_remaining": 50
+      "days_remaining": 49
     },
     {
       "opportunity_id": "opp-tz-creator-fund",
       "funder": "Tanzania Government \u2014 Creator Economy Fund",
       "programme": "timamu",
       "deadline": "2026-09-30",
-      "days_remaining": 79
+      "days_remaining": 78
     },
     {
       "opportunity_id": "opp-microsoft-timamu",
       "funder": "Microsoft Philanthropies (Accessibility)",
       "programme": "timamu",
       "deadline": "2026-10-01",
-      "days_remaining": 80
+      "days_remaining": 79
     },
     {
       "opportunity_id": "opp-google-nonprofits-learnimpact",
       "funder": "Google.org",
       "programme": "soma",
       "deadline": "2026-10-01",
-      "days_remaining": 80
+      "days_remaining": 79
     },
     {
       "opportunity_id": "opp-dovetail-track2-soma",
       "funder": "Dovetail / Prevail Fund",
       "programme": "soma",
       "deadline": "2026-12-01",
-      "days_remaining": 141
+      "days_remaining": 140
     },
     {
       "opportunity_id": "opp-vtf-soma-pipeline",
       "funder": "Vodacom Tanzania Foundation (VTF)",
       "programme": "soma",
       "deadline": "2027-03-01",
-      "days_remaining": 231
+      "days_remaining": 230
     },
     {
       "opportunity_id": "opp-founders-pledge-soma",
       "funder": "Founders Pledge",
       "programme": "soma",
       "deadline": "2027-03-31",
-      "days_remaining": 261
+      "days_remaining": 260
     },
     {
       "opportunity_id": "opp-gpe-soma",
       "funder": "Global Partnership for Education (GPE)",
       "programme": "soma",
       "deadline": "2027-06-01",
-      "days_remaining": 323
+      "days_remaining": 322
     }
   ],
-  "monday_brief_summary": "Week 29 (2026-07-13).\n\nSOMA insight: Research unavailable for soma \u2014 retry next week.\n\nKiuFunza insight: Research unavailable for kiufunza \u2014 retry next week.\n\nTimamu insight: Research unavailable for timamu \u2014 retry next week.\n\nTop actions: \n\nNext deadline: KiuFunza Phase 5 \u2014 VTF Renewal 2026-2027 \u2014 2026-07-15.",
+  "monday_brief_summary": "Week 29 (2026-07-14).\n\nSOMA insight: Research unavailable for soma \u2014 retry next week.\n\nKiuFunza insight: Research unavailable for kiufunza \u2014 retry next week.\n\nTimamu insight: Research unavailable for timamu \u2014 retry next week.\n\nTop actions: \n\nNext deadline: KiuFunza Phase 5 \u2014 VTF Renewal 2026-2027 \u2014 2026-07-15.",
   "funding_gap": {
     "soma_confirmed_usd": 229000,
     "soma_needed_usd": 866000,

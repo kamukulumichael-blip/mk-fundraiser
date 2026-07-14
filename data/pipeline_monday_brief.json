@@ -1,59 +1,16 @@
 {
   "generated_at": "2026-07-14",
   "week_number": 29,
-  "this_week_focus": "VTF deadline is TOMORROW (July 15) — confirm KiuFunza renewal status with Sandra Oswald today. This is the most time-sensitive action in the pipeline.",
-  "top_3_actions": [
-    {
-      "action": "Contact Sandra Oswald (VTF) today to confirm KiuFunza renewal signing status — deadline is July 15",
-      "funder": "Vodacom Tanzania Foundation (VTF)",
-      "programme": "kiufunza",
-      "urgency": "critical",
-      "reasoning": "VTF deadline is tomorrow. The TZS 462M (~USD 178K) agreement was finalised but unsigned as of July 1. If unsigned, this must be escalated immediately. Do not let this slip silently — VTF is 23% of KiuFunza confirmed revenue."
-    },
-    {
-      "action": "Check ANTHROPIC_API_KEY2 secret in GitHub Actions — weekly research has failed two consecutive weeks (weeks 28 and 29); all AI analysis is returning empty",
-      "funder": "Internal",
-      "programme": "all",
-      "urgency": "high",
-      "reasoning": "research.py ran but Claude API calls failed with fallback error for all three programmes. The likely cause is that ANTHROPIC_API_KEY2 credits are depleted (same issue that affected survey-hub AI billing). Go to GitHub → mk-fundraiser → Settings → Secrets and check/refresh ANTHROPIC_API_KEY2. Then trigger workflow_dispatch to backfill week 29."
-    },
-    {
-      "action": "Confirm learnimpact.org website is on track for July 31 — Google for Nonprofits and Goodstack verification both blocked until website is live",
-      "funder": "Google for Nonprofits / Goodstack",
-      "programme": "soma",
-      "urgency": "high",
-      "reasoning": "Google for Nonprofits (USD 120K/yr ad credits) and Goodstack verification are rolling applications with no deadline, but every week without a live website is a week without these assets. July 31 is the internal target — two weeks away. Website needs: Reg. 00NGO/R/8931, mission, board, contact page."
-    }
-  ],
+  "this_week_focus": "Pipeline brief unavailable \u2014 check logs and retry.",
+  "top_3_actions": [],
   "pipeline_health": {
-    "soma": "USD 229K confirmed vs USD 866K needed — gap of USD 637K. Founders Pledge USD 5M in review (decision Q1-Q2 2027). SOMA pipeline: USD 5.48M total active asks. Google for Nonprofits (rolling, USD 120K/yr) blocked on website. Dovetail Track 2 and VTF SOMA not yet started.",
-    "kiufunza": "VTF renewal (USD 178K) CRITICAL — deadline tomorrow. Hempel Foundation USD 587K Hearing Committee active — do not push. Dovetail Track 1 USD 100K won. KiuFunza confirmed: USD 765K.",
-    "timamu": "Pipeline not yet active. Adobe Foundation (USD 50K, deadline Sep 1) and Tanzania Creator Economy Fund (deadline Sep 30) are next to open — both require Timamu registration first. Microsoft AI for Accessibility deadline Oct 1.",
-    "concentration_risk": "KiuFunza revenue heavily concentrated. VTF unsigned agreement is the single biggest near-term risk. If Hempel Hearing Committee delays beyond Q3, cash position is at risk.",
-    "gap_progress": "SOMA gap unchanged at USD 637K. Founders Pledge is the only pipeline bet large enough to close it alone. Google for Nonprofits (USD 120K/yr) is the most immediately achievable action once website is live."
+    "soma": "",
+    "kiufunza": "",
+    "timamu": "",
+    "concentration_risk": null,
+    "gap_progress": ""
   },
-  "positioning_move": "Once VTF is confirmed, publish a one-paragraph LinkedIn post: KiuFunza Year 5 secured, SOMA pilot launching Kibaha Term 3. Tags VTF partnership. This signals programme continuity to other funders watching and keeps Founders Pledge and Hempel warm ahead of their Q3/Q4 decision windows.",
-  "flags": [
-    {
-      "flag": "VTF deadline TOMORROW (July 15) — unsigned agreement still at risk",
-      "urgency": "critical",
-      "response": "Call or email Sandra Oswald today. Do not assume it is processing silently."
-    },
-    {
-      "flag": "research.py Claude API failing — two consecutive weeks of empty intelligence (weeks 28 and 29)",
-      "urgency": "high",
-      "response": "Check ANTHROPIC_API_KEY2 GitHub secret. Credits likely depleted. Top up at console.anthropic.com, refresh secret, trigger workflow_dispatch."
-    },
-    {
-      "flag": "learnimpact.org website — 17 days to July 31 target",
-      "urgency": "high",
-      "response": "Google for Nonprofits and Goodstack both blocked. Website must include: Reg. 00NGO/R/8931, mission, board, contact. Prioritise this week."
-    },
-    {
-      "flag": "Timamu registration still pending — three funders (Microsoft, Adobe, Creator Economy Fund) blocked",
-      "urgency": "medium",
-      "response": "Adobe deadline Sep 1 is the first to close. Registration must happen in July/August to meet this window."
-    }
-  ],
-  "weekly_narrative": "Week 29 opens with the VTF signing as the single most urgent task — the deadline is tomorrow and the agreement was still unsigned as of two weeks ago. This cannot be assumed to be processing; Sandra Oswald needs a direct contact today. Beyond VTF, the research automation has failed two consecutive weeks — ANTHROPIC_API_KEY2 appears depleted, which means the AI-powered intelligence (hot list, RFP detection, priority shifts) has not updated since June 30. This must be fixed before next Monday or week 30 will also be blind. The SOMA gap remains at USD 637K. Founders Pledge is the only active bet large enough to close it, but that is an 8-month wait. The near-term achievable action is Google for Nonprofits — rolling application, USD 120K/yr, unblocked the moment learnimpact.org goes live. July 31 target is 17 days away."
+  "positioning_move": "",
+  "flags": [],
+  "weekly_narrative": ""
 }
