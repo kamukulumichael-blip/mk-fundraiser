@@ -34,6 +34,6 @@ jobs:
         run: |
           git config user.name  "Raisr Email Bot"
           git config user.email "actions@github.com"
-          git add data/email_config.json
-          git diff --cached --quiet && echo "No changes to commit" || git commit -m "email: brief dispatched [skip pages]"
+          git add data/email_config.json data/email_debug.json
+          git diff --cached --quiet && echo "No changes to commit" || git commit -m "email: dispatch attempt [skip pages]"
           git push

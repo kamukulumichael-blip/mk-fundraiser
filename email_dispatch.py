@@ -19,55 +19,86 @@ def load_json(filename):
         return json.load(f)
 
 
+def write_debug(info: dict):
+    """Write debug state to data/email_debug.json so it's readable from the remote repo."""
+    p = DATA_DIR / "email_debug.json"
+    info["run_at_utc"] = datetime.datetime.utcnow().isoformat() + "Z"
+    with open(p, "w") as f:
+        json.dump(info, f, indent=2)
+
+
 def main():
     from research import (
         load_email_config, save_email_config,
         should_send_today, build_email_html, send_via_gmail
     )
 
-    # Diagnostics — always print so logs show state
     gmail_user = os.environ.get("GMAIL_USER", "")
     gmail_pass = os.environ.get("GMAIL_APP_PASSWORD", "")
-    print(f"GMAIL_USER set: {'yes (' + gmail_user + ')' if gmail_user else 'NO — secret missing'}")
-    print(f"GMAIL_APP_PASSWORD set: {'yes (' + str(len(gmail_pass)) + ' chars)' if gmail_pass else 'NO — secret missing'}")
-
+    today_name = datetime.datetime.utcnow().strftime("%A")
     cfg = load_email_config()
-    print(f"Email config: enabled={cfg.get('enabled')}, recipients={cfg.get('recipients')}, "
-          f"send_day={cfg.get('send_day')}, frequency={cfg.get('frequency')}, last_sent={cfg.get('last_sent')}")
+
+    debug = {
+        "gmail_user_set": bool(gmail_user),
+        "gmail_user_value": gmail_user,
+        "gmail_pass_set": bool(gmail_pass),
+        "gmail_pass_len": len(gmail_pass),
+        "today_utc": TODAY,
+        "today_weekday": today_name,
+        "config": cfg,
+        "should_send": None,
+        "send_result": None,
+        "error": None
+    }
 
     if not cfg:
-        print("No email config found — nothing to do.")
+        debug["error"] = "No email config found"
+        write_debug(debug)
         return
 
-    today_name = datetime.datetime.utcnow().strftime("%A")
-    print(f"Today: {TODAY} ({today_name})")
+    send = should_send_today(cfg)
+    debug["should_send"] = send
 
-    if not should_send_today(cfg):
-        print(f"Email not due today — skipping.")
+    if not send:
+        debug["error"] = "should_send_today returned False — day/frequency/enabled check failed"
+        write_debug(debug)
+        print("Email not due — check email_debug.json for details.")
         return
 
-    print("Conditions met — building email...")
     alerts = load_json("alerts.json")
     brief  = load_json("pipeline_monday_brief.json")
+    debug["alerts_found"] = bool(alerts)
+    debug["brief_found"] = bool(brief)
 
     if not alerts:
-        print("ERROR: No alerts.json found — cannot build email.")
+        debug["error"] = "alerts.json missing or empty"
+        write_debug(debug)
         sys.exit(1)
 
     html = build_email_html(alerts, brief)
     week = alerts.get("week_number", "")
     subject = f"Raisr Pipeline Brief — Week {week} · {TODAY}"
-    print(f"Sending to: {cfg['recipients']}  Subject: {subject}")
+    debug["subject"] = subject
+    debug["recipients"] = cfg.get("recipients", [])
 
-    sent = send_via_gmail(cfg["recipients"], subject, html)
+    try:
+        sent = send_via_gmail(cfg["recipients"], subject, html)
+        debug["send_result"] = "sent" if sent else "failed"
+    except Exception as e:
+        debug["send_result"] = "exception"
+        debug["error"] = str(e)
+        write_debug(debug)
+        sys.exit(1)
+
+    write_debug(debug)
 
     if sent:
         cfg["last_sent"] = datetime.datetime.utcnow().isoformat() + "Z"
         cfg["send_now"] = False
         save_email_config(cfg)
-        print(f"Done. last_sent={cfg['last_sent']}")
+        print(f"Done. Email sent. last_sent={cfg['last_sent']}")
     else:
-        print("ERROR: send_via_gmail returned False — check Gmail credentials above.")
+        print("ERROR: send_via_gmail returned False — check email_debug.json")
         sys.exit(1)
 
 
