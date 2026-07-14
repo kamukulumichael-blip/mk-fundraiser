@@ -34,6 +34,6 @@ jobs:
         run: |
           git config user.name  "LearnImpact Research Bot"
           git config user.email "actions@github.com"
-          git add data/alerts.json data/funders.json
+          git add data/alerts.json data/funders.json data/pipeline_monday_brief.json
           git diff --cached --quiet && echo "No changes" || git commit -m "research: week $(date +%V) intelligence update [skip pages]"
           git push
