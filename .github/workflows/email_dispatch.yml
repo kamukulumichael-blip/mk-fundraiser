@@ -13,11 +13,9 @@ jobs:
   dispatch:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 1
+      - uses: actions/checkout@v4.2.2
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5.3.0
         with:
           python-version: '3.11'
 
@@ -35,6 +33,6 @@ jobs:
         run: |
           git config user.name  "Raisr Email Bot"
           git config user.email "actions@github.com"
-          git add data/email_config.json data/email_debug.json
-          git diff --cached --quiet && echo "No changes to commit" || git commit -m "email: dispatch attempt [skip pages]"
+          git add data/email_config.json
+          git diff --cached --quiet && echo "No changes to commit" || git commit -m "email: brief dispatched [skip pages]"
           git push
