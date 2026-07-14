@@ -29,7 +29,7 @@ def parse_json(text):
     return None
 from pathlib import Path
 
-API_KEY    = os.environ["ANTHROPIC_API_KEY"]
+API_KEY    = os.environ.get("ANTHROPIC_API_KEY", "")
 GH_TOKEN   = os.environ.get("GITHUB_TOKEN", "")
 GH_REPO    = os.environ.get("GITHUB_REPOSITORY", "kamukulumichael-blip/mk-fundraiser")
 DATA_DIR   = Path(__file__).parent / "data"
