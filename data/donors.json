@@ -16,15 +16,31 @@
       },
       "next_action": "Prepare actively for HF Board TZ visit — Education partners event Sept 27 + school visit with VVOB Sept 30. Youdi pursuing renewal discussion in July. Do not push — let Rosa lead.",
       "next_action_due": "2026-09-27",
-      "programmes": ["kiufunza"],
+      "programmes": [
+        "kiufunza"
+      ],
       "total_funded_usd": 587000,
       "proposal_history": [
-        {"opportunity_id": "opp-hempel-kiufunza", "submitted": "2026-06-15", "outcome": "in_review", "amount_usd": 587000}
+        {
+          "opportunity_id": "opp-hempel-kiufunza",
+          "submitted": "2026-06-15",
+          "outcome": "in_review",
+          "amount_usd": 587000
+        }
       ],
       "intelligence_notes": [
-        {"date": "2026-05-15", "note": "Steering Committee May 2026 — Rosa unprompted mentioned renewal. Hearing Committee is where decision happens. Maintain relationship quality, do not over-push."},
-        {"date": "2026-06-01", "note": "USD 587K confirmed for FY2026. This is the anchor grant — protect this relationship above all others."},
-        {"date": "2026-05-27", "note": "SC meeting May 27 with Anders Holm (HF Director — first SC he attended) + Rosa. Key outcomes: (1) Anders showed genuine interest in incentives model and the Hempel business people are interested in the idea of incentives; (2) LearnImpact formally introduced — HF team appreciates LI was launched under their support; (3) Rosa mentioned renewal possibility at Oxford April breakfast — no timeline yet; (4) HF Board TZ visit confirmed: Education partners event Sept 27, school visit with VVOB Sept 30 in Udzungwa. Renewal formally LOW probability (extension already given 2026). Youdi pursuing renewal timeline in July. Board visit is the single most important cultivation event of the year."}
+        {
+          "date": "2026-05-15",
+          "note": "Steering Committee May 2026 — Rosa unprompted mentioned renewal. Hearing Committee is where decision happens. Maintain relationship quality, do not over-push."
+        },
+        {
+          "date": "2026-06-01",
+          "note": "USD 587K confirmed for FY2026. This is the anchor grant — protect this relationship above all others."
+        },
+        {
+          "date": "2026-05-27",
+          "note": "SC meeting May 27 with Anders Holm (HF Director — first SC he attended) + Rosa. Key outcomes: (1) Anders showed genuine interest in incentives model and the Hempel business people are interested in the idea of incentives; (2) LearnImpact formally introduced — HF team appreciates LI was launched under their support; (3) Rosa mentioned renewal possibility at Oxford April breakfast — no timeline yet; (4) HF Board TZ visit confirmed: Education partners event Sept 27, school visit with VVOB Sept 30 in Udzungwa. Renewal formally LOW probability (extension already given 2026). Youdi pursuing renewal timeline in July. Board visit is the single most important cultivation event of the year."
+        }
       ],
       "drive_notes_id": "",
       "created_at": "2025-01-01",
@@ -46,18 +62,44 @@
       },
       "next_action": "Address VTF request to update contract to reflect 5-year commitment. Wait for Vodacom counter-signature (~July 30). Begin SOMA conversation AFTER fully signed — do not conflate.",
       "next_action_due": "2026-07-30",
-      "programmes": ["kiufunza", "soma"],
+      "programmes": [
+        "kiufunza",
+        "soma"
+      ],
       "total_funded_usd": 178000,
       "proposal_history": [
-        {"opportunity_id": "opp-vtf-kiufunza-2026", "submitted": "2026-05-15", "outcome": "signed_by_li", "amount_usd": 178000}
+        {
+          "opportunity_id": "opp-vtf-kiufunza-2026",
+          "submitted": "2026-05-15",
+          "outcome": "signed_by_li",
+          "amount_usd": 178000
+        }
       ],
       "intelligence_notes": [
-        {"date": "2026-05-01", "note": "TZS 462M KiuFunza Phase 5 confirmed. Grant Agreement has Clause 2.3 re: TIF reallocation."},
-        {"date": "2026-06-29", "note": "VTF documentary team visited Pangani & Kilindi districts — strong signal of VTF's public commitment to KiuFunza. Use this as leverage in SOMA conversation."},
-        {"date": "2026-06-30", "note": "Sandra raised concern about 300M+ allocation to field vs. beneficiaries. She wants balance between Hempel and VTF contributions visible. Resolved in subsequent exchange."},
-        {"date": "2026-07-01", "note": "Agreement finalised. Begin SOMA conversation AFTER signing — do not conflate the two asks. VTF 80% tech mandate maps perfectly to Mwalimu WhatsApp AI coaching."},
-        {"date": "2026-07-09", "note": "SIGNED BY LI. Michael returned signed agreement July 9 after Sandra gentle reminder. Sandra process: agreement circulates to several internal VTF stakeholders. Counter-signature expected within 2-3 weeks = by ~July 30. VTF will onboard LearnImpact into their systems upon receipt of fully signed agreement."},
-        {"date": "2026-07-14", "note": "STRATEGIC: Sandra / VTF want contract updated to reflect 5-year commitment (now in year 2). Signals VTF wants a multi-year partnership frame, not annual renewals. Explore 5-year MoU structure when beginning SOMA conversation. Do not let this request delay current agreement counter-signature."}
+        {
+          "date": "2026-05-01",
+          "note": "TZS 462M KiuFunza Phase 5 confirmed. Grant Agreement has Clause 2.3 re: TIF reallocation."
+        },
+        {
+          "date": "2026-06-29",
+          "note": "VTF documentary team visited Pangani & Kilindi districts — strong signal of VTF's public commitment to KiuFunza. Use this as leverage in SOMA conversation."
+        },
+        {
+          "date": "2026-06-30",
+          "note": "Sandra raised concern about 300M+ allocation to field vs. beneficiaries. She wants balance between Hempel and VTF contributions visible. Resolved in subsequent exchange."
+        },
+        {
+          "date": "2026-07-01",
+          "note": "Agreement finalised. Begin SOMA conversation AFTER signing — do not conflate the two asks. VTF 80% tech mandate maps perfectly to Mwalimu WhatsApp AI coaching."
+        },
+        {
+          "date": "2026-07-09",
+          "note": "SIGNED BY LI. Michael returned signed agreement July 9 after Sandra gentle reminder. Sandra process: agreement circulates to several internal VTF stakeholders. Counter-signature expected within 2-3 weeks = by ~July 30. VTF will onboard LearnImpact into their systems upon receipt of fully signed agreement."
+        },
+        {
+          "date": "2026-07-14",
+          "note": "STRATEGIC: Sandra / VTF want contract updated to reflect 5-year commitment (now in year 2). Signals VTF wants a multi-year partnership frame, not annual renewals. Explore 5-year MoU structure when beginning SOMA conversation. Do not let this request delay current agreement counter-signature."
+        }
       ],
       "drive_notes_id": "",
       "created_at": "2024-01-01",
@@ -72,23 +114,50 @@
       "relationship_stage": "submitted",
       "relationship_health": "hot",
       "last_touchpoint": {
-        "date": "2026-07-01",
-        "note": "Lorcan replied to DD submission confirming things are progressing. Full DD Q&A (4 sets from June 16) submitted June 30 by Youdi + Michael, with SOMA Concept Note attached.",
+        "date": "2026-07-14",
+        "note": "here is an email from Lorcan of FP: Dear Youdi and Michael, \n\nI'm pleased to share that we've shared a grant recommendation to support LearnImpact's work with our philanthropy partner. ($5M total to support scale-up over 4 years)\n\nWe will hear back over the next couple of weeks on any initial questions they have as they review the recommendation. Our partner may accept the recommendation, adjust it, or choose not to make the grant. This process can take some time, and I will share updates promptly when they come through.  \n\nPlease feel free to reach out if you have any questions - thanks again for your collaboration throughout the evaluation process.\n\nBest regards,\nLorcan",
         "channel": "email"
       },
       "next_action": "Expect second (limited) set of DD questions from Lorcan in second half of July 2026. Prepare. Do not chase — let Lorcan lead the timeline.",
       "next_action_due": "2026-07-31",
-      "programmes": ["soma", "kiufunza"],
+      "programmes": [
+        "soma",
+        "kiufunza"
+      ],
       "total_funded_usd": 0,
       "proposal_history": [
-        {"opportunity_id": "opp-founders-pledge-soma", "submitted": "2026-06-01", "outcome": "in_review", "amount_usd": 5000000}
+        {
+          "opportunity_id": "opp-founders-pledge-soma",
+          "submitted": "2026-06-01",
+          "outcome": "in_review",
+          "amount_usd": 5000000
+        }
       ],
       "intelligence_notes": [
-        {"date": "2026-06-01", "note": "USD 5M proposal submitted for SOMA (4-year ask). Full proposal stage."},
-        {"date": "2026-06-16", "note": "Lorcan sent 4 sets of DD questions. Michael handled 1.1-1.3 and 4.1-4.2 (structure, positioning, SOMA). Youdi handling 2.1-3.2 (KiuFunza research quality)."},
-        {"date": "2026-06-24", "note": "Call with Lorcan, Youdi, Michael. Lorcan offered extra time. Team asked for until Tuesday June 30 COB to polish responses."},
-        {"date": "2026-06-30", "note": "FULL DD SUBMITTED. Youdi + Michael submitted answers to all 4 sets of questions + SOMA Concept Note. Youdi noted to Lorcan: there may be another limited set of questions in the second half of July. Lorcan confirmed well received."},
-        {"date": "2026-07-01", "note": "Lorcan replied confirming progression. Second limited set of questions expected second half July. Decision expected Q1-Q2 2027. Relationship with Vadim (FP member) is a parallel track — see Vadim record."}
+        {
+          "date": "2026-07-14",
+          "note": "here is an email from Lorcan of FP: Dear Youdi and Michael, \n\nI'm pleased to share that we've shared a grant recommendation to support LearnImpact's work with our philanthropy partner. ($5M total to support scale-up over 4 years)\n\nWe will hear back over the next couple of weeks on any initial questions they have as they review the recommendation. Our partner may accept the recommendation, adjust it, or choose not to make the grant. This process can take some time, and I will share updates promptly when they come through.  \n\nPlease feel free to reach out if you have any questions - thanks again for your collaboration throughout the evaluation process.\n\nBest regards,\nLorcan"
+        },
+        {
+          "date": "2026-06-01",
+          "note": "USD 5M proposal submitted for SOMA (4-year ask). Full proposal stage."
+        },
+        {
+          "date": "2026-06-16",
+          "note": "Lorcan sent 4 sets of DD questions. Michael handled 1.1-1.3 and 4.1-4.2 (structure, positioning, SOMA). Youdi handling 2.1-3.2 (KiuFunza research quality)."
+        },
+        {
+          "date": "2026-06-24",
+          "note": "Call with Lorcan, Youdi, Michael. Lorcan offered extra time. Team asked for until Tuesday June 30 COB to polish responses."
+        },
+        {
+          "date": "2026-06-30",
+          "note": "FULL DD SUBMITTED. Youdi + Michael submitted answers to all 4 sets of questions + SOMA Concept Note. Youdi noted to Lorcan: there may be another limited set of questions in the second half of July. Lorcan confirmed well received."
+        },
+        {
+          "date": "2026-07-01",
+          "note": "Lorcan replied confirming progression. Second limited set of questions expected second half July. Decision expected Q1-Q2 2027. Relationship with Vadim (FP member) is a parallel track — see Vadim record."
+        }
       ],
       "drive_notes_id": "",
       "created_at": "2026-04-01",
@@ -109,11 +178,17 @@
       },
       "next_action": "Keep Lorcan as primary FP relationship. Allow Lorcan to orchestrate Vadim introduction. Do not reach out to Vadim directly.",
       "next_action_due": "2026-09-01",
-      "programmes": ["soma", "kiufunza"],
+      "programmes": [
+        "soma",
+        "kiufunza"
+      ],
       "total_funded_usd": 0,
       "proposal_history": [],
       "intelligence_notes": [
-        {"date": "2026-06-24", "note": "Lorcan connected Vadim to LearnImpact. Vadim is a FP member — high-net-worth individual who has pledged significant amounts through FP recommended funds. If FP recommends LearnImpact, Vadim may direct personal giving separately. Handle via Lorcan only."}
+        {
+          "date": "2026-06-24",
+          "note": "Lorcan connected Vadim to LearnImpact. Vadim is a FP member — high-net-worth individual who has pledged significant amounts through FP recommended funds. If FP recommends LearnImpact, Vadim may direct personal giving separately. Handle via Lorcan only."
+        }
       ],
       "drive_notes_id": "",
       "created_at": "2026-07-01",
@@ -134,15 +209,34 @@
       },
       "next_action": "Start Track 2 SOMA conversation with Ali. Frame SOMA AI coaching as the natural next step beyond Track 1 assessment. Potential 10-year partnership.",
       "next_action_due": "2026-09-01",
-      "programmes": ["kiufunza", "soma"],
+      "programmes": [
+        "kiufunza",
+        "soma"
+      ],
       "total_funded_usd": 100000,
       "proposal_history": [
-        {"opportunity_id": "opp-dovetail-track1", "submitted": "2026-03-01", "outcome": "won", "amount_usd": 100000},
-        {"opportunity_id": "opp-dovetail-track2-soma", "submitted": null, "outcome": null, "amount_usd": 150000}
+        {
+          "opportunity_id": "opp-dovetail-track1",
+          "submitted": "2026-03-01",
+          "outcome": "won",
+          "amount_usd": 100000
+        },
+        {
+          "opportunity_id": "opp-dovetail-track2-soma",
+          "submitted": null,
+          "outcome": null,
+          "amount_usd": 150000
+        }
       ],
       "intelligence_notes": [
-        {"date": "2026-06-01", "note": "Track 1 $100K won. Dovetail/Prevail Fund is a strong relationship — potential for 10-year partnership."},
-        {"date": "2026-06-30", "note": "Track 2 NOT started. Ali is warm after Track 1. Frame: Track 1 gave us the assessment baseline; Track 2 is the AI coaching loop that closes the improvement cycle."}
+        {
+          "date": "2026-06-01",
+          "note": "Track 1 $100K won. Dovetail/Prevail Fund is a strong relationship — potential for 10-year partnership."
+        },
+        {
+          "date": "2026-06-30",
+          "note": "Track 2 NOT started. Ali is warm after Track 1. Frame: Track 1 gave us the assessment baseline; Track 2 is the AI coaching loop that closes the improvement cycle."
+        }
       ],
       "drive_notes_id": "",
       "created_at": "2026-01-15",
@@ -163,11 +257,16 @@
       },
       "next_action": "Ensure Youdi has all KiuFunza data needed for FP DD second round (expected second half July). Do NOT pull into SOMA conversations — keep lane separation clean.",
       "next_action_due": "2026-07-27",
-      "programmes": ["kiufunza"],
+      "programmes": [
+        "kiufunza"
+      ],
       "total_funded_usd": 0,
       "proposal_history": [],
       "intelligence_notes": [
-        {"date": "2026-06-30", "note": "KIUFUNZA LANE ONLY. Youdi handling FP DD questions 2.1-3.2 about KiuFunza research quality. He also endorsed SOMA CN to Lorcan — his credibility is a bridge asset. KF Update Call scheduled July 13 and 27."}
+        {
+          "date": "2026-06-30",
+          "note": "KIUFUNZA LANE ONLY. Youdi handling FP DD questions 2.1-3.2 about KiuFunza research quality. He also endorsed SOMA CN to Lorcan — his credibility is a bridge asset. KF Update Call scheduled July 13 and 27."
+        }
       ],
       "drive_notes_id": "",
       "created_at": "2026-06-01",
