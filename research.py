@@ -7,6 +7,26 @@ and source intelligence feed from registered websites/LinkedIn creators.
 """
 
 import json, os, datetime, anthropic, base64, requests, sys
+try:
+    from json_repair import repair_json as _repair
+except ImportError:
+    _repair = None
+
+def parse_json(text):
+    start = text.find("{")
+    end = text.rfind("}") + 1
+    if start < 0 or end <= start:
+        return None
+    raw = text[start:end]
+    try:
+        return json.loads(raw)
+    except Exception:
+        if _repair:
+            try:
+                return json.loads(_repair(raw))
+            except Exception:
+                pass
+    return None
 from pathlib import Path
 
 API_KEY    = os.environ["ANTHROPIC_API_KEY"]
@@ -154,14 +174,12 @@ Be specific and actionable. No generic advice."""
     try:
         msg = client.messages.create(
             model="claude-haiku-4-5-20251001",
-            max_tokens=2048,
+            max_tokens=4096,
             messages=[{"role": "user", "content": prompt}]
         )
-        text = msg.content[0].text
-        start = text.find("{")
-        end = text.rfind("}") + 1
-        if start >= 0 and end > start:
-            return json.loads(text[start:end])
+        parsed = parse_json(msg.content[0].text)
+        if parsed:
+            return parsed
     except Exception as e:
         err_msg = str(e)
         print(f"Error researching {programme}: {err_msg}")
@@ -367,15 +385,12 @@ Insight: {timamu_res.get('insight_of_week','')}
         print("Generating Pipeline Monday brief…")
         msg = client.messages.create(
             model="claude-haiku-4-5-20251001",
-            max_tokens=1500,
+            max_tokens=2048,
             system=PIPELINE_BRIEF_SYSTEM,
             messages=[{"role": "user", "content": context}]
         )
-        text = msg.content[0].text
-        start = text.find("{")
-        end = text.rfind("}") + 1
-        if start >= 0 and end > start:
-            result = json.loads(text[start:end])
+        result = parse_json(msg.content[0].text)
+        if result:
             result["generated_at"] = TODAY
             result["week_number"] = WEEK_NUM
             return result
