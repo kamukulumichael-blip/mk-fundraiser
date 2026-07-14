@@ -2,9 +2,10 @@
   "gmail_user_set": true,
   "gmail_user_value": "kamukulumichael@gmail.com",
   "gmail_pass_set": true,
-  "gmail_pass_len": 19,
+  "gmail_pass_len": 16,
   "today_utc": "2026-07-14",
   "today_weekday": "Tuesday",
+  "is_manual_dispatch": true,
   "config": {
     "enabled": true,
     "recipients": [
@@ -16,8 +17,14 @@
     "last_sent": null,
     "send_now": false
   },
-  "should_send": false,
-  "send_result": null,
-  "error": "should_send_today returned False \u2014 day/frequency/enabled check failed",
-  "run_at_utc": "2026-07-14T12:26:28.038281Z"
+  "should_send": true,
+  "send_result": "sent",
+  "error": null,
+  "alerts_found": true,
+  "brief_found": true,
+  "subject": "Raisr Pipeline Brief \u2014 Week 29 \u00b7 2026-07-14",
+  "recipients": [
+    "mkamukulu@learnimpact.org"
+  ],
+  "run_at_utc": "2026-07-14T12:34:04.343811Z"
 }
