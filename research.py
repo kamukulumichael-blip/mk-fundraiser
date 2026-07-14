@@ -843,8 +843,11 @@ def send_via_gmail(recipients, subject, html_body):
             smtp.sendmail(gmail_user, recipients, msg.as_string())
         print(f"Email sent to {len(recipients)} recipient(s).")
         return True
+    except smtplib.SMTPAuthenticationError as e:
+        print(f"Email auth failed (wrong app password?): {e}")
+        return False
     except Exception as e:
-        print(f"Email send failed: {e}")
+        print(f"Email send failed ({type(e).__name__}): {e}")
         return False
 
 
