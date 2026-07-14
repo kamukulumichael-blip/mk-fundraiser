@@ -34,9 +34,15 @@ def main():
     )
 
     gmail_user = os.environ.get("GMAIL_USER", "")
-    gmail_pass = os.environ.get("GMAIL_APP_PASSWORD", "")
+    # Strip spaces — Google displays app passwords with spaces but they're not part of the key
+    gmail_pass = os.environ.get("GMAIL_APP_PASSWORD", "").replace(" ", "")
+    os.environ["GMAIL_APP_PASSWORD"] = gmail_pass  # update so send_via_gmail uses stripped version
+
     today_name = datetime.datetime.utcnow().strftime("%A")
     cfg = load_email_config()
+
+    # Manual workflow_dispatch → force send regardless of day schedule
+    is_manual = os.environ.get("GITHUB_EVENT_NAME", "") == "workflow_dispatch"
 
     debug = {
         "gmail_user_set": bool(gmail_user),
@@ -45,6 +51,7 @@ def main():
         "gmail_pass_len": len(gmail_pass),
         "today_utc": TODAY,
         "today_weekday": today_name,
+        "is_manual_dispatch": is_manual,
         "config": cfg,
         "should_send": None,
         "send_result": None,
@@ -56,7 +63,7 @@ def main():
         write_debug(debug)
         return
 
-    send = should_send_today(cfg)
+    send = should_send_today(cfg, force=is_manual)
     debug["should_send"] = send
 
     if not send:

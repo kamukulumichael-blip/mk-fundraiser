@@ -679,11 +679,12 @@ def save_email_config(cfg):
         json.dump(cfg, f, indent=2)
 
 
-def should_send_today(cfg):
+def should_send_today(cfg, force=False):
     """Return True if conditions are met to send the brief now."""
     if not cfg.get("enabled") or not cfg.get("recipients"):
         return False
-    if cfg.get("send_now"):
+    # Manual workflow_dispatch or send_now flag → skip day/frequency check
+    if force or cfg.get("send_now"):
         return True
 
     day_names = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]
