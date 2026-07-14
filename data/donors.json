@@ -16,14 +16,27 @@
       },
       "next_action": "Provide Hearing Committee with any additional materials requested. Do not rush — relationship is strong.",
       "next_action_due": "2026-07-31",
-      "programmes": ["kiufunza"],
+      "programmes": [
+        "kiufunza"
+      ],
       "total_funded_usd": 587000,
       "proposal_history": [
-        {"opportunity_id": "opp-hempel-kiufunza", "submitted": "2026-06-15", "outcome": "in_review", "amount_usd": 587000}
+        {
+          "opportunity_id": "opp-hempel-kiufunza",
+          "submitted": "2026-06-15",
+          "outcome": "in_review",
+          "amount_usd": 587000
+        }
       ],
       "intelligence_notes": [
-        {"date": "2026-05-15", "note": "Steering Committee May 2026 — Rosa unprompted mentioned renewal. Hearing Committee is where decision happens. Maintain relationship quality, do not over-push."},
-        {"date": "2026-06-01", "note": "USD 587K confirmed for FY2026. This is the anchor grant — protect this relationship above all others."}
+        {
+          "date": "2026-05-15",
+          "note": "Steering Committee May 2026 — Rosa unprompted mentioned renewal. Hearing Committee is where decision happens. Maintain relationship quality, do not over-push."
+        },
+        {
+          "date": "2026-06-01",
+          "note": "USD 587K confirmed for FY2026. This is the anchor grant — protect this relationship above all others."
+        }
       ],
       "drive_notes_id": "",
       "created_at": "2025-01-01",
@@ -39,26 +52,50 @@
       "relationship_stage": "partner",
       "relationship_health": "hot",
       "last_touchpoint": {
-        "date": "2026-07-01",
-        "note": "Active email negotiation concluded. Budget balance concern re: Hempel/VTF split resolved. Partnership agreement finalised — moving to signing imminently. Sandra confirmed readiness to proceed.",
+        "date": "2026-07-14",
+        "note": "Sandra / VTF have suggested that the cntract be updated to reflect the long term commitment that VTF has made for KiuFunza / LearnImpact which is 5 years, now in the second year",
         "channel": "email"
       },
       "next_action": "Confirm signing date. Prepare partner welcome pack and onboarding schedule for VTF comms team field visit follow-up.",
       "next_action_due": "2026-07-10",
-      "programmes": ["kiufunza", "soma"],
+      "programmes": [
+        "kiufunza",
+        "soma"
+      ],
       "total_funded_usd": 178000,
       "proposal_history": [
-        {"opportunity_id": "opp-vtf-kiufunza-2026", "submitted": "2026-05-15", "outcome": "signing_imminent", "amount_usd": 178000}
+        {
+          "opportunity_id": "opp-vtf-kiufunza-2026",
+          "submitted": "2026-05-15",
+          "outcome": "signing_imminent",
+          "amount_usd": 178000
+        }
       ],
       "intelligence_notes": [
-        {"date": "2026-05-01", "note": "TZS 462M KiuFunza Phase 5 confirmed. Grant Agreement has Clause 2.3 re: TIF reallocation."},
-        {"date": "2026-06-29", "note": "VTF documentary team visited Pangani & Kilindi districts — strong signal of VTF's public commitment to KiuFunza. Use this as leverage in SOMA conversation."},
-        {"date": "2026-06-30", "note": "Sandra raised concern about 300M+ allocation to field vs. beneficiaries. She wants balance between Hempel and VTF contributions visible. Resolved in subsequent exchange."},
-        {"date": "2026-07-01", "note": "Agreement finalised. Signing imminent. Begin SOMA conversation AFTER signing — do not conflate the two asks. VTF 80% tech mandate maps perfectly to Mwalimu WhatsApp AI coaching."}
+        {
+          "date": "2026-07-14",
+          "note": "Sandra / VTF have suggested that the cntract be updated to reflect the long term commitment that VTF has made for KiuFunza / LearnImpact which is 5 years, now in the second year"
+        },
+        {
+          "date": "2026-05-01",
+          "note": "TZS 462M KiuFunza Phase 5 confirmed. Grant Agreement has Clause 2.3 re: TIF reallocation."
+        },
+        {
+          "date": "2026-06-29",
+          "note": "VTF documentary team visited Pangani & Kilindi districts — strong signal of VTF's public commitment to KiuFunza. Use this as leverage in SOMA conversation."
+        },
+        {
+          "date": "2026-06-30",
+          "note": "Sandra raised concern about 300M+ allocation to field vs. beneficiaries. She wants balance between Hempel and VTF contributions visible. Resolved in subsequent exchange."
+        },
+        {
+          "date": "2026-07-01",
+          "note": "Agreement finalised. Signing imminent. Begin SOMA conversation AFTER signing — do not conflate the two asks. VTF 80% tech mandate maps perfectly to Mwalimu WhatsApp AI coaching."
+        }
       ],
       "drive_notes_id": "",
       "created_at": "2024-01-01",
-      "updated_at": "2026-07-01"
+      "updated_at": "2026-07-14"
     },
     {
       "id": "d-lorcan-clarke-fp",
@@ -75,15 +112,32 @@
       },
       "next_action": "Let Lorcan lead. Follow up if no word by August 15. Decision expected Q1-Q2 2027. Do not rush.",
       "next_action_due": "2026-08-15",
-      "programmes": ["soma", "kiufunza"],
+      "programmes": [
+        "soma",
+        "kiufunza"
+      ],
       "total_funded_usd": 0,
       "proposal_history": [
-        {"opportunity_id": "opp-founders-pledge-soma", "submitted": "2026-06-01", "outcome": "in_review", "amount_usd": 5000000}
+        {
+          "opportunity_id": "opp-founders-pledge-soma",
+          "submitted": "2026-06-01",
+          "outcome": "in_review",
+          "amount_usd": 5000000
+        }
       ],
       "intelligence_notes": [
-        {"date": "2026-06-01", "note": "USD 5M proposal submitted for SOMA (4-year ask). Full proposal stage."},
-        {"date": "2026-06-26", "note": "DD questions received from Lorcan. Michael handled 1.1-1.3 and 4.1-4.2 (structure, positioning, SOMA). Youdi handling 2.1-3.2 (KiuFunza research quality)."},
-        {"date": "2026-06-30", "note": "SOMA Concept Note forwarded to Lorcan by Youdi. Lorcan response: 'strong concept note.' Relationship with Vadim (FP member) is a parallel track — see Vadim's record."}
+        {
+          "date": "2026-06-01",
+          "note": "USD 5M proposal submitted for SOMA (4-year ask). Full proposal stage."
+        },
+        {
+          "date": "2026-06-26",
+          "note": "DD questions received from Lorcan. Michael handled 1.1-1.3 and 4.1-4.2 (structure, positioning, SOMA). Youdi handling 2.1-3.2 (KiuFunza research quality)."
+        },
+        {
+          "date": "2026-06-30",
+          "note": "SOMA Concept Note forwarded to Lorcan by Youdi. Lorcan response: 'strong concept note.' Relationship with Vadim (FP member) is a parallel track — see Vadim's record."
+        }
       ],
       "drive_notes_id": "",
       "created_at": "2026-04-01",
@@ -104,11 +158,17 @@
       },
       "next_action": "Keep Lorcan as primary FP relationship. Allow Lorcan to orchestrate Vadim introduction. Do not reach out to Vadim directly — let the relationship warm through Lorcan first.",
       "next_action_due": "2026-09-01",
-      "programmes": ["soma", "kiufunza"],
+      "programmes": [
+        "soma",
+        "kiufunza"
+      ],
       "total_funded_usd": 0,
       "proposal_history": [],
       "intelligence_notes": [
-        {"date": "2026-06-24", "note": "Lorcan connected Vadim to LearnImpact. Vadim is a FP member — these are high-net-worth individuals who have pledged to give significant amounts through FP's recommended funds. If FP recommends LearnImpact, Vadim may direct personal giving to us separately. Handle via Lorcan only."}
+        {
+          "date": "2026-06-24",
+          "note": "Lorcan connected Vadim to LearnImpact. Vadim is a FP member — these are high-net-worth individuals who have pledged to give significant amounts through FP's recommended funds. If FP recommends LearnImpact, Vadim may direct personal giving to us separately. Handle via Lorcan only."
+        }
       ],
       "drive_notes_id": "",
       "created_at": "2026-07-01",
@@ -129,15 +189,34 @@
       },
       "next_action": "Start Track 2 SOMA conversation with Ali. Frame SOMA AI coaching as the natural next step beyond Track 1 assessment. Potential 10-year partnership.",
       "next_action_due": "2026-09-01",
-      "programmes": ["kiufunza", "soma"],
+      "programmes": [
+        "kiufunza",
+        "soma"
+      ],
       "total_funded_usd": 100000,
       "proposal_history": [
-        {"opportunity_id": "opp-dovetail-track1", "submitted": "2026-03-01", "outcome": "won", "amount_usd": 100000},
-        {"opportunity_id": "opp-dovetail-track2-soma", "submitted": null, "outcome": null, "amount_usd": 150000}
+        {
+          "opportunity_id": "opp-dovetail-track1",
+          "submitted": "2026-03-01",
+          "outcome": "won",
+          "amount_usd": 100000
+        },
+        {
+          "opportunity_id": "opp-dovetail-track2-soma",
+          "submitted": null,
+          "outcome": null,
+          "amount_usd": 150000
+        }
       ],
       "intelligence_notes": [
-        {"date": "2026-06-01", "note": "Track 1 $100K won. Dovetail/Prevail Fund is a strong relationship — potential for 10-year partnership."},
-        {"date": "2026-06-30", "note": "Track 2 NOT started. Ali is warm after Track 1. Frame: 'Track 1 gave us the assessment baseline; Track 2 is the AI coaching loop that closes the improvement cycle'."}
+        {
+          "date": "2026-06-01",
+          "note": "Track 1 $100K won. Dovetail/Prevail Fund is a strong relationship — potential for 10-year partnership."
+        },
+        {
+          "date": "2026-06-30",
+          "note": "Track 2 NOT started. Ali is warm after Track 1. Frame: 'Track 1 gave us the assessment baseline; Track 2 is the AI coaching loop that closes the improvement cycle'."
+        }
       ],
       "drive_notes_id": "",
       "created_at": "2026-01-15",
@@ -158,11 +237,16 @@
       },
       "next_action": "Review Youdi's May-June report. Ensure he has all KiuFunza data needed for FP DD. Do NOT pull into SOMA conversations — keep lane separation clean.",
       "next_action_due": "2026-07-13",
-      "programmes": ["kiufunza"],
+      "programmes": [
+        "kiufunza"
+      ],
       "total_funded_usd": 0,
       "proposal_history": [],
       "intelligence_notes": [
-        {"date": "2026-06-30", "note": "KIUFUNZA LANE ONLY. Youdi handling FP DD questions 2.1-3.2 about KiuFunza research quality. He also endorsed SOMA CN to Lorcan — his credibility is a bridge asset. KF Update Call scheduled July 13 and 27."}
+        {
+          "date": "2026-06-30",
+          "note": "KIUFUNZA LANE ONLY. Youdi handling FP DD questions 2.1-3.2 about KiuFunza research quality. He also endorsed SOMA CN to Lorcan — his credibility is a bridge asset. KF Update Call scheduled July 13 and 27."
+        }
       ],
       "drive_notes_id": "",
       "created_at": "2026-06-01",
