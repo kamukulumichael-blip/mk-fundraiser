@@ -1,16 +1,48 @@
 {
-  "generated_at": "2026-07-14",
-  "week_number": 29,
-  "this_week_focus": "Pipeline brief error \u2014 Expecting ',' delimiter: line 32 column 4 (char 4117)",
-  "top_3_actions": [],
+  "this_week_focus": "Confirm VTF KiuFunza Phase 5 signing with Sandra Oswald TODAY (USD 178K locked by EOW), then immediately secure Tanzania company registration for Timamu to hit Ministry of ICT EOI deadline 2026-09-30 \u2014 these two moves unblock USD 178K certainty and the largest domestic funding window.",
+  "top_3_actions": [
+    {
+      "action": "Call Sandra Oswald TODAY to confirm VTF Phase 5 signing date and location. Secure signature before 2026-07-15. Prepare partner welcome pack (KiuFunza Phase 5 roadmap + VTF comms field visit schedule + preliminary SOMA alignment brief marked 'post-signing conversation'). DO NOT mention SOMA before signing is complete.",
+      "funder": "Sandra Oswald, Vodacom Foundation",
+      "programme": "kiufunza",
+      "urgency": "high",
+      "reasoning": "VTF signing deadline is 2026-07-15 (48 hours). USD 178K confirms KiuFunza FY2027 cash flow. Delay past this week = miss the window entirely. VTF's documentary team visit to Pangani & Kilindi signals public commitment momentum \u2014 use post-signing to pivot to SOMA tech conversation without clouding current deal."
+    },
+    {
+      "action": "Confirm Tanzania company registration status TODAY with Michael. If not yet registered: engage expedited corporate lawyer THIS WEEK (target 21-day incorporation). Simultaneously draft Ministry of ICT Expression of Interest positioning Timamu as disability-inclusive programme implementation partner. Contact ICT focal point to flag intent and understand selection criteria before EOI deadline 2026-09-30.",
+      "funder": "Tanzania Creator Economy Fund (Ministry of ICT)",
+      "programme": "timamu",
+      "urgency": "high",
+      "reasoning": "Tanzania Creator Economy Fund (TZS 2B) activates July 2026. Timamu has 78 days to register AND submit EOI (deadline 2026-09-30). Legal registration must complete by mid-August to allow EOI drafting and submission. This is the largest domestic funding opportunity available \u2014 missing this window closes Timamu's 2026 entry."
+    },
+    {
+      "action": "Ensure Youdi Schipper finalizes KiuFunza research responses to FP DD questions 2.1-3.2 by August 10. Michael to schedule light check-in call with Lorcan Clarke by August 5 (positioning: 'wanted to confirm we're on track for your timeline'). Frame as momentum update, not a push. Do NOT mention Vadim in conversation \u2014 let Lorcan orchestrate that introduction.",
+      "funder": "Lorcan Clarke / Founders Pledge",
+      "programme": "soma",
+      "urgency": "high",
+      "reasoning": "FP due diligence response window closes August 15. Youdi's high-quality KiuFunza research answers are the throttle on FP probability. Early submission (August 10) signals confidence and keeps FP evaluation on track for Q1-Q2 2027 decision (USD 5M). Light check-in with Lorcan by August 5 confirms alignment without pressure."
+    }
+  ],
   "pipeline_health": {
-    "soma": "",
-    "kiufunza": "",
-    "timamu": "",
-    "concentration_risk": null,
-    "gap_progress": ""
+    "soma": "Founders Pledge USD 5M in active DD (decision Q1-Q2 2027, response window closes August 15); Youdi's KiuFunza research quality is the constraint \u2014 early submission critical. Dovetail/Prevail Track 2 (USD 150K, December 2026) NOT YET STARTED with Ali Ellegard. VTF SOMA conversation (USD 150K, March 2027) identified but not launched \u2014 must begin post-KiuFunza signing. GPE Tanzania (USD 500K, June 2027) requires PMO-RALG door-opener. Gap trajectory: 2027 SOMA need USD 637K; Founders Pledge USD 5M would over-cover, but concentration risk is extreme.",
+    "kiufunza": "VTF Phase 5 signing imminent (Sandra Oswald, USD 178K, deadline 2026-07-15 \u2014 48 HOURS). Hempel Hearing Committee considering USD 587K FY2026 renewal (decision by 2026-08-31). Combined KiuFunza 2026-2027 = USD 765K; strong momentum if both lock. Post-VTF signing, prepare separate SOMA conversation with VTF (tech mandate alignment).",
+    "timamu": "Microsoft AI for Accessibility (USD 150K, October 2026 rolling) and Adobe Foundation (USD 50K, September 2026 rolling) are both identified but dependent on Tanzania legal registration completion by mid-August. Creator Economy Fund Expression of Interest (September 30 deadline) is largest domestic opportunity \u2014 registration delay = missed window. Registration status must be confirmed TODAY.",
+    "concentration_risk": "Founders Pledge USD 5M represents 88% of 2027 SOMA gap (USD 637K). If FP declines, LearnImpact must activate Dovetail/Prevail (Ali Ellegard, Track 2, December 2026) and VTF SOMA conversation (post-signing) simultaneously. No Plan B depth currently visible.",
+    "gap_progress": "2027 SOMA gap USD 637K. Current confirmed pipeline: Founders Pledge USD 5M (high probability if DD response strong by August 15) + Dovetail/Prevail USD 150K (not started) + VTF SOMA USD 150K (not started) + GPE Tanzania USD 500K (not started) = theoretical USD 5.8M if all convert. Actual risk: FP concentration + zero alternate funders active yet. Urgency: Start Ali Ellegard Track 2 conversation by August 1; launch VTF SOMA post-signing by August 31."
   },
-  "positioning_move": "",
-  "flags": [],
-  "weekly_narrative": ""
+  "positioning_move": "Michael should publish a 2-minute video or LinkedIn post THIS WEEK featuring the VTF documentary team's field visit to Pangani & Kilindi (if footage/photos available). Frame: 'WhatsApp AI coaching reaching real classrooms in rural Tanzania \u2014 see how Mwalimu is scaling foundational learning where connectivity is the bottleneck.' This keeps LearnImpact visible with tech-focused funders (Founders Pledge, VTF leadership, potential SOMA prospects) and positions SOMA/Timamu at the convergence of education + creator economy + assistive technology. Target: Stay top-of-mind with Lorcan Clarke (FP) and warm VTF leadership for post-signing SOMA conversation.",
+  "flags": [
+    {
+      "flag": "VTF Phase 5 signing deadline 2026-07-15 (48 hours). Sandra Oswald confirmation is not yet documented in system as of briefing. If signing slips past EOW, USD 178K cash flow confirmation shifts to Q4 2026 at earliest.",
+      "urgency": "high",
+      "response": "Michael or Operations Lead calls Sandra TODAY (2026-07-14) to confirm signing date/location/witness details. Secure written confirmation by EOD. If any barrier detected, escalate to VTF CFO immediately. Do NOT wait for Sandra's next update \u2014 proactive confirmation is standard practice for imminent deal close."
+    },
+    {
+      "flag": "Timamu Tanzania company registration status is UNKNOWN as of briefing. If not yet registered, 21-day expedited incorporation timeline puts completion at ~2026-08-04, leaving only 4 weeks to draft and submit Ministry of ICT EOI before 2026-09-30 deadline. Corporate lawyer delays compound risk exponentially.",
+      "urgency": "high",
+      "response": "Michael confirms registration status TODAY with company secretary or legal counsel. If not registered: engage expedited corporate lawyer by end of this week (2026-07-17 at latest). Budget expedited fees if necessary \u2014 this is the largest domestic funding window available. Parallel: begin Ministry of ICT EOI draft this week (do not wait for registration completion)."
+    }
+  ],
+  "generated_at": "2026-07-14",
+  "week_number": 29
 }
