@@ -976,9 +976,8 @@ html[data-theme="light"] .dock-tab.active{color:#0b0b0c !important}
   /* ── Main: ensure content clears exec strip + nav on scroll ── */
   main{padding:10px 10px 76px}
 
-  /* ── Flatten cmd-grid on mobile — same structure as all other tabs ── */
-  .cmd-grid{display:block}
-  .cmd-sidebar{display:none}
+  /* ── cmd-main min-width:0 prevents CSS Grid from expanding to cal-strip's 800px ── */
+  .cmd-main{min-width:0}
 
   /* ── Prevent iOS auto-zoom on input focus (font-size must be ≥16px) ── */
   .field-group input,.field-group select,
@@ -1037,6 +1036,11 @@ html[data-theme="light"] .dock-tab.active{color:#0b0b0c !important}
 @media(max-width:1100px){
   .cmd-grid{grid-template-columns:1fr}
   .cmd-sidebar{position:static;max-height:none}
+}
+@media(max-width:768px){
+  /* Collapse grid to block so mobile cmd tab matches other tabs structurally */
+  .cmd-grid{display:block}
+  .cmd-sidebar{display:none}
 }
 
 /* ═══════════════════════════════════════════════════════════
