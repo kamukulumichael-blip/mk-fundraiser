@@ -10,6 +10,9 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <link rel="preconnect" href="https://kamukulumichael-blip.github.io">
 <link rel="dns-prefetch" href="https://kamukulumichael-blip.github.io">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 /* ═══════════════════════════════════════════════════════════
    THEME TOKENS — override per data-theme attribute on <html>
@@ -771,6 +774,212 @@ html[data-theme="obsidian"] .timamu-theme .hot-cta{background:var(--ti-coral)}
   #crm-drawer{width:480px}
   .fab{bottom:var(--gap-xl)}
 }
+
+/* ═══════════════════════════════════════════════════════════
+   STEALTH THEME
+═══════════════════════════════════════════════════════════ */
+html[data-theme="stealth"]{
+  --bg:#0b0b0c;--surface:#111113;--surface-2:rgba(255,255,255,.035);
+  --border:rgba(255,255,255,.07);--border-2:rgba(255,255,255,.04);
+  --text:#f0f0f2;--text-2:#888;--text-3:rgba(240,240,242,.28);
+  --nav-bg:#080809;--nav-text:rgba(255,255,255,.88);--nav-tab-active:rgba(255,198,80,.08);
+  --accent:#FFC650;--accent-text:#0b0b0c;--data:#5EA6B8;--warn:#BE6243;
+  --glow:rgba(255,198,80,.15);
+  --shadow:0 1px 12px rgba(0,0,0,.6);--shadow-lg:0 4px 40px rgba(0,0,0,.8);
+  --input-bg:rgba(255,255,255,.04);--input-border:rgba(255,255,255,.1);
+  --drawer-bg:#111113;--modal-bg:#111113;
+  --table-head:rgba(255,255,255,.03);--row-hover:rgba(255,255,255,.02);
+  --scrollbar:rgba(255,255,255,.07);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   TYPOGRAPHY — INTER, REDUCED WEIGHTS
+═══════════════════════════════════════════════════════════ */
+:root{--font:'Inter',system-ui,-apple-system,BlinkMacSystemFont,sans-serif}
+body{font-weight:300;letter-spacing:-.01em}
+.section-title{font-weight:400;letter-spacing:.05em;font-size:10px}
+.nav-brand{font-weight:500;font-size:15px;letter-spacing:-.3px}
+.hot-name{font-weight:500;font-size:13px}
+.hot-why{font-weight:300}
+.action-card h3{font-weight:500;font-size:12px}
+.action-card p{font-size:11px;font-weight:300}
+.pipeline-total{font-weight:300;font-size:16px}
+.pipeline-card h4{font-weight:500}
+td{font-weight:300;font-size:12px}
+.prog-stat-val{font-weight:300;font-size:19px}
+.brief-summary{font-weight:300;font-size:12px;line-height:1.65}
+.agent-brief-focus{font-weight:400;font-size:13px}
+.agent-brief-label{font-weight:500}
+.brief-week{font-weight:500}
+.hot-action{font-weight:400}
+.score-ring{font-size:13px;font-weight:500}
+thead th{font-weight:500}
+.drawer-header h3{font-weight:500;font-size:14px}
+.modal-box h3,.modal-box-lg h3{font-weight:500}
+.section-hrow .section-title{margin-bottom:0}
+
+/* ═══════════════════════════════════════════════════════════
+   COMMAND BAR — GLASSMORPHIC, ULTRA-THIN
+═══════════════════════════════════════════════════════════ */
+#main-nav{
+  backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+  border-bottom:0.5px solid var(--border);
+  box-shadow:none;height:48px;
+}
+html[data-theme="stealth"]  #main-nav{background:rgba(8,8,9,.95)}
+html[data-theme="midnight"] #main-nav{background:rgba(6,11,24,.94)}
+html[data-theme="obsidian"] #main-nav{background:rgba(10,10,11,.94)}
+html[data-theme="light"]    #main-nav{background:rgba(244,244,244,.94);border-bottom:0.5px solid rgba(53,64,98,.1)}
+/* Hide old tab row — replaced by floating dock */
+#main-nav .nav-tabs{display:none!important}
+.cmd-k{
+  font-size:11px;color:var(--text-3);font-weight:400;letter-spacing:.02em;
+  border:0.5px solid var(--border);border-radius:5px;padding:3px 8px;
+  display:flex;align-items:center;gap:4px;cursor:default;
+  background:var(--surface-2);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   EXECUTIVE STRIP
+═══════════════════════════════════════════════════════════ */
+#exec-strip{
+  display:flex;align-items:center;gap:0;
+  padding:7px 24px;
+  border-bottom:0.5px solid var(--border);
+  background:var(--bg);
+  position:sticky;top:48px;z-index:99;
+  transition:background .25s;
+}
+.exec-metric{display:flex;flex-direction:column;gap:1px;padding-right:20px}
+.exec-metric:first-child{padding-left:0}
+.exec-val{
+  font-size:13px;font-weight:300;color:var(--text);
+  letter-spacing:-.02em;display:flex;align-items:center;gap:5px;
+}
+.exec-label{
+  font-size:9px;font-weight:400;color:var(--text-3);
+  text-transform:uppercase;letter-spacing:.07em;
+}
+.exec-sep{width:0.5px;background:var(--border);align-self:stretch;margin-right:20px}
+/* Pulsing live dot */
+.pulse-dot{
+  width:6px;height:6px;border-radius:50%;background:#22C55E;
+  display:inline-block;flex-shrink:0;
+  animation:pulse-glow 2s ease-in-out infinite;
+}
+.pulse-dot.stale{background:var(--text-3);animation:none}
+@keyframes pulse-glow{
+  0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(34,197,94,.5)}
+  50%{opacity:.35;box-shadow:0 0 0 5px rgba(34,197,94,0)}
+}
+
+/* ═══════════════════════════════════════════════════════════
+   FLOATING KINETIC DOCK
+═══════════════════════════════════════════════════════════ */
+#float-dock{
+  display:flex;align-items:center;justify-content:center;
+  padding:8px 0 9px;
+  background:var(--bg);
+  border-bottom:0.5px solid var(--border);
+  position:sticky;top:calc(48px + 37px);z-index:98;
+  transition:background .25s;
+}
+#dock-inner{
+  position:relative;display:flex;align-items:center;
+  background:var(--surface);
+  border:0.5px solid var(--border);
+  border-radius:100px;padding:3px;gap:0;
+}
+#dock-indicator{
+  position:absolute;top:3px;height:calc(100% - 6px);
+  background:var(--accent);border-radius:100px;
+  transition:left .32s cubic-bezier(.34,1.56,.64,1),width .32s cubic-bezier(.34,1.56,.64,1);
+  pointer-events:none;z-index:0;
+}
+.dock-tab{
+  position:relative;z-index:1;
+  padding:5px 13px;border-radius:100px;
+  font-size:12px;font-weight:400;letter-spacing:-.01em;
+  color:var(--text-3);background:transparent;border:none;
+  cursor:pointer;white-space:nowrap;
+  transition:color .2s ease;
+}
+.dock-tab.active,.dock-tab.nav-tab.active{
+  color:var(--accent-text) !important;
+  background:transparent !important;
+}
+html[data-theme="light"] .dock-tab.active{color:#0b0b0c !important}
+@media(max-width:768px){
+  #float-dock{display:none}
+  #exec-strip{top:48px;padding:5px 12px}
+}
+
+/* ═══════════════════════════════════════════════════════════
+   70/30 COMMAND CENTER GRID
+═══════════════════════════════════════════════════════════ */
+.cmd-grid{
+  display:grid;grid-template-columns:1fr 300px;
+  gap:var(--gap-lg);align-items:start;
+}
+.cmd-sidebar{
+  position:sticky;top:156px;
+  max-height:calc(100vh - 170px);overflow-y:auto;
+  scrollbar-width:thin;scrollbar-color:var(--border) transparent;
+}
+.cmd-sidebar::-webkit-scrollbar{width:3px}
+.cmd-sidebar::-webkit-scrollbar-thumb{background:var(--border);border-radius:2px}
+.cmd-sidebar .agent-brief-section{
+  border:0.5px solid var(--border);border-left:none;
+  background:var(--surface);border-radius:var(--radius-lg);
+  animation:slide-in-right .4s cubic-bezier(.16,1,.3,1) both;
+}
+@keyframes slide-in-right{
+  from{opacity:0;transform:translateX(20px)}
+  to{opacity:1;transform:translateX(0)}
+}
+@media(max-width:1100px){
+  .cmd-grid{grid-template-columns:1fr}
+  .cmd-sidebar{position:static;max-height:none}
+}
+
+/* ═══════════════════════════════════════════════════════════
+   TAB CONTENT FADE-IN
+═══════════════════════════════════════════════════════════ */
+.tab-panel.active{
+  animation:tab-fade .15s ease-out both;
+}
+@keyframes tab-fade{
+  from{opacity:0;transform:translateY(5px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+/* ═══════════════════════════════════════════════════════════
+   STEALTH LOW-INK CARD HYGIENE
+═══════════════════════════════════════════════════════════ */
+html[data-theme="stealth"] .card,
+html[data-theme="stealth"] .gap-section,
+html[data-theme="stealth"] .pipeline-card,
+html[data-theme="stealth"] .prog-context,
+html[data-theme="stealth"] .hot-card{
+  background:transparent;box-shadow:none;border:0.5px solid var(--border);
+}
+html[data-theme="stealth"] .brief-banner{
+  background:rgba(255,255,255,.015);box-shadow:none;border:0.5px solid var(--border);
+}
+html[data-theme="stealth"] .action-card{
+  background:transparent;box-shadow:none;
+  border:0.5px solid var(--border);border-left:2px solid var(--accent);
+}
+html[data-theme="stealth"] .action-card.urgent{border-left-color:var(--warn)}
+html[data-theme="stealth"] .action-card.medium{border-left-color:var(--accent)}
+html[data-theme="stealth"] .action-card:hover{
+  background:var(--row-hover);transform:none;box-shadow:none;
+}
+html[data-theme="stealth"] .hot-card:hover{
+  transform:none;border-color:rgba(255,198,80,.3);background:var(--row-hover);box-shadow:none;
+}
+html[data-theme="stealth"] tbody tr:hover{background:rgba(255,255,255,.025)}
+html[data-theme="stealth"] .funder-table-wrap{border:0.5px solid var(--border)}
 </style>
 </head>
 <body>
@@ -790,86 +999,114 @@ html[data-theme="obsidian"] .timamu-theme .hot-cta{background:var(--ti-coral)}
 <!-- ══ APP ════════════════════════════════════════════════ -->
 <div id="app">
   <nav id="main-nav">
-    <div class="nav-brand" onclick="showMondayBrief()">Raisr <span>·</span> LearnImpact</div>
-    <div class="nav-tabs">
-      <button class="nav-tab active" onclick="showTab('cmd',this)">Command Center</button>
-      <button class="nav-tab" onclick="showTab('soma',this)">SOMA</button>
-      <button class="nav-tab" onclick="showTab('kiufunza',this)">KiuFunza</button>
-      <button class="nav-tab" onclick="showTab('timamu',this)">Timamu</button>
-      <button class="nav-tab" onclick="showTab('studio',this)">Doc Studio</button>
-      <button class="nav-tab" onclick="showMondayBrief()">Monday Brief</button>
-    </div>
+    <div class="nav-brand" onclick="showMondayBrief()">Raisr <span>·</span></div>
+    <div class="cmd-k">⌘K</div>
     <div class="nav-right">
       <div class="theme-switcher">
         <button class="theme-btn" onclick="setTheme('light')" id="tbtn-light">☀</button>
         <button class="theme-btn active" onclick="setTheme('midnight')" id="tbtn-midnight">◑</button>
         <button class="theme-btn" onclick="setTheme('obsidian')" id="tbtn-obsidian">◉</button>
+        <button class="theme-btn" onclick="setTheme('stealth')" id="tbtn-stealth">⬛</button>
       </div>
       <button id="settings-btn" onclick="openSettings()">⚙ Settings</button>
       <button id="hq-chip" onclick="lock()">HQ ✕</button>
     </div>
   </nav>
+  <!-- Executive strip -->
+  <div id="exec-strip">
+    <div class="exec-metric">
+      <span class="exec-val" id="strip-pipeline">—</span>
+      <span class="exec-label">Total Pipeline</span>
+    </div>
+    <div class="exec-sep"></div>
+    <div class="exec-metric">
+      <span class="exec-val" id="strip-health"><span class="pulse-dot stale"></span>&nbsp;—</span>
+      <span class="exec-label">Research Health</span>
+    </div>
+    <div class="exec-sep"></div>
+    <div class="exec-metric">
+      <span class="exec-val" id="strip-hot">—</span>
+      <span class="exec-label">Hot Funders</span>
+    </div>
+  </div>
+  <!-- Floating kinetic dock -->
+  <div id="float-dock">
+    <div id="dock-inner">
+      <div id="dock-indicator"></div>
+      <button class="dock-tab nav-tab active" onclick="showTab('cmd',this)" data-tab="cmd">Command</button>
+      <button class="dock-tab nav-tab" onclick="showTab('soma',this)" data-tab="soma">SOMA</button>
+      <button class="dock-tab nav-tab" onclick="showTab('kiufunza',this)" data-tab="kiufunza">KiuFunza</button>
+      <button class="dock-tab nav-tab" onclick="showTab('timamu',this)" data-tab="timamu">Timamu</button>
+      <button class="dock-tab nav-tab" onclick="showTab('studio',this)" data-tab="studio">Doc Studio</button>
+      <button class="dock-tab nav-tab" onclick="showMondayBrief()" data-tab="brief">Brief</button>
+    </div>
+  </div>
 
   <main>
     <!-- ── COMMAND CENTER ── -->
     <div id="tab-cmd" class="tab-panel active">
-      <div id="action-cards-area" class="action-cards"></div>
-      <div class="brief-banner">
-        <div class="brief-week" id="brief-week"></div>
-        <div class="brief-summary" id="brief-summary">Loading weekly brief…</div>
-        <div class="brief-ts" id="brief-ts"></div>
-      </div>
-      <!-- ── PIPELINE AGENT BRIEF ── -->
-      <div class="agent-brief-section" id="agent-brief-section" style="display:none">
-        <div class="agent-brief-header">
-          <span class="agent-brief-label">Pipeline Agent · Week <span id="ab-week"></span></span>
-          <div style="display:flex;gap:6px;align-items:center">
-            <button class="btn-xs" id="run-research-btn" onclick="triggerResearch()" title="Re-run weekly research now">↻ Run Research</button>
-            <button class="btn-xs" id="ab-toggle" onclick="toggleAgentBrief()">Expand ▼</button>
+      <div class="cmd-grid">
+        <!-- 70% main stream -->
+        <div class="cmd-main">
+          <div id="action-cards-area" class="action-cards"></div>
+          <div class="brief-banner">
+            <div class="brief-week" id="brief-week"></div>
+            <div class="brief-summary" id="brief-summary">Loading weekly brief…</div>
+            <div class="brief-ts" id="brief-ts"></div>
+          </div>
+          <div class="pipeline-row" id="pipeline-row"></div>
+          <div class="gap-section">
+            <div class="section-title">Funding Gap Status</div>
+            <div class="gap-bars" id="gap-bars"></div>
+          </div>
+          <!-- ── RESEARCH INBOX ── -->
+          <div class="section-hrow">
+            <div class="section-title">Research Inbox <span class="inbox-badge" id="inbox-count">0</span></div>
+            <button class="btn-xs promote" onclick="openQC()">+ Quick Capture</button>
+          </div>
+          <div class="card" style="margin-bottom:var(--gap-lg)">
+            <div class="inbox-tabs">
+              <button class="itab active" id="itab-prospects" onclick="switchInboxTab('prospects')">My Prospects</button>
+              <button class="itab" id="itab-sources" onclick="switchInboxTab('sources')">Intelligence Sources</button>
+            </div>
+            <div id="inbox-prospects"></div>
+            <div id="inbox-sources" style="display:none"></div>
+          </div>
+          <!-- ── EVENTS & NETWORKING ── -->
+          <div class="section-hrow">
+            <div class="section-title">Events &amp; Networking</div>
+            <button class="btn-xs" onclick="openAddEvent()">+ Add Event</button>
+          </div>
+          <div class="card" id="events-section" style="margin-bottom:var(--gap-lg)"></div>
+          <div class="section-title">Relationship Heat Map</div>
+          <div class="card" style="margin-bottom:var(--gap-lg)">
+            <div class="heat-map" id="heat-map"></div>
+          </div>
+          <div class="section-title">Alerts This Week</div>
+          <div class="alerts-strip" id="alerts-strip"></div>
+          <div class="section-title">Grant Calendar</div>
+          <div class="card grant-cal"><div class="cal-strip" id="cal-strip"></div></div>
+        </div>
+        <!-- 30% sticky sidebar — Pipeline Agent brief -->
+        <div class="cmd-sidebar" id="cmd-sidebar">
+          <div class="agent-brief-section" id="agent-brief-section" style="display:none">
+            <div class="agent-brief-header">
+              <span class="agent-brief-label">Pipeline Agent · Week <span id="ab-week"></span></span>
+              <div style="display:flex;gap:6px;align-items:center">
+                <button class="btn-xs" id="run-research-btn" onclick="triggerResearch()" title="Re-run weekly research now">↻ Run</button>
+                <button class="btn-xs" id="ab-toggle" onclick="toggleAgentBrief()">Expand ▼</button>
+              </div>
+            </div>
+            <div id="run-research-status" style="display:none;font-size:11px;margin-bottom:8px;padding:6px 10px;border-radius:6px;background:var(--surface-2)"></div>
+            <div class="agent-brief-focus" id="ab-focus"></div>
+            <div class="agent-brief-detail" id="ab-detail" style="display:none">
+              <div id="ab-actions"></div>
+              <div id="ab-flags"></div>
+              <div class="agent-brief-narrative" id="ab-narrative"></div>
+            </div>
           </div>
         </div>
-        <div id="run-research-status" style="display:none;font-size:11px;margin-bottom:8px;padding:6px 10px;border-radius:6px;background:var(--surface-2)"></div>
-        <div class="agent-brief-focus" id="ab-focus"></div>
-        <div class="agent-brief-detail" id="ab-detail" style="display:none">
-          <div id="ab-actions"></div>
-          <div id="ab-flags"></div>
-          <div class="agent-brief-narrative" id="ab-narrative"></div>
-        </div>
       </div>
-      <div class="pipeline-row" id="pipeline-row"></div>
-      <div class="gap-section">
-        <div class="section-title">Funding Gap Status</div>
-        <div class="gap-bars" id="gap-bars"></div>
-      </div>
-      <!-- ── RESEARCH INBOX ── -->
-      <div class="section-hrow">
-        <div class="section-title">Research Inbox <span class="inbox-badge" id="inbox-count">0</span></div>
-        <button class="btn-xs promote" onclick="openQC()">+ Quick Capture</button>
-      </div>
-      <div class="card" style="margin-bottom:var(--gap-lg)">
-        <div class="inbox-tabs">
-          <button class="itab active" id="itab-prospects" onclick="switchInboxTab('prospects')">My Prospects</button>
-          <button class="itab" id="itab-sources" onclick="switchInboxTab('sources')">Intelligence Sources</button>
-        </div>
-        <div id="inbox-prospects"></div>
-        <div id="inbox-sources" style="display:none"></div>
-      </div>
-
-      <!-- ── EVENTS & NETWORKING ── -->
-      <div class="section-hrow">
-        <div class="section-title">Events &amp; Networking</div>
-        <button class="btn-xs" onclick="openAddEvent()">+ Add Event</button>
-      </div>
-      <div class="card" id="events-section" style="margin-bottom:var(--gap-lg)"></div>
-
-      <div class="section-title">Relationship Heat Map</div>
-      <div class="card" style="margin-bottom:var(--gap-lg)">
-        <div class="heat-map" id="heat-map"></div>
-      </div>
-      <div class="section-title">Alerts This Week</div>
-      <div class="alerts-strip" id="alerts-strip"></div>
-      <div class="section-title">Grant Calendar</div>
-      <div class="card grant-cal"><div class="cal-strip" id="cal-strip"></div></div>
     </div>
 
     <!-- ── SOMA ── -->
@@ -1448,6 +1685,7 @@ function unlock() {
   const btn = document.getElementById('tbtn-' + t);
   if (btn) btn.classList.add('active');
   loadAllData();
+  requestAnimationFrame(()=>animateDock('cmd'));
 }
 function lock() {
   document.getElementById('gate').style.display='flex';
@@ -1546,6 +1784,9 @@ function renderAll() {
   renderFunderTable('timamu','timamu-tbody');
   renderConflicts(); renderPositioning(); updateDocFunderList();
   renderResearchInbox(); renderEventsSection();
+  initExecStrip();
+  // Position dock indicator on default active tab
+  requestAnimationFrame(()=>animateDock('cmd'));
 }
 
 function renderActionCards() {
@@ -2084,12 +2325,71 @@ function showTab(id,btn){
   const p=document.getElementById('tab-'+id);
   if(p)p.classList.add('active');
   if(btn&&btn.classList.contains('nav-tab'))btn.classList.add('active');
+  animateDock(id);
   syncBottomNav(id);
 }
 function syncBottomNav(id){
   document.querySelectorAll('.bn-tab').forEach(t=>t.classList.remove('active'));
   const bn=document.getElementById('bn-'+id);
   if(bn)bn.classList.add('active');
+}
+function animateDock(id){
+  const dock=document.getElementById('dock-inner');
+  const indicator=document.getElementById('dock-indicator');
+  if(!dock||!indicator)return;
+  const btn=dock.querySelector('.dock-tab[data-tab="'+id+'"]');
+  if(!btn)return;
+  const dockRect=dock.getBoundingClientRect();
+  const btnRect=btn.getBoundingClientRect();
+  const left=btnRect.left-dockRect.left;
+  indicator.style.width=btnRect.width+'px';
+  indicator.style.transform='translateX('+left+'px)';
+}
+function countUp(el,target,prefix,suffix){
+  if(!el)return;
+  const duration=800,start=performance.now();
+  const step=ts=>{
+    const prog=Math.min((ts-start)/duration,1);
+    const ease=1-Math.pow(1-prog,3);
+    const val=Math.round(ease*target);
+    el.textContent=(prefix||'')+val+(suffix||'');
+    if(prog<1)requestAnimationFrame(step);
+  };
+  requestAnimationFrame(step);
+}
+function initExecStrip(){
+  try{
+    const alerts=APP.alerts||{};
+    // Total pipeline USD
+    let pipeline=0;
+    if(alerts.funding_gap){
+      const g=alerts.funding_gap;
+      pipeline=(g.soma_pipeline_usd||0)+(g.kiufunza_confirmed_usd||0)+(g.timamu_pipeline_usd||0);
+    }
+    const stripPipeline=document.getElementById('strip-pipeline');
+    if(stripPipeline){
+      const millions=Math.round(pipeline/100000)/10;
+      countUp(stripPipeline,millions,'$','M');
+    }
+    // Research health: weeks since last research
+    const stripHealth=document.getElementById('strip-health');
+    if(stripHealth){
+      const gen=alerts.generated_at?new Date(alerts.generated_at):null;
+      const now=new Date();
+      const daysSince=gen?Math.floor((now-gen)/86400000):99;
+      const dot=`<span class="pulse-dot ${daysSince<=7?'':'stale'}"></span>&nbsp;`;
+      stripHealth.innerHTML=dot+(daysSince<=7?daysSince+'d ago':'Stale');
+    }
+    // Hot funders count
+    const stripHot=document.getElementById('strip-hot');
+    if(stripHot){
+      const hotCount=
+        ((alerts.soma&&alerts.soma.hot_list)||[]).filter(h=>h.composite_score>=80).length+
+        ((alerts.kiufunza&&alerts.kiufunza.hot_list)||[]).filter(h=>h.composite_score>=80).length+
+        ((alerts.timamu&&alerts.timamu.hot_list)||[]).filter(h=>h.composite_score>=80).length;
+      countUp(stripHot,hotCount,'','');
+    }
+  }catch(e){console.warn('initExecStrip',e);}
 }
 
 // ══════════════════════════════════════════════════════════════
