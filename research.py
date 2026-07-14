@@ -163,7 +163,14 @@ Be specific and actionable. No generic advice."""
         if start >= 0 and end > start:
             return json.loads(text[start:end])
     except Exception as e:
-        print(f"Error researching {programme}: {e}")
+        err_msg = str(e)
+        print(f"Error researching {programme}: {err_msg}")
+        return {
+            "insight_of_week": f"API error — {err_msg[:200]}",
+            "hot_list": [], "new_rfps": [], "new_funders_detected": [],
+            "priority_shifts": [], "out_of_industry": [],
+            "positioning_advice": ""
+        }
     return {
         "insight_of_week": f"Research unavailable for {programme} — retry next week.",
         "hot_list": [], "new_rfps": [], "new_funders_detected": [],
@@ -373,7 +380,18 @@ Insight: {timamu_res.get('insight_of_week','')}
             result["week_number"] = WEEK_NUM
             return result
     except Exception as e:
-        print(f"Pipeline brief error: {e}")
+        err_msg = str(e)
+        print(f"Pipeline brief error: {err_msg}")
+        return {
+            "generated_at": TODAY,
+            "week_number": WEEK_NUM,
+            "this_week_focus": f"Pipeline brief error — {err_msg[:200]}",
+            "top_3_actions": [],
+            "pipeline_health": {"soma": "", "kiufunza": "", "timamu": "", "concentration_risk": None, "gap_progress": ""},
+            "positioning_move": "",
+            "flags": [],
+            "weekly_narrative": ""
+        }
     return {
         "generated_at": TODAY,
         "week_number": WEEK_NUM,
