@@ -206,7 +206,7 @@ main{flex:1;padding:var(--gap-lg);max-width:1400px;margin:0 auto;width:100%}
 .pipeline-stages{display:flex;flex-direction:column;gap:6px}
 .pipeline-stage{display:flex;align-items:center;gap:8px;font-size:12px}
 .pipeline-stage-label{width:80px;color:var(--text-3);flex-shrink:0}
-.pipeline-bar-wrap{flex:1;height:5px;background:var(--surface-2);border-radius:3px;overflow:hidden}
+.pipeline-bar-wrap{flex:1;height:6px;background:var(--surface-2);border-radius:3px;overflow:hidden}
 .pipeline-bar{height:100%;border-radius:3px;background:var(--data);transition:width .6s ease}
 .pipeline-count{width:28px;text-align:right;font-weight:600;color:var(--text)}
 
@@ -984,6 +984,30 @@ html[data-theme="light"] .dock-tab.active{color:#0b0b0c !important}
   /* ── Touch targets: 44px min height on interactive elements ── */
   .field-group select,.toggle-switch{min-height:44px}
   .btn-xs{min-height:36px;padding:6px 12px}
+
+  /* ── Action cards: bolder on mobile ── */
+  .action-card{padding:16px}
+  .action-card h3{font-size:15px;font-weight:800}
+  .action-card p{font-size:12px;line-height:1.55}
+  .action-due{font-size:12px;margin-top:10px}
+
+  /* ── Pipeline: horizontal scroll (3 cards side-by-side, swipeable) ── */
+  .pipeline-row{
+    display:flex;overflow-x:auto;gap:12px;
+    padding-bottom:8px;margin-bottom:var(--gap-lg);
+    scrollbar-width:none;scroll-snap-type:x mandatory;
+  }
+  .pipeline-row::-webkit-scrollbar{display:none}
+  .pipeline-card{min-width:220px;flex-shrink:0;scroll-snap-align:start}
+  .pipeline-bar-wrap{height:10px;border-radius:5px}
+  .pipeline-bar{border-radius:5px}
+  .pipeline-stages{gap:9px}
+  .pipeline-stage{font-size:12px}
+  .pipeline-stage-label{width:72px;font-size:11px}
+  .pipeline-total{font-size:22px}
+
+  /* ── Brief banner: bigger summary text ── */
+  .brief-summary{font-size:13px;line-height:1.7;opacity:.9}
 }
 
 /* ═══════════════════════════════════════════════════════════
@@ -1915,22 +1939,31 @@ function renderAll() {
 function renderActionCards() {
   const c = document.getElementById('action-cards-area');
   if (!APP.alerts) return;
-  c.innerHTML = (APP.alerts.this_week_actions||[]).slice(0,3).map(a=>`
-    <div class="action-card ${a.urgency}" onclick="openFunderByName('${a.funder}')">
+  c.innerHTML = (APP.alerts.this_week_actions||[]).slice(0,3).map(a=>{
+    // Resolve funder ID to display name
+    const f = APP.funders.find(f=>f.id===a.funder);
+    const displayName = f ? f.name : a.funder.replace(/^f-/,'').replace(/-/g,' ').replace(/\b\w/g,c=>c.toUpperCase());
+    return `<div class="action-card ${a.urgency}" onclick="openDrawer('${a.funder}')">
       <div class="action-card-badges">
         <span class="prog-badge prog-${a.programme}">${a.programme.toUpperCase()}</span>
         <span class="urg-chip urg-${a.urgency}">${a.urgency}</span>
       </div>
-      <h3>${a.funder}</h3>
+      <h3>${displayName}</h3>
       <p>${a.action}</p>
       <div class="action-due">Due: ${formatDate(a.due)}</div>
-    </div>`).join('');
+    </div>`;
+  }).join('');
 }
 
 function renderBriefBanner() {
   if (!APP.alerts) return;
   document.getElementById('brief-week').textContent=`Week ${APP.alerts.week_number} · ${APP.alerts.generated_at}`;
-  document.getElementById('brief-summary').textContent=(APP.alerts.monday_brief_summary||'').split('\n')[0];
+  // Skip the first line (week label) and show the actual summary content
+  const raw = APP.alerts.monday_brief_summary || '';
+  const lines = raw.split('\n').map(l=>l.trim()).filter(Boolean);
+  const body = lines.length > 1 ? lines.slice(1).join(' ') : lines[0] || '';
+  const preview = body.length > 320 ? body.substring(0, 320) + '…' : body;
+  document.getElementById('brief-summary').textContent = preview || 'No summary yet.';
   document.getElementById('brief-ts').textContent=`Last generated: ${APP.alerts.generated_at}`;
   const wv=document.getElementById('brief-view-week');
   if(wv) wv.textContent=`Week ${APP.alerts.week_number} · ${APP.alerts.generated_at}`;
