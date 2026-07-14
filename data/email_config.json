@@ -6,6 +6,6 @@
   "frequency": "weekly",
   "send_day": "Monday",
   "send_time": "morning",
-  "last_sent": null,
+  "last_sent": "2026-07-14T12:34:04.344085Z",
   "send_now": false
 }
