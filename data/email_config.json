@@ -1,6 +1,8 @@
 {
   "enabled": false,
-  "recipients": [],
+  "recipients": [
+    "mkamukulu@learnimpact.org"
+  ],
   "frequency": "weekly",
   "send_day": "Monday",
   "send_time": "morning",
