@@ -462,7 +462,7 @@ html[data-theme="obsidian"] .btn-primary{background:var(--accent);color:var(--ac
   align-items:center;justify-content:center;background:rgba(0,0,0,.5)}
 #settings-modal.open{display:flex}
 .modal-box{background:var(--modal-bg);border-radius:var(--radius-lg);
-  padding:var(--gap-xl);width:420px;max-width:90vw;
+  padding:var(--gap-xl);width:420px;max-width:min(420px,92vw);
   box-shadow:var(--shadow-lg);border:1px solid var(--border)}
 .modal-box h3{font-size:17px;font-weight:800;color:var(--text);margin-bottom:var(--gap-lg)}
 .field-group{margin-bottom:var(--gap-md)}
@@ -490,8 +490,9 @@ html[data-theme="obsidian"] .btn-primary{background:var(--accent);color:var(--ac
 .toggle-switch input:checked+.toggle-slider:before{transform:translateX(18px)}
 /* recipient tags */
 .recipient-input-row{display:flex;gap:6px;margin-bottom:8px}
-.recipient-input-row input{flex:1;padding:8px 10px;border:1.5px solid var(--input-border);
-  background:var(--input-bg);color:var(--text);border-radius:var(--radius);font-size:12px}
+.recipient-input-row input{flex:1;padding:10px 10px;border:1.5px solid var(--input-border);
+  background:var(--input-bg);color:var(--text);border-radius:var(--radius);font-size:16px;
+  min-height:44px}
 .recipient-input-row input:focus{border-color:var(--accent);outline:none}
 .recipient-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px;min-height:28px}
 .recipient-tag{display:inline-flex;align-items:center;gap:5px;background:rgba(53,64,98,.15);
@@ -947,7 +948,42 @@ html[data-theme="light"]    #main-nav{background:rgba(244,244,244,.94);border-bo
 html[data-theme="light"] .dock-tab.active{color:#0b0b0c !important}
 @media(max-width:768px){
   #float-dock{display:none}
-  #exec-strip{top:48px;padding:5px 12px}
+
+  /* ── Exec strip: compact 3-metric bar ── */
+  #exec-strip{top:48px;padding:4px 10px;height:auto;min-height:36px}
+  .exec-metric{padding-right:8px;gap:0}
+  .exec-sep{margin-right:8px}
+  .exec-val{font-size:12px}
+  .exec-label{font-size:8px;letter-spacing:.04em}
+
+  /* ── Nav: hide keyboard-only hints, slim settings button ── */
+  .cmd-k{display:none}
+  #settings-btn{font-size:10px;padding:3px 7px}
+
+  /* ── Settings modal: stack day+time fields vertically ── */
+  .field-row{flex-direction:column;gap:var(--gap-sm)}
+  .modal-box{max-height:85vh;width:92vw;padding:16px}
+  .radio-group{gap:5px}
+  .radio-chip label{padding:5px 10px;font-size:10px}
+
+  /* ── Sidebar agent brief: fade instead of slide on full-width mobile ── */
+  .cmd-sidebar .agent-brief-section{animation:tab-fade .2s ease-out both}
+
+  /* ── Bottom nav: tighter to fit 6 tabs on 375px ── */
+  .bn-tab{padding:8px 1px 6px;font-size:8px;min-height:52px}
+  .bn-tab .bn-icon{font-size:18px}
+
+  /* ── Main: ensure content clears exec strip + nav on scroll ── */
+  main{padding:10px 10px 76px}
+
+  /* ── Prevent iOS auto-zoom on input focus (font-size must be ≥16px) ── */
+  .field-group input,.field-group select,
+  .modal-field input,.modal-field select,.modal-field textarea,
+  #recipient-input{font-size:16px !important}
+
+  /* ── Touch targets: 44px min height on interactive elements ── */
+  .field-group select,.toggle-switch{min-height:44px}
+  .btn-xs{min-height:36px;padding:6px 12px}
 }
 
 /* ═══════════════════════════════════════════════════════════
