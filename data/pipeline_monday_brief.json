@@ -1,7 +1,7 @@
 {
   "generated_at": "2026-07-14",
   "week_number": 29,
-  "this_week_focus": "Pipeline brief unavailable \u2014 check logs and retry.",
+  "this_week_focus": "Pipeline brief error \u2014 Expecting ',' delimiter: line 32 column 4 (char 4117)",
   "top_3_actions": [],
   "pipeline_health": {
     "soma": "",
