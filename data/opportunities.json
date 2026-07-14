@@ -14,28 +14,28 @@
       "outcome": null,
       "won_amount_usd": null,
       "drive_proposal_id": "",
-      "won_lost_notes": "",
-      "pattern_tags": ["evidence-framing", "LAYS-cost-effectiveness", "government-partnership", "RCT-backed"],
+      "won_lost_notes": "Full DD Q&A (4 sets from June 16) submitted June 30 by Youdi + Michael, with SOMA CN attached. Lorcan replied July 1 confirming progression. Second limited set of questions expected second half July 2026. Decision expected Q1-Q2 2027.",
+      "pattern_tags": ["evidence-framing", "LAYS-cost-effectiveness", "government-partnership", "RCT-backed", "DD-in-progress"],
       "created_at": "2026-05-01",
-      "updated_at": "2026-06-30"
+      "updated_at": "2026-07-14"
     },
     {
       "id": "opp-vtf-kiufunza-2026",
       "funder_id": "f-vtf",
       "programme": "kiufunza",
       "title": "KiuFunza Phase 5 — VTF Renewal 2026-2027",
-      "stage": "in_review",
+      "stage": "won",
       "ask_amount_usd": 178000,
-      "deadline": "2026-07-15",
+      "deadline": "2026-07-30",
       "submitted_date": "2026-05-15",
       "document_type": "full_proposal",
-      "outcome": "signing_imminent",
+      "outcome": "won_pending_counter_signature",
       "won_amount_usd": 178000,
       "drive_proposal_id": "",
-      "won_lost_notes": "Agreement finalised 2026-07-01. Sandra confirmed readiness to sign. TZS 462M (~USD 178K). Signing expected before 2026-07-10. Prepare onboarding pack for VTF comms team.",
-      "pattern_tags": ["technology-mandate", "Tanzania-CSR", "KiuFunza-renewal", "signing-imminent"],
+      "won_lost_notes": "LearnImpact signed and returned agreement July 9 2026. Vodacom counter-signature expected within 2-3 weeks (~July 30). Agreement circulating to VTF internal stakeholders. Onboarding into Vodacom systems pending receipt of fully signed agreement.",
+      "pattern_tags": ["technology-mandate", "Tanzania-CSR", "KiuFunza-renewal", "signed-by-li"],
       "created_at": "2026-04-01",
-      "updated_at": "2026-07-01"
+      "updated_at": "2026-07-14"
     },
     {
       "id": "opp-hempel-kiufunza",
@@ -50,10 +50,10 @@
       "outcome": null,
       "won_amount_usd": null,
       "drive_proposal_id": "",
-      "won_lost_notes": "USD 587K confirmed FY2026. Renewal under active Hearing Committee consideration.",
-      "pattern_tags": ["anchor-donor", "relationship-based", "long-term-partnership", "evidence-based"],
+      "won_lost_notes": "USD 587K confirmed FY2026. Renewal under active Hearing Committee consideration. Renewal formally LOW probability (extension already given 2026). HF Board TZ visit Sept 27+30 is critical cultivation — prepare actively. Rosa mentioned renewal possibility at Oxford April 2026. Anders Holm (HF Director) engaged for first time at SC May 27.",
+      "pattern_tags": ["anchor-donor", "relationship-based", "long-term-partnership", "evidence-based", "board-visit-sept-2026"],
       "created_at": "2025-11-01",
-      "updated_at": "2026-06-30"
+      "updated_at": "2026-07-14"
     },
     {
       "id": "opp-dovetail-track1",
