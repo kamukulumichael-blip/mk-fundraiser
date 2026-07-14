@@ -271,24 +271,44 @@ Only include genuinely relevant findings. Maximum 10 findings. Be specific — n
 
 
 def fetch_ms365_intelligence():
-    """Fetch funder-related emails and calendar events from Michael's M365 Outlook via Graph API."""
-    tenant_id = os.environ.get("MS_TENANT_ID", "")
-    client_id = os.environ.get("MS_CLIENT_ID", "")
+    """Fetch funder-related emails and calendar events from Michael's M365 Outlook via Graph API.
+    Prefers delegated flow (MS_REFRESH_TOKEN — no admin consent needed).
+    Falls back to client credentials flow if refresh token not set."""
+    tenant_id     = os.environ.get("MS_TENANT_ID", "")
+    client_id     = os.environ.get("MS_CLIENT_ID", "")
     client_secret = os.environ.get("MS_CLIENT_SECRET", "")
+    refresh_token = os.environ.get("MS_REFRESH_TOKEN", "")
 
-    if not all([tenant_id, client_id, client_secret]):
+    if not tenant_id or not client_id:
         print("MS365 credentials not set — skipping Outlook sync.")
         return {"emails": [], "events": [], "synced_at": TODAY, "error": "credentials_missing"}
 
-    token_resp = requests.post(
-        f"https://login.microsoftonline.com/{tenant_id}/oauth2/v2.0/token",
-        data={
-            "grant_type": "client_credentials",
-            "client_id": client_id,
-            "client_secret": client_secret,
-            "scope": "https://graph.microsoft.com/.default"
-        }
-    )
+    # Delegated flow: use refresh token (preferred — no admin consent needed)
+    if refresh_token:
+        token_resp = requests.post(
+            f"https://login.microsoftonline.com/{tenant_id}/oauth2/v2.0/token",
+            data={
+                "grant_type":    "refresh_token",
+                "refresh_token": refresh_token,
+                "client_id":     client_id,
+                "scope":         "Mail.ReadBasic Calendars.Read offline_access",
+            }
+        )
+    elif client_secret:
+        # Application flow: requires admin consent (fallback)
+        token_resp = requests.post(
+            f"https://login.microsoftonline.com/{tenant_id}/oauth2/v2.0/token",
+            data={
+                "grant_type":    "client_credentials",
+                "client_id":     client_id,
+                "client_secret": client_secret,
+                "scope":         "https://graph.microsoft.com/.default",
+            }
+        )
+    else:
+        print("MS365: no refresh token or client secret — skipping.")
+        return {"emails": [], "events": [], "synced_at": TODAY, "error": "no_auth_method"}
+
     if token_resp.status_code != 200:
         err = token_resp.text[:200]
         print(f"MS365 token error {token_resp.status_code}: {err}")
