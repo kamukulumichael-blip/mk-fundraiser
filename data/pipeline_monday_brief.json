@@ -1,43 +1,16 @@
 {
-  "this_week_focus": "File Timamu legal registration in Tanzania by Friday to unlock Tanzania Creator Economy Fund (TZS 2B) EOI deadline Sept 30; simultaneously prepare Lorcan's SOMA redesign brief (assessment + AI analytics + dashboard + Mwalimu Kinara) for his second DD questions expected by July 31.",
-  "top_3_actions": [
-    {
-      "action": "Submit Timamu legal registration application to Tanzania Business Registration & Licensing Agency (BRLA) by Friday 2026-07-26. Confirm with legal counsel that registration covers digital creative tools + assistive technology for PWDs. This is the gating requirement for Tanzania Creator Economy Fund EOI (Sept 30 deadline).",
-      "funder": "Tanzania Ministry of ICT (Tanzania Creator Economy Fund)",
-      "programme": "timamu",
-      "urgency": "high",
-      "reasoning": "TZS 2B fund launches this week. EOI deadline is Sept 30 (only 69 days away). Registration is non-negotiable eligibility gate. Delay by even 1 week compresses preparation time for concept note (due Aug 15 per intel). This is the largest domestic funding opportunity available for Timamu."
-    },
-    {
-      "action": "Draft 1-page SOMA Redesign Brief for Lorcan Clarke: headline is 'SOMA July 2026 Board Redesign \u2014 Locked Cost Model & Enhanced Impact'. Content: (1) Assessment framework (3x/year) + ability grouping, (2) Live learning dashboard, (3) AI predictive analytics (powered by KiuFunza + Uwezo data), (4) Mwalimu Kinara integration, (5) Cost lock: USD 3.12/student/year. Pre-emptively address dropped TaRL prescription and WhatsApp bot as 'not fit-for-purpose relative to dashboard + analytics'. Cite Quarterly Journal of Economics KiuFunza evidence. Hold brief; do not send unsolicited. Respond within 24 hours of Lorcan's second DD set arrives.",
-      "funder": "Founders Pledge (Lorcan Clarke, Applied Researcher)",
-      "programme": "soma",
-      "urgency": "high",
-      "reasoning": "Lorcan's July 14 email signals internal FP recommendation made and partner review phase underway. Second DD questions expected by July 31 (this week or next). This is the highest-probability moment in the USD 5M decision cycle before Q1-Q2 2027 final decision. Shape the narrative on redesign NOW or risk FP partner review misunderstanding programme scope."
-    },
-    {
-      "action": "Michael: Schedule 90-minute pre-visit briefing with Youdi Schipper + Rosa Robinson + LearnImpact ops team for week of Aug 5. Agenda: (1) KiuFunza Year 2 impact data + Year 3 roadmap (Youdi leads), (2) Hempel Foundation board composition + Anders Holm's business-sector incentives interest (Rosa leads), (3) School visit narrative for Sept 30 VVOB event \u2014 emphasize teacher incentives + performance pay angle (ops team leads), (4) Confirm Sept 27 education partners event logistics + Sept 30 school logistics with VVOB. Prepare 1-pager 'KiuFunza Impact & Roadmap' for Anders/HF board. Do NOT pitch renewal directly \u2014 let Rosa lead conversation.",
-      "funder": "Hempel Foundation (Rosa Robinson, Programme Officer; Anders Holm, Director)",
-      "programme": "kiufunza",
-      "urgency": "high",
-      "reasoning": "HF Board visit Sept 27\u201330 is the single most critical cultivation moment of 2026 for KiuFunza renewal (USD 587K). Renewal is formally LOW probability but Rosa has signaled possibility. Anders' first-time SC attendance (May 27) showed genuine interest in incentives model. Intensive preparation now determines whether HF extends beyond 2026 or walks. Failure to activate = loss of USD 587K anchor donor."
-    }
-  ],
-  "pipeline_health": {
-    "soma": "Founders Pledge USD 5M in partner review phase (Lorcan Clarke); second DD questions expected by July 31. SOMA July 2026 board redesign (assessment + AI analytics + dashboard + Mwalimu Kinara; cost-lock USD 3.12/student/year) must be briefed to Lorcan within 24 hours of his questions. Dovetail Track 2 (USD 150K, AI + dashboard) identified but not yet initiated; Ali Ellegard contact ready for Sept start. VTF USD 150K (tech mandate fit) gates on VTF counter-signature (~July 30). Gap progress: USD 229K confirmed / USD 637K gap remains; Founders Pledge decision is the primary gap-closer.",
-    "kiufunza": "Hempel Foundation Renewal (USD 587K) under Hearing Committee review; renewal formally LOW probability but Rosa Robinson and Anders Holm both engaged. HF Board TZ visit Sept 27\u201330 is make-or-break cultivation moment. Youdi Schipper (research advisor) ready to present QJE evidence. VTF partnership on track for July 30 counter-signature. Current FY2026 funding confirmed.",
-    "timamu": "Legal registration in Tanzania is the gating constraint for Tanzania Creator Economy Fund (TZS 2B, Ministry of ICT) EOI deadline Sept 30. Registration must be filed by Friday 2026-07-26. Microsoft AI for Accessibility (USD 150K, rolling deadline Oct 1) and Adobe Foundation (USD 50K, rolling deadline Sept 1) are secondary high-alignment prospects post-registration.",
-    "concentration_risk": "Hempel Foundation (USD 587K, formally LOW renewal probability despite engagement) is the sole anchor for KiuFunza beyond 2026. Loss of HF = loss of programme financial sustainability. Mitigations: intensive Sept 27\u201330 cultivation; Anders Holm board-level engagement on incentives model. Secondary risk: Founders Pledge decision slips beyond Q1-Q2 2027, delaying SOMA gap closure.",
-    "gap_progress": "SOMA 2027 gap is USD 637K of USD 866K need. Confirmed: USD 229K (12-month runway remaining). Trajectory: Founders Pledge USD 5M decision (Q1-Q2 2027) is the primary gap-closer. Secondary: VTF (USD 150K, July 30 trigger) + Dovetail Track 2 (USD 150K, Sept start). Gap closure is on track IF Founders Pledge moves into final decision phase by Aug 31 and IF VTF counter-signs by July 30. No movement on GPE (USD 500K, identified but not yet initiated)."
-  },
-  "positioning_move": "Michael should publish a 400-word LinkedIn post or short blog by Thursday 2026-07-25: 'SOMA 2026 Redesign: Why AI Analytics + Live Dashboards Replace Coaching Bots'. Position LearnImpact as evidence-led, willing to kill features that don't scale (TaRL prescription, WhatsApp bot) in favour of classroom-level decision support (assessment + ability grouping + AI predictive alerts for teachers). Cite KiuFunza QJE evidence. This move (1) signals design maturity to Lorcan before his second DD questions, (2) demonstrates agility to Founders Pledge partner review, (3) establishes Timamu's credibility on assistive technology + digital tools (not just hardware). Tag Youdi and Hempel Foundation to warm the relationship.",
-  "flags": [
-    {
-      "flag": "Timamu legal registration deadline compression: TZS 2B fund EOI (Sept 30) gates on registration filed THIS WEEK. No buffer. Concept note due Aug 15 (only 20 days post-registration if filed Friday).",
-      "urgency": "high",
-      "response": "Assign legal filing to external Tanzania counsel IMMEDIATELY (today). Confirm filing by Friday EOD. Parallel-track concept note outline (assistive tech + digital creative + Vision 2050 disability alignment) with ops team so draft is ready Aug 5 for submission Aug 15."
-    }
-  ],
   "generated_at": "2026-07-23",
-  "week_number": 30
+  "week_number": 30,
+  "this_week_focus": "Pipeline brief error \u2014 Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purcha",
+  "top_3_actions": [],
+  "pipeline_health": {
+    "soma": "",
+    "kiufunza": "",
+    "timamu": "",
+    "concentration_risk": null,
+    "gap_progress": ""
+  },
+  "positioning_move": "",
+  "flags": [],
+  "weekly_narrative": ""
 }
