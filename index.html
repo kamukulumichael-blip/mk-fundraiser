@@ -1835,6 +1835,18 @@ function unlock() {
   const btn = document.getElementById('tbtn-' + t);
   if (btn) btn.classList.add('active');
   loadAllData();
+  setInterval(async () => {
+    try {
+      const fresh = await fetchJSON('./data/alerts.json');
+      if (fresh.generated_at !== (APP.alerts||{}).generated_at) {
+        APP.alerts = fresh;
+        renderActionCards(); renderBriefBanner(); renderPipeline();
+        renderAlerts(); renderFundingGap(); renderHotList('soma');
+        renderHotList('kiufunza'); renderHotList('timamu');
+        console.log('Alerts refreshed →', fresh.generated_at, 'Week', fresh.week_number);
+      }
+    } catch(e) { /* silent — keep showing existing data */ }
+  }, 5 * 60 * 1000);
   requestAnimationFrame(()=>animateDock('cmd'));
 }
 function lock() {
