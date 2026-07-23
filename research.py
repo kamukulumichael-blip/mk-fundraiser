@@ -58,6 +58,12 @@ KiuFunza Programme: Teacher performance pay, Grades 1-7. 265 schools.
 QJE-published: +9.4pp treatment effect. USD 7/child/year.
 Active funders: Hempel (anchor, Hearing Committee), VTF (TZS 462M near-confirmed), Dovetail ($100K Track 1 SIGNED July 2026).
 CRITICAL: Never lead with Twaweza history. GoT sensitivity — brand damaging.
+
+FUNDER EXCLUSIONS (board policy — never surface these in hot lists, recommendations, or new funder suggestions):
+- Alcohol industry (breweries, spirits, wine, beer distributors) — e.g. Tanzania Breweries, AB InBev, EABL
+- Tobacco industry (manufacturers, distributors) — e.g. BAT Tanzania
+- Gambling/betting industry (casinos, sports betting, lotteries) — e.g. SportPesa, Betika
+If a funder in these categories is detected, mark as DNA and do not include in any output.
 """.strip()
 
 TIMAMU_CONTEXT = """
@@ -78,6 +84,7 @@ Locked cost evidence: SOMA = USD 3.12/student/year; KiuFunza = +9.4pp (Quarterly
 SOMA redesigned July 2026: assessments (3x/year) + ability grouping + learning dashboard + Mwalimu Kinara + AI predictive analytics. No TaRL prescription. No WhatsApp bot.
 LearnImpact is NOT a startup — established NGO Reg. 00NGO/R/8931, 10+ years evidence, newly independent from Twaweza May 2026.
 Never re-derive cost figures. Michael owns all donor relationships. Name names. Flag risks early.
+NEVER recommend funders from: alcohol industry, tobacco industry, gambling/betting industry. These are board-level exclusions — do not surface them under any circumstances.
 
 Return ONLY valid JSON:
 {
