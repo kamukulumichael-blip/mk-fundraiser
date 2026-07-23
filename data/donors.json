@@ -203,8 +203,8 @@
       "relationship_stage": "partner",
       "relationship_health": "warm",
       "last_touchpoint": {
-        "date": "2026-06-01",
-        "note": "Track 1 USD 100K confirmed. Ali Ellegard is the relationship manager.",
+        "date": "2026-07-23",
+        "note": "Michael signed an agreement with Dovetail for Track 1 - $100K. Ragate (LI's Senior Finance & Operatiosn Officer) will verify bank details with DOvetail tema on Monday 27 July 2026, immediately after that, funds will be transfered to LearnImpact's Bank",
         "channel": "email"
       },
       "next_action": "Start Track 2 SOMA conversation with Ali. Frame SOMA AI coaching as the natural next step beyond Track 1 assessment. Potential 10-year partnership.",
@@ -230,6 +230,10 @@
       ],
       "intelligence_notes": [
         {
+          "date": "2026-07-23",
+          "note": "Michael signed an agreement with Dovetail for Track 1 - $100K. Ragate (LI's Senior Finance & Operatiosn Officer) will verify bank details with DOvetail tema on Monday 27 July 2026, immediately after that, funds will be transfered to LearnImpact's Bank"
+        },
+        {
           "date": "2026-06-01",
           "note": "Track 1 $100K won. Dovetail/Prevail Fund is a strong relationship — potential for 10-year partnership."
         },
@@ -240,7 +244,7 @@
       ],
       "drive_notes_id": "",
       "created_at": "2026-01-15",
-      "updated_at": "2026-06-30"
+      "updated_at": "2026-07-23"
     },
     {
       "id": "d-youdi-schipper",
