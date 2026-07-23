@@ -1,208 +1,215 @@
 {
-  "generated_at": "2026-07-14",
-  "week_number": 29,
+  "generated_at": "2026-07-23",
+  "week_number": 30,
   "soma": {
-    "insight_of_week": "Founders Pledge has submitted a positive grant recommendation for USD 5M to their philanthropy partner (decision July-August 2026). Lorcan Clarke explicitly signalled progression on July 14 with 'second limited set of questions' expected in second half of July. This is the most mature deal in pipeline\u2014probability has shifted from 55% to 65%+ pending final partner questions. Michael must prepare crisp responses NOW (within 5 days) to avoid delay into Q3.",
+    "insight_of_week": "Founders Pledge $5M recommendation has progressed to philanthropy partner review (Lorcan email July 14). Second limited DD round expected by July 31. Michael must prepare focused responses on SOMA programme redesign (July 2026 board changes: dropped TaRL/WhatsApp bot, locked AI analytics + assessment + dashboard + Mwalimu Kinara) before Lorcan's questions arrive. Decision timeline: Q1-Q2 2027.",
     "hot_list": [
       {
         "funder_id": "f-founders-pledge",
-        "why_now": "Grant recommendation submitted to partner. Second DD round imminent (expected by July 31). Decision timeline Q1-Q2 2027 but questions this month are make-or-break for momentum. USD 5M ask is largest single prospect.",
-        "recommended_action": "Schedule internal prep call (Michael + Youdi) by July 17 to draft response templates for likely second-round questions on: (1) risk mitigation if Mtwara RCT shows <7pp effect size, (2) path to government adoption post-Kibaha, (3) unit economics under 3 exchange rate scenarios. Keep Lorcan looped; do not over-communicate.",
+        "why_now": "Lorcan's July 14 email signals internal FP recommendation made. Partner review phase = highest probability moment before final decision. Second DD questions imminent (by July 31). Window to shape narrative on SOMA redesign is NOW.",
+        "recommended_action": "Prepare 1-page briefing for Lorcan on July 2026 SOMA board redesign: assessment + ability grouping + dashboard + Mwalimu Kinara + AI analytics. Emphasise cost-lock ($3.12/student/year) and LAYS modelling. Pre-empt likely questions on dropped TaRL prescription and WhatsApp coaching bot (not fit-for-purpose). Do not send unsolicited; wait for Lorcan's second DD set, then respond swiftly.",
         "deadline": "2026-07-31",
-        "composite_score": 8.47
-      },
-      {
-        "funder_id": "f-vtf",
-        "why_now": "VTF KiuFunza Grant Agreement counter-signature expected by July 30. Upon full execution, relationship moves to 'onboarding' phase. This is the moment to initiate SOMA conversation\u2014VTF's 80% tech mandate maps perfectly to Mwalimu WhatsApp AI coaching (USD 150K ask, not to compete with KiuFunza but positioned as post-Phase 5 evolution). Sandra's July 14 signal re: 5-year MoU indicates appetite for multi-year commitment.",
-        "recommended_action": "Michael: email Sandra (cc Youdi) by July 22 (after agreement signed, before August): 'Sandra, thank you for finalizing the KiuFunza partnership. As we think about how technology can deepen teacher impact post-2027, we'd like to explore how Mwalimu (our WhatsApp AI coaching tool) might complement VTF's digital mandate. Can we schedule 30min with you + tech team in early August?' Frame as natural evolution, not replacement.",
-        "deadline": "2026-08-15",
-        "composite_score": 7.81
+        "composite_score": 11.88
       },
       {
         "funder_id": "f-dovetail",
-        "why_now": "Track 1 (USD 100K) won June 2026. Ali Ellegard is warm. Track 2 conversation has NOT started. Assessment technology angle is documented entry point. Dovetail's 10-year partnership potential makes this a strategic long-game relationship\u2014USD 150K Track 2 ask is realistic follow-on.",
-        "recommended_action": "Youdi: initiate Track 2 conversation with Ali by July 25. Email frame: 'Hi Ali, Track 1 enabled us to establish assessment baselines in Kibaha. Now we're launching AI coaching (Mwalimu) to close the feedback loop\u2014real-time teacher support powered by assessment data. Track 2 would fund pilot integration in 15 schools. Does this resonate as a natural next chapter?' Request 20min call in early August. Emphasize 10-year partnership narrative, not ad-hoc funding.",
+        "why_now": "Track 1 ($100K) signed July 23. Bank transfer verified Monday July 27. Ali Ellegard is warm and ready. Immediate follow-up window (next 2 weeks) to initiate Track 2 SOMA conversation while momentum is high.",
+        "recommended_action": "Email Ali Ellegard by July 28: 'Track 1 onboarding underway. We'd like to explore Track 2 for SOMA's AI predictive analytics layer (KiuFunza + Uwezo historical data feeding live learning dashboard). This completes the assessment \u2192 insight \u2192 coaching improvement cycle. Could we schedule a 30-min call in first week of August to scope fit?' Frame as natural 10-year partnership extension.",
         "deadline": "2026-08-31",
-        "composite_score": 7.34
+        "composite_score": 11.52
       },
       {
-        "funder_id": "f-gpe",
-        "why_now": "Tanzania GPE grant (USD 88M) just disbursed 2026. Entry point is positioning SOMA as NGO complementary delivery mechanism to government-led curriculum. This requires PMO-RALG door-opener (political/MOE relationship). USD 500K ask is realistic if government champions integration. EOI stage\u2014low effort to explore.",
-        "recommended_action": "Michael: engage Hempel relationship manager (who sits on Hearing Committee) to request warm intro to Tanzania GPE Country Coordinator and PMO-RALG contact. Message to Hempel: 'We're exploring how SOMA teacher coaching could complement GPE-funded curriculum rollout in Dar/Morogoro. Your government relationships are invaluable\u2014can you introduce us?' Schedule call with GPE coordinator by end August. Do NOT approach GPE cold.",
-        "deadline": "2027-06-01",
-        "composite_score": 5.92
-      },
-      {
-        "funder_id": "f-gates",
-        "why_now": "Gates announced USD 40M AI-education partnership with ADQ (Dec 2025) for sub-Saharan Africa. SOMA (USD 3.12/student/year, WhatsApp AI, RCT-backed) is textbook Gates alignment. However, Gates portfolio is crowded and probability is 35%. Effort score is 5 (high). Best entry is through Gates' LAYS metric community\u2014become visible there first.",
-        "recommended_action": "Michael + Youdi: co-author 2,000-word thought piece 'Cost-Effective AI-Enabled Foundational Learning in Sub-Saharan Africa: Lessons from Tanzania' for Gates Medium/blog or Education Week (by Aug 31). Emphasize LAYS modelling (USD 12/LAYS), QJE evidence, government co-financing model. Share with Gates via education team (not cold). Use to warm relationship before direct ask in Q4 2026.",
-        "deadline": "2026-10-15",
-        "composite_score": 5.63
+        "funder_id": "f-vtf",
+        "why_now": "VTF KiuFunza agreement counter-signature expected by ~July 30 (Sandra's timeline). Post-signature, SOMA conversation can begin without conflating the asks. VTF's 80% tech mandate is perfectly aligned with AI dashboard + predictive analytics.",
+        "recommended_action": "On or after July 30 (when agreement fully signed), email Sandra Oswald: 'We'd like to explore how SOMA's AI analytics + live learning dashboard could extend VTF's technology impact in KiuFunza schools. Frame as tech platform opportunity, not a separate funding ask. Could we propose a 5-year partnership structure (reflecting VTF's multi-year commitment signal from July 14)?' Deadline to start: first week of August.",
+        "deadline": "2026-09-01",
+        "composite_score": 10.56
       },
       {
         "funder_id": "f-google-org",
-        "why_now": "Two Google tracks active: (1) Google for Nonprofits ad grant (USD 120K/year in-kind, rolling, IMMEDIATE), (2) Google.org Impact Challenge Africa (USD 1M potential, competitive, no current window). Track 1 is blockers-removed: NGO registration confirmed, domain secured, website in progress. This is the fastest execution path in pipeline.",
-        "recommended_action": "Website launch (learnimpact.org) MUST complete by July 31. Upon live: submit Google for Nonprofits via Goodstack (takes 10-14 days). Once approved: establish direct relationship with Google.org Africa team (email through google.org contact database). Monitor for Africa-specific Impact Challenge announcements (typically 3-6 months before open). Build relationship NOW; ask later.",
-        "deadline": "2026-07-31",
-        "composite_score": 5.44
+        "why_now": "Google for Nonprofits ad grant pipeline is IMMEDIATE PRIORITY. Website live \u2192 Goodstack submission (10-14 days) \u2192 activate $10K/month search credits. Zero-cost infrastructure win to unlock Google.org Impact Challenge relationship-building.",
+        "recommended_action": "URGENT: Confirm learnimpact.org website goes live THIS WEEK (by July 25). Upon live verification, submit Goodstack application immediately. Rolling 10-14 day approval. Parallel: assign someone to prepare Google.org Impact Challenge tracking sheet (monitor for Africa-specific calls, typically 3-6 months advance notice). This establishes Google relationship foundation before seeking $1M+ impact grant.",
+        "deadline": "2026-10-01",
+        "composite_score": 9.6
       },
       {
-        "funder_id": "f-arnold",
-        "why_now": "Arnold Ventures (USD 85M education portfolio) prioritizes RCT-backed interventions, government integration, scale pathway, cost-effectiveness. SOMA ticks all boxes. Probability 38% is moderate but effort score is 4 (reasonable). No recent news or detection of priority shift\u2014but Gates/ADQ partnership (Dec 2025) signals sector heat on AI-education.",
-        "recommended_action": "Research Arnold's education grants (past 12 months) for submission patterns and decision timelines. Identify Arnold education programme officer via LinkedIn. Prepare 2-page concept (by Aug 15): SOMA as 'cost-effective AI-coaching model reducing foundational learning gap in sub-Saharan Africa.' Ask Founders Pledge (Lorcan) if he has Arnold connection\u2014FP members often refer across networks. Cold submission is low-ROI; warm intro essential.",
-        "deadline": "2026-12-31",
-        "composite_score": 5.09
-      }
-    ],
-    "new_rfps": [],
-    "new_funders_detected": [],
-    "priority_shifts": [
-      {
-        "funder_id": "f-vtf",
-        "funder": "Vodacom Tanzania Foundation",
-        "what_changed": "Sandra Oswald (July 14) requested contract update to reflect 5-year commitment structure, not annual renewals. Signals VTF is pivoting from transactional to partnership framing. This is a relationship maturation signal\u2014NOT a red flag.",
-        "action": "When opening SOMA conversation (post-July 30 signature), frame as: 'We'd like to explore a 5-year MoU for Mwalimu AI coaching (2027-2032) that mirrors the depth of our KiuFunza partnership.' This signals Michael has listened to Sandra's strategic intent. 5-year framing increases VTF buy-in and board-level commitment.",
-        "urgency": "high"
-      }
-    ],
-    "out_of_industry": [
-      {
-        "funder": "Vodacom Tanzania Foundation (Tech/Telecoms CSR)",
-        "sector": "Corporate Social Responsibility / Telecommunications",
-        "why_it_fits": "VTF's 80% tech mandate + WhatsApp platform = natural fit for AI-coaching delivery. Mwalimu runs on WhatsApp (free, ubiquitous in Tanzania). This is not education philanthropy\u2014it's tech-enabled social impact via a telecom partner. VTF sees ROI in user adoption, brand value, and community impact.",
-        "action": "Position SOMA to Sandra as 'bringing teacher coaching to 70+ schools via WhatsApp\u2014the channel your customers already use.' This reframes ask as tech deployment story, not grant dependency. Emphasize Vodacom brand visibility in schools + government endorsement = marketing ROI for VTF."
-      }
-    ],
-    "positioning_advice": "Michael should author or co-author ONE visible piece by August 31 to stay warm across top prospects: a 1,500-2,000 word article on 'AI-Enabled Teacher Coaching at Scale: Cost-Effectiveness Lessons from Tanzania' (target: Gates Medium, Arnold Ventures blog, or Stanford CREDO newsletter). Key messages: (1) USD 3.12/student/year unit cost + government co-financing model, (2) Mwalimu WhatsApp platform = zero infrastructure lift, (3) QJE-published RCT evidence from KiuFunza + upcoming Mtwara RCT, (4) pathway from 10 schools (Kibaha 2026) \u2192 70 (Mtwara 2027) \u2192 government adoption (2028+). This positions LearnImpact as evidence-led, cost-conscious, and government-aligned\u2014exactly what Gates, Arnold, Open Philanthropy, and Schmidt Futures signal in their latest education strategies. Publish by Aug 25 to funnel traffic before Q3 board decisions."
-  },
-  "kiufunza": {
-    "insight_of_week": "Hempel Foundation Board visit Sept 27\u201330 is the single make-or-break cultivation event for KiuFunza renewal (USD 587K). Anders Holm (HF Director) attended SC for first time May 27 and showed genuine interest in teacher incentives model. Rosa Robinson signalled renewal possibility at Oxford April breakfast. Renewal formally LOW probability (extension already given 2026), but board visit + school immersion is your opportunity to shift narrative from 'extension' to 'anchor partnership'. Prepare actively NOW: brief Michael on HF's incentives-sector interest; coordinate with VVOB for Sept 30 school visit; prepare quantified impact deck emphasizing teacher behaviour change over pure cost-effectiveness.",
-    "hot_list": [
+        "funder_id": "f-gates",
+        "why_now": "Gates Foundation just announced $40M AI-education partnership with ADQ for sub-Saharan Africa (Dec 2025). SOMA's AI predictive analytics + KiuFunza RCT evidence + cost-lock ($3.12/student/year) are direct fit to Gates' current priority shift. Prospect not yet warm, but strategic window is NOW.",
+        "recommended_action": "Research Gates Foundation's AI-education sub-Saharan Africa initiative (Dec 2025 announcement + 2025 Global Education Program $240M commitment). Identify programme officer for foundational learning + AI. Prepare 2-page expression of interest positioning SOMA as Gates-funded scale pathway: RCT evidence, cost-effectiveness narrative, government partnership model. Target submission: September 2026.",
+        "deadline": "2026-09-30",
+        "composite_score": 8.96
+      },
       {
         "funder_id": "f-hempel",
-        "why_now": "Board visit Sept 27\u201330 is live cultivation event. Anders Holm (Director) newly engaged. Rosa signalled renewal possibility. Renewal decision in Hearing Committee \u2014 timing is critical now to build momentum before August 31 decision deadline.",
-        "recommended_action": "Michael: Brief with Rosa on board visit logistics + education partners event Sept 27. Prepare quantified behaviour-change narrative (teacher effort, student engagement delta, not just LAYS). Coordinate with VVOB for Sept 30 Udzungwa school immersion. Do NOT push renewal explicitly \u2014 let Rosa lead. Relationship quality is the ask.",
-        "deadline": "2026-08-31",
-        "composite_score": 9.45
+        "why_now": "Hempel Foundation spontaneously signalled renewal for KiuFunza at May 2026 Steering Committee. Hearing Committee decision is LIVE. No explicit ask yet, but this is highest-probability existing funder. Relationship health is 'partner' with 70% probability.",
+        "recommended_action": "Send brief (1-page) KiuFunza impact summary to Hempel by August 1: outcomes from Phase 5, teacher incentive programme feedback, link to SOMA teacher recognition component (Mwalimu Kinara). Signal that SOMA is a complementary system-strengthening layer that amplifies KiuFunza teacher impact. Prep for renewal conversation Q4 2026.",
+        "deadline": "2026-12-31",
+        "composite_score": 8.82
       },
       {
-        "funder_id": "f-vtf",
-        "why_now": "Grant Agreement signed by LI July 9. Waiting for VTF counter-signature by ~July 30. Sandra Oswald signalled desire to upgrade contract to reflect 5-year commitment (not annual renewals). VTF documentary team visited Pangani & Kilindi \u2014 strong public commitment signal. SOMA conversation cannot start until agreement fully signed.",
-        "recommended_action": "Confirm counter-signature status with Sandra by July 25. Upon full signature (~July 30), initiate SOMA conversation framing Mwalimu WhatsApp AI coaching as natural extension of KiuFunza. Position as 5-year tech partnership (maps to VTF's 80% tech mandate). Do NOT conflate with KiuFunza agreement \u2014 separate asks, separate timelines.",
-        "deadline": "2026-07-30",
+        "funder_id": "f-gpe",
+        "why_now": "Tanzania GPE grant ($88M, 2026) is active. SOMA can position as NGO delivery complement to government programme. GPE's Global Coalition for Foundational Learning is explicitly aligned with SOMA's 4-component model. Entry requires PMO-RALG door-opener, but window is NOW (year 1 of grant cycle).",
+        "recommended_action": "Schedule call with Michael + Youdi to map PMO-RALG relationship (Ministry of Education contact for GPE). If relationship exists, prepare expression of interest framing SOMA as NGO implementation partner for GPE foundational learning outcomes in 2-3 pilot districts. If no existing PMO-RALG contact, identify via Ministry network by end August. Target LOI submission: October 2026 (Q4 grant cycle window).",
+        "deadline": "2027-06-01",
         "composite_score": 8.64
-      },
-      {
-        "funder_id": "f-founders-pledge",
-        "why_now": "Lorcan Clarke (July 14) confirmed grant recommendation shared with FP philanthropy partner. USD 5M SOMA ask now in partner review phase. Expect second (limited) set of DD questions second half July. Decision timeline: Q1\u2013Q2 2027. Parallel track: Vadim (FP member, HNW individual) introduced June 24 \u2014 may direct personal giving if FP recommends.",
-        "recommended_action": "Prepare for second limited DD round (expected by July 31). Youdi to own KiuFunza data readiness. Michael to stay available for SOMA positioning follow-ups. Do NOT reach out to Vadim \u2014 keep Lorcan as orchestrator. Maintain relationship temperature: responsive but not pushy. FP timeline is long; do not force urgency.",
-        "deadline": "2026-07-31",
-        "composite_score": 7.67
-      },
-      {
-        "funder_id": "f-dovetail",
-        "why_now": "Track 1 (USD 100K) won. Track 2 SOMA conversation not yet started. Ali Ellegard is warm and open. SOMA AI coaching frames naturally as assessment-to-coaching feedback loop \u2014 perfect narrative for Dovetail's assessment-tech + teacher-performance mandate. Potential 10-year partnership.",
-        "recommended_action": "Schedule call with Ali Ellegard by mid-August to initiate Track 2 SOMA conversation. Frame: Track 1 baseline assessment \u2192 Track 2 AI coaching intervention \u2192 10-year partnership arc. Position Mwalimu WhatsApp coaching as the execution engine for assessment insights. Ali is warm post-Track 1; convert warmth into second ask.",
-        "deadline": "2026-09-01",
-        "composite_score": 7.2
-      },
-      {
-        "funder_id": "f-arnold",
-        "why_now": "Arnold Ventures scores 85 alignment (RCT-backed, cost-effective, government integration, scale pathway). KiuFunza QJE publication + Mtwara RCT 2027 is exactly Arnold's evidence play. Probability currently 38% (prospect tier). No recent news \u2014 relationship cold. Now is the moment to warm it: QJE publication credibility is fresh.",
-        "recommended_action": "Initiate outreach to Arnold Ventures (Education team) with QJE publication as anchor. Brief: KiuFunza proven cost-effective (USD 7/child/year, +9.4pp effect). Mtwara RCT 2027 will further de-risk SOMA scale. Position as government-embedded, evidence-first partnership. Effort score 4 \u2014 medium lift, but alignment strong. Aim for exploratory call by August 31.",
-        "deadline": null,
-        "composite_score": 6.36
-      },
-      {
-        "funder_id": "f-world-bank-edu",
-        "why_now": "World Bank's Global Coalition for Foundational Learning commits USD 15B through 2030. LAYS-based cost-effectiveness (KiuFunza USD 7/child/year, +9.4pp; SOMA USD 3.12/student/year modelled) is precisely WB's evaluation metric. Tanzania education sector is active WB geography. Probability 30% but effort 5 (high lift) \u2014 requires government relationships.",
-        "recommended_action": "Loop Michael through World Bank Tanzania education team (via MoE contact or existing WB relationship). Brief: KiuFunza LAYS-modelled evidence; SOMA alignment with WB foundational learning priorities. Explore co-financing pathway: WB sector budget + GoT + LearnImpact. Long timeline (effort 5), but USD 15B coalition is transformational. Start conversation by September 2026.",
-        "deadline": null,
-        "composite_score": 5.71
-      },
-      {
-        "funder_id": "f-hewlett",
-        "why_now": "Hewlett Foundation alignment 82 (deeper learning, SSA education quality, government capacity). QJE publication + Mtwara RCT 2027 is credible evidence play. Probability 35% (prospect), effort 4. No recent news \u2014 relationship cold. Post-QJE publication is the moment to introduce LearnImpact's evidence-based positioning to Hewlett's deeper-learning programme.",
-        "recommended_action": "Research Hewlett's current sub-Saharan Africa education grantees + RFP calendar (likely Q4 2026 or Q1 2027). Prepare brief positioning paper: KiuFunza QJE + SOMA innovation pipeline. Position as government-led systems transformation (not NGO dependency). Effort medium-high; aim for exploratory conversation by October 2026.",
-        "deadline": null,
-        "composite_score": 5.52
       }
     ],
     "new_rfps": [],
     "new_funders_detected": [],
     "priority_shifts": [
       {
+        "funder_id": "f-founders-pledge",
+        "funder": "Founders Pledge",
+        "what_changed": "Internal recommendation made (Lorcan email July 14). Progressed from initial DD to philanthropy partner review phase. Second limited DD round now expected (by July 31) before final decision Q1-Q2 2027.",
+        "action": "Prepare lean, focused responses on SOMA redesign (July 2026 board changes). Do not over-explain. Emphasise cost-lock and LAYS evidence. Anticipate questions on programme simplification (dropped TaRL/WhatsApp bot).",
+        "urgency": "high"
+      },
+      {
         "funder_id": "f-vtf",
         "funder": "Vodacom Tanzania Foundation",
-        "what_changed": "Sandra Oswald (July 14) signalled desire to upgrade KiuFunza contract to reflect 5-year commitment structure (not annual renewals). This is a strategic partnership maturation signal \u2014 VTF wants multi-year certainty, not transactional grants.",
-        "action": "Upon Grant Agreement counter-signature (~July 30), propose 5-year MoU framework to Sandra. Frame as: VTF + LearnImpact 5-year partnership (Years 1\u20132 KiuFunza, Years 2\u20135 SOMA + KiuFunza scale). Explore whether VTF would commit TZS 462M+ (or equivalent) over 5 years with milestone-based tranches. This unlocks SOMA conversation and locks in anchor funding through 2031.",
+        "what_changed": "KiuFunza grant agreement now signed by LearnImpact (July 9). Awaiting VTF counter-signature (~July 30). Sandra's July 14 signal: VTF wants 5-year partnership frame (not annual renewals). This is a strategic shift to long-term commitment structure.",
+        "action": "Post-signature (by Aug 1), begin SOMA conversation with Sandra framed as 5-year partnership extension. AI analytics + dashboard = tech platform play, not separate funding ask. Aligns with VTF's public commitment signal (documentary team visit to Pangani & Kilindi, June 29).",
         "urgency": "high"
       }
     ],
     "out_of_industry": [],
-    "positioning_advice": "Michael should publish or speak on ONE of these topics in the next 30 days to stay warm with Hempel, Arnold, Hewlett, and World Bank: (1) 'Teacher Incentives as a Lever for Learning Systems Change in East Africa' \u2014 Op-ed or blog anchored on KiuFunza's +9.4pp effect and behaviour-change mechanism (NOT cost-effectiveness alone). This positions LearnImpact as a systems-thinking organisation, not a cost-minimisation play. Hempel's board (especially Anders Holm) is interested in this framing. (2) Alternatively: 'Designing AI-Enabled Teacher Coaching for Scale: Lessons from Kibaha Pilot' (SOMA positioning). This appeals to Arnold, Hewlett, and World Bank's evidence-based + technology narrative. Keep Twaweza history OUT of all public positioning \u2014 brand damaging with GoT. Frame LearnImpact as a newly independent, government-embedded systems organisation. If Michael speaks at any education conference (EdData, Learning Exchange, AfEDB), emphasize: (a) QJE publication as proof of rigour, (b) Government co-financing model as de-risking mechanism, (c) 5-year vision (Tanzania \u2192 Zanzibar \u2192 Burundi \u2192 East Africa) as scale ambition. Do NOT mention Twaweza pivot. Audience: Hempel, Arnold, Hewlett, WB, Dovetail all monitor education thought leadership. One strong voice piece by August 31 will warm all six relationships simultaneously."
+    "positioning_advice": "Michael should author or contribute to 2-3 pieces in the next 30 days to stay warm with Gates, Founders Pledge, and Google.org: (1) Co-authored short-form piece on 'Cost-Effective AI for Foundational Learning: Evidence from Tanzania KiuFunza RCT' (target: LAYS metric framing; pitch to Gates + FP). (2) Podcast or webinar appearance on 'Learning Dashboards as Government Systems Strengthening Tools' (target: GPE + FCDO audiences; emphasise government co-financing and SOMA Kibaha Mtwara pathway). (3) LinkedIn op-ed: 'Why Programme Redesign Matters: Dropping Complexity, Locking Cost-Effectiveness' (broad positioning of SOMA's July 2026 board decisions as evidence-driven simplification; reach early-stage fundraisers and impact investors like Vadim). Avoid Twaweza history. Lead with QJE evidence, government partnership, and AI as systems tool \u2014 not tech for tech's sake. Emphasise 'newly independent' framing (May 2026) as signal of institutional maturity and board governance."
+  },
+  "kiufunza": {
+    "insight_of_week": "Hempel Foundation Board visit to Tanzania Sept 27\u201330 is the single most critical cultivation moment of 2026. Rosa Robinson has signalled renewal is possible but formally LOW probability (extension already given). Anders Holm (HF Director) attended SC for first time May 27 and showed genuine interest in the incentives model. Prepare intensively: brief Michael on HF's business-sector interest in performance pay; stage a compelling school visit narrative; have Youdi ready to present KiuFunza QJE evidence if needed. This visit determines whether HF extends beyond 2026. Failure to activate here risks losing USD 587K anchor donor.",
+    "hot_list": [
+      {
+        "funder_id": "f-hempel",
+        "why_now": "Board visit Sept 27\u201330 is imminent (66 days). Rosa unprompted mentioned renewal at Oxford April; Anders Holm showed first-time interest at SC May 27. Renewal formally LOW probability but culturally possible if visit is executed well. USD 587K confirmed FY2026 is anchor grant \u2014 protect above all.",
+        "recommended_action": "Michael: Schedule pre-visit briefing with Youdi (KiuFunza evidence), Rosa (relationship lead), and LI operations team. Prepare school visit narrative highlighting teacher incentives + business-sector angle (Anders mentioned HF board members interested in incentives). Draft 1-pager on 'KiuFunza Year 2 Impact & Year 3 Roadmap' for Anders/board. Do NOT push for renewal directly \u2014 let Rosa lead. Confirm Sept 27 event details + Sept 30 school logistics with VVOB immediately.",
+        "deadline": "2026-09-27",
+        "composite_score": 6.3
+      },
+      {
+        "funder_id": "f-founders-pledge",
+        "why_now": "Lorcan Clarke emailed July 14 confirming grant recommendation shared with FP's philanthropy partner. USD 5M 4-year SOMA ask under review. Expect second (limited) set of DD questions second half July. Timeline to decision is Q1\u2013Q2 2027 but questions are imminent (within 14 days). Parallel Vadim track (FP member) may unlock personal giving if recommendation is accepted.",
+        "recommended_action": "Youdi + Michael: Prepare for limited DD round expected by July 31. Likely focus: SOMA budget breakdown, AI coaching cost model, government co-financing contingency. Brief on Vadim introduction: keep Lorcan as primary relationship; do NOT reach out to Vadim directly. Lorcan will orchestrate. Have Michael ready for Lorcan update call mid-late July.",
+        "deadline": "2026-07-31",
+        "composite_score": 5.92
+      },
+      {
+        "funder_id": "f-vtf",
+        "why_now": "VTF KiuFunza Grant Agreement signed by LI July 9. Counter-signature expected by ~July 30 (2-3 weeks from June 30 signature). TZS 462M commitment confirmed. Upon full signature, VTF onboards LearnImpact into systems and SOMA conversation can BEGIN. Sandra Oswald flagged: contract should be updated to reflect 5-year commitment (not annual renewals). This signals readiness for multi-year partnership expansion.",
+        "recommended_action": "Ragate (Finance): Verify bank details with Dovetail team Monday July 27 immediately after (VTF funds transfer follows signature completion). Michael: DO NOT conflate current KiuFunza agreement with SOMA ask. Wait for full counter-signature (~July 30) THEN begin SOMA conversation with Sandra. Frame: 'VTF's 80% tech mandate maps perfectly to Mwalimu WhatsApp AI coaching.' Explore 5-year MoU structure when proposing SOMA.",
+        "deadline": "2026-07-30",
+        "composite_score": 5.25
+      },
+      {
+        "funder_id": "f-dovetail",
+        "why_now": "Track 1 USD 100K SIGNED July 2026. Bank transfer in process (July 27). Ali Ellegard (Programme Officer) is warm after Track 1 win. Track 2 SOMA conversation NOT YET started. Potential for 10-year partnership if pitched strategically.",
+        "recommended_action": "Michael: After bank transfer confirmation (late July), schedule Track 2 exploratory call with Ali. Frame SOMA Track 2 as natural progression: 'Track 1 gave us the assessment baseline; Track 2 is the AI coaching loop that closes the improvement cycle.' Position as year 2\u20133 expansion of Dovetail's assessment investment. Potential ask: USD 150\u2013250K over 2 years for AI coaching component.",
+        "deadline": null,
+        "composite_score": 4.61
+      },
+      {
+        "funder_id": "f-arnold",
+        "why_now": "Arnold Ventures is Tier 1 prospect with 85% alignment (RCT-backed evidence, government integration, cost-effectiveness, scale pathway). Probability currently 38% but effort score is high (4). No recent news \u2014 opportunity to differentiate. KiuFunza QJE publication + SOMA government co-financing model are direct fit to AV's core thesis.",
+        "recommended_action": "Michael: Commission Youdi to write 2-page 'Arnold Ventures Memo' positioning KiuFunza QJE evidence + SOMA government co-financing as case study in scale pathways. Send to Arnold via warm introduction (check if Founders Pledge or HF have AV contacts). Target: exploratory call Q4 2026. Budget: USD 500K 2-year ask for SOMA scaling.",
+        "deadline": null,
+        "composite_score": 4.24
+      },
+      {
+        "funder_id": "f-world-bank-edu",
+        "why_now": "World Bank Education Global Practice just announced $15B Global Coalition for Foundational Learning (2026\u20132030). LearnImpact's LAYS-based cost-effectiveness model + government systems angle are direct fit. Tanzania education sector is active. Probability currently 30% but effort is high (5).",
+        "recommended_action": "Michael: Identify World Bank contact via Youdi or HF network (Rosa Robinson may have connections). Draft inquiry: 'Is LearnImpact eligible for GCFL funding? Can SOMA model be co-financed with World Bank in-country education budget?' Target: exploratory call late Q3 2026. Do NOT lead with Twaweza history.",
+        "deadline": null,
+        "composite_score": 3.8
+      },
+      {
+        "funder_id": "f-hewlett",
+        "why_now": "William & Flora Hewlett Foundation continues Sub-Saharan Africa foundational learning focus (2025\u20132026). 82% alignment (deeper learning, evidence-based, government capacity). Probability 35% but effort is high (4). No recent news but SOMA foundational assessment component is direct fit.",
+        "recommended_action": "Michael: Research Hewlett's 2026 education RFP calendar. If no open RFP, prepare 3-page concept note for Q4 2026 inquiry: 'SOMA as Government-Embedded Foundational Learning System.' Target: USD 300\u2013500K seed for Mtwara RCT governance/data dashboard component. Use Youdi or HF network for warm intro.",
+        "deadline": null,
+        "composite_score": 3.19
+      }
+    ],
+    "new_rfps": [],
+    "new_funders_detected": [],
+    "priority_shifts": [
+      {
+        "funder_id": "f-vtf",
+        "funder": "Vodacom Tanzania Foundation",
+        "what_changed": "Sandra Oswald signalled (July 14) that VTF wants current KiuFunza agreement updated to reflect 5-year commitment, not annual renewal cycle. This represents a strategic shift from transactional to relational contracting.",
+        "action": "Michael + Ragate: Once VTF agreement is fully counter-signed (~July 30), propose 5-year MoU framework for SOMA. Frame as 'deepening partnership' not 'adding budget.' This unlocks multi-year planning confidence and increases SOMA ask credibility.",
+        "urgency": "high"
+      },
+      {
+        "funder_id": "f-founders-pledge",
+        "funder": "Founders Pledge",
+        "what_changed": "Lorcan Clarke's July 14 email signals positive internal recommendation momentum. Phrase 'our partner may accept, adjust, or choose not to make the grant' indicates FP's internal process is moving toward decision gate. Second DD round expected second half July indicates partner is taking it seriously (not routine diligence).",
+        "action": "Michael: Prepare for focused, technical second round of questions. High probability these will target SOMA financial model robustness, government co-financing contingency, and disbursement schedule. Have budget detail ready by July 27.",
+        "urgency": "high"
+      }
+    ],
+    "out_of_industry": [],
+    "positioning_advice": "Michael should author or co-author ONE thought piece in next 30 days targeting Hempel, Founders Pledge, and World Bank audiences. Recommended framing: 'Government-Embedded Incentive Systems as the Bridge Between Evidence and Scale: Lessons from KiuFunza and SOMA.' Publish as: (1) LinkedIn article (tag Rosa Robinson, Lorcan Clarke, Anders Holm); (2) EdData or similar education research platform; or (3) short blog post on LearnImpact website. Key messages: (i) KiuFunza QJE result (9.4pp) proves teacher incentives work at scale in low-resource contexts; (ii) SOMA's government co-financing model (Kibaha District Council) de-risks donor dependency; (iii) AI analytics layer (predictive, not prescriptive) respects teacher autonomy while improving targeting. Avoid any mention of Twaweza. This positions Michael as a pragmatist bridge-builder between rigorous evidence and political feasibility \u2014 exactly what HF's Anders Holm signalled interest in at the May SC. Timing: publish by August 31 to warm prospects before Sept (Hempel visit) and Q4 (Arnold, Hewlett exploratory outreach)."
   },
   "timamu": {
-    "insight_of_week": "Tanzania Creator Economy Fund (TZS 2B) activates THIS MONTH (July 2026). Timamu must submit Expression of Interest to Ministry of ICT by 2026-09-30 to position as disability-inclusive programme partner. This is a once-per-Vision-2050-cycle opportunity\u2014government funds infrastructure, Timamu provides implementation capability for PWD creator economy access. Registration status is blocking factor.",
+    "insight_of_week": "Tanzania Creator Economy Fund (TZS 2B, Ministry of ICT) launches in July 2026 \u2014 this week. Timamu must file legal registration in Tanzania immediately to be eligible for the September 30 expression-of-interest deadline. This is the largest domestic funding opportunity available and aligns perfectly with Vision 2050 disability inclusion mandates. Registration is the gating factor.",
     "hot_list": [
       {
         "funder_id": "f-adobe-foundation",
-        "why_now": "Smallest ask ($50K), rolling deadline (2026-09-01), highest probability (55%), minimal effort (2). Adobe UK already committed \u00a3432K to disability orgs\u2014clear signal. First anchor grant for Timamu is achievable here.",
-        "recommended_action": "Submit concept note by 2026-08-15 (2-week buffer). Frame: 'Digital creativity tools for PWDs in Tanzania creator economy.' Highlight assistive tech + creator economy dual focus. Reference Adobe's disability grants as proof of fit.",
+        "why_now": "September 1 deadline is 40 days away. Adobe Foundation prioritizes disability + creator economy. $50K grant is sized for early-stage orgs. Rolling deadline means early submission increases approval odds. First anchor funder for Timamu is strategically valuable.",
+        "recommended_action": "Submit concept note by August 15 (16 days early buffer). Emphasize: assistive technology + digital creative tools for PWDs in Tanzania. Frame as pilot for Phase 1. Use Adobe Creative Cloud accessibility features as evidence.",
         "deadline": "2026-09-01",
-        "composite_score": 3.96
+        "composite_score": 24.75
       },
       {
         "funder_id": "f-microsoft-accessibility",
-        "why_now": "Highest alignment (93%), rolling deadline (2026-10-01), active programme ongoing. $150K for assistive tech is Timamu core. Effort is minimal (2). Legal registration is only blocker\u2014once cleared, apply immediately.",
-        "recommended_action": "Upon Timamu legal registration completion, submit LOI within 48 hours. Frame: AI-powered assistive tech for gig economy PWDs (Phase 2). Reference Tanzania Vision 2050 + 9-10M PWD population context.",
+        "why_now": "October 1 deadline (70 days). Highest alignment score (93) + rolling applications. Microsoft AI for Accessibility is most accessible Tier 1 funder. Legal registration requirement likely cleared by mid-August; applies immediately after.",
+        "recommended_action": "Prepare LOI targeting $150K for assistive technology development + AI tools for PWDs (Phase 1 focus). Emphasize: AI accessibility gap in East Africa, Timamu's founder-led approach, partnership potential with Microsoft's global network.",
         "deadline": "2026-10-01",
-        "composite_score": 3.72
+        "composite_score": 23.88
       },
       {
         "funder_id": "f-tanzanian-govt-creator",
-        "why_now": "Historic window: TZS 2B fund LIVE NOW (July 2026). 60 days to submit EOI (2026-09-30). Must position Timamu as disability-inclusive delivery partner to government infrastructure play. 82% alignment, 45% probability.",
-        "recommended_action": "Immediate: Confirm Timamu legal registration status in Tanzania. Draft EOI by 2026-08-20 to Ministry of ICT, Youth & Culture. Positioning: Timamu = disability-inclusive creator economy programme; government = digital infrastructure. Request meeting with Fund administrator by 2026-08-10.",
+        "why_now": "Fund activates NOW (July 2026). Expression-of-interest deadline September 30 (69 days). Timamu is uniquely positioned as disability-inclusive capability partner to government infrastructure play. TZS 2B (~USD 85M) is transformational scale.",
+        "recommended_action": "Submit EOI by September 10. Position: government funds creator platform infrastructure, Timamu delivers disability-inclusive curriculum + accessibility standards. Name Ministry of ICT contact. Reference Tanzania Vision 2050 disability mainstreaming commitment.",
         "deadline": "2026-09-30",
-        "composite_score": 3.51
-      },
-      {
-        "funder_id": "f-google-org-timamu",
-        "why_now": "88% alignment, 42% probability, rolling deadline. Google AI for accessibility commitments expanding 2025-26. High fit for Phase 1 (digital creation + assistive tech). Effort low (3). Second-tier opportunity after Adobe + Microsoft but strong backup.",
-        "recommended_action": "Research Google.org accessibility grant window (typically Q3-Q4). Prepare 2-page concept: 'AI accessibility tools for Tanzanian PWD creators.' Monitor Google.org Africa digital inclusion announcements for RFP drop.",
-        "deadline": null,
-        "composite_score": 2.87
+        "composite_score": 24.3
       },
       {
         "funder_id": "f-ford-foundation",
-        "why_now": "PARADIGM SHIFT: April 2025, Ford announced $15M disability rights commitment (first in Ford history) + 25% disability inclusion across ALL grantmaking. Highest-tier funder. 86% alignment. New strategic fit.",
-        "recommended_action": "DO NOT apply immediately. Instead: (1) Request informational call with Ford's Africa disability rights team by end of August. (2) Position Timamu as structured case study for disability + creator economy economic inclusion. (3) Target 2027 larger grant (Phase 2: gig economy + AI tools).",
+        "why_now": "Ford's April 2025 $15M disability rights commitment is still being deployed (12 months in). Detected priority shift towards technology + disability rights. No hard deadline yet, but 35% probability suggests targeted outreach this quarter could unlock Phase 2 (gig economy + AI) positioning.",
+        "recommended_action": "Prepare briefing document on Timamu's Phase 2 roadmap (gig economy + AI tools for PWDs). Research Ford's disability rights grantee cohort. Pitch: Ford's work reimagined story lab + Timamu's creator economy pathway = economic inclusion at scale.",
         "deadline": null,
-        "composite_score": 2.77
+        "composite_score": 18.06
+      },
+      {
+        "funder_id": "f-google-org-timamu",
+        "why_now": "88 alignment score. 2025-2026 Google AI for Accessibility commitments expanding. No tight deadline detected but high-tier strategic funder. Early relationship-building now pays off in Q4 2026 / Q1 2027 cycles.",
+        "recommended_action": "Research Google.org Africa accessibility grantee map. Identify 2-3 existing grantees doing complementary work (e.g., accessibility training, assistive tech). Request informational call with Google.org program officer to map collaboration potential before formal LOI in Q4.",
+        "deadline": null,
+        "composite_score": 18.62
       },
       {
         "funder_id": "f-cbm",
-        "why_now": "87% alignment, 48% probability, 3-effort. Disability-inclusive development + assistive tech + East Africa focus. No recent news = underexplored. Could be responsive to direct outreach.",
-        "recommended_action": "Direct email to CBM Tanzania programme manager (research contact). Pitch: assistive tech for creator economy = CBM's disability inclusion mandate + economic empowerment angle. Request 20-min call before Q4 2026 grant cycle.",
+        "why_now": "87 alignment (disability-inclusive development + assistive tech + East Africa focus). No detected priority shift, but CBM is Tier 1 disability specialist with active Tanzania presence. No immediate deadline suggests relationship-building window.",
+        "recommended_action": "Request 30-minute call with CBM Tanzania country director. Present Timamu founder story + 9-10M PWD market opportunity. Explore: co-funding possibility, referral to other disability-focused funders, potential partnership on Phase 2 economic inclusion pilot.",
         "deadline": null,
-        "composite_score": 2.58
+        "composite_score": 16.78
       },
       {
         "funder_id": "f-humanity-inclusion",
-        "why_now": "84% alignment, 45% probability, East Africa + economic inclusion for PWDs. Handicap International has ground presence. 3-effort. Second-tier disability funder, responsive to local pitches.",
-        "recommended_action": "Identify Humanity & Inclusion Tanzania country director. Schedule in-country briefing (virtual or in-person) by September 2026 to present Timamu Phase 1 + Phase 2 roadmap. Explore co-implementation partnership potential.",
+        "why_now": "84 alignment. Disability inclusion + economic empowerment for PWDs + East Africa. No deadline pressure but strong strategic fit. Complementary to CBM outreach \u2014 Humanity & Inclusion often co-funds disability initiatives.",
+        "recommended_action": "After CBM call, request intro to Humanity & Inclusion Tanzania programme manager. Position: Timamu as partner for economic inclusion pillar of disability-inclusive development work. Explore funding size ($100-250K range).",
         "deadline": null,
-        "composite_score": 2.52
+        "composite_score": 16.24
       }
     ],
     "new_rfps": [
       {
-        "title": "Tanzania Creator Economy Fund (TZS 2B) \u2014 Expression of Interest",
-        "funder": "Tanzania Government \u2014 Creator Economy Fund",
+        "title": "Tanzania Creator Economy Fund \u2014 Disability-Inclusive Programme Partnership",
+        "funder": "Tanzania Government",
         "funder_id": "f-tanzanian-govt-creator",
         "deadline": "2026-09-30",
         "amount_usd": 200000,
-        "why_it_fits": "Government-backed, Vision 2050 aligned, creator economy focus, and NO explicit disability exclusion. Timamu's unique value: disability-inclusive programme design for PWD creator economy access. Fund activates July 2026 (NOW). Partnership model: government infrastructure, Timamu programme delivery."
+        "why_it_fits": "TZS 2B fund launches July 2026 (this week). Timamu's disability-inclusive creator economy model directly addresses Vision 2050 targets. Government seeks capability partners. This is the most aligned domestic funding vehicle available. Legal registration in Tanzania is gating requirement."
       }
     ],
     "new_funders_detected": [],
@@ -210,48 +217,43 @@
       {
         "funder_id": "f-ford-foundation",
         "funder": "Ford Foundation",
-        "what_changed": "April 2025: Announced $15M disability rights commitment + 25% disability inclusion across all Ford grantmaking. This is Ford's FIRST major disability rights strategic focus in foundation history.",
-        "action": "Upgrade Ford from prospect to TOP PROSPECT. Do NOT chase small/medium grants. Instead, build relationship with Ford's Africa disability team. Position Timamu as structured case study for disability economic inclusion + creator economy (Phase 2 focus for 2027). Michael should publish on disability creator economy economics in Q3 2026 to warm Ford relationship.",
+        "what_changed": "April 2025: $15M new disability rights commitment \u2014 first in Ford's history. 25% disability inclusion across all grantmaking. Detected shift towards technology + disability rights (evidenced by Work Reimagined StoryLab partnership with Africa No Filter).",
+        "action": "Reposition Timamu pitch: from 'assistive tech for PWDs' to 'disability-centered creator economy = structural economic change.' Ford's theory of change favors systems-level interventions. Emphasize: Timamu disrupts creator economy gatekeeping for PWDs.",
         "urgency": "high"
       },
       {
         "funder_id": "f-tanzanian-govt-creator",
         "funder": "Tanzania Government \u2014 Creator Economy Fund",
-        "what_changed": "July 2026: TZS 2B creator economy fund ACTIVATES (TODAY'S MONTH). This is the implementation window for Tanzania Vision 2050 creator economy pillar.",
-        "action": "URGENT: Confirm Timamu legal registration in Tanzania is complete. If NOT registered, prioritize registration this week. Then: Submit EOI to Ministry of ICT by 2026-08-20 (10-day buffer before deadline). This is a once-per-5-year opportunity.",
+        "what_changed": "July 2026 (this week): TZS 2B creator economy fund activates. Vision 2050 implementation begins. Disability inclusion now mainstreamed into government funding strategy (CRPD commitments).",
+        "action": "Register Timamu Foundation in Tanzania within 14 days. Conduct pre-submission stakeholder mapping with Ministry of ICT (Digital Economy Directorate). Submit EOI by September 10.",
         "urgency": "high"
       }
     ],
     "out_of_industry": [
       {
         "funder": "Mastercard Foundation",
-        "sector": "Financial Services / Economic Empowerment",
-        "why_it_fits": "Young Africa Works programme expanding digital livelihoods focus 2025-26. Disability inclusion is EMERGING (not yet mainstream) in Mastercard's priorities. Creator economy + digital skills align perfectly. 80% alignment but only 22% probability (low priority for Mastercard currently).",
-        "action": "WATCH, don't chase yet. Monitor Mastercard Young Africa Works announcements for disability inclusion signals (Q3-Q4 2026). If Mastercard adds disability to Young Africa Works, immediately pitch Timamu as partner. Current effort required = 5 (high), probability too low for now."
-      },
-      {
-        "funder": "Omidyar Network",
-        "sector": "Economic Inclusion / Fintech",
-        "why_it_fits": "Economic Inclusion + gig economy platforms + Africa focus = Phase 2 (Timamu) future state. But 28% probability, 4-effort, and Omidyar's disability awareness is low. Long-term prospect.",
-        "action": "Queue for 2027. If Timamu Phase 2 (gig economy AI tools) gains traction by mid-2027, revisit Omidyar. Current focus should be on disability-first funders (Microsoft, Adobe, Google, Ford)."
+        "sector": "Youth Financial Inclusion / Creator Economy",
+        "why_it_fits": "Young Africa Works programme (2025-2026) explicitly expanding digital livelihoods focus. Emerging disability inclusion priority. Mastercard's creator economy interest + youth empowerment mandate = Timamu's exact niche. 80 alignment score suggests untapped opportunity.",
+        "action": "Research Mastercard Foundation's Young Africa Works grantee cohort in Tanzania. Identify 1-2 aligned orgs. Request warm introduction. Position: Timamu as disability-inclusive capability partner for Young Africa Works expansion in East Africa."
       }
     ],
-    "positioning_advice": "Michael should publish / speak on ONE of these angles in the next 30 days to stay warm with top prospects:\n\n1. **FOR FORD, GOOGLE, MICROSOFT**: Publish a 1-2 page brief titled 'Assistive Technology + Creator Economy: Economic Inclusion Model for 9M+ Tanzanian PWDs.' Position Timamu as bridge between disability rights + digital livelihoods. Share with Ford disability team, Google.org contacts, Microsoft accessibility leadership.\n\n2. **FOR TANZANIAN GOVERNMENT + REGIONAL VISIBILITY**: Secure speaking slot at Tanzania Creator Economy Fund launch event (Ministry of ICT, July 2026) OR write op-ed in local media (e.g., The Citizen, TanzaniaInvest) on 'Why Creator Economy Must Include Persons with Disabilities.' Position Timamu as local implementation partner.\n\n3. **FOR ADOBE + EARLY ANCHOR**: Record 3-min video case study: 'Tanzanian PWD Creator' \u2014 real person, real assistive tech gap, real economic opportunity. Share with Adobe Foundation contacts. Adobe responds to human-centered creative narratives.\n\n**DO NOT TALK ABOUT LEARNIMPACT.** Timamu is independent legal entity with Michael Kamukulu as founder. Emphasize: Timamu Foundation's separate mission, Tanzanian registration, disability-first focus, Vision 2050 alignment, 9-10M PWD addressable market.\n\n**DEADLINE CRITICAL PATH**: Adobe LOI (2026-09-01) + Tanzania EOI (2026-09-30) + Microsoft LOI (2026-10-01) = Q3-Q4 2026 funding window. All three are achievable if registration clears by mid-August."
+    "positioning_advice": "Michael should publish or speak on: (1) **Disability-centered creator economy as economic inclusion model** \u2014 op-ed in African tech media (TechCrunch Africa, etc.) positioning Timamu as solving 9-10M PWD employment gap in Tanzania. Angle: Vision 2050 + gig economy + AI. Publish by August 15 to warm Ford Foundation + Mastercard conversations. (2) **Case study: Assistive tech adoption barriers in African creator platforms** \u2014 500-word LinkedIn article + webinar proposal to Google.org accessibility network. Publish by August 30 to support October Microsoft LOI. (3) **Tanzania Vision 2050 disability inclusion readiness** \u2014 brief comment piece for government stakeholder audience (Ministry of ICT newsletter, Tanzanian development blogs). Frame Timamu as implementation partner. Publish by August 20 to support Tanzania creator fund EOI positioning. All three position Michael as thought leader on disability + creator economy at East African scale \u2014 essential credibility signal for Tier 1 funders."
   },
   "source_feed": [],
   "ms365_sync": {
     "emails": [],
     "events": [],
-    "synced_at": "2026-07-14"
+    "meeting_notes": [],
+    "synced_at": "2026-07-23"
   },
   "cross_programme_conflicts": [
     {
       "funder_id": "f-mastercard-timamu",
       "funder": "Mastercard Foundation",
       "programmes": [
+        "timamu",
         "kiufunza",
-        "soma",
-        "timamu"
+        "soma"
       ],
       "note": "Same funder appears in both LearnImpact and Timamu pools. Coordinate before approaching \u2014 never allow simultaneous asks to same contact.",
       "recommended_sequence": "Decide priority entity first. LearnImpact asks first if active programme ongoing."
@@ -259,63 +261,63 @@
   ],
   "this_week_actions": [
     {
-      "action": "Confirm counter-signature status with Sandra by July 25. Upon full signature (~July 30), initiate SOMA conversation framing Mwalimu WhatsApp AI coaching as natural extension of KiuFunza. Position as 5-year tech partnership (maps to VTF's 80% tech mandate). Do NOT conflate with KiuFunza agreement \u2014 separate asks, separate timelines.",
+      "action": "Ragate (Finance): Verify bank details with Dovetail team Monday July 27 immediately after (VTF funds transfer follows signature completion). Michael: DO NOT conflate current KiuFunza agreement with SOMA ask. Wait for full counter-signature (~July 30) THEN begin SOMA conversation with Sandra. Frame: 'VTF's 80% tech mandate maps perfectly to Mwalimu WhatsApp AI coaching.' Explore 5-year MoU structure when proposing SOMA.",
       "funder": "f-vtf",
       "programme": "kiufunza",
       "due": "2026-07-30",
       "urgency": "medium"
     },
     {
-      "action": "Schedule internal prep call (Michael + Youdi) by July 17 to draft response templates for likely second-round questions on: (1) risk mitigation if Mtwara RCT shows <7pp effect size, (2) path to government adoption post-Kibaha, (3) unit economics under 3 exchange rate scenarios. Keep Lorcan looped; do not over-communicate.",
+      "action": "Prepare 1-page briefing for Lorcan on July 2026 SOMA board redesign: assessment + ability grouping + dashboard + Mwalimu Kinara + AI analytics. Emphasise cost-lock ($3.12/student/year) and LAYS modelling. Pre-empt likely questions on dropped TaRL prescription and WhatsApp coaching bot (not fit-for-purpose). Do not send unsolicited; wait for Lorcan's second DD set, then respond swiftly.",
       "funder": "f-founders-pledge",
       "programme": "soma",
       "due": "2026-07-31",
       "urgency": "medium"
     },
     {
-      "action": "Prepare for second limited DD round (expected by July 31). Youdi to own KiuFunza data readiness. Michael to stay available for SOMA positioning follow-ups. Do NOT reach out to Vadim \u2014 keep Lorcan as orchestrator. Maintain relationship temperature: responsive but not pushy. FP timeline is long; do not force urgency.",
+      "action": "Youdi + Michael: Prepare for limited DD round expected by July 31. Likely focus: SOMA budget breakdown, AI coaching cost model, government co-financing contingency. Brief on Vadim introduction: keep Lorcan as primary relationship; do NOT reach out to Vadim directly. Lorcan will orchestrate. Have Michael ready for Lorcan update call mid-late July.",
       "funder": "f-founders-pledge",
       "programme": "kiufunza",
       "due": "2026-07-31",
       "urgency": "medium"
     },
     {
-      "action": "Michael: email Sandra (cc Youdi) by July 22 (after agreement signed, before August): 'Sandra, thank you for finalizing the KiuFunza partnership. As we think about how technology can deepen teacher impact post-2027, we'd like to explore how Mwalimu (our WhatsApp AI coaching tool) might complement VTF's digital mandate. Can we schedule 30min with you + tech team in early August?' Frame as natural evolution, not replacement.",
-      "funder": "f-vtf",
-      "programme": "soma",
-      "due": "2026-08-15",
-      "urgency": "medium"
-    },
-    {
-      "action": "Youdi: initiate Track 2 conversation with Ali by July 25. Email frame: 'Hi Ali, Track 1 enabled us to establish assessment baselines in Kibaha. Now we're launching AI coaching (Mwalimu) to close the feedback loop\u2014real-time teacher support powered by assessment data. Track 2 would fund pilot integration in 15 schools. Does this resonate as a natural next chapter?' Request 20min call in early August. Emphasize 10-year partnership narrative, not ad-hoc funding.",
+      "action": "Email Ali Ellegard by July 28: 'Track 1 onboarding underway. We'd like to explore Track 2 for SOMA's AI predictive analytics layer (KiuFunza + Uwezo historical data feeding live learning dashboard). This completes the assessment \u2192 insight \u2192 coaching improvement cycle. Could we schedule a 30-min call in first week of August to scope fit?' Frame as natural 10-year partnership extension.",
       "funder": "f-dovetail",
       "programme": "soma",
       "due": "2026-08-31",
       "urgency": "medium"
     },
     {
-      "action": "Michael: Brief with Rosa on board visit logistics + education partners event Sept 27. Prepare quantified behaviour-change narrative (teacher effort, student engagement delta, not just LAYS). Coordinate with VVOB for Sept 30 Udzungwa school immersion. Do NOT push renewal explicitly \u2014 let Rosa lead. Relationship quality is the ask.",
-      "funder": "f-hempel",
-      "programme": "kiufunza",
-      "due": "2026-08-31",
+      "action": "On or after July 30 (when agreement fully signed), email Sandra Oswald: 'We'd like to explore how SOMA's AI analytics + live learning dashboard could extend VTF's technology impact in KiuFunza schools. Frame as tech platform opportunity, not a separate funding ask. Could we propose a 5-year partnership structure (reflecting VTF's multi-year commitment signal from July 14)?' Deadline to start: first week of August.",
+      "funder": "f-vtf",
+      "programme": "soma",
+      "due": "2026-09-01",
       "urgency": "medium"
     },
     {
-      "action": "Submit concept note by 2026-08-15 (2-week buffer). Frame: 'Digital creativity tools for PWDs in Tanzania creator economy.' Highlight assistive tech + creator economy dual focus. Reference Adobe's disability grants as proof of fit.",
+      "action": "Submit concept note by August 15 (16 days early buffer). Emphasize: assistive technology + digital creative tools for PWDs in Tanzania. Frame as pilot for Phase 1. Use Adobe Creative Cloud accessibility features as evidence.",
       "funder": "f-adobe-foundation",
       "programme": "timamu",
       "due": "2026-09-01",
       "urgency": "medium"
     },
     {
-      "action": "Immediate: Confirm Timamu legal registration status in Tanzania. Draft EOI by 2026-08-20 to Ministry of ICT, Youth & Culture. Positioning: Timamu = disability-inclusive creator economy programme; government = digital infrastructure. Request meeting with Fund administrator by 2026-08-10.",
+      "action": "Michael: Schedule pre-visit briefing with Youdi (KiuFunza evidence), Rosa (relationship lead), and LI operations team. Prepare school visit narrative highlighting teacher incentives + business-sector angle (Anders mentioned HF board members interested in incentives). Draft 1-pager on 'KiuFunza Year 2 Impact & Year 3 Roadmap' for Anders/board. Do NOT push for renewal directly \u2014 let Rosa lead. Confirm Sept 27 event details + Sept 30 school logistics with VVOB immediately.",
+      "funder": "f-hempel",
+      "programme": "kiufunza",
+      "due": "2026-09-27",
+      "urgency": "medium"
+    },
+    {
+      "action": "Submit EOI by September 10. Position: government funds creator platform infrastructure, Timamu delivers disability-inclusive curriculum + accessibility standards. Name Ministry of ICT contact. Reference Tanzania Vision 2050 disability mainstreaming commitment.",
       "funder": "f-tanzanian-govt-creator",
       "programme": "timamu",
       "due": "2026-09-30",
       "urgency": "medium"
     },
     {
-      "action": "Upon Timamu legal registration completion, submit LOI within 48 hours. Frame: AI-powered assistive tech for gig economy PWDs (Phase 2). Reference Tanzania Vision 2050 + 9-10M PWD population context.",
+      "action": "Prepare LOI targeting $150K for assistive technology development + AI tools for PWDs (Phase 1 focus). Emphasize: AI accessibility gap in East Africa, Timamu's founder-led approach, partnership potential with Microsoft's global network.",
       "funder": "f-microsoft-accessibility",
       "programme": "timamu",
       "due": "2026-10-01",
@@ -328,66 +330,66 @@
       "funder": "Hempel Foundation",
       "programme": "kiufunza",
       "deadline": "2026-08-31",
-      "days_remaining": 48
+      "days_remaining": 39
     },
     {
       "opportunity_id": "opp-adobe-timamu",
       "funder": "Adobe Foundation",
       "programme": "timamu",
       "deadline": "2026-09-01",
-      "days_remaining": 49
+      "days_remaining": 40
     },
     {
       "opportunity_id": "opp-tz-creator-fund",
       "funder": "Tanzania Government \u2014 Creator Economy Fund",
       "programme": "timamu",
       "deadline": "2026-09-30",
-      "days_remaining": 78
+      "days_remaining": 69
     },
     {
       "opportunity_id": "opp-microsoft-timamu",
       "funder": "Microsoft Philanthropies (Accessibility)",
       "programme": "timamu",
       "deadline": "2026-10-01",
-      "days_remaining": 79
+      "days_remaining": 70
     },
     {
       "opportunity_id": "opp-google-nonprofits-learnimpact",
       "funder": "Google.org",
       "programme": "soma",
       "deadline": "2026-10-01",
-      "days_remaining": 79
+      "days_remaining": 70
     },
     {
       "opportunity_id": "opp-dovetail-track2-soma",
       "funder": "Dovetail / Prevail Fund",
       "programme": "soma",
       "deadline": "2026-12-01",
-      "days_remaining": 140
+      "days_remaining": 131
     },
     {
       "opportunity_id": "opp-vtf-soma-pipeline",
       "funder": "Vodacom Tanzania Foundation (VTF)",
       "programme": "soma",
       "deadline": "2027-03-01",
-      "days_remaining": 230
+      "days_remaining": 221
     },
     {
       "opportunity_id": "opp-founders-pledge-soma",
       "funder": "Founders Pledge",
       "programme": "soma",
       "deadline": "2027-03-31",
-      "days_remaining": 260
+      "days_remaining": 251
     },
     {
       "opportunity_id": "opp-gpe-soma",
       "funder": "Global Partnership for Education (GPE)",
       "programme": "soma",
       "deadline": "2027-06-01",
-      "days_remaining": 322
+      "days_remaining": 313
     }
   ],
-  "monday_brief_summary": "Week 29 (2026-07-14).\n\nSOMA insight: Founders Pledge has submitted a positive grant recommendation for USD 5M to their philanthropy partner (decision July-August 2026). Lorcan Clarke explicitly signalled progression on July 14 with 'second limited set of questions' expected in second half of July. This is the most mature deal in pipeline\u2014probability has shifted from 55% to 65%+ pending final partner questions. Michael must prepare crisp responses NOW (within 5 days) to avoid delay into Q3.\n\nKiuFunza insight: Hempel Foundation Board visit Sept 27\u201330 is the single make-or-break cultivation event for KiuFunza renewal (USD 587K). Anders Holm (HF Director) attended SC for first time May 27 and showed genuine interest in teacher incentives model. Rosa Robinson signalled renewal possibility at Oxford April breakfast. Renewal formally LOW probability (extension already given 2026), but board visit + school immersion is your opportunity to shift narrative from 'extension' to 'anchor partnership'. Prepare actively NOW: brief Michael on HF's incentives-sector interest; coordinate with VVOB for Sept 30 school visit; prepare quantified impact deck emphasizing teacher behaviour change over pure cost-effectiveness.\n\nTimamu insight: Tanzania Creator Economy Fund (TZS 2B) activates THIS MONTH (July 2026). Timamu must submit Expression of Interest to Ministry of ICT by 2026-09-30 to position as disability-inclusive programme partner. This is a once-per-Vision-2050-cycle opportunity\u2014government funds infrastructure, Timamu provides implementation capability for PWD creator economy access. Registration status is blocking factor.\n\nTop actions: SOMA: Schedule internal prep call (Michael + Youdi) by July 17 to draft response templates for likely second-round questions on: (1) risk mitigation if Mtwara RCT shows <7pp effect size, (2) path to government adoption post-Kibaha, (3) unit economics under 3 exchange rate scenarios. Keep Lorcan looped; do not over-communicate. | KiuFunza: Michael: Brief with Rosa on board visit logistics + education partners event Sept 27. Prepare quantified behaviour-change narrative (teacher effort, student engagement delta, not just LAYS). Coordinate with VVOB for Sept 30 Udzungwa school immersion. Do NOT push renewal explicitly \u2014 let Rosa lead. Relationship quality is the ask. | Timamu: Submit concept note by 2026-08-15 (2-week buffer). Frame: 'Digital creativity tools for PWDs in Tanzania creator economy.' Highlight assistive tech + creator economy dual focus. Reference Adobe's disability grants as proof of fit.\n\nNext deadline: KiuFunza Phase 5 \u2014 Hempel Foundation Renewal (Hearing Committee) \u2014 2026-08-31.",
+  "monday_brief_summary": "Week 30 (2026-07-23).\n\nSOMA insight: Founders Pledge $5M recommendation has progressed to philanthropy partner review (Lorcan email July 14). Second limited DD round expected by July 31. Michael must prepare focused responses on SOMA programme redesign (July 2026 board changes: dropped TaRL/WhatsApp bot, locked AI analytics + assessment + dashboard + Mwalimu Kinara) before Lorcan's questions arrive. Decision timeline: Q1-Q2 2027.\n\nKiuFunza insight: Hempel Foundation Board visit to Tanzania Sept 27\u201330 is the single most critical cultivation moment of 2026. Rosa Robinson has signalled renewal is possible but formally LOW probability (extension already given). Anders Holm (HF Director) attended SC for first time May 27 and showed genuine interest in the incentives model. Prepare intensively: brief Michael on HF's business-sector interest in performance pay; stage a compelling school visit narrative; have Youdi ready to present KiuFunza QJE evidence if needed. This visit determines whether HF extends beyond 2026. Failure to activate here risks losing USD 587K anchor donor.\n\nTimamu insight: Tanzania Creator Economy Fund (TZS 2B, Ministry of ICT) launches in July 2026 \u2014 this week. Timamu must file legal registration in Tanzania immediately to be eligible for the September 30 expression-of-interest deadline. This is the largest domestic funding opportunity available and aligns perfectly with Vision 2050 disability inclusion mandates. Registration is the gating factor.\n\nTop actions: SOMA: Prepare 1-page briefing for Lorcan on July 2026 SOMA board redesign: assessment + ability grouping + dashboard + Mwalimu Kinara + AI analytics. Emphasise cost-lock ($3.12/student/year) and LAYS modelling. Pre-empt likely questions on dropped TaRL prescription and WhatsApp coaching bot (not fit-for-purpose). Do not send unsolicited; wait for Lorcan's second DD set, then respond swiftly. | KiuFunza: Michael: Schedule pre-visit briefing with Youdi (KiuFunza evidence), Rosa (relationship lead), and LI operations team. Prepare school visit narrative highlighting teacher incentives + business-sector angle (Anders mentioned HF board members interested in incentives). Draft 1-pager on 'KiuFunza Year 2 Impact & Year 3 Roadmap' for Anders/board. Do NOT push for renewal directly \u2014 let Rosa lead. Confirm Sept 27 event details + Sept 30 school logistics with VVOB immediately. | Timamu: Submit concept note by August 15 (16 days early buffer). Emphasize: assistive technology + digital creative tools for PWDs in Tanzania. Frame as pilot for Phase 1. Use Adobe Creative Cloud accessibility features as evidence.\n\nNext deadline: KiuFunza Phase 5 \u2014 Hempel Foundation Renewal (Hearing Committee) \u2014 2026-08-31.",
   "funding_gap": {
     "soma_confirmed_usd": 229000,
     "soma_needed_usd": 866000,
