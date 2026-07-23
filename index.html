@@ -2615,9 +2615,9 @@ function initExecStrip(){
     const stripHot=document.getElementById('strip-hot');
     if(stripHot){
       const hotCount=
-        ((alerts.soma&&alerts.soma.hot_list)||[]).filter(h=>h.composite_score>=80).length+
-        ((alerts.kiufunza&&alerts.kiufunza.hot_list)||[]).filter(h=>h.composite_score>=80).length+
-        ((alerts.timamu&&alerts.timamu.hot_list)||[]).filter(h=>h.composite_score>=80).length;
+        ((alerts.soma&&alerts.soma.hot_list)||[]).filter(h=>h.composite_score>=5).length+
+        ((alerts.kiufunza&&alerts.kiufunza.hot_list)||[]).filter(h=>h.composite_score>=5).length+
+        ((alerts.timamu&&alerts.timamu.hot_list)||[]).filter(h=>h.composite_score>=5).length;
       countUp(stripHot,hotCount,'','');
     }
   }catch(e){console.warn('initExecStrip',e);}
