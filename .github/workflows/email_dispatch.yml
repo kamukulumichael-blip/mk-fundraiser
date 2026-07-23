@@ -25,6 +25,7 @@ jobs:
 
       - name: Dispatch email brief
         env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY2 }}
           GMAIL_USER: ${{ secrets.GMAIL_USER }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
           GITHUB_EVENT_NAME: ${{ github.event_name }}
