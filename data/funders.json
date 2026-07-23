@@ -3159,6 +3159,553 @@
       "drive_due_diligence_id": "",
       "last_research_date": "2026-07-23",
       "notes": "Local Tanzanian corporate foundation. SOMA pitch angle: Mwalimu Kinara (teacher recognition \u2014 visible, community-facing) + learning dashboard (tangible data product). Frame around number of students reached, not evidence methodology. Direct contact: foundation@gsmgroup.africa | +255 745 750 602. Short application process likely. Michael may have a direct relationship entry point given LI Tanzania presence."
+    },
+    {
+      "id": "f-standard-chartered-futuremakers",
+      "name": "Standard Chartered Futuremakers (Tanzania)",
+      "programmes": [
+        "soma"
+      ],
+      "entity": "learnimpact",
+      "funder_type": "local_corporate",
+      "tier": 3,
+      "status": "prospect",
+      "mission_summary": "Standard Chartered's flagship community investment programme, active in 35 markets including Tanzania. Focuses on economic inclusion of disadvantaged youth (18\u201335): digital skills, financial literacy, and employability. Does not fund directly \u2014 partners with local NGOs as implementing organisations. Annual commitment per implementing partner: typically USD 50K\u2013200K over 1\u20132 years.",
+      "current_priorities": [
+        "youth economic inclusion",
+        "digital skills",
+        "financial literacy",
+        "girls and women",
+        "employability"
+      ],
+      "geography": [
+        "Tanzania",
+        "East Africa"
+      ],
+      "thematic_eligibility": [
+        "youth education",
+        "digital skills",
+        "economic inclusion",
+        "foundational learning"
+      ],
+      "grant_size_usd_min": 50000,
+      "grant_size_usd_max": 200000,
+      "typical_duration_years": 2,
+      "recent_portfolio": [
+        "Futuremakers implementing partners across East Africa",
+        "youth employability programmes",
+        "digital skills training"
+      ],
+      "due_diligence_requirements": [
+        "NGO registration",
+        "track record",
+        "theory of change",
+        "M&E framework"
+      ],
+      "application_process": "invite-only",
+      "cycle_months": [],
+      "language_frame": "youth-inclusion digital-skills economic-opportunity evidence-based",
+      "key_contacts": [
+        {
+          "name": "Standard Chartered Tanzania",
+          "role": "Corporate Affairs / Sustainability",
+          "email": "",
+          "linkedin": ""
+        }
+      ],
+      "known_restrictions": [
+        "partner model \u2014 SC does not fund passively; requires co-designed programme",
+        "focus on 18\u201335 age group; primary school age is a stretch"
+      ],
+      "alignment_score": 58,
+      "probability_score": 30,
+      "effort_score": 3,
+      "detected_priority_shift": null,
+      "recent_news": [],
+      "drive_profile_id": "",
+      "drive_due_diligence_id": "",
+      "last_research_date": "2026-07-23",
+      "notes": "Tanzania SC office in Dar es Salaam. Futuremakers operates through NGO implementing partners, not open grants. Approach: request an introductory meeting with SC Tanzania Corporate Affairs team. SOMA angle: frame Mwalimu Kinara as teacher economic empowerment + the learning dashboard as a digital public good. The 'youth' frame is a stretch for primary teachers but can be made to work. Worth one meeting."
+    },
+    {
+      "id": "f-kcb-foundation-tz",
+      "name": "KCB Foundation (Tanzania)",
+      "programmes": [
+        "soma"
+      ],
+      "entity": "learnimpact",
+      "funder_type": "local_corporate",
+      "tier": 3,
+      "status": "prospect",
+      "mission_summary": "The philanthropic arm of KCB Group, one of East Africa's largest banking groups with a strong Tanzania presence. KCB Foundation focuses on education, environment, and entrepreneurship (2jiajiri programme). Has funded secondary and vocational education NGOs across Tanzania. Operates through an annual grants cycle and direct partnerships.",
+      "current_priorities": [
+        "education access",
+        "vocational skills",
+        "youth entrepreneurship",
+        "environment",
+        "women empowerment"
+      ],
+      "geography": [
+        "Tanzania",
+        "Kenya",
+        "Uganda",
+        "Rwanda",
+        "East Africa"
+      ],
+      "thematic_eligibility": [
+        "education",
+        "teacher development",
+        "learning outcomes",
+        "youth skills"
+      ],
+      "grant_size_usd_min": 20000,
+      "grant_size_usd_max": 100000,
+      "typical_duration_years": 1,
+      "recent_portfolio": [
+        "2jiajiri vocational training",
+        "secondary education bursaries",
+        "NGO education grants Tanzania"
+      ],
+      "due_diligence_requirements": [
+        "registration",
+        "annual accounts",
+        "project proposal",
+        "impact evidence"
+      ],
+      "application_process": "rolling",
+      "cycle_months": [],
+      "language_frame": "education-access youth-skills community-impact Tanzania",
+      "key_contacts": [
+        {
+          "name": "KCB Foundation Tanzania",
+          "role": "Foundation Office",
+          "email": "foundation@kcbgroup.com",
+          "linkedin": ""
+        }
+      ],
+      "known_restrictions": [
+        "focus tends toward access/bursaries rather than system-strengthening",
+        "smaller grants",
+        "requires local relationship"
+      ],
+      "alignment_score": 64,
+      "probability_score": 40,
+      "effort_score": 2,
+      "detected_priority_shift": null,
+      "recent_news": [],
+      "drive_profile_id": "",
+      "drive_due_diligence_id": "",
+      "last_research_date": "2026-07-23",
+      "notes": "KCB Bank Tanzania branch in Dar es Salaam is the entry point. Request meeting with Country Manager + Corporate Affairs. SOMA pitch: Mwalimu Kinara (teacher recognition = visible, community-reportable) + student learning data dashboard. Lead with number of schools and student reach, not methodology. Accessible funder with lower bar than international foundations."
+    },
+    {
+      "id": "f-equity-group-foundation",
+      "name": "Equity Group Foundation",
+      "programmes": [
+        "soma"
+      ],
+      "entity": "learnimpact",
+      "funder_type": "international_foundation",
+      "tier": 3,
+      "status": "prospect",
+      "mission_summary": "The philanthropic arm of Equity Group Holdings (East Africa's largest bank by customer count). Operates Wings to Fly scholarship programme and broader education, health, and enterprise development. Tanzania operations exist through Equity Bank Tanzania though the foundation is more Kenya-focused. Has supported 60,000+ students through education programmes.",
+      "current_priorities": [
+        "education",
+        "scholarships",
+        "STEM",
+        "youth entrepreneurship",
+        "financial inclusion",
+        "health"
+      ],
+      "geography": [
+        "Kenya",
+        "Tanzania",
+        "Uganda",
+        "Rwanda",
+        "South Sudan",
+        "DRC"
+      ],
+      "thematic_eligibility": [
+        "education",
+        "learning outcomes",
+        "foundational skills",
+        "teacher development"
+      ],
+      "grant_size_usd_min": 25000,
+      "grant_size_usd_max": 150000,
+      "typical_duration_years": 2,
+      "recent_portfolio": [
+        "Wings to Fly (60,000+ scholars)",
+        "STEM education",
+        "enterprise development",
+        "962,000+ MSMEs trained"
+      ],
+      "due_diligence_requirements": [
+        "registration",
+        "evidence base",
+        "impact metrics",
+        "financial statements"
+      ],
+      "application_process": "invite-only",
+      "cycle_months": [],
+      "language_frame": "education-access scholarship STEM economic-opportunity youth",
+      "key_contacts": [
+        {
+          "name": "Equity Group Foundation",
+          "role": "Programmes",
+          "email": "support@equitygroupfoundation.org",
+          "linkedin": ""
+        }
+      ],
+      "known_restrictions": [
+        "foundation primarily Kenya-focused; Tanzania operations are secondary",
+        "tends toward scholarship/access rather than system-strengthening"
+      ],
+      "alignment_score": 60,
+      "probability_score": 28,
+      "effort_score": 3,
+      "detected_priority_shift": null,
+      "recent_news": [],
+      "drive_profile_id": "",
+      "drive_due_diligence_id": "",
+      "last_research_date": "2026-07-23",
+      "notes": "Entry point: Equity Bank Tanzania Managing Director. Foundation is Nairobi-based but awards Tanzania grants. SOMA angle: position learning assessment system as complementary to scholarship selection (Equity uses learning metrics for scholarship allocation). Lower priority than KCB or SC given Kenya-primary focus."
+    },
+    {
+      "id": "f-crdb-bank-foundation",
+      "name": "CRDB Bank Foundation",
+      "programmes": [
+        "soma"
+      ],
+      "entity": "learnimpact",
+      "funder_type": "local_corporate",
+      "tier": 3,
+      "status": "prospect",
+      "mission_summary": "Subsidiary of CRDB Bank (Tanzania's largest bank by assets). Focuses on entrepreneurship for youth and women (iMBEJU programme \u2014 400,000+ financially included), financial literacy, health (maternity wards), and climate action. Primary focus is economic empowerment rather than educational quality, but has funded community learning initiatives. Seed capital to entrepreneurs is the core programme.",
+      "current_priorities": [
+        "women and youth entrepreneurship",
+        "financial literacy and inclusion",
+        "health",
+        "climate/environment"
+      ],
+      "geography": [
+        "Tanzania"
+      ],
+      "thematic_eligibility": [
+        "financial literacy",
+        "youth empowerment",
+        "community development"
+      ],
+      "grant_size_usd_min": 5000,
+      "grant_size_usd_max": 50000,
+      "typical_duration_years": 1,
+      "recent_portfolio": [
+        "iMBEJU entrepreneurship (400K+ women/youth)",
+        "maternity ward construction",
+        "financial literacy campaigns"
+      ],
+      "due_diligence_requirements": [
+        "NGO registration",
+        "project proposal"
+      ],
+      "application_process": "rolling",
+      "cycle_months": [],
+      "language_frame": "community-impact youth-women entrepreneurship financial-inclusion Tanzania",
+      "key_contacts": [
+        {
+          "name": "CRDB Bank Foundation",
+          "role": "Foundation Office",
+          "email": "info@crdbbankfoundation.co.tz",
+          "linkedin": ""
+        }
+      ],
+      "known_restrictions": [
+        "primarily entrepreneurship/business focus, not pedagogical",
+        "smaller grants",
+        "not a natural fit for SOMA unless Mwalimu Kinara framing used"
+      ],
+      "alignment_score": 48,
+      "probability_score": 32,
+      "effort_score": 2,
+      "detected_priority_shift": null,
+      "recent_news": [],
+      "drive_profile_id": "",
+      "drive_due_diligence_id": "",
+      "last_research_date": "2026-07-23",
+      "notes": "Contact: info@crdbbankfoundation.co.tz / +255 222 117442. Lower priority. SOMA angle if approached: financial literacy for teachers (Mwalimu Kinara economic benefit) + data dashboard as community transparency tool. Weaker fit than GSM Foundation or KCB. Worth one email."
+    },
+    {
+      "id": "f-tbl-ab-inbev-foundation",
+      "name": "Tanzania Breweries Limited (AB InBev) \u2014 Social Investment",
+      "programmes": [
+        "soma"
+      ],
+      "entity": "learnimpact",
+      "funder_type": "local_corporate",
+      "tier": 3,
+      "status": "prospect",
+      "mission_summary": "Tanzania Breweries Limited (TBL) is a subsidiary of AB InBev, the world's largest brewer. TBL's social investment programme covers education, water access, agriculture, and community empowerment across Tanzania. AB InBev's global 100+ Accelerator and Smart Agriculture programmes have Tanzania components. Education and youth are consistent CSR pillars.",
+      "current_priorities": [
+        "education",
+        "water and sanitation",
+        "agriculture/smallholder farmers",
+        "youth empowerment",
+        "women"
+      ],
+      "geography": [
+        "Tanzania"
+      ],
+      "thematic_eligibility": [
+        "education",
+        "community development",
+        "youth",
+        "teacher support"
+      ],
+      "grant_size_usd_min": 10000,
+      "grant_size_usd_max": 75000,
+      "typical_duration_years": 1,
+      "recent_portfolio": [
+        "education CSR Tanzania",
+        "water access",
+        "smallholder agriculture"
+      ],
+      "due_diligence_requirements": [
+        "NGO registration",
+        "project proposal",
+        "community impact evidence"
+      ],
+      "application_process": "invite-only",
+      "cycle_months": [],
+      "language_frame": "community-impact education-access youth Tanzania visible-results",
+      "key_contacts": [
+        {
+          "name": "TBL Corporate Affairs",
+          "role": "CSR / Corporate Affairs Manager",
+          "email": "",
+          "linkedin": ""
+        }
+      ],
+      "known_restrictions": [
+        "alcohol company \u2014 may create optics risk for LearnImpact; check board policy",
+        "invite-only, relationship-led",
+        "smaller amounts"
+      ],
+      "alignment_score": 52,
+      "probability_score": 28,
+      "effort_score": 3,
+      "detected_priority_shift": null,
+      "recent_news": [],
+      "drive_profile_id": "",
+      "drive_due_diligence_id": "",
+      "last_research_date": "2026-07-23",
+      "notes": "FLAG: TBL is an alcohol company. Confirm board/ED comfort with alcohol industry CSR funding before approaching. If cleared: contact TBL Corporate Affairs in Dar es Salaam. SOMA angle: teacher recognition (Mwalimu Kinara) as community anchor, student learning dashboard as visible social impact. Moderate priority."
+    },
+    {
+      "id": "f-anglogold-geita",
+      "name": "AngloGold Ashanti \u2014 Geita Gold Mine Community Fund",
+      "programmes": [
+        "soma"
+      ],
+      "entity": "learnimpact",
+      "funder_type": "local_corporate",
+      "tier": 3,
+      "status": "prospect",
+      "mission_summary": "AngloGold Ashanti operates Geita Gold Mine, one of Africa's largest gold mines, in Geita Region, Tanzania. Has a Community Social Investment (CSI) programme focused on communities near the mine: education, health, livelihoods, and infrastructure. Funds are geographically restricted to Geita Region only. Education includes school construction, bursaries, and teacher support.",
+      "current_priorities": [
+        "community development near mine",
+        "education access",
+        "health",
+        "livelihoods",
+        "infrastructure"
+      ],
+      "geography": [
+        "Geita Region, Tanzania"
+      ],
+      "thematic_eligibility": [
+        "education",
+        "teacher support",
+        "learning outcomes",
+        "community development"
+      ],
+      "grant_size_usd_min": 10000,
+      "grant_size_usd_max": 80000,
+      "typical_duration_years": 1,
+      "recent_portfolio": [
+        "school construction Geita",
+        "bursaries for local students",
+        "teacher support",
+        "community health"
+      ],
+      "due_diligence_requirements": [
+        "registration",
+        "Geita Region focus",
+        "community benefit evidence"
+      ],
+      "application_process": "invite-only",
+      "cycle_months": [],
+      "language_frame": "community-development Geita-Region education-access visible-impact",
+      "key_contacts": [
+        {
+          "name": "Geita Gold Mine Community Affairs",
+          "role": "Community Affairs Manager",
+          "email": "",
+          "linkedin": ""
+        }
+      ],
+      "known_restrictions": [
+        "STRICTLY geographically restricted to Geita Region \u2014 only fundable if LearnImpact has schools/operations in Geita",
+        "mining company \u2014 check board policy"
+      ],
+      "alignment_score": 55,
+      "probability_score": 35,
+      "effort_score": 2,
+      "detected_priority_shift": null,
+      "recent_news": [],
+      "drive_profile_id": "",
+      "drive_due_diligence_id": "",
+      "last_research_date": "2026-07-23",
+      "notes": "ONLY relevant if KiuFunza or SOMA has schools in Geita Region. Check school distribution data. If yes: very accessible, high probability \u2014 mining CSI funds are often undersubscribed for credible NGO partners. Contact: Geita Gold Mine Community Affairs office, Geita Town."
+    },
+    {
+      "id": "f-barrick-tanzania",
+      "name": "Barrick Gold \u2014 North Mara & Bulyanhulu Community Funds",
+      "programmes": [
+        "soma"
+      ],
+      "entity": "learnimpact",
+      "funder_type": "local_corporate",
+      "tier": 3,
+      "status": "prospect",
+      "mission_summary": "Barrick Gold operates North Mara Gold Mine (Mara Region) and Bulyanhulu Gold Mine (Kahama District, Shinyanga Region) in Tanzania. Both operations have Community Development Funds focused on communities within the mine's area of influence. Education, water, health, and livelihoods are funded. Geographically restricted to Mara and Shinyanga regions.",
+      "current_priorities": [
+        "community development",
+        "education access",
+        "health",
+        "water and sanitation",
+        "local employment"
+      ],
+      "geography": [
+        "Mara Region, Tanzania",
+        "Shinyanga Region, Tanzania"
+      ],
+      "thematic_eligibility": [
+        "education",
+        "teacher support",
+        "community learning",
+        "school infrastructure"
+      ],
+      "grant_size_usd_min": 10000,
+      "grant_size_usd_max": 100000,
+      "typical_duration_years": 1,
+      "recent_portfolio": [
+        "school construction",
+        "teacher materials",
+        "health clinics",
+        "water access"
+      ],
+      "due_diligence_requirements": [
+        "registration",
+        "geographic presence in Mara or Shinyanga",
+        "community benefit plan"
+      ],
+      "application_process": "invite-only",
+      "cycle_months": [],
+      "language_frame": "community-development education-access Mara-Shinyanga-Region visible-impact",
+      "key_contacts": [
+        {
+          "name": "North Mara Community Affairs",
+          "role": "Community Affairs",
+          "email": "",
+          "linkedin": ""
+        },
+        {
+          "name": "Bulyanhulu Community Affairs",
+          "role": "Community Affairs",
+          "email": "",
+          "linkedin": ""
+        }
+      ],
+      "known_restrictions": [
+        "STRICTLY geographically restricted to Mara Region (North Mara) and Shinyanga Region (Bulyanhulu)",
+        "mining company \u2014 check board policy",
+        "Barrick has had community conflicts in Tanzania \u2014 reputational consideration"
+      ],
+      "alignment_score": 52,
+      "probability_score": 32,
+      "effort_score": 2,
+      "detected_priority_shift": null,
+      "recent_news": [],
+      "drive_profile_id": "",
+      "drive_due_diligence_id": "",
+      "last_research_date": "2026-07-23",
+      "notes": "Only relevant if KiuFunza/SOMA schools are in Mara or Shinyanga regions. Note: Barrick had significant community relations issues at North Mara (water contamination allegations) \u2014 reputational risk for LearnImpact. Check school data for geographic overlap before approaching. Lower priority than AngloGold Geita."
+    },
+    {
+      "id": "f-halotel-viettel-tz",
+      "name": "Halotel (Viettel Tanzania) \u2014 Social Investment",
+      "programmes": [
+        "soma"
+      ],
+      "entity": "learnimpact",
+      "funder_type": "local_corporate",
+      "tier": 3,
+      "status": "prospect",
+      "mission_summary": "Halotel is the Tanzania brand of Viettel, the Vietnamese state-owned telecoms company. Fourth-largest mobile operator in Tanzania with growing rural coverage. Has a social investment programme focused on education, digital connectivity, and rural community development \u2014 particularly in underserved areas where they're building towers. Has supplied ICT equipment to schools and funded education events.",
+      "current_priorities": [
+        "digital connectivity",
+        "rural education",
+        "youth",
+        "ICT in schools",
+        "community development"
+      ],
+      "geography": [
+        "Tanzania",
+        "focus on rural and underserved areas"
+      ],
+      "thematic_eligibility": [
+        "digital education",
+        "ICT",
+        "rural learning",
+        "teacher development",
+        "connectivity"
+      ],
+      "grant_size_usd_min": 5000,
+      "grant_size_usd_max": 50000,
+      "typical_duration_years": 1,
+      "recent_portfolio": [
+        "ICT equipment for schools",
+        "digital skills events",
+        "rural community development"
+      ],
+      "due_diligence_requirements": [
+        "registration",
+        "project proposal"
+      ],
+      "application_process": "rolling",
+      "cycle_months": [],
+      "language_frame": "digital-education ICT rural-Tanzania connectivity youth",
+      "key_contacts": [
+        {
+          "name": "Halotel Corporate Affairs",
+          "role": "CSR / Corporate Affairs",
+          "email": "",
+          "linkedin": ""
+        }
+      ],
+      "known_restrictions": [
+        "state-owned by Vietnam \u2014 funding decisions can be slow",
+        "smaller amounts",
+        "stronger on digital/ICT than pedagogical approach"
+      ],
+      "alignment_score": 57,
+      "probability_score": 35,
+      "effort_score": 2,
+      "detected_priority_shift": null,
+      "recent_news": [],
+      "drive_profile_id": "",
+      "drive_due_diligence_id": "",
+      "last_research_date": "2026-07-23",
+      "notes": "Halotel has strong rural Tanzania reach \u2014 maps well to KiuFunza school geography. SOMA pitch: learning progress dashboard (digital product) + AI analytics = ICT in education angle. Frame as technology-enabled teacher support, not as a teaching methodology. Accessible entry point. Contact Halotel Tanzania HQ in Dar es Salaam."
     }
   ]
 }
