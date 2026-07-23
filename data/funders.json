@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "last_updated": "2026-06-30",
+  "last_updated": "2026-07-23",
   "funders": [
     {
       "id": "f-gates",
@@ -3084,6 +3084,81 @@
       "drive_due_diligence_id": "",
       "last_research_date": "2026-07-14",
       "notes": "Placeholder for CIFF, Co-Impact, LEGO Foundation \u2014 each warrants individual research. Add as separate funder records in weekly research phase."
+    },
+    {
+      "id": "f-gsm-foundation",
+      "name": "GSM Foundation (GSM Group)",
+      "programmes": [
+        "soma"
+      ],
+      "entity": "learnimpact",
+      "funder_type": "local_corporate",
+      "tier": 3,
+      "status": "prospect",
+      "mission_summary": "Corporate social responsibility foundation of GSM Group (Tanzania), led by President Ghalib Said Mohamed. Operates across all regions of mainland Tanzania and Zanzibar. Has reached 500,000+ students through education support, classroom construction, and inclusive education initiatives. Also funds healthcare, environment, and community empowerment.",
+      "current_priorities": [
+        "education access",
+        "inclusive education",
+        "community infrastructure",
+        "health",
+        "youth and children",
+        "persons with disabilities"
+      ],
+      "geography": [
+        "Tanzania",
+        "Zanzibar"
+      ],
+      "thematic_eligibility": [
+        "foundational education",
+        "inclusive education",
+        "learning outcomes",
+        "community development"
+      ],
+      "grant_size_usd_min": 10000,
+      "grant_size_usd_max": 100000,
+      "typical_duration_years": 1,
+      "recent_portfolio": [
+        "classroom construction",
+        "student support (500K+ students)",
+        "inclusive education programmes",
+        "medical camps",
+        "water wells"
+      ],
+      "due_diligence_requirements": [
+        "registration",
+        "programme description",
+        "impact numbers"
+      ],
+      "application_process": "rolling",
+      "cycle_months": [],
+      "language_frame": "community-impact visible-results Tanzania-wide student-numbers",
+      "key_contacts": [
+        {
+          "name": "GSM Foundation",
+          "role": "Foundation Office",
+          "email": "foundation@gsmgroup.africa",
+          "linkedin": ""
+        },
+        {
+          "name": "Ghalib Said Mohamed",
+          "role": "GSM Group President",
+          "email": "",
+          "linkedin": ""
+        }
+      ],
+      "known_restrictions": [
+        "likely prefers tangible/visible impact over systems change",
+        "typically infrastructure and access rather than pedagogical programmes"
+      ],
+      "alignment_score": 62,
+      "probability_score": 38,
+      "effort_score": 2,
+      "detected_priority_shift": null,
+      "recent_news": [],
+      "drive_profile_id": "",
+      "drive_due_diligence_id": "",
+      "last_research_date": "2026-07-23",
+      "notes": "Local Tanzanian corporate foundation. SOMA pitch angle: Mwalimu Kinara (teacher recognition \u2014 visible, community-facing) + learning dashboard (tangible data product). Frame around number of students reached, not evidence methodology. Direct contact: foundation@gsmgroup.africa | +255 745 750 602. Short application process likely. Michael may have a direct relationship entry point given LI Tanzania presence."
     }
   ]
 }
