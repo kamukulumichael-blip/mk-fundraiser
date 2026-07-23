@@ -15,12 +15,18 @@ Architecture: GitHub Pages static site + GitHub Actions cron (Monday 03:00 UTC) 
 ## LEARNIMPACT — PROGRAMMES
 
 ### SOMA (top fundraising priority)
-- AI-enabled teacher coaching via WhatsApp chatbot (Mwalimu)
-- USD 3.12/student/year · USD 12/LAYS modelled (Mtwara RCT verifies 2027)
+**Board-revised July 2026 — four components:**
+1. Student Assessments (3x per year) + ability grouping for differentiated instruction
+2. Live Learning Progress Data Dashboard — democratised, accessible to teachers, schools, government
+3. Mwalimu Kinara (teacher recognition) — co-financed by local government
+4. AI Predictive Analytics — using KiuFunza + Uwezo historical data to anticipate learning gaps
+**DROPPED from programme: TaRL prescription · Mwalimu WhatsApp AI Bot**
+- USD 3.12/student/year [LOCKED — do not re-derive] · USD 12/LAYS modelled (Mtwara RCT verifies 2027)
 - Kibaha pilot: Term 3 2026, 10 schools · Mtwara RCT: 2027, 70 schools
 - Government co-financing: Kibaha District Council (proves integration appetite)
 - 2027 funding gap: USD 637K (USD 229K confirmed vs USD 866K needed)
 - Pipeline: Founders Pledge $5M in review (Lorcan Clarke), VTF SOMA not started, Dovetail Track 2 not started
+- NOTE: Founders Pledge DD round 2 may ask about programme model — need to brief Lorcan on redesign
 
 ### KiuFunza
 - Teacher performance pay, Grades 1–7. 265 schools, 10 regions Tanzania.
@@ -45,8 +51,8 @@ Architecture: GitHub Pages static site + GitHub Actions cron (Monday 03:00 UTC) 
 | Founders Pledge SOMA | SOMA | In Review | $5M | Lorcan Clarke |
 | VTF KiuFunza Phase 5 | KiuFunza | Signing Imminent | $178K | Sandra Oswald |
 | Hempel KiuFunza Renewal | KiuFunza | In Review (Hearing Committee) | $587K | Rosa |
-| Dovetail Track 1 | KiuFunza | WON | $100K | Ali Ellegard |
-| Dovetail Track 2 SOMA | SOMA | Identified (not started) | $150K | Ali Ellegard |
+| Dovetail Track 1 | KiuFunza | SIGNED July 2026 | $100K | Ali Ellegard |
+| Dovetail Track 2 SOMA | SOMA | Identified (not started) | $150K | Ali Ellegard — pitch: AI analytics + dashboard |
 | VTF SOMA | SOMA | Identified (not started) | $150K | Sandra Oswald |
 | GPE Tanzania SOMA | SOMA | Identified | $500K | — |
 | Microsoft AI Accessibility | Timamu | Identified | $150K | — |
@@ -143,8 +149,9 @@ SOMA is the pivot from KiuFunza — government integration is the endgame, not p
 
 **LearnImpact framing (non-negotiable):**
 - NOT a startup. Never use startup language.
-- Correct framing: "Established NGO, 10+ years KiuFunza evidence (QJE-published), newly independent from Twaweza, deploying AI coaching at scale."
+- Correct framing: "Established NGO, 10+ years KiuFunza evidence (QJE-published), newly independent from Twaweza, deploying AI-powered learning systems at scale."
 - SOMA has a live pilot (Kibaha Term 3 2026) — not a theoretical idea.
+- SOMA is NO LONGER a WhatsApp coaching programme. It is a learning measurement + ability grouping + data dashboard + AI analytics system. Update all materials accordingly.
 
 **Domain / website:**
 - learnimpact.org — PRIMARY domain (secured)

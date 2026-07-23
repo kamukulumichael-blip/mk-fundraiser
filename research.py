@@ -43,15 +43,20 @@ LearnImpact is an evidence-based learning systems transformation organisation in
 Newly independent from Twaweza, May 2026. Executive Director: Michael Kamukulu.
 5-Year Architecture: Prove → Partner → Embed → Replicate (Tanzania → Zanzibar → Burundi → East Africa).
 
-SOMA Programme: AI-enabled foundational learning. WhatsApp coaching chatbot (Mwalimu) for teachers.
-USD 3.12/student/year. Kibaha pilot Term 3 2026 (10 schools). Mtwara RCT 2027 (70 schools).
-USD 12/LAYS modelled. Government co-financing: Kibaha District Council.
+SOMA Programme (Board-revised July 2026): Foundational learning system — four components:
+1. Assessments (3x per year) + ability grouping for differentiated classroom instruction
+2. Live Learning Progress Data Dashboard — democratised, accessible to teachers, schools, government
+3. Mwalimu Kinara (teacher recognition component) — co-financed by local government
+4. AI Predictive Analytics — using KiuFunza + Uwezo historical data to anticipate learning gaps
+NOTE: TaRL prescription and Mwalimu WhatsApp AI Bot DROPPED from programme design.
+USD 3.12/student/year [LOCKED — do not re-derive]. Kibaha pilot Term 3 2026 (10 schools).
+Mtwara RCT 2027 (70 schools). USD 12/LAYS modelled. Government co-financing: Kibaha District Council.
 Active asks: Founders Pledge $5M (in review), VTF SOMA (not started), Dovetail Track 2 (not started).
 2027 funding gap: $637K (USD 229K confirmed vs USD 866K needed).
 
 KiuFunza Programme: Teacher performance pay, Grades 1-7. 265 schools.
 QJE-published: +9.4pp treatment effect. USD 7/child/year.
-Active funders: Hempel (anchor, Hearing Committee), VTF (TZS 462M near-confirmed), Dovetail ($100K Track 1 won).
+Active funders: Hempel (anchor, Hearing Committee), VTF (TZS 462M near-confirmed), Dovetail ($100K Track 1 SIGNED July 2026).
 CRITICAL: Never lead with Twaweza history. GoT sensitivity — brand damaging.
 """.strip()
 
@@ -70,6 +75,7 @@ PIPELINE_BRIEF_SYSTEM = """You are Pipeline — LearnImpact's fundraising strate
 Produce a Monday briefing for Michael Kamukulu (Executive Director). Be specific, named, opinionated.
 The 2027 SOMA gap is the urgent constraint: USD 229K confirmed / USD 866K needed / Gap: USD 637K.
 Locked cost evidence: SOMA = USD 3.12/student/year; KiuFunza = +9.4pp (Quarterly Journal of Economics).
+SOMA redesigned July 2026: assessments (3x/year) + ability grouping + learning dashboard + Mwalimu Kinara + AI predictive analytics. No TaRL prescription. No WhatsApp bot.
 LearnImpact is NOT a startup — established NGO Reg. 00NGO/R/8931, 10+ years evidence, newly independent from Twaweza May 2026.
 Never re-derive cost figures. Michael owns all donor relationships. Name names. Flag risks early.
 

@@ -14,10 +14,10 @@
       "outcome": null,
       "won_amount_usd": null,
       "drive_proposal_id": "",
-      "won_lost_notes": "Full DD Q&A (4 sets from June 16) submitted June 30 by Youdi + Michael, with SOMA CN attached. Lorcan replied July 1 confirming progression. Second limited set of questions expected second half July 2026. Decision expected Q1-Q2 2027.",
-      "pattern_tags": ["evidence-framing", "LAYS-cost-effectiveness", "government-partnership", "RCT-backed", "DD-in-progress"],
+      "won_lost_notes": "Full DD Q&A (4 sets from June 16) submitted June 30 by Youdi + Michael, with SOMA CN attached. Lorcan replied July 1 confirming progression. Second limited set of questions expected second half July 2026. Decision expected Q1-Q2 2027. NOTE: SOMA redesigned July 2026 by LI board — assessments + ability grouping + learning dashboard + Mwalimu Kinara + AI analytics. No TaRL prescription, no WhatsApp bot. May need to brief Lorcan on redesign if second DD round asks about programme model.",
+      "pattern_tags": ["evidence-framing", "LAYS-cost-effectiveness", "government-partnership", "RCT-backed", "DD-in-progress", "programme-redesign-july-2026"],
       "created_at": "2026-05-01",
-      "updated_at": "2026-07-14"
+      "updated_at": "2026-07-23"
     },
     {
       "id": "opp-vtf-kiufunza-2026",
@@ -68,16 +68,16 @@
       "outcome": "won",
       "won_amount_usd": 100000,
       "drive_proposal_id": "",
-      "won_lost_notes": "USD 100K confirmed for Track 1 (KiuFunza assessment technology focus).",
-      "pattern_tags": ["assessment-technology", "evidence-based", "East-Africa"],
+      "won_lost_notes": "USD 100K grant agreement SIGNED July 2026. Track 1 scope: KiuFunza assessment technology. Ali Ellegard (Dovetail) is the relationship holder. Track 2 (SOMA) conversation to be initiated after Track 1 onboarding.",
+      "pattern_tags": ["assessment-technology", "evidence-based", "East-Africa", "signed-agreement"],
       "created_at": "2026-01-15",
-      "updated_at": "2026-06-30"
+      "updated_at": "2026-07-23"
     },
     {
       "id": "opp-dovetail-track2-soma",
       "funder_id": "f-dovetail",
       "programme": "soma",
-      "title": "Dovetail / Prevail Fund — Track 2 (SOMA AI Coaching)",
+      "title": "Dovetail / Prevail Fund — Track 2 (SOMA Learning Dashboard + AI Analytics)",
       "stage": "identified",
       "ask_amount_usd": 150000,
       "deadline": "2026-12-01",
@@ -86,16 +86,16 @@
       "outcome": null,
       "won_amount_usd": null,
       "drive_proposal_id": "",
-      "won_lost_notes": "Track 2 conversation NOT YET STARTED. Ali Ellegard is the contact. Assessment technology angle is entry point.",
-      "pattern_tags": ["assessment-technology", "AI-coaching", "follow-on-from-track1"],
+      "won_lost_notes": "Track 2 conversation NOT YET STARTED. Ali Ellegard is the contact. SOMA redesigned July 2026: pitch angle is now AI predictive analytics (KiuFunza + Uwezo data) + live learning progress dashboard. Stronger fit for Dovetail than WhatsApp coaching. Initiate after Track 1 onboarding complete.",
+      "pattern_tags": ["assessment-technology", "AI-analytics", "learning-dashboard", "follow-on-from-track1"],
       "created_at": "2026-06-30",
-      "updated_at": "2026-06-30"
+      "updated_at": "2026-07-23"
     },
     {
       "id": "opp-vtf-soma-pipeline",
       "funder_id": "f-vtf",
       "programme": "soma",
-      "title": "VTF — SOMA WhatsApp AI Coaching (Technology Mandate Fit)",
+      "title": "VTF — SOMA Learning Dashboard + AI Analytics (Technology Mandate Fit)",
       "stage": "identified",
       "ask_amount_usd": 150000,
       "deadline": "2027-03-01",
@@ -104,8 +104,8 @@
       "outcome": null,
       "won_amount_usd": null,
       "drive_proposal_id": "",
-      "won_lost_notes": "SOMA conversation with VTF NOT YET STARTED. Must begin before KiuFunza phases down. VTF 80% tech mandate maps to WhatsApp AI coaching (Mwalimu) perfectly.",
-      "pattern_tags": ["technology-mandate", "AI-coaching", "WhatsApp", "Tanzania-CSR"],
+      "won_lost_notes": "SOMA conversation with VTF NOT YET STARTED. Must begin after VTF counter-signature (~July 30). SOMA redesigned July 2026: pitch angle is live learning dashboard + AI predictive analytics — strong fit for VTF 80% tech mandate. Frame as natural tech extension of KiuFunza partnership, not a separate ask.",
+      "pattern_tags": ["technology-mandate", "AI-analytics", "learning-dashboard", "Tanzania-CSR"],
       "created_at": "2026-06-30",
       "updated_at": "2026-06-30"
     },
@@ -194,7 +194,7 @@
       "outcome": null,
       "won_amount_usd": null,
       "drive_proposal_id": "",
-      "won_lost_notes": "Competitive window — no open call currently active. FRAMING LOCKED: LearnImpact is an established NGO (NOT a startup) with QJE-published RCT evidence, 265 schools, 10+ years programme history, newly independent. Tech hook: Mwalimu WhatsApp AI coaching at $3.12/student/year with live Kibaha pilot. Strategy: complete Track 1 (Google for Nonprofits) first to establish Google relationship, then build direct connection with Google.org Africa team before next Impact Challenge opens. Watch for Africa-specific calls (typically announced 3-6 months in advance). Ask range $500K-$2M realistic given SOMA evidence base.",
+      "won_lost_notes": "Competitive window — no open call currently active. FRAMING LOCKED: LearnImpact is an established NGO (NOT a startup) with QJE-published RCT evidence, 265 schools, 10+ years programme history, newly independent. Tech hook (updated July 2026): SOMA = AI predictive analytics on KiuFunza + Uwezo historical data + live democratised learning dashboard at $3.12/student/year. Strategy: complete Track 1 (Google for Nonprofits) first to establish Google relationship, then build direct connection with Google.org Africa team before next Impact Challenge opens. Watch for Africa-specific calls (typically 3-6 months advance notice). Ask range $500K-$2M realistic given SOMA evidence base.",
       "pattern_tags": ["google-org", "AI-education", "impact-challenge", "competitive", "relationship-first", "established-NGO"],
       "created_at": "2026-07-01",
       "updated_at": "2026-07-01"
