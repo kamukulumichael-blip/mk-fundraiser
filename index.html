@@ -1891,9 +1891,17 @@ document.getElementById('gate').addEventListener('click', e => {
 // ══════════════════════════════════════════════════════════════
 // DATA
 // ══════════════════════════════════════════════════════════════
+// GitHub Actions bot commits don't trigger Pages rebuilds — fetch volatile data
+// directly from raw.githubusercontent.com so it's always the latest committed version.
+const RAW_BASE = 'https://raw.githubusercontent.com/kamukulumichael-blip/mk-fundraiser/main/data/';
+const VOLATILE = ['alerts.json','funders.json','opportunities.json','pipeline_monday_brief.json'];
 async function fetchJSON(path) {
-  const r = await fetch(path + '?v=' + Date.now());
-  if (!r.ok) throw new Error('Failed: ' + path);
+  const file = path.split('/').pop();
+  const url = VOLATILE.includes(file)
+    ? RAW_BASE + file + '?v=' + Date.now()
+    : path + '?v=' + Date.now();
+  const r = await fetch(url);
+  if (!r.ok) throw new Error('Failed: ' + url);
   return r.json();
 }
 async function loadAllData() {
