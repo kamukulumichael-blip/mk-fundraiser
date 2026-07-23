@@ -2,8 +2,9 @@ name: Email Brief Dispatch
 
 on:
   schedule:
-    - cron: '0 3 * * *'   # 06:00 EAT (morning slot) — skips if research.yml already sent Mon morning
-    - cron: '0 10 * * *'  # 13:00 EAT (afternoon slot)
+    - cron: '0 4 * * 1'   # Monday 07:00 EAT — runs AFTER research.yml (avoids push race at 03:00 UTC)
+    - cron: '0 3 * * 2-7' # Tue–Sun 06:00 EAT morning slot
+    - cron: '0 10 * * *'  # 13:00 EAT afternoon slot (all days)
   workflow_dispatch:       # Manual trigger — useful for "send now"
 
 permissions:
@@ -34,5 +35,4 @@ jobs:
           git config user.name  "Raisr Email Bot"
           git config user.email "actions@github.com"
           git add data/email_config.json
-          git diff --cached --quiet && echo "No changes to commit" || git commit -m "email: brief dispatched [skip pages]"
-          git push
+          git diff --cached --quiet && echo "No changes to commit" || (git commit -m "email: brief dispatched [skip pages]" && git pull --rebase origin main && git push)
